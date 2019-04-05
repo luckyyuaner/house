@@ -2,17 +2,12 @@ package com.yuan.house.service;
 
 import com.alibaba.fastjson.JSONObject;
 
-/**
- * @author: hxy
- * @description: 用户/角色/权限
- * @date: 2017/11/2 10:18
- */
 public interface UserService {
 
 	/**
-	 * 登录表单提交
+	 * 用户登录
 	 */
-	JSONObject authLogin(JSONObject jsonObject);
+	JSONObject userLogin(JSONObject jsonObject);
 
 	/**
 	 * 根据用户名和密码查询对应的用户
@@ -25,7 +20,7 @@ public interface UserService {
 	/**
 	 * 查询当前登录用户的权限等信息
 	 */
-	JSONObject getInfo();
+	JSONObject getUserPermissions();
 
 	/**
 	 * 退出登录

@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 	 * 用户登录
 	 */
 	@Override
-	public JSONObject authLogin(JSONObject jsonObject) {
+	public JSONObject userLogin(JSONObject jsonObject) {
 		String username = jsonObject.getString("username");
 		String password = jsonObject.getString("password");
 		JSONObject res = new JSONObject();
@@ -56,19 +56,22 @@ public class UserServiceImpl implements UserService {
 	 */
 	@Override
 	public JSONObject getUser(String username, String password) {
-		return userDao.getUser(username, password);
+		JSONObject rs = new JSONObject();
+		rs.put("type", TypeEnum.T_object.getTypeCode());
+		rs.put("user", userDao.getUser(username, password));
+		return rs;
 	}
 
 	/**
 	 * 查询当前登录用户的权限等信息
 	 */
 	@Override
-	public JSONObject getInfo() {
+	public JSONObject getUserPermissions() {
 		//从session获取用户信息
 		Session session = SecurityUtils.getSubject().getSession();
 		JSONObject user = (JSONObject) session.getAttribute(Constants.SESSION_CURR_USER);
-		String username = user.getString("username");
-		JSONObject userPermissions = permissionService.getUserPermissions(username);
+		int userId = user.getInteger("userId");
+		JSONObject userPermissions = permissionService.getUserPermissions(userId);
 		session.setAttribute(Constants.SESSION_USER_PERMISSIONS, userPermissions);
 		return userPermissions;
 	}

@@ -6,5 +6,5 @@ public interface PermissionService {
 	/**
 	 * 查询用户的所有权限
 	 */
-	JSONObject getUserPermissions(String username);
+	JSONObject getUserPermissions(int userId);
 }

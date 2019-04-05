@@ -29,9 +29,10 @@ public class CommonController extends BaseController {
 	public JSONObject userLogin(@RequestBody JSONObject requestJson) {
 		JSONObject check = FieldUtil.checkRequiredFields(requestJson, "username,password");
 		if(ResultEnum.R_required.getResCode().equals(check.get("code"))) {
-		    return check;
+		    userService.getUserPermissions();
+			return check;
         }
-		return userService.authLogin(requestJson);
+		return userService.userLogin(requestJson);
 	}
 
     /**

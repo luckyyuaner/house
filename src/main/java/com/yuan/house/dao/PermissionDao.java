@@ -1,11 +1,14 @@
 package com.yuan.house.dao;
 
-import com.alibaba.fastjson.JSONObject;
+import com.yuan.house.model.Permission;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Set;
 
 
 public interface PermissionDao {
 	/**
 	 * 查询用户所有权限
 	 */
-	JSONObject getUserPermissions(String username);
+	Set<Permission> getUserPermissions(@Param("userId") int userId);
 }
