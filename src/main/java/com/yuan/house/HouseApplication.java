@@ -11,6 +11,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @MapperScan("com.yuan.house.dao")
 public class HouseApplication extends SpringBootServletInitializer {
 
+
 	public static void main(String[] args) {
 		SpringApplication application = new SpringApplication(HouseApplication.class);
 		application.setBannerMode(Banner.Mode.OFF);

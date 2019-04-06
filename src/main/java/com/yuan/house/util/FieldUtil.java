@@ -2,7 +2,6 @@ package com.yuan.house.util;
 
 import com.alibaba.fastjson.JSONObject;
 import com.yuan.house.constants.ResultEnum;
-import com.yuan.house.constants.TypeEnum;
 import org.apache.commons.lang3.StringUtils;
 
 
@@ -18,7 +17,6 @@ public class FieldUtil {
 	 */
 	public static JSONObject checkRequiredFields(JSONObject jsonObject, String requiredColumns) {
 		JSONObject res = new JSONObject();
-		res.put("type", TypeEnum.T_result.getTypeCode());
 		if(StringUtils.isBlank(requiredColumns)) {
             res.put("code", ResultEnum.R_success.getResCode());
             res.put("msg", ResultEnum.R_success.getResMsg());

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/permission")
-@CrossOrigin(origins = "http://localhost:9520", maxAge = 3600)
 public class PermissionController extends BaseController {
 
 	/**

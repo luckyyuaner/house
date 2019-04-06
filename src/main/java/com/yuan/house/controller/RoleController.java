@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/role")
-@CrossOrigin(origins = "http://localhost:9520", maxAge = 3600)
 public class RoleController extends BaseController {
 
 	@RequiresPermissions(value = {"user:add", "user:update"}, logical = Logical.OR)

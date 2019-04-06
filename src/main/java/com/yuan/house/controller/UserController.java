@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:9520", maxAge = 3600)
 public class UserController extends BaseController {
 	/**
 	 * 查询用户列表

@@ -2,7 +2,6 @@ package com.yuan.house.config.shiro;
 
 import com.alibaba.fastjson.JSONObject;
 import com.yuan.house.constants.ResultEnum;
-import com.yuan.house.constants.TypeEnum;
 import com.yuan.house.util.LoggerUtil;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -22,7 +21,6 @@ public class AjaxPermissionsAuthorizationFilter extends FormAuthenticationFilter
 	@Override
 	protected boolean onAccessDenied(ServletRequest request, ServletResponse response) {
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("type", TypeEnum.T_result.getTypeCode());
 		jsonObject.put("code", ResultEnum.R_out.getResCode());
 		jsonObject.put("msg", ResultEnum.R_out.getResMsg());
 		PrintWriter out = null;

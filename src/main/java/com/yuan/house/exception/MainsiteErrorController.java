@@ -1,7 +1,6 @@
 package com.yuan.house.exception;
 
 import com.alibaba.fastjson.JSONObject;
-import com.yuan.house.constants.TypeEnum;
 import com.yuan.house.constants.ResultEnum;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
@@ -23,7 +22,6 @@ public class MainsiteErrorController implements ErrorController {
 	@ResponseBody
 	public JSONObject handleError() {
         JSONObject res = new JSONObject();
-        res.put("type", TypeEnum.T_result.getTypeCode());
         res.put("code", ResultEnum.R_404.getResCode());
         res.put("msg", ResultEnum.R_404.getResMsg());
         return res;
