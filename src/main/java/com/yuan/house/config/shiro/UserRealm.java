@@ -49,6 +49,7 @@ public class UserRealm extends AuthorizingRealm {
 		User user = userService.getUser(username, password);
 		if (user == null) {
 			//没找到帐号
+			System.out.println("用户不存在");
             LoggerUtil.error("用户{}不存在",username);
 			throw new UnknownAccountException();
 		}

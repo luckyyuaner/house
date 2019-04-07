@@ -12,7 +12,10 @@
         (
           select permission_id from role_permission where role_id in
           (
-            select role_id from user_role where user_id = #{userId}
+            select role_id from user_role where user_id in
+            (
+              select user_id from user where username = #{username}
+            )
           )
         )
     </select>

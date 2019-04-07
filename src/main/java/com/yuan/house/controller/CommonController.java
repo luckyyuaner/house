@@ -1,15 +1,13 @@
 package com.yuan.house.controller;
-
-import com.alibaba.fastjson.JSONObject;
 import com.yuan.house.constants.ResultEnum;
 import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.UserService;
-import com.yuan.house.util.FieldUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 公共Controller，不限制权限
@@ -24,29 +22,50 @@ public class CommonController extends BaseController {
 	private PermissionService permissionService;
 
     /**
+     * 获取用户登录页面
+     * @param model
+     * @return
+     */
+    @GetMapping("/showLogin")
+    public ModelAndView showLogin(Model model) {
+        return new ModelAndView("common/login", "userModel", model);
+    }
+
+
+    /**
      * 用户登录
-     * @param requestJson
+     * @param username
+     * @param password
+     * @param model
      * @return
      */
 	@PostMapping("/login")
-	public String userLogin(@RequestBody JSONObject requestJson) {
-		JSONObject check = FieldUtil.checkRequiredFields(requestJson, "username,password");
-		if(ResultEnum.R_required.getResCode().equals(check.get("code"))) {
-			return ResultEnum.R_required.getResCode();
+	public ModelAndView userLogin(@RequestParam("username")String username, @RequestParam("password")String password, Model model) {
+		System.out.println("执行");
+	    if(StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
+            model.addAttribute("msg", ResultEnum.R_required.getResMsg());
+            return new ModelAndView("error","msgModel",model);
         }
-		if(ResultEnum.R_wrong.getResCode().equals(userService.userLogin(requestJson))) {
-            return ResultEnum.R_wrong.getResCode();
+		String rs = userService.userLogin(username, password);
+		if(ResultEnum.R_wrong.getResCode().equals(rs)){
+            model.addAttribute("msg", ResultEnum.R_error.getResMsg());
+            return new ModelAndView("error","msgModel",model);
         }
         permissionService.getUserPermissions();
-        return ResultEnum.R_success.getResCode();
+        return new ModelAndView("common/list");
 	}
 
     /**
      * 用户注销
      * @return
      */
-	@PostMapping("/logout")
-	public String userLogout() {
-		return userService.logout();
+	@GetMapping("/logout")
+	public ModelAndView userLogout(Model model) {
+		String rs = userService.logout();
+		if(ResultEnum.R_error.getResCode().equals(rs)) {
+            model.addAttribute("msg", ResultEnum.R_error.getResMsg());
+            return new ModelAndView("error","msgModel",model);
+        }
+        return new ModelAndView("common/login", "userModel", model);
 	}
 }

@@ -7,8 +7,11 @@ public interface UserService {
 
 	/**
 	 * 用户登录
+	 * @param username
+	 * @param password
+	 * @return
 	 */
-	String userLogin(JSONObject jsonObject);
+	String userLogin(String username, String password);
 
 	/**
 	 * 根据用户名和密码查询对应的用户

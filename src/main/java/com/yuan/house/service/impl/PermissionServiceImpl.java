@@ -30,8 +30,8 @@ public class PermissionServiceImpl implements PermissionService {
 		//从session获取用户信息
 		Session session = SecurityUtils.getSubject().getSession();
 		JSONObject user = (JSONObject) session.getAttribute(Constants.SESSION_CURR_USER);
-		int userId = user.getInteger("userId");
-        Set<Permission> userPermissions = permissionDao.getUserPermissions(userId);
+		String username = user.getString("username");
+        Set<Permission> userPermissions = permissionDao.getUserPermissions(username);
 		session.setAttribute(Constants.SESSION_USER_PERMISSIONS, userPermissions);
 		return userPermissions;
 	}

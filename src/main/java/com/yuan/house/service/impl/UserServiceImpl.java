@@ -9,6 +9,7 @@ import com.yuan.house.service.UserService;
 import com.yuan.house.util.LoggerUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +31,15 @@ public class UserServiceImpl implements UserService {
 	 * 用户登录
 	 */
 	@Override
-	public String userLogin(JSONObject jsonObject) {
-		String username = jsonObject.getString("username");
-		String password = jsonObject.getString("password");
+	public String userLogin(String username, String password) {
 		Subject currentUser = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken(username, password);
 		try {
 			currentUser.login(token);
 			return ResultEnum.R_success.getResCode();
+		} catch (UnknownAccountException e) {
+			LoggerUtil.error("用户不存在异常：",e);
+			return ResultEnum.R_wrong.getResCode();
 		} catch (AuthenticationException e) {
 		    LoggerUtil.error("用户登录异常：",e);
             return ResultEnum.R_wrong.getResCode();
