@@ -1,6 +1,5 @@
 package com.yuan.house.service;
 
-import com.alibaba.fastjson.JSONObject;
 import com.yuan.house.model.User;
 
 public interface UserService {

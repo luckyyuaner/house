@@ -1,6 +1,5 @@
 package com.yuan.house.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.yuan.house.constants.ResultEnum;
 import com.yuan.house.dao.UserDao;
 import com.yuan.house.model.User;
