@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Permission {
-    private int permissionId;
-    private int parentId;
+    private long permissionId;
+    private long parentId;
     private String name;
     private int type;
     private String permissionValue;
