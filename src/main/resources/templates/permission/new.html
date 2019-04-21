@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <form th:action="@{/permission/addPermission}" th:object="${permission}" method="post">
+        <input type="text" th:field="*{name}" />
+        <input type="text" th:field="*{permissionValue}" />
+        <input type="submit" value="添加"/>
+        <input type="reset" value="取消"/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>权限值</th>
+            <th>权限路径</th>
+            <th>权限状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="permission:${permissionPageInfo.getList()}">
+            <td th:text="${permission.permissionId}"></td>
+            <td th:text="${permission.name}"></td>
+            <td th:text="${permission.permissionValue}"></td>
+            <td th:text="${permission.url}"></td>
+            <td th:text="${permission.status}"></td>
+            <td>
+                <a th:href="@{/permission/showUpdate?(id=${permission.permissionId})}">更新</a>
+                <a th:href="@{/permission/deletePermission?(id=${permission.permissionId})}">删除</a>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <div th:if="${permissionPageInfo.hasPreviousPage}">
+                <a th:href="@{/permission/listPermission?(number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                </a>
+            </div>
+            <span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页
+            <div th:if="${permissionPageInfo.hasNextPage}">
+                <a th:href="@{/permission/listPermission?(number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                </a>
+            </div>
+        </tfoot>
+    </table>
+</div>
+</body>
+</html>

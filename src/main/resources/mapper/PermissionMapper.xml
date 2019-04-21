@@ -2,13 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yuan.house.dao.PermissionDao">
+
+    <sql id="allColumns">
+        permission_id, parent_id, name, type, permission_value, url, icon, status, orders
+    </sql>
+
     <select id="getUserPermissions" resultType="String">
         select
         permission_value
         from
         permission
-        where
-        permission_id in
+        where status = 0
+        and permission_id in
         (
           select permission_id from role_permission where role_id in
           (
@@ -19,4 +24,52 @@
           )
         )
     </select>
+
+    <select id="getAllPermissions" resultType="com.yuan.house.model.Permission">
+        SELECT
+        <include refid="allColumns"/>
+        FROM permission
+        WHERE status = 0
+        ORDER BY permission_id ASC
+    </select>
+
+    <select id="queryPermissionById" resultType="com.yuan.house.model.Permission">
+        SELECT
+        <include refid="allColumns"/>
+        FROM permission
+        WHERE status = 0
+        AND permission_id = #{id}
+        ORDER BY permission_id ASC
+    </select>
+
+    <select id="queryPermissionLikeName" resultType="com.yuan.house.model.Permission">
+        SELECT
+        <include refid="allColumns"/>
+        FROM permission
+        WHERE status = 0
+        AND name LIKE CONCAT(CONCAT('%', #{name}), '%')
+        ORDER BY permission_id ASC
+    </select>
+
+    <insert id="addPermission" parameterType="com.yuan.house.model.Permission">
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="permissionId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO permission
+        (parent_id, name, type, permission_value, url, icon, status, orders)
+        VALUES
+        (#{object.parentId}, #{object.name}, #{object.type}, #{object.permissionValue},
+        #{object.url}, #{object.icon}, #{object.status}, #{object.orders})
+    </insert>
+
+    <update id="updatePermission" parameterType="com.yuan.house.model.Permission">
+        UPDATE permission
+        SET parent_id = #{object.parentId}, name = #{object.name}, type = #{object.type}, permission_value = #{object.permissionValue},
+        url = #{object.url}, icon = #{object.icon}, status = #{object.status}, orders = #{object.orders}
+        WHERE permission_id = #{object.permissionId}
+    </update>
+
+    <delete id="deletePermission" parameterType="Long">
+        DELETE FROM permission WHERE permission_id = #{id}
+    </delete>
 </mapper>

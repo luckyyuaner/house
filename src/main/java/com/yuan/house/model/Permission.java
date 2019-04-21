@@ -4,12 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigInteger;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Permission {
-    private long permissionId;
-    private long parentId;
+    private Long permissionId;
+    private Long parentId;
     private String name;
     private int type;
     private String permissionValue;

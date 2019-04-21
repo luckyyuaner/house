@@ -5,5 +5,7 @@ spring:
       password: 28416107
 mybatis:
    mapperLocations: classpath:/mapper/*.xml
+   configuration:
+       map-underscore-to-camel-case: true
 server:
   port: 8888
