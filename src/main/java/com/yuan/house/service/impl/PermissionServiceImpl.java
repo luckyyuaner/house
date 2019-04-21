@@ -55,13 +55,13 @@ public class PermissionServiceImpl implements PermissionService {
 	}
 
 	@Override
-	public List<Permission> queryPermissionLikeName(String name) {
-        String key = "permissions_like_" + name;
+	public List<Permission> queryPermissionLikeMsg(String msg) {
+        String key = "permissions_like_" + msg;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<Permission>)rs;
         }
-        List<Permission> pers = permissionDao.queryPermissionLikeName(name);
+        List<Permission> pers = permissionDao.queryPermissionLikeMsg(msg);
         commonService.insertRedis(key, pers);
         return pers;
 	}

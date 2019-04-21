@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yuan.house.model.Permission;
 import com.yuan.house.service.PermissionService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -46,13 +48,34 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("permission:read")
     @GetMapping("/permission/listPermission")
-    public ModelAndView listPermission(Model model, int number) {
-        PageHelper.startPage(number, 5);
-        List<Permission> permissions = permissionService.getAllPermissions();
-        PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
-        model.addAttribute("permissionPageInfo", permissionPageInfo);
+    public ModelAndView listPermission(Model model, int number, String msg, String type) {
+        if("" == type) {
+            System.out.println("type=");
+            PageHelper.startPage(number, 5);
+            List<Permission> permissions = permissionService.getAllPermissions();
+            System.out.println(permissions.size());
+            PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
+            model.addAttribute("permissionPageInfo", permissionPageInfo);
+        }
+        else if("id".equals(type)) {
+            PageHelper.startPage(number, 5);
+            Permission permission = permissionService.queryPermissionById(Long.parseLong(msg));
+            List<Permission> permissions = new ArrayList<Permission>();
+            permissions.add(permission);
+            PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
+            model.addAttribute("permissionPageInfo", permissionPageInfo);
+        }
+        else if("msg".equals(type)) {
+            PageHelper.startPage(number, 5);
+            List<Permission> permissions = permissionService.queryPermissionLikeMsg(msg);
+            PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
+            model.addAttribute("permissionPageInfo", permissionPageInfo);
+        }
+        model.addAttribute("type", type);
+        model.addAttribute("msg", msg);
         return new ModelAndView("permission/show", "Model", model);
     }
+
     @RequiresPermissions("permission:create")
     @GetMapping("/permission/showAdd")
     public ModelAndView showAddPermission(Model model) {
@@ -62,8 +85,7 @@ public class UserController extends BaseController {
     @RequiresPermissions("permission:create")
     @PostMapping("/permission/addPermission")
     public ModelAndView addPermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
-        System.out.println(permission.getName());
-        System.out.println(permission.getPermissionValue());
+        permissionService.addPermission(permission);
         return new ModelAndView("common/login", "Model", model);
     }
 
@@ -77,13 +99,13 @@ public class UserController extends BaseController {
     @RequiresPermissions("permission:update")
     @PostMapping("/permission/updatePermission")
     public ModelAndView updatePermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
-        System.out.println(permission.getName());
-        System.out.println(permission.getPermissionValue());
+        permissionService.updatePermission(permission);
         return new ModelAndView("common/login", "Model", model);
     }
     @RequiresPermissions("permission:delete")
     @GetMapping("/permission/deletePermission")
     public ModelAndView deletePermission(Model model, Long id) {
+        permissionService.deletePermission(id);
         return new ModelAndView("common/login", "Model", model);
     }
 }

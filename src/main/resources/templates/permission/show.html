@@ -5,6 +5,14 @@
 </head>
 <body>
 <div>
+    <form th:action="@{/permission/listPermission}"  method="get">
+        <input name="number" type="hidden" th:value="1" />
+        <input name="msg" type="text" />
+        <input name="type" type="radio" value="id" checked="checked" />id查询<br/>
+        <input name="type" type="radio" value="msg" />条件查询<br/>
+        <input type="submit" value="搜索"/>
+        <input type="reset" value="取消"/>
+    </form>
     <table>
         <thead>
         <tr>
@@ -30,17 +38,17 @@
         </tr>
         </tbody>
         <tfoot>
-            <div th:if="${permissionPageInfo.hasPreviousPage}">
-                <a th:href="@{/permission/listPermission?(number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
-                    <span aria-hidden="true">«</span>
-                </a>
-            </div>
-            <span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页
-            <div th:if="${permissionPageInfo.hasNextPage}">
-                <a th:href="@{/permission/listPermission?(number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
-                    <span aria-hidden="true">»</span>
-                </a>
-            </div>
+        <div th:if="${permissionPageInfo.hasPreviousPage}">
+            <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
+                <span aria-hidden="true">«</span>
+            </a>
+        </div>
+        <span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页
+        <div th:if="${permissionPageInfo.hasNextPage}">
+            <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
+                <span aria-hidden="true">»</span>
+            </a>
+        </div>
         </tfoot>
     </table>
 </div>

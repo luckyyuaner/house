@@ -1,0 +1,141 @@
+2019-04-21 16:38:34.542 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13472 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-21 16:38:34.551 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-21 16:38:45.797 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-21 16:38:46.768 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-21 16:38:46.822 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-21 16:38:50.112 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-21 16:38:52.136 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.72 seconds (JVM running for 23.288)
+2019-04-21 16:39:22.305 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-04-21 16:39:23.156 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-04-21 16:39:23.178 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT * FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-21 16:39:23.293 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-21 16:39:23.519 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-04-21 16:39:23.558 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_value from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) 
+2019-04-21 16:39:23.559 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 系统管理员(String)
+2019-04-21 16:39:23.568 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 6
+2019-04-21 16:39:31.039 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:39:31.564 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 
+2019-04-21 16:39:31.567 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 
+2019-04-21 16:39:31.587 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-04-21 16:39:31.600 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:39:31.603 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 5(Integer)
+2019-04-21 16:39:31.626 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 5
+2019-04-21 16:39:53.927 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:39:54.698 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-04-21 16:39:54.702 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-04-21 16:39:57.225 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_like_test
+2019-04-21 16:39:57.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 AND (name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%')) 
+2019-04-21 16:39:57.253 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: test(String), test(String), test(String), test(String)
+2019-04-21 16:39:57.258 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-21 16:39:57.260 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND ( name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%') ) ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:39:57.262 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: test(String), test(String), test(String), test(String), 5(Integer)
+2019-04-21 16:39:57.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 2
+2019-04-21 16:39:57.303 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_like_test
+2019-04-21 16:40:03.560 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:40:03.573 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在permission_42
+2019-04-21 16:40:03.583 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND permission_id = ? ORDER BY permission_id ASC 
+2019-04-21 16:40:03.596 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 42(Long)
+2019-04-21 16:40:03.626 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-04-21 16:40:03.643 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加permission_42
+2019-04-21 16:40:07.127 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:40:07.159 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: UPDATE permission SET parent_id = ?, name = ?, type = ?, permission_value = ?, url = ?, icon = ?, status = ?, orders = ? WHERE permission_id = ? 
+2019-04-21 16:40:07.164 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: null, 测试方法(String), 0(Integer), test,test(String), null, null, 0(Integer), 0(Integer), null
+2019-04-21 16:40:07.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==    Updates: 0
+2019-04-21 16:40:18.456 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:40:18.506 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在permissions_like_test
+2019-04-21 16:40:18.577 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 AND (name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%')) 
+2019-04-21 16:40:18.611 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: test(String), test(String), test(String), test(String)
+2019-04-21 16:40:18.622 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-04-21 16:40:18.626 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND ( name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%') ) ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:40:18.631 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: test(String), test(String), test(String), test(String), 5(Integer)
+2019-04-21 16:40:18.656 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 2
+2019-04-21 16:40:18.674 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加permissions_like_test
+2019-04-21 16:40:37.405 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:40:37.430 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permissions_like_test
+2019-04-21 16:40:37.501 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 AND (name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%')) 
+2019-04-21 16:40:37.505 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: test(String), test(String), test(String), test(String)
+2019-04-21 16:40:37.520 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-04-21 16:40:37.531 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND ( name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%') ) ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:40:37.539 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: test(String), test(String), test(String), test(String), 5(Integer)
+2019-04-21 16:40:37.556 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 2
+2019-04-21 16:40:37.577 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permissions_like_test
+2019-04-21 16:40:50.959 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:40:50.983 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在permission_42
+2019-04-21 16:40:50.998 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND permission_id = ? ORDER BY permission_id ASC 
+2019-04-21 16:40:51.002 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 42(Long)
+2019-04-21 16:40:51.028 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-21 16:40:51.048 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加permission_42
+2019-04-21 16:40:54.443 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:40:54.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: UPDATE permission SET parent_id = ?, name = ?, type = ?, permission_value = ?, url = ?, icon = ?, status = ?, orders = ? WHERE permission_id = ? 
+2019-04-21 16:40:54.503 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: null, 测试方法(String), 0(Integer), test,test(String), null, null, 0(Integer), 0(Integer), null
+2019-04-21 16:40:54.559 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 0
+2019-04-21 16:42:01.787 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13816 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-21 16:42:01.804 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-21 16:42:18.938 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-21 16:42:19.721 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-21 16:42:19.778 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-21 16:42:22.296 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-21 16:42:23.735 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 24.837 seconds (JVM running for 28.046)
+2019-04-21 16:42:41.525 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-04-21 16:42:42.369 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-04-21 16:42:42.400 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT * FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-21 16:42:42.566 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-21 16:42:42.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-21 16:42:42.802 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_value from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) 
+2019-04-21 16:42:42.804 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String)
+2019-04-21 16:42:42.813 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 6
+2019-04-21 16:42:45.428 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:42:46.276 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 
+2019-04-21 16:42:46.280 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 
+2019-04-21 16:42:46.299 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 1
+2019-04-21 16:42:46.331 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:42:46.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 5(Integer)
+2019-04-21 16:42:46.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 5
+2019-04-21 16:42:54.937 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:42:57.090 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional epoll library
+2019-04-21 16:42:57.147 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional kqueue library
+2019-04-21 16:43:01.429 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在permissions_like_test
+2019-04-21 16:43:01.494 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 AND (name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%')) 
+2019-04-21 16:43:01.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: test(String), test(String), test(String), test(String)
+2019-04-21 16:43:01.509 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-04-21 16:43:01.512 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND ( name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%') ) ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:43:01.515 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: test(String), test(String), test(String), test(String), 5(Integer)
+2019-04-21 16:43:01.528 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 2
+2019-04-21 16:43:01.615 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加permissions_like_test
+2019-04-21 16:43:06.517 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:43:06.530 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permission_42
+2019-04-21 16:43:06.538 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND permission_id = ? ORDER BY permission_id ASC 
+2019-04-21 16:43:06.541 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 42(Long)
+2019-04-21 16:43:06.557 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-04-21 16:43:06.578 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permission_42
+2019-04-21 16:43:15.951 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:43:15.965 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中删除permission_42
+2019-04-21 16:43:15.980 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: UPDATE permission SET parent_id = ?, name = ?, type = ?, permission_value = ?, url = ?, icon = ?, status = ?, orders = ? WHERE permission_id = ? 
+2019-04-21 16:43:15.987 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: null, 测试(String), 0(Integer), test(String), null, null, 0(Integer), 0(Integer), 42(Long)
+2019-04-21 16:43:16.098 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==    Updates: 1
+2019-04-21 16:43:54.115 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:43:54.185 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: UPDATE permission SET parent_id = ?, name = ?, type = ?, permission_value = ?, url = ?, icon = ?, status = ?, orders = ? WHERE permission_id = ? 
+2019-04-21 16:43:54.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: null, 测试方法(String), 0(Integer), test(String), null, null, 0(Integer), 0(Integer), 42(Long)
+2019-04-21 16:43:54.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==    Updates: 1
+2019-04-21 16:44:07.220 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:44:07.246 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permissions_like_test
+2019-04-21 16:44:07.299 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 AND (name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%')) 
+2019-04-21 16:44:07.304 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: test(String), test(String), test(String), test(String)
+2019-04-21 16:44:07.316 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-21 16:44:07.319 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND ( name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%') ) ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:44:07.322 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: test(String), test(String), test(String), test(String), 5(Integer)
+2019-04-21 16:44:07.358 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 2
+2019-04-21 16:44:07.380 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permissions_like_test
+2019-04-21 16:44:17.736 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:44:17.758 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: DELETE FROM permission WHERE permission_id = ? 
+2019-04-21 16:44:17.763 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 43(Long)
+2019-04-21 16:44:17.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-21 16:44:25.288 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, permission:delete, user:read, role:read, permission:update, permission:read]
+2019-04-21 16:44:25.321 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在permissions_like_test
+2019-04-21 16:44:25.417 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 AND (name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%')) 
+2019-04-21 16:44:25.425 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: test(String), test(String), test(String), test(String)
+2019-04-21 16:44:25.443 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-04-21 16:44:25.460 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 AND ( name LIKE CONCAT(CONCAT('%', ?), '%') OR type LIKE CONCAT(CONCAT('%', ?), '%') OR permission_value LIKE CONCAT(CONCAT('%', ?), '%') OR url LIKE CONCAT(CONCAT('%', ?), '%') ) ORDER BY permission_id ASC LIMIT ? 
+2019-04-21 16:44:25.467 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: test(String), test(String), test(String), test(String), 5(Integer)
+2019-04-21 16:44:25.481 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-04-21 16:44:25.496 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加permissions_like_test

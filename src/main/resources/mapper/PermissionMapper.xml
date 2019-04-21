@@ -42,12 +42,17 @@
         ORDER BY permission_id ASC
     </select>
 
-    <select id="queryPermissionLikeName" resultType="com.yuan.house.model.Permission">
+    <select id="queryPermissionLikeMsg" resultType="com.yuan.house.model.Permission">
         SELECT
         <include refid="allColumns"/>
         FROM permission
-        WHERE status = 0
-        AND name LIKE CONCAT(CONCAT('%', #{name}), '%')
+        WHERE status = 0 AND
+        (
+        name LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR type LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR permission_value LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR url LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        )
         ORDER BY permission_id ASC
     </select>
 

@@ -1,6 +1,7 @@
 package com.yuan.house.service.impl;
 
 import com.yuan.house.service.CommonService;
+import com.yuan.house.util.LoggerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -19,8 +20,10 @@ public class CommonServiceImpl implements CommonService {
         boolean exist = redisTemplate.hasKey(key);
         if(exist) {
             ValueOperations<String, Object> operations = redisTemplate.opsForValue();
+            LoggerUtil.info("redis缓存中存在{}", key);
             return operations.get(key);
         }
+        LoggerUtil.info("redis缓存中不存在{}", key);
         return null;
     }
 
@@ -28,6 +31,7 @@ public class CommonServiceImpl implements CommonService {
     public void deleteRedis(String key) {
         boolean exist = redisTemplate.hasKey(key);
         if(exist) {
+            LoggerUtil.info("redis缓存中删除{}", key);
             redisTemplate.delete(key);
         }
     }
@@ -36,5 +40,6 @@ public class CommonServiceImpl implements CommonService {
     public void insertRedis(String key, Object object) {
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
         operations.set(key, object, 10, TimeUnit.SECONDS);
+        LoggerUtil.info("redis缓存中添加{}", key);
     }
 }

@@ -27,11 +27,11 @@ public interface PermissionDao {
 	Permission queryPermissionById(@Param("id") Long id);
 
     /**
-     * 根据name模糊查询权限
-     * @param name
+     * 根据msg模糊查询权限
+     * @param msg
      * @return
      */
-    List<Permission> queryPermissionLikeName(@Param("name") String name);
+    List<Permission> queryPermissionLikeMsg(@Param("msg") String msg);
 
     /**
      * 添加权限

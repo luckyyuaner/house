@@ -6,6 +6,7 @@
 <body>
 <div>
     <form th:action="@{/permission/updatePermission}" th:object="${permission}" method="post">
+        <input type="hidden" th:field="*{permissionId}" th:value="${permission.permissionId}" />
         <input type="text" th:field="*{name}" th:value="${permission.name}" />
         <input type="text" th:field="*{permissionValue}" th:value="${permission.permissionValue}" />
         <input type="submit" value="修改"/>

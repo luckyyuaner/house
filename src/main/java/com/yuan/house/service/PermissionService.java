@@ -25,11 +25,11 @@ public interface PermissionService {
 	Permission queryPermissionById(Long id);
 
 	/**
-	 * 根据name模糊查询权限
-	 * @param name
+	 * 根据msg模糊查询权限
+	 * @param msg
 	 * @return
 	 */
-    List<Permission> queryPermissionLikeName(String name);
+    List<Permission> queryPermissionLikeMsg(String msg);
 
 	/**
 	 * 添加权限
