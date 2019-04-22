@@ -2,6 +2,8 @@ package com.yuan.house.service;
 
 import com.yuan.house.model.User;
 
+import java.util.List;
+
 public interface UserService {
 
 	/**
@@ -25,5 +27,46 @@ public interface UserService {
 	 * 退出登录
 	 */
 	String logout();
+
+	/**
+	 * 查询所有用户
+	 * @return
+	 */
+	List<User> getAllUsers();
+
+	/**
+	 * 根据id查询用户
+	 * @param id
+	 * @return
+	 */
+	User queryUserById(Long id);
+
+	/**
+	 * 根据msg模糊查询用户
+	 * @param msg
+	 * @return
+	 */
+	List<User> queryUserLikeMsg(String msg);
+
+	/**
+	 * 添加用户
+	 * @param object
+	 * @return
+	 */
+	Long addUser(User object);
+
+	/**
+	 * 更新用户
+	 * @param object
+	 * @return
+	 */
+	int updateUser(User object);
+
+	/**
+	 * 删除用户
+	 * @param id
+	 * @return
+	 */
+	int deleteUser(Long id);
 
 }

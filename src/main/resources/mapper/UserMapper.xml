@@ -3,9 +3,73 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yuan.house.dao.UserDao">
 
+    <sql id="allColumns">
+        user_id, username, password, user_type, status,
+        ctime, utime, head, money, phone
+    </sql>
+
+    <select id="getAllUsers" resultType="com.yuan.house.model.User">
+        SELECT
+        <include refid="allColumns"/>
+        FROM user
+        WHERE status = 0
+        ORDER BY user_id ASC
+    </select>
+
+    <select id="queryUserById" resultType="com.yuan.house.model.User">
+        SELECT
+        <include refid="allColumns"/>
+        FROM user
+        WHERE status = 0
+        AND user_id = #{id}
+        ORDER BY user_id ASC
+    </select>
+
+    <select id="queryUserLikeMsg" resultType="com.yuan.house.model.User">
+        SELECT
+        <include refid="allColumns"/>
+        FROM user
+        WHERE status = 0 AND
+        (
+        username LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR ctime LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR utime LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR phone LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR idcard LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        )
+        ORDER BY user_id ASC
+    </select>
+
+    <insert id="addUser" parameterType="com.yuan.house.model.User">
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="userId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO user
+        (username, password, user_type, status, ctime, utime, head, money,
+        phone, idcard, photo, birth, sex, reputation)
+        VALUES
+        (#{object.username}, #{object.password}, #{object.userType},
+        #{object.status}, #{object.ctime}, #{object.utime}, #{object.head},
+        #{object.money}, #{object.phone}, #{object.idcard}, #{object.photo},
+        #{object.birth}, #{object.sex}, #{object.reputation})
+    </insert>
+
+    <update id="updateUser" parameterType="com.yuan.house.model.User">
+        UPDATE user
+        SET username = #{object.username}, password = #{object.password}, user_type = #{object.userType},
+        status = #{object.status}, ctime = #{object.ctime}, utime = #{object.utime}, head = #{object.head},
+        money = #{object.money}, phone = #{object.phone}, idcard = #{object.idcard}, photo = #{object.photo},
+        birth = #{object.birth}, sex = #{object.sex}, reputation = #{object.reputation}
+        WHERE user_id = #{object.userId}
+    </update>
+
+    <delete id="deleteUser" parameterType="Long">
+        DELETE FROM user WHERE user_id = #{id}
+    </delete>
+
     <select id="getUser" resultType="com.yuan.house.model.User">
         SELECT
-        *
+        <include refid="allColumns"/>
         FROM
         user
         WHERE username = #{username}

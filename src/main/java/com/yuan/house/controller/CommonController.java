@@ -1,19 +1,26 @@
 package com.yuan.house.controller;
+import com.yuan.house.constants.Constants;
 import com.yuan.house.constants.ResultEnum;
+import com.yuan.house.model.User;
 import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.UserService;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * 公共Controller，不限制权限
  */
 @Controller
-@RequestMapping("/common")
+@RequestMapping("/")
 public class CommonController extends BaseController {
 
 	@Autowired
@@ -26,7 +33,7 @@ public class CommonController extends BaseController {
      * @param model
      * @return
      */
-    @GetMapping("/showLogin")
+    @GetMapping("/common/showLogin")
     public ModelAndView showLogin(Model model) {
         return new ModelAndView("common/login", "userModel", model);
     }
@@ -39,9 +46,8 @@ public class CommonController extends BaseController {
      * @param model
      * @return
      */
-	@PostMapping("/login")
+	@PostMapping("/common/login")
 	public ModelAndView userLogin(@RequestParam("username")String username, @RequestParam("password")String password, Model model) {
-		System.out.println("执行");
 	    if(StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
             model.addAttribute("msg", ResultEnum.R_required.getResMsg());
             return new ModelAndView("error","msgModel",model);
@@ -52,14 +58,25 @@ public class CommonController extends BaseController {
             return new ModelAndView("error","msgModel",model);
         }
         permissionService.getUserPermissions();
-        return new ModelAndView("common/list");
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        if(0 == user.getUserType()){
+            return new ModelAndView("manager/index");
+        }
+        if(1 == user.getUserType()){
+            return new ModelAndView("tenant/index");
+        }
+        if(2 == user.getUserType()){
+            return new ModelAndView("landlord/index");
+        }
+        return new ModelAndView("common/login");
 	}
 
     /**
      * 用户注销
      * @return
      */
-	@GetMapping("/logout")
+	@GetMapping("/common/logout")
 	public ModelAndView userLogout(Model model) {
 		String rs = userService.logout();
 		if(ResultEnum.R_error.getResCode().equals(rs)) {

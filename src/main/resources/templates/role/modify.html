@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <form th:action="@{/role/updateRole}" th:object="${role}" method="post">
+        <input type="hidden" th:field="*{roleId}" th:value="${role.roleId}" />
+        <input type="text" th:field="*{name}" th:value="${role.name}" />
+        <input type="submit" value="修改"/>
+        <input type="reset" value="取消"/>
+    </form>
+</div>
+</body>
+</html>

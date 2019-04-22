@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员首页</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+<ul th:each="permission:${session.userPermissions}">
+    <li><a href="${permission.url}"><span th:text="${permission.url}"/><span th:text="${permission.name}"/></a></li>
+</ul>
+<div th:replace="~{fragments/footer :: footer}">...</div>
+</body>
+</html>

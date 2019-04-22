@@ -11,6 +11,7 @@ import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -27,14 +28,19 @@ public class PermissionServiceImpl implements PermissionService {
 	 * 查询当前登录用户的权限等信息
 	 */
 	@Override
-	public Set<String> getUserPermissions() {
+	public Set<Permission> getUserPermissions() {
 		//从session获取用户信息
 		Session session = SecurityUtils.getSubject().getSession();
 		User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
 		String username = user.getUsername();
-        Set<String> userPermissions = permissionDao.getUserPermissions(username);
-		session.setAttribute(Constants.SESSION_USER_PERMISSIONS, userPermissions);
-		return userPermissions;
+        Set<Permission> userPermissions = permissionDao.getUserPermissions(username);
+        session.setAttribute(Constants.SESSION_USER_PERMISSIONS, userPermissions);
+		Set<String> userStringPermissions = new HashSet<String>();
+		for(Permission p : userPermissions) {
+		    userStringPermissions.add(p.getPermissionValue());
+        }
+        session.setAttribute(Constants.SESSION_STRING_USER_PERMISSIONS, userStringPermissions);
+        return userPermissions;
 	}
 
 	@Override

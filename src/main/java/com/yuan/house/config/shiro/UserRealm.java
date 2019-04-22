@@ -27,7 +27,7 @@ public class UserRealm extends AuthorizingRealm {
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
 		Session session = SecurityUtils.getSubject().getSession();
 		//查询用户的权限
-        Collection<String> permission = (Collection<String>) session.getAttribute(Constants.SESSION_USER_PERMISSIONS);
+        Collection<String> permission = (Collection<String>) session.getAttribute(Constants.SESSION_STRING_USER_PERMISSIONS);
 		LoggerUtil.info("permission的值为:" + permission);
 		//为当前用户设置角色和权限
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
@@ -45,10 +45,8 @@ public class UserRealm extends AuthorizingRealm {
 		// 获取用户密码
 		String password = new String((char[]) authcToken.getCredentials());
 		User user = userService.getUser(username, password);
-		System.out.println("user=>username="+username+",password="+password);
 		if (user == null) {
 			//没找到帐号
-			System.out.println("用户不存在");
             LoggerUtil.error("用户{}不存在",username);
 			throw new UnknownAccountException();
 		}

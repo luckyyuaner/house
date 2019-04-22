@@ -1,0 +1,10 @@
+body{
+    width:1000px;
+    height:400px;
+    background-image: url(/images/bg.jpg);
+}
+#form{
+    text-align:center;
+    margin:200px auto;
+    font-size:20px;
+}

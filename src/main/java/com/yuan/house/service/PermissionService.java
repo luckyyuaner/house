@@ -9,7 +9,7 @@ public interface PermissionService {
 	/**
 	 * 查询用户的所有权限值
 	 */
-	Set<String> getUserPermissions();
+	Set<Permission> getUserPermissions();
 
     /**
      * 查询所有权限

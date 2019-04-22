@@ -7,9 +7,9 @@
         permission_id, parent_id, name, type, permission_value, url, icon, status, orders
     </sql>
 
-    <select id="getUserPermissions" resultType="String">
+    <select id="getUserPermissions" resultType="com.yuan.house.model.Permission">
         select
-        permission_value
+        <include refid="allColumns"/>
         from
         permission
         where status = 0
@@ -23,6 +23,7 @@
             )
           )
         )
+        order by orders asc
     </select>
 
     <select id="getAllPermissions" resultType="com.yuan.house.model.Permission">
@@ -30,7 +31,7 @@
         <include refid="allColumns"/>
         FROM permission
         WHERE status = 0
-        ORDER BY permission_id ASC
+        ORDER BY orders ASC
     </select>
 
     <select id="queryPermissionById" resultType="com.yuan.house.model.Permission">
@@ -39,7 +40,7 @@
         FROM permission
         WHERE status = 0
         AND permission_id = #{id}
-        ORDER BY permission_id ASC
+        ORDER BY orders ASC
     </select>
 
     <select id="queryPermissionLikeMsg" resultType="com.yuan.house.model.Permission">
@@ -53,7 +54,7 @@
         OR permission_value LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR url LIKE CONCAT(CONCAT('%', #{msg}), '%')
         )
-        ORDER BY permission_id ASC
+        ORDER BY orders ASC
     </select>
 
     <insert id="addPermission" parameterType="com.yuan.house.model.Permission">

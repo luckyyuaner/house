@@ -11,7 +11,7 @@ public interface PermissionDao {
 	/**
 	 * 查询用户所有权限
 	 */
-	Set<String> getUserPermissions(@Param("username") String username);
+	Set<Permission> getUserPermissions(@Param("username") String username);
 
     /**
      * 查询所有权限

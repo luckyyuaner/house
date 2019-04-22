@@ -9,4 +9,5 @@ public class Constants {
 	 */
 	public static final String SESSION_CURR_USER = "currUser";
 	public static final String SESSION_USER_PERMISSIONS = "userPermissions";
+	public static final String SESSION_STRING_USER_PERMISSIONS = "userStringPermissions";
 }
