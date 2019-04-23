@@ -32,8 +32,8 @@
         WHERE status = 0 AND
         (
         username LIKE CONCAT(CONCAT('%', #{msg}), '%')
-        OR ctime LIKE CONCAT(CONCAT('%', #{msg}), '%')
-        OR utime LIKE CONCAT(CONCAT('%', #{msg}), '%')
+        OR ctime LIKE binary CONCAT(CONCAT('%', #{msg}), '%')
+        OR utime LIKE binary CONCAT(CONCAT('%', #{msg}), '%')
         OR phone LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR idcard LIKE CONCAT(CONCAT('%', #{msg}), '%')
         )

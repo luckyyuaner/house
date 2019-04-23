@@ -44,11 +44,13 @@ public class UserController extends BaseController {
             model.addAttribute("userPageInfo", userPageInfo);
         }
         else if("id".equals(type)) {
+            System.out.println("2执行："+msg);
             PageHelper.startPage(number, 5);
             User user = userService.queryUserById(Long.parseLong(msg));
             List<User> users = new ArrayList<User>();
             users.add(user);
             PageInfo<User> userPageInfo = new PageInfo<User>(users);
+            System.out.println("3执行："+userPageInfo.getList().size());
             model.addAttribute("userPageInfo", userPageInfo);
         }
         else if("msg".equals(type)) {
@@ -72,7 +74,7 @@ public class UserController extends BaseController {
     @PostMapping("/user/addUser")
     public ModelAndView addUser(@ModelAttribute(value = "user") User user, Model model) {
         userService.addUser(user);
-        return new ModelAndView("common/new", "Model", model);
+        return new ModelAndView("user/new", "Model", model);
     }
 
     @RequiresPermissions("user:update")
@@ -86,13 +88,13 @@ public class UserController extends BaseController {
     @PostMapping("/user/updateUser")
     public ModelAndView updateUser(@ModelAttribute(value = "user") User user, Model model) {
         userService.updateUser(user);
-        return new ModelAndView("common/show", "Model", model);
+        return new ModelAndView("common/list", "Model", model);
     }
     @RequiresPermissions("user:delete")
     @GetMapping("/user/deleteUser")
     public ModelAndView deleteUser(Model model, Long id) {
         userService.deleteUser(id);
-        return new ModelAndView("common/show", "Model", model);
+        return new ModelAndView("common/list", "Model", model);
     }
 
     @RequiresPermissions("permission:read")
@@ -133,7 +135,7 @@ public class UserController extends BaseController {
     @PostMapping("/permission/addPermission")
     public ModelAndView addPermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
         permissionService.addPermission(permission);
-        return new ModelAndView("common/new", "Model", model);
+        return new ModelAndView("permission/new", "Model", model);
     }
 
     @RequiresPermissions("permission:update")
@@ -147,13 +149,13 @@ public class UserController extends BaseController {
     @PostMapping("/permission/updatePermission")
     public ModelAndView updatePermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
         permissionService.updatePermission(permission);
-        return new ModelAndView("common/show", "Model", model);
+        return new ModelAndView("common/list", "Model", model);
     }
     @RequiresPermissions("permission:delete")
     @GetMapping("/permission/deletePermission")
     public ModelAndView deletePermission(Model model, Long id) {
         permissionService.deletePermission(id);
-        return new ModelAndView("common/show", "Model", model);
+        return new ModelAndView("common/list", "Model", model);
     }
 
 
@@ -195,7 +197,7 @@ public class UserController extends BaseController {
     @PostMapping("/role/addRole")
     public ModelAndView addRole(@ModelAttribute(value = "role") Role role, Model model) {
         roleService.addRole(role);
-        return new ModelAndView("common/new", "Model", model);
+        return new ModelAndView("role/new", "Model", model);
     }
 
     @RequiresPermissions("role:update")
@@ -209,12 +211,12 @@ public class UserController extends BaseController {
     @PostMapping("/role/updateRole")
     public ModelAndView updateRole(@ModelAttribute(value = "role") Role role, Model model) {
         roleService.updateRole(role);
-        return new ModelAndView("common/show", "Model", model);
+        return new ModelAndView("common/list", "Model", model);
     }
     @RequiresPermissions("role:delete")
     @GetMapping("/role/deleteRole")
     public ModelAndView deleteRole(Model model, Long id) {
         roleService.deleteRole(id);
-        return new ModelAndView("common/show", "Model", model);
+        return new ModelAndView("common/list", "Model", model);
     }
 }

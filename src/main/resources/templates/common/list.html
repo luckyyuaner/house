@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
 <div>
-    <a href="/user/listUser">用户列表</a>
-    <a href="/user/addUser">添加用户</a>
-    <a href="/user/updateUser">更新用户</a>
-    <a href="/user/deleteUser">删除用户</a>
-
+    <a href="/user/listUser?type=&msg=&number=1">用户列表</a>
+    <a href="/user/showAdd">添加用户</a>
+    <a href="/role/listRole?type=&msg=&number=1">角色列表</a>
+    <a href="/role/showAdd">添加角色</a>
     <a href="/permission/listPermission?type=&msg=&number=1">权限列表</a>
     <a href="/permission/showAdd">添加权限</a>
 </div>

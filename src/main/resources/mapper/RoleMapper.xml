@@ -31,7 +31,6 @@
         WHERE status = 0 AND
         (
         name LIKE CONCAT(CONCAT('%', #{msg}), '%')
-        OR type LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR title LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR description LIKE CONCAT(CONCAT('%', #{msg}), '%')
         )

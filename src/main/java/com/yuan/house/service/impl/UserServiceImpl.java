@@ -86,6 +86,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User queryUserById(Long id) {
+	    System.out.println("1执行:"+id);
         String key = "user_" + id;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {

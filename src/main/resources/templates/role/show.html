@@ -6,7 +6,7 @@
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div>
-    <form th:action="@{/permission/listPermission}"  method="get">
+    <form th:action="@{/role/listRole}"  method="get">
         <input name="number" type="hidden" th:value="1" />
         <input name="msg" type="text" />
         <input name="type" type="radio" value="id" checked="checked" />id查询<br/>
@@ -18,35 +18,33 @@
         <thead>
         <tr>
             <th>编号</th>
-            <th>名称</th>
-            <th>权限值</th>
-            <th>权限路径</th>
+            <th>角色名称</th>
+            <th>角色排序</th>
             <th>权限状态</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="permission:${permissionPageInfo.getList()}">
-            <td th:text="${permission.permissionId}"></td>
-            <td th:text="${permission.name}"></td>
-            <td th:text="${permission.permissionValue}"></td>
-            <td th:text="${permission.url}"></td>
-            <td th:text="${permission.status}"></td>
+        <tr th:each="role:${rolePageInfo.getList()}" th:if="${role != null}">
+            <td th:text="${role.roleId}"></td>
+            <td th:text="${role.name}"></td>
+            <td th:text="${role.orders}"></td>
+            <td th:text="${role.status}"></td>
             <td>
-                <a th:href="@{/permission/showUpdate?(id=${permission.permissionId})}">更新</a>
-                <a th:href="@{/permission/deletePermission?(id=${permission.permissionId})}">删除</a>
+                <a th:href="@{/role/showUpdate?(id=${role.roleId})}">更新</a>
+                <a th:href="@{/role/deleteRole?(id=${role.roleId})}">删除</a>
             </td>
         </tr>
         </tbody>
         <tfoot>
-        <div th:if="${permissionPageInfo.hasPreviousPage}">
-            <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
+        <div th:if="${rolePageInfo.hasPreviousPage}">
+            <a th:href="@{/role/listRole?(type=${type},msg=${msg},number=${rolePageInfo.pageNum}-1)}" aria-label="Previous">
                 <span aria-hidden="true">«</span>
             </a>
         </div>
-        <span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页
-        <div th:if="${permissionPageInfo.hasNextPage}">
-            <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
+        <span th:text="${rolePageInfo.pageNum}"></span>/<span th:text="${rolePageInfo.pages}"></span>页
+        <div th:if="${rolePageInfo.hasNextPage}">
+            <a th:href="@{/role/listRole?(type=${type},msg=${msg},number=${rolePageInfo.pageNum}+1)}" aria-label="Next">
                 <span aria-hidden="true">»</span>
             </a>
         </div>

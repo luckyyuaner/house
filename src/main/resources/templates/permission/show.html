@@ -26,7 +26,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="permission:${permissionPageInfo.getList()}">
+        <tr th:each="permission:${permissionPageInfo.getList()}" th:if="${permission != null}">
             <td th:text="${permission.permissionId}"></td>
             <td th:text="${permission.name}"></td>
             <td th:text="${permission.permissionValue}"></td>

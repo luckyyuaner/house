@@ -60,7 +60,7 @@ public class CommonController extends BaseController {
         permissionService.getUserPermissions();
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
-        if(0 == user.getUserType()){
+        /*if(0 == user.getUserType()){
             return new ModelAndView("manager/index");
         }
         if(1 == user.getUserType()){
@@ -68,8 +68,8 @@ public class CommonController extends BaseController {
         }
         if(2 == user.getUserType()){
             return new ModelAndView("landlord/index");
-        }
-        return new ModelAndView("common/login");
+        }*/
+        return new ModelAndView("common/list");
 	}
 
     /**
