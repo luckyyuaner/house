@@ -38,7 +38,7 @@ public interface PermissionDao {
      * @param object
      * @return
      */
-    Long addPermission(@Param("object") Permission object);
+    int addPermission(@Param("object") Permission object);
 
     /**
      * 更新权限

@@ -4033,3 +4033,1199 @@ java.lang.NumberFormatException: For input string: "测试"
 2019-04-23 11:47:21.287 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
 2019-04-23 11:47:21.288 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 系统管理员(String)
 2019-04-23 11:47:21.306 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 12
+2019-04-23 12:41:40.108 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13864 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 12:41:40.179 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 12:42:30.280 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:42:32.170 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:42:32.260 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:42:43.084 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 12:42:45.697 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 81.003 seconds (JVM running for 97.898)
+2019-04-23 12:43:02.909 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-04-23 12:43:05.587 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-04-23 12:43:05.623 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 12:43:06.089 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 12:43:06.614 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 12:43:06.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 12:43:06.892 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String)
+2019-04-23 12:43:07.020 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 12
+2019-04-23 12:43:16.978 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 12:43:17.170 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 12:43:17.175 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 
+2019-04-23 12:43:17.277 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 42
+2019-04-23 12:43:17.545 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-9] - [THYMELEAF][http-nio-8888-exec-9] Exception processing template "role/new": An error happened during template parsing (template: "class path resource [templates/role/new.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/role/new.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "rolePageInfo.getList()" (template: "role/new" - line 10, col 13)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "rolePageInfo.getList()" (template: "role/new" - line 10, col 13)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getList() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 91 common frames omitted
+2019-04-23 12:43:17.557 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-9] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/role/new.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getList() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-04-23 12:45:08.350 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13220 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 12:45:08.380 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 12:45:18.572 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:45:19.227 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:45:19.291 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:45:21.737 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 12:45:22.978 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.661 seconds (JVM running for 20.203)
+2019-04-23 12:45:38.230 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-04-23 12:45:39.600 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-04-23 12:45:39.673 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 12:45:40.385 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 12:45:40.556 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 12:45:40.637 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 12:45:40.640 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String)
+2019-04-23 12:45:40.685 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 12
+2019-04-23 12:45:47.370 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 12:45:47.540 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 12:45:47.543 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 
+2019-04-23 12:45:47.615 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 42
+2019-04-23 12:45:47.993 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-3] - [THYMELEAF][http-nio-8888-exec-3] Exception processing template "role/new": An error happened during template parsing (template: "class path resource [templates/role/new.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/role/new.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "permission.name" (template: "role/new" - line 10, col 159)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "permission.name" (template: "role/new" - line 10, col 159)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79)
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241)
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327)
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'name' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 90 common frames omitted
+2019-04-23 12:45:48.080 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-3] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/role/new.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'name' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79)
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241)
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327)
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-04-23 12:50:04.690 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6824 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 12:50:04.703 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 12:50:17.895 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:50:19.299 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:50:19.446 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 12:50:23.687 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 12:50:25.185 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 22.672 seconds (JVM running for 25.782)
+2019-04-23 12:51:08.808 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-3] - HikariPool-1 - Starting...
+2019-04-23 12:51:10.390 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-3] - HikariPool-1 - Start completed.
+2019-04-23 12:51:10.458 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 12:51:10.808 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 12:51:11.072 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-04-23 12:51:11.168 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 12:51:11.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 系统管理员(String)
+2019-04-23 12:51:11.297 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 12
+2019-04-23 12:51:17.780 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 12:51:17.979 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 12:51:17.992 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 12:51:18.139 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 42
+2019-04-23 12:52:32.666 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 12:52:32.674 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: INSERT INTO role (name, title, description, orders, status) VALUES (?, ?, ?, ?, ?) 
+2019-04-23 12:52:32.679 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 测试(String), null, null, 0(Integer), 0(Integer)
+2019-04-23 12:52:33.287 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==    Updates: 1
+2019-04-23 12:52:33.288 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 12:52:33.289 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 
+2019-04-23 12:52:33.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-04-23 13:15:12.689 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 3168 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 13:15:12.706 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 13:15:52.144 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:15:54.929 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:15:55.096 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:16:01.450 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 13:16:04.963 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 65.355 seconds (JVM running for 87.482)
+2019-04-23 13:16:21.045 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-04-23 13:16:25.053 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-04-23 13:16:25.106 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 13:16:25.532 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 13:16:26.141 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-04-23 13:16:26.296 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 13:16:26.301 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 系统管理员(String)
+2019-04-23 13:16:26.434 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 12
+2019-04-23 13:16:32.823 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 13:16:33.017 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 13:16:33.020 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 
+2019-04-23 13:16:34.968 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 42
+2019-04-23 13:16:55.192 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 13:16:55.637 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: INSERT INTO role (name, title, description, orders, status) VALUES (?, ?, ?, ?, ?) 
+2019-04-23 13:16:55.647 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 测试测试(String), null, null, 0(Integer), 0(Integer)
+2019-04-23 13:16:55.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==    Updates: 1
+2019-04-23 13:16:55.783 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:16:55.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 
+2019-04-23 13:16:55.827 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-04-23 13:16:55.998 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-5] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "28,26,25,24"] with root cause
+java.lang.NumberFormatException: For input string: "28,26,25,24"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.yuan.house.service.impl.RoleServiceImpl.addRole(RoleServiceImpl.java:62)
+	at com.yuan.house.service.impl.RoleServiceImpl$$FastClassBySpringCGLIB$$dd193230.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$574/1447420849.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.service.impl.RoleServiceImpl$$EnhancerBySpringCGLIB$$c67077a2.addRole(<generated>)
+	at com.yuan.house.service.impl.RoleServiceImpl$$FastClassBySpringCGLIB$$dd193230.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$574/1447420849.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.service.impl.RoleServiceImpl$$EnhancerBySpringCGLIB$$ee3dbe60.addRole(<generated>)
+	at com.yuan.house.controller.UserController.addRole(UserController.java:202)
+	at com.yuan.house.controller.UserController$$FastClassBySpringCGLIB$$bb2c73d3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.UserController$$EnhancerBySpringCGLIB$$a7dd5a54.addRole(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-04-23 13:19:25.218 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16800 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 13:19:25.230 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 13:19:35.530 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:19:36.204 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:19:36.254 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:19:38.960 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 13:19:40.937 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.922 seconds (JVM running for 23.289)
+2019-04-23 13:19:52.030 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-04-23 13:19:53.137 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-04-23 13:19:53.223 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 13:19:53.703 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 13:19:53.839 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 13:19:54.016 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 13:19:54.040 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String)
+2019-04-23 13:19:54.083 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 12
+2019-04-23 13:19:59.220 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 13:19:59.344 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 13:19:59.352 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 
+2019-04-23 13:19:59.425 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 42
+2019-04-23 13:20:57.451 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:create, permission:delete, user:delete, permission:create, role:update, role:create, role:read, user:read, user:update, role:delete, permission:update, permission:read]
+2019-04-23 13:20:57.743 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: INSERT INTO role (name, title, description, orders, status) VALUES (?, ?, ?, ?, ?) 
+2019-04-23 13:20:57.748 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters:  测试测试(String), null, null, 0(Integer), 0(Integer)
+2019-04-23 13:20:57.846 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==    Updates: 1
+2019-04-23 13:20:57.850 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:20:57.854 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 
+2019-04-23 13:20:57.988 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-23 13:20:57.992 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:20:57.995 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 1(Long), 26(Long)
+2019-04-23 13:20:58.018 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==    Updates: 1
+2019-04-23 13:20:58.020 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:20:58.022 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 
+2019-04-23 13:20:58.029 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-23 13:20:58.033 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:20:58.037 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 1(Long), 24(Long)
+2019-04-23 13:20:58.047 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==    Updates: 1
+2019-04-23 13:20:58.049 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:20:58.052 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 
+2019-04-23 13:20:58.060 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-23 13:20:58.065 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:20:58.081 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 1(Long), 23(Long)
+2019-04-23 13:20:58.103 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==    Updates: 1
+2019-04-23 13:20:58.117 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:20:58.120 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 
+2019-04-23 13:20:58.168 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-23 13:20:58.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:20:58.265 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 1(Long), 22(Long)
+2019-04-23 13:20:58.278 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==    Updates: 1
+2019-04-23 13:20:58.284 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:20:58.287 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 
+2019-04-23 13:20:58.315 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-23 13:44:02.455 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16372 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 13:44:02.485 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 13:44:24.808 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:44:26.071 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:44:26.226 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:44:31.148 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 13:44:33.369 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 36.218 seconds (JVM running for 50.154)
+2019-04-23 13:47:02.133 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-3] - HikariPool-1 - Starting...
+2019-04-23 13:47:04.134 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-3] - HikariPool-1 - Start completed.
+2019-04-23 13:47:04.247 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 13:47:04.615 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 13:47:05.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-04-23 13:47:05.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 13:47:05.407 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 系统管理员(String)
+2019-04-23 13:47:05.552 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 16
+2019-04-23 13:47:21.276 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:47:22.718 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT count(0) FROM permission WHERE status = 0 
+2019-04-23 13:47:22.719 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:47:22.767 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:47:22.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC LIMIT ? 
+2019-04-23 13:47:22.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 5(Integer)
+2019-04-23 13:47:22.796 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 5
+2019-04-23 13:47:31.602 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:47:35.529 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:47:35.599 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT count(0) FROM role WHERE status = 0 
+2019-04-23 13:47:35.600 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 
+2019-04-23 13:47:35.639 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-04-23 13:47:35.641 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT role_id, name, title, description, orders FROM role WHERE status = 0 ORDER BY role_id ASC LIMIT ? 
+2019-04-23 13:47:35.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 5(Integer)
+2019-04-23 13:47:35.655 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 4
+2019-04-23 13:47:40.334 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:47:40.343 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 13:47:40.347 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 
+2019-04-23 13:47:40.446 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 42
+2019-04-23 13:48:30.637 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:48:30.855 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO role (name, title, description, orders, status) VALUES (?, ?, ?, ?, ?) 
+2019-04-23 13:48:30.870 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: new(String), null, null, 0(Integer), 0(Integer)
+2019-04-23 13:48:30.932 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:48:30.934 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:48:30.936 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:48:30.945 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:48:30.951 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:48:30.955 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 1(Long), 24(Long)
+2019-04-23 13:48:32.150 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-6] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'
+### The error may involve com.yuan.house.dao.RoleDao.addRolePermission-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO role_permission         (role_id, permission_id)         VALUES         (?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'
+; Duplicate entry '1-24' for key 'unique_idx'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:974)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:391)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy95.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy93.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy55.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy71.addRolePermission(Unknown Source)
+	at com.yuan.house.service.impl.RoleServiceImpl.addRole(RoleServiceImpl.java:63)
+	at com.yuan.house.service.impl.RoleServiceImpl$$FastClassBySpringCGLIB$$dd193230.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$573/1912138307.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.service.impl.RoleServiceImpl$$EnhancerBySpringCGLIB$$8d380afe.addRole(<generated>)
+	at com.yuan.house.service.impl.RoleServiceImpl$$FastClassBySpringCGLIB$$dd193230.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$573/1912138307.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.service.impl.RoleServiceImpl$$EnhancerBySpringCGLIB$$b50551bc.addRole(<generated>)
+	at com.yuan.house.controller.UserController.addRole(UserController.java:206)
+	at com.yuan.house.controller.UserController$$FastClassBySpringCGLIB$$bb2c73d3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.UserController$$EnhancerBySpringCGLIB$$bab25939.addRole(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-04-23 13:50:11.742 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:50:11.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: INSERT INTO role (name, title, description, orders, status) VALUES (?, ?, ?, ?, ?) 
+2019-04-23 13:50:11.785 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: new(String), null, null, 0(Integer), 0(Integer)
+2019-04-23 13:50:11.816 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==    Updates: 1
+2019-04-23 13:50:11.820 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:50:11.824 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 
+2019-04-23 13:50:11.839 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-04-23 13:50:11.844 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:50:11.848 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 1(Long), 24(Long)
+2019-04-23 13:50:11.918 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-10] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'
+### The error may involve com.yuan.house.dao.RoleDao.addRolePermission-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO role_permission         (role_id, permission_id)         VALUES         (?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'
+; Duplicate entry '1-24' for key 'unique_idx'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-24' for key 'unique_idx'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:974)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:391)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy95.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy93.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy55.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy71.addRolePermission(Unknown Source)
+	at com.yuan.house.service.impl.RoleServiceImpl.addRole(RoleServiceImpl.java:63)
+	at com.yuan.house.service.impl.RoleServiceImpl$$FastClassBySpringCGLIB$$dd193230.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$573/1912138307.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.service.impl.RoleServiceImpl$$EnhancerBySpringCGLIB$$8d380afe.addRole(<generated>)
+	at com.yuan.house.service.impl.RoleServiceImpl$$FastClassBySpringCGLIB$$dd193230.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$573/1912138307.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.service.impl.RoleServiceImpl$$EnhancerBySpringCGLIB$$b50551bc.addRole(<generated>)
+	at com.yuan.house.controller.UserController.addRole(UserController.java:206)
+	at com.yuan.house.controller.UserController$$FastClassBySpringCGLIB$$bb2c73d3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.UserController$$EnhancerBySpringCGLIB$$bab25939.addRole(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-04-23 13:55:26.617 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14148 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 13:55:26.625 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 13:55:39.687 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:55:40.590 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:55:40.674 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 13:55:43.340 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 13:55:44.348 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.694 seconds (JVM running for 24.101)
+2019-04-23 13:56:49.914 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-04-23 13:56:51.156 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-04-23 13:56:51.215 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 13:56:51.537 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 13:56:51.765 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 13:56:51.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 13:56:51.876 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String)
+2019-04-23 13:56:51.917 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 16
+2019-04-23 13:56:55.513 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:56:55.718 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 13:56:55.725 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 
+2019-04-23 13:56:55.795 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 42
+2019-04-23 13:57:14.099 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:57:14.278 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO role (name, title, description, orders, status) VALUES (?, ?, ?, ?, ?) 
+2019-04-23 13:57:14.289 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: kk(String), null, null, 0(Integer), 0(Integer)
+2019-04-23 13:57:14.310 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:57:14.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:14.316 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:57:14.326 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:57:14.330 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:57:14.343 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 1(Long), 27(Long)
+2019-04-23 13:57:14.392 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:57:14.396 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:14.398 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:57:14.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:57:14.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:57:14.412 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 1(Long), 25(Long)
+2019-04-23 13:57:14.418 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:57:14.424 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:14.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:57:14.467 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:57:14.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:57:14.495 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 1(Long), 24(Long)
+2019-04-23 13:57:14.500 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:57:14.504 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:14.506 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:57:14.512 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:57:23.918 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:57:24.449 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT count(0) FROM role WHERE status = 0 
+2019-04-23 13:57:24.459 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 
+2019-04-23 13:57:24.496 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-04-23 13:57:24.509 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT role_id, name, title, description, orders FROM role WHERE status = 0 ORDER BY role_id ASC LIMIT ? 
+2019-04-23 13:57:24.514 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 5(Integer)
+2019-04-23 13:57:24.536 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 5
+2019-04-23 13:57:29.593 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:57:29.597 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 13:57:29.599 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 
+2019-04-23 13:57:29.621 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 42
+2019-04-23 13:57:30.276 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional epoll library
+2019-04-23 13:57:30.287 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional kqueue library
+2019-04-23 13:57:32.979 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在role_10
+2019-04-23 13:57:32.989 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT role_id, name, title, description, orders FROM role WHERE status = 0 AND role_id = ? ORDER BY role_id ASC 
+2019-04-23 13:57:32.992 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 10(Long)
+2019-04-23 13:57:33.024 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-04-23 13:57:34.087 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加role_10
+2019-04-23 13:57:44.722 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:57:44.741 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: UPDATE role SET name = ?, title = ?, description = ?, orders = ?, status = ? WHERE role_id = ? 
+2019-04-23 13:57:44.751 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: kk(String), null, null, 0(Integer), 0(Integer), 10(Long)
+2019-04-23 13:57:44.839 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==    Updates: 1
+2019-04-23 13:57:44.844 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: DELETE FROM role_permission WHERE role_id = ? 
+2019-04-23 13:57:44.848 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 10(Long)
+2019-04-23 13:57:44.901 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==    Updates: 0
+2019-04-23 13:57:44.904 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:57:44.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 10(Long), 26(Long)
+2019-04-23 13:57:44.997 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==    Updates: 1
+2019-04-23 13:57:45.001 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:45.003 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 
+2019-04-23 13:57:45.009 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 13:57:45.017 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:57:45.021 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 10(Long), 25(Long)
+2019-04-23 13:57:45.074 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==    Updates: 1
+2019-04-23 13:57:45.076 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:45.078 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 
+2019-04-23 13:57:45.089 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 13:57:45.094 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: INSERT INTO role_permission (role_id, permission_id) VALUES (?, ?) 
+2019-04-23 13:57:45.098 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 10(Long), 24(Long)
+2019-04-23 13:57:45.151 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==    Updates: 1
+2019-04-23 13:57:45.154 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:57:45.156 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 
+2019-04-23 13:57:45.165 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 13:57:47.688 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:57:47.719 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT count(0) FROM user WHERE status = 0 
+2019-04-23 13:57:47.722 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 
+2019-04-23 13:57:47.751 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-04-23 13:57:47.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE status = 0 ORDER BY user_id ASC LIMIT ? 
+2019-04-23 13:57:47.757 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 5(Integer)
+2019-04-23 13:57:47.770 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 2
+2019-04-23 13:57:52.210 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:57:52.217 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT role_id, name, title, description, orders FROM role WHERE status = 0 ORDER BY role_id ASC 
+2019-04-23 13:57:52.220 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 
+2019-04-23 13:57:52.234 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 5
+2019-04-23 13:58:11.071 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:58:11.084 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO user (username, password, user_type, status, ctime, utime, head, money, phone, idcard, photo, birth, sex, reputation) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2019-04-23 13:58:11.090 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: cc(String), 123456(String), 0(Integer), 0(Integer), null, null, null, 0.0(Double), null, null, null, null, 0(Integer), 0.0(Double)
+2019-04-23 13:58:11.279 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:58:11.281 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:58:11.283 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:58:11.288 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:58:11.293 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO user_role (user_id, role_id) VALUES (?, ?) 
+2019-04-23 13:58:11.298 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 1(Long), 7(Long)
+2019-04-23 13:58:11.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:58:11.435 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:58:11.438 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:58:11.444 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:58:11.450 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: INSERT INTO user_role (user_id, role_id) VALUES (?, ?) 
+2019-04-23 13:58:11.452 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 1(Long), 10(Long)
+2019-04-23 13:58:11.568 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==    Updates: 1
+2019-04-23 13:58:11.570 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:58:11.572 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 
+2019-04-23 13:58:11.578 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-04-23 13:58:14.732 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:58:14.739 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT role_id, name, title, description, orders FROM role WHERE status = 0 ORDER BY role_id ASC 
+2019-04-23 13:58:14.742 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 
+2019-04-23 13:58:14.756 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 5
+2019-04-23 13:58:17.715 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:58:17.728 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT count(0) FROM user WHERE status = 0 
+2019-04-23 13:58:17.730 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 
+2019-04-23 13:58:17.734 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-04-23 13:58:17.736 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE status = 0 ORDER BY user_id ASC LIMIT ? 
+2019-04-23 13:58:17.739 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 5(Integer)
+2019-04-23 13:58:17.748 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 3
+2019-04-23 13:58:19.737 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:58:19.744 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT role_id, name, title, description, orders FROM role WHERE status = 0 ORDER BY role_id ASC 
+2019-04-23 13:58:19.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 
+2019-04-23 13:58:19.751 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 5
+2019-04-23 13:58:19.762 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_4
+2019-04-23 13:58:19.764 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE status = 0 AND user_id = ? ORDER BY user_id ASC 
+2019-04-23 13:58:19.766 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 4(Long)
+2019-04-23 13:58:19.772 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-04-23 13:58:19.792 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_4
+2019-04-23 13:58:27.450 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[role:update, user:delete, permission:create, role:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, role:delete, money:delete]
+2019-04-23 13:58:27.464 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中删除user_4
+2019-04-23 13:58:27.490 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: UPDATE user SET username = ?, password = ?, user_type = ?, status = ?, ctime = ?, utime = ?, head = ?, money = ?, phone = ?, idcard = ?, photo = ?, birth = ?, sex = ?, reputation = ? WHERE user_id = ? 
+2019-04-23 13:58:27.507 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: ccc(String), 123456(String), 0(Integer), 0(Integer), null, null, null, 0.0(Double), null, null, null, null, 0(Integer), 0.0(Double), 4(Long)
+2019-04-23 13:58:27.600 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==    Updates: 1
+2019-04-23 13:58:27.603 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: DELETE FROM user_role WHERE user_id = ? 
+2019-04-23 13:58:27.607 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 4(Long)
+2019-04-23 13:58:27.613 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==    Updates: 0
+2019-04-23 13:58:27.615 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: INSERT INTO user_role (user_id, role_id) VALUES (?, ?) 
+2019-04-23 13:58:27.618 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 4(Long), 4(Long)
+2019-04-23 13:58:27.679 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==    Updates: 1
+2019-04-23 13:58:27.682 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:58:27.685 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 
+2019-04-23 13:58:27.691 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 1
+2019-04-23 13:58:27.696 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: INSERT INTO user_role (user_id, role_id) VALUES (?, ?) 
+2019-04-23 13:58:27.699 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 4(Long), 5(Long)
+2019-04-23 13:58:27.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==    Updates: 1
+2019-04-23 13:58:27.763 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT LAST_INSERT_ID() 
+2019-04-23 13:58:27.765 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 
+2019-04-23 13:58:27.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 1
+2019-04-23 13:58:36.373 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 13:58:36.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: ccc(String), 123456(String)
+2019-04-23 13:58:36.434 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-04-23 13:58:36.466 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 13:58:36.468 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: ccc(String)
+2019-04-23 13:58:36.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 0
+2019-04-23 13:58:38.025 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[]
+2019-04-23 13:58:38.659 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-6] - Resolved [org.apache.shiro.authz.UnauthorizedException: Subject does not have permission [user:create]]
+2019-04-23 14:27:01.478 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 17476 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-04-23 14:27:01.508 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-23 14:27:35.377 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 14:27:36.814 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 14:27:36.903 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-04-23 14:27:41.663 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-04-23 14:27:43.537 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 51.075 seconds (JVM running for 65.774)
+2019-04-23 14:28:15.280 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-04-23 14:28:16.455 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-04-23 14:28:16.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-04-23 14:28:16.750 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String), 123456(String)
+2019-04-23 14:28:17.826 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-04-23 14:28:17.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-04-23 14:28:17.911 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 系统管理员(String)
+2019-04-23 14:28:18.009 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 18
+2019-04-23 14:28:43.043 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[role:update, user:delete, permission:create, role:read, house:read, user:update, permission:update, money:create, permission:read, money:update, user:create, permission:delete, role:create, contract:read, user:read, cart:read, role:delete, money:delete]
+2019-04-23 14:28:43.181 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT permission_id, parent_id, name, type, permission_value, url, icon, status, orders FROM permission WHERE status = 0 ORDER BY orders ASC 
+2019-04-23 14:28:43.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 
+2019-04-23 14:28:43.228 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 42

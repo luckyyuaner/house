@@ -1,0 +1,91 @@
+body{
+    width:100%;
+    height:400px;
+    background-image: url(/images/bg.jpg);
+    color:rgba(0,0,0,0.69);
+}
+#form{
+    font-size:24px;
+    font-family:SimHei;
+    text-align:center;
+    margin:200px auto;
+    width:500px;
+}
+.field{
+    border:1px #5d9aff;
+    opacity:0.5;
+    width:300px;
+    height:32px;
+    border-radius:10px;
+}
+.field:focus {
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+#checkImg{
+    float:right;
+    margin-right:48px;
+    margin-top:-33px;
+}
+.btn{
+    border:1px #5d9aff;
+    opacity:0.7;
+    width:140px;
+    height:32px;
+    border-radius:8px;
+    font-size:20px;
+}
+#radiodiv{
+    margin:0px auto;
+    width:500px;
+    padding-left:100px;
+    font-size:18px;
+}
+.div1{
+    position: relative;
+    line-height: 20px;
+    margin-left: 40px;
+}
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+label {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+
+/*设置选中的input的样式*/
+/* + 是兄弟选择器,获取选中后的label元素*/
+input:checked+label {
+    background-color: #5d9aff;
+    border: 1px solid #5d9aff;
+}
+
+input:checked+label::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    top: 3px;
+    left: 6px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg)
+}
+.btndiv{
+    clear:both;
+    width:500px;
+    margin:20px auto;
+}
+.err{
+    color:red;
+    font-size:12px;
+}

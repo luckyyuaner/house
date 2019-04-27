@@ -8,6 +8,10 @@
     <form th:action="@{/user/addUser}" th:object="${user}" method="post">
         <input type="text" th:field="*{username}" />
         <input type="password" th:field="*{password}" />
+        <div th:if="${roleList != null}" th:each="role:${roleList}">
+            <input name="rid" type="checkbox" th:value="${role.roleId}" />
+            <span th:text="${role.name}" />
+        </div>
         <input type="submit" value="添加"/>
         <input type="reset" value="取消"/>
     </form>

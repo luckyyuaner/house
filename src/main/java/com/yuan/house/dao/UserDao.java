@@ -1,6 +1,7 @@
 package com.yuan.house.dao;
 
 import com.yuan.house.model.User;
+import com.yuan.house.model.UserRole;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -24,6 +25,13 @@ public interface UserDao {
 	 */
     User queryUserById(@Param("id") Long id);
 
+    /**
+     * 根据用户名查询用户
+     * @param name
+     * @return
+     */
+	User queryUserByName(@Param("name") String name);
+
 	/**
 	 * 根据msg模糊查询用户
 	 * @param msg
@@ -36,7 +44,7 @@ public interface UserDao {
 	 * @param object
 	 * @return
 	 */
-	Long addUser(@Param("object") User object);
+	int addUser(@Param("object") User object);
 
 	/**
 	 * 更新用户
@@ -51,4 +59,13 @@ public interface UserDao {
 	 * @return
 	 */
 	int deleteUser(@Param("id") Long id);
+
+
+	int deleteUserRole(@Param("id") Long id);
+
+	/**
+	 * 添加角色权限
+	 * @return
+	 */
+	int addUserRole(@Param("object") UserRole object);
 }

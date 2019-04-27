@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2019-04-23 11:48:33
+Date: 2019-04-27 15:56:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -146,6 +146,7 @@ CREATE TABLE `house` (
   `url` varchar(200) DEFAULT NULL COMMENT '房源图片视频路径，多个以英文分号间隔，结尾不加分号',
   `grade` double(8,0) NOT NULL DEFAULT '5' COMMENT '房源分数，0-10',
   PRIMARY KEY (`house_id`),
+  UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`house_id`) USING BTREE,
   KEY `h_uid_f` (`user_id`),
   CONSTRAINT `h_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -170,6 +171,7 @@ CREATE TABLE `permission` (
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '权限状态，0：有效，1：无效',
   `orders` bigint(20) DEFAULT NULL COMMENT '排序',
   PRIMARY KEY (`permission_id`),
+  UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`permission_id`) USING BTREE,
   KEY `pid_f` (`parent_id`),
   CONSTRAINT `pid_f` FOREIGN KEY (`parent_id`) REFERENCES `permission` (`permission_id`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -233,14 +235,19 @@ CREATE TABLE `role` (
   `orders` bigint(20) DEFAULT NULL COMMENT '排序',
   `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0:有效，1：无效',
   PRIMARY KEY (`role_id`),
+  UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`role_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role
 -- ----------------------------
 INSERT INTO `role` VALUES ('1', '系统管理员', '系统管理员', null, '0', '0');
-INSERT INTO `role` VALUES ('4', 'ceshi', null, null, '0', '0');
+INSERT INTO `role` VALUES ('2', '业务管理员', null, null, '0', '0');
+INSERT INTO `role` VALUES ('3', '一般管理员', null, null, null, '0');
+INSERT INTO `role` VALUES ('4', '租客', null, null, null, '0');
+INSERT INTO `role` VALUES ('5', '房东', null, null, null, '0');
+INSERT INTO `role` VALUES ('7', '测试角色', null, null, '0', '0');
 
 -- ----------------------------
 -- Table structure for role_permission
@@ -256,7 +263,7 @@ CREATE TABLE `role_permission` (
   KEY `rp_pid_f` (`permission_id`),
   CONSTRAINT `rp_pid_f` FOREIGN KEY (`permission_id`) REFERENCES `permission` (`permission_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `rp_rid_f` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role_permission
@@ -273,6 +280,11 @@ INSERT INTO `role_permission` VALUES ('3', '1', '11');
 INSERT INTO `role_permission` VALUES ('4', '1', '12');
 INSERT INTO `role_permission` VALUES ('5', '1', '13');
 INSERT INTO `role_permission` VALUES ('6', '1', '14');
+INSERT INTO `role_permission` VALUES ('16', '7', '26');
+INSERT INTO `role_permission` VALUES ('15', '7', '27');
+INSERT INTO `role_permission` VALUES ('14', '7', '28');
+INSERT INTO `role_permission` VALUES ('18', '7', '36');
+INSERT INTO `role_permission` VALUES ('17', '7', '38');
 
 -- ----------------------------
 -- Table structure for user
@@ -282,7 +294,7 @@ CREATE TABLE `user` (
   `user_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户帐号',
   `username` varchar(20) NOT NULL COMMENT '用户名',
   `password` varchar(60) NOT NULL COMMENT '用户密码',
-  `user_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户身份，0:"管理员"，1:"租房客"，2:"房东"',
+  `user_type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '用户身份，0:"管理员"，1:"租房客"，2:"房东"',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户状态，0：有效，1：无效',
   `ctime` timestamp NULL DEFAULT NULL COMMENT '创建时间',
   `utime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -297,13 +309,13 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `unique_idx` (`username`) USING BTREE,
   KEY `id_idx` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', '系统管理员', '123456', '0', '0', null, '2019-04-19 10:25:28', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('3', '测试哈哈', '123456', '0', '0', null, '2019-04-23 10:59:20', null, '0', null, null, null, null, '0', '0');
+INSERT INTO `user` VALUES ('4', '测试哈哈', '123456', '1', '0', null, '2019-04-27 15:51:33', null, '0', null, null, null, null, '0', '0');
 
 -- ----------------------------
 -- Table structure for user_role
@@ -319,9 +331,10 @@ CREATE TABLE `user_role` (
   KEY `rid_f` (`role_id`),
   CONSTRAINT `rid_f` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_role
 -- ----------------------------
 INSERT INTO `user_role` VALUES ('1', '1', '1');
+INSERT INTO `user_role` VALUES ('2', '4', '4');

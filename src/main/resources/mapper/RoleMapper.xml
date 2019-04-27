@@ -21,7 +21,14 @@
         FROM role
         WHERE status = 0
         AND role_id = #{id}
-        ORDER BY role_id ASC
+    </select>
+
+    <select id="queryRoleByName" resultType="com.yuan.house.model.Role">
+        SELECT
+        <include refid="allColumns"/>
+        FROM role
+        WHERE status = 0
+        AND name = #{name}
     </select>
 
     <select id="queryRoleLikeMsg" resultType="com.yuan.house.model.Role">
@@ -38,9 +45,6 @@
     </select>
 
     <insert id="addRole" parameterType="com.yuan.house.model.Role">
-        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="roleId">
-            SELECT LAST_INSERT_ID()
-        </selectKey>
         INSERT INTO role
         (name, title, description, orders, status)
         VALUES
@@ -58,4 +62,16 @@
     <delete id="deleteRole" parameterType="Long">
         DELETE FROM role WHERE role_id = #{id}
     </delete>
+
+    <delete id="deleteRolePermission" parameterType="Long">
+        DELETE FROM role_permission WHERE role_id = #{id}
+    </delete>
+
+
+    <insert id="addRolePermission" parameterType="com.yuan.house.model.RolePermission">
+        INSERT INTO role_permission
+        (role_id, permission_id)
+        VALUES
+        (#{object.roleId}, #{object.permissionId})
+    </insert>
 </mapper>

@@ -25,6 +25,13 @@
         ORDER BY user_id ASC
     </select>
 
+    <select id="queryUserByName" resultType="com.yuan.house.model.User">
+        SELECT
+        <include refid="allColumns"/>
+        FROM user
+        WHERE username = #{name}
+    </select>
+
     <select id="queryUserLikeMsg" resultType="com.yuan.house.model.User">
         SELECT
         <include refid="allColumns"/>
@@ -41,9 +48,6 @@
     </select>
 
     <insert id="addUser" parameterType="com.yuan.house.model.User">
-        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="userId">
-            SELECT LAST_INSERT_ID()
-        </selectKey>
         INSERT INTO user
         (username, password, user_type, status, ctime, utime, head, money,
         phone, idcard, photo, birth, sex, reputation)
@@ -76,4 +80,16 @@
         AND password = #{password}
         AND status = 0;
     </select>
+
+    <delete id="deleteUserRole" parameterType="Long">
+        DELETE FROM user_role WHERE user_id = #{id}
+    </delete>
+
+
+    <insert id="addUserRole" parameterType="com.yuan.house.model.UserRole">
+        INSERT INTO user_role
+        (user_id, role_id)
+        VALUES
+        (#{object.userId}, #{object.roleId})
+    </insert>
 </mapper>

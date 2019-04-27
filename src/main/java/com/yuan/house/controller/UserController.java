@@ -44,13 +44,11 @@ public class UserController extends BaseController {
             model.addAttribute("userPageInfo", userPageInfo);
         }
         else if("id".equals(type)) {
-            System.out.println("2执行："+msg);
             PageHelper.startPage(number, 5);
             User user = userService.queryUserById(Long.parseLong(msg));
             List<User> users = new ArrayList<User>();
             users.add(user);
             PageInfo<User> userPageInfo = new PageInfo<User>(users);
-            System.out.println("3执行："+userPageInfo.getList().size());
             model.addAttribute("userPageInfo", userPageInfo);
         }
         else if("msg".equals(type)) {
@@ -67,34 +65,38 @@ public class UserController extends BaseController {
     @RequiresPermissions("user:create")
     @GetMapping("/user/showAdd")
     public ModelAndView showAddUser(Model model) {
+        List<Role> roleList = roleService.getAllRoles();
+        model.addAttribute("roleList", roleList);
         model.addAttribute("user", new User());
         return new ModelAndView("user/new", "Model", model);
     }
     @RequiresPermissions("user:create")
     @PostMapping("/user/addUser")
-    public ModelAndView addUser(@ModelAttribute(value = "user") User user, Model model) {
-        userService.addUser(user);
+    public ModelAndView addUser(@ModelAttribute(value = "user") User user, Model model, String rid) {
+        userService.addUser(user, rid);
         return new ModelAndView("user/new", "Model", model);
     }
 
     @RequiresPermissions("user:update")
     @GetMapping("/user/showUpdate")
     public ModelAndView showUpdateUser(Model model, Long id) {
+        List<Role> roleList = roleService.getAllRoles();
+        model.addAttribute("roleList", roleList);
         model.addAttribute("user", userService.queryUserById(id));
         return new ModelAndView("user/modify", "Model", model);
     }
 
     @RequiresPermissions("user:update")
     @PostMapping("/user/updateUser")
-    public ModelAndView updateUser(@ModelAttribute(value = "user") User user, Model model) {
-        userService.updateUser(user);
-        return new ModelAndView("common/list", "Model", model);
+    public ModelAndView updateUser(@ModelAttribute(value = "user") User user, Model model, String rid) {
+        userService.updateUser(user, rid);
+        return new ModelAndView("user/show", "Model", model);
     }
     @RequiresPermissions("user:delete")
     @GetMapping("/user/deleteUser")
     public ModelAndView deleteUser(Model model, Long id) {
         userService.deleteUser(id);
-        return new ModelAndView("common/list", "Model", model);
+        return new ModelAndView("user/show", "Model", model);
     }
 
     @RequiresPermissions("permission:read")
@@ -149,13 +151,13 @@ public class UserController extends BaseController {
     @PostMapping("/permission/updatePermission")
     public ModelAndView updatePermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
         permissionService.updatePermission(permission);
-        return new ModelAndView("common/list", "Model", model);
+        return new ModelAndView("permission/show", "Model", model);
     }
     @RequiresPermissions("permission:delete")
     @GetMapping("/permission/deletePermission")
     public ModelAndView deletePermission(Model model, Long id) {
         permissionService.deletePermission(id);
-        return new ModelAndView("common/list", "Model", model);
+        return new ModelAndView("permission/show", "Model", model);
     }
 
 
@@ -190,33 +192,38 @@ public class UserController extends BaseController {
     @RequiresPermissions("role:create")
     @GetMapping("/role/showAdd")
     public ModelAndView showAddRole(Model model) {
+        List<Permission> permissionList = permissionService.getAllPermissions();
+        model.addAttribute("permissionList", permissionList);
         model.addAttribute("role", new Role());
         return new ModelAndView("role/new", "Model", model);
     }
     @RequiresPermissions("role:create")
     @PostMapping("/role/addRole")
-    public ModelAndView addRole(@ModelAttribute(value = "role") Role role, Model model) {
-        roleService.addRole(role);
+    public ModelAndView addRole(@ModelAttribute(value = "role") Role role, Model model, String pid) {
+        System.out.println("5执行："+pid);
+        roleService.addRole(role, pid);
         return new ModelAndView("role/new", "Model", model);
     }
 
     @RequiresPermissions("role:update")
     @GetMapping("/role/showUpdate")
     public ModelAndView showUpdateRole(Model model, Long id) {
+        List<Permission> permissionList = permissionService.getAllPermissions();
+        model.addAttribute("permissionList", permissionList);
         model.addAttribute("role", roleService.queryRoleById(id));
         return new ModelAndView("role/modify", "Model", model);
     }
 
     @RequiresPermissions("role:update")
     @PostMapping("/role/updateRole")
-    public ModelAndView updateRole(@ModelAttribute(value = "role") Role role, Model model) {
-        roleService.updateRole(role);
-        return new ModelAndView("common/list", "Model", model);
+    public ModelAndView updateRole(@ModelAttribute(value = "role") Role role, Model model, String pid) {
+        roleService.updateRole(role, pid);
+        return new ModelAndView("role/show", "Model", model);
     }
     @RequiresPermissions("role:delete")
     @GetMapping("/role/deleteRole")
     public ModelAndView deleteRole(Model model, Long id) {
         roleService.deleteRole(id);
-        return new ModelAndView("common/list", "Model", model);
+        return new ModelAndView("role/show", "Model", model);
     }
 }

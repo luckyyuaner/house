@@ -73,7 +73,7 @@ public class PermissionServiceImpl implements PermissionService {
 	}
 
 	@Override
-	public Long addPermission(Permission object) {
+	public int addPermission(Permission object) {
 		return permissionDao.addPermission(object);
 	}
 

@@ -58,9 +58,6 @@
     </select>
 
     <insert id="addPermission" parameterType="com.yuan.house.model.Permission">
-        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="permissionId">
-            SELECT LAST_INSERT_ID()
-        </selectKey>
         INSERT INTO permission
         (parent_id, name, type, permission_value, url, icon, status, orders)
         VALUES

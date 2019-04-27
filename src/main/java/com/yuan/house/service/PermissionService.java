@@ -36,7 +36,7 @@ public interface PermissionService {
 	 * @param object
 	 * @return
 	 */
-	Long addPermission(Permission object);
+	int addPermission(Permission object);
 
 	/**
 	 * 更新权限

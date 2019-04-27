@@ -3,10 +3,12 @@ package com.yuan.house.service.impl;
 import com.yuan.house.constants.ResultEnum;
 import com.yuan.house.dao.UserDao;
 import com.yuan.house.model.User;
+import com.yuan.house.model.UserRole;
 import com.yuan.house.service.CommonService;
 import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.UserService;
 import com.yuan.house.util.LoggerUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -14,6 +16,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -98,6 +101,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User queryUserByName(String name) {
+        return userDao.queryUserByName(name);
+    }
+
+    @Override
     public List<User> queryUserLikeMsg(String msg) {
         String key = "user_like_" + msg;
         Object rs = commonService.queryRedis(key);
@@ -110,15 +118,38 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Long addUser(User object) {
-        return userDao.addUser(object);
+    @Transactional(rollbackFor=Exception.class)
+    public void addUser(User object, String rid) {
+        userDao.addUser(object);
+        if(StringUtils.isNotBlank(rid)){
+            String[] rds = rid.split(",");
+            UserRole ur = new UserRole();
+            User user = userDao.queryUserByName(object.getUsername());
+            ur.setUserId(user.getUserId());
+            for(String rs: rds) {
+                System.out.println("9执行：roleId="+rs);
+                ur.setRoleId(Long.parseLong(rs));
+                userDao.addUserRole(ur);
+            }
+        }
     }
 
     @Override
-    public int updateUser(User object) {
+    public int updateUser(User object, String rid) {
         String key = "user_" + object.getUserId();
         commonService.deleteRedis(key);
-        return userDao.updateUser(object);
+        int rs= userDao.updateUser(object);
+        userDao.deleteUserRole(object.getUserId());
+        if(StringUtils.isNotBlank(rid)){
+            String[] rds = rid.split(",");
+            UserRole rp = new UserRole();
+            rp.setUserId(object.getUserId());
+            for(String ps: rds) {
+                rp.setRoleId(Long.parseLong(ps));
+                userDao.addUserRole(rp);
+            }
+        }
+        return rs;
     }
 
     @Override

@@ -41,6 +41,13 @@ public interface UserService {
 	 */
 	User queryUserById(Long id);
 
+    /**
+     * 根据用户名查询用户
+     * @param name
+     * @return
+     */
+	User queryUserByName(String name);
+
 	/**
 	 * 根据msg模糊查询用户
 	 * @param msg
@@ -53,14 +60,14 @@ public interface UserService {
 	 * @param object
 	 * @return
 	 */
-	Long addUser(User object);
+	void addUser(User object, String id);
 
 	/**
 	 * 更新用户
 	 * @param object
 	 * @return
 	 */
-	int updateUser(User object);
+	int updateUser(User object,String id);
 
 	/**
 	 * 删除用户

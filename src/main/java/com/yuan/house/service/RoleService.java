@@ -20,6 +20,13 @@ public interface RoleService {
 	 */
 	Role queryRoleById(Long id);
 
+    /**
+     * 根据name查询角色
+     * @param name
+     * @return
+     */
+	Role queryRoleByName(String name);
+
 	/**
 	 * 根据msg模糊查询角色
 	 * @param msg
@@ -32,14 +39,14 @@ public interface RoleService {
 	 * @param object
 	 * @return
 	 */
-	Long addRole(Role object);
+	void addRole(Role object, String pid);
 
 	/**
 	 * 更新角色
 	 * @param object
 	 * @return
 	 */
-	int updateRole(Role object);
+	int updateRole(Role object, String pid);
 
 	/**
 	 * 删除角色

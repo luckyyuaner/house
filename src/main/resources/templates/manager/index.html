@@ -7,7 +7,7 @@
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <ul th:each="permission:${session.userPermissions}">
-    <li th:if="${permission.type==2}"><a th:href="${permission.url}"><span th:text="${permission.name}"/></a></li>
+    <li th:if="${permission.type==2}"><a th:href="@{${permission.url}(type=, msg=, number=1)}"><span th:text="${permission.name}"/></a></li>
 </ul>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>

@@ -1,6 +1,7 @@
 package com.yuan.house.dao;
 
 import com.yuan.house.model.Role;
+import com.yuan.house.model.RolePermission;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -22,6 +23,13 @@ public interface RoleDao {
 	Role queryRoleById(@Param("id") Long id);
 
     /**
+     * 根据name查询角色
+     * @param name
+     * @return
+     */
+    Role queryRoleByName(@Param("name") String name);
+
+    /**
      * 根据msg模糊查询角色
      * @param msg
      * @return
@@ -33,7 +41,7 @@ public interface RoleDao {
      * @param object
      * @return
      */
-    Long addRole(@Param("object") Role object);
+    int addRole(@Param("object") Role object);
 
     /**
      * 更新角色
@@ -49,4 +57,12 @@ public interface RoleDao {
      */
     int deleteRole(@Param("id") Long id);
 
+
+    int deleteRolePermission(@Param("id") Long id);
+
+    /**
+     * 添加角色权限
+     * @return
+     */
+    int addRolePermission(@Param("object") RolePermission object);
 }

@@ -2,10 +2,13 @@ package com.yuan.house.service.impl;
 
 import com.yuan.house.dao.RoleDao;
 import com.yuan.house.model.Role;
+import com.yuan.house.model.RolePermission;
 import com.yuan.house.service.CommonService;
 import com.yuan.house.service.RoleService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -35,7 +38,12 @@ public class RoleServiceImpl implements RoleService {
 		return role;
 	}
 
-	@Override
+    @Override
+    public Role queryRoleByName(String name) {
+        return roleDao.queryRoleByName(name);
+    }
+
+    @Override
 	public List<Role> queryRoleLikeMsg(String msg) {
         String key = "role_like_" + msg;
         Object rs = commonService.queryRedis(key);
@@ -47,16 +55,39 @@ public class RoleServiceImpl implements RoleService {
         return roles;
 	}
 
+    @Transactional(rollbackFor=Exception.class)
 	@Override
-	public Long addRole(Role object) {
-		return roleDao.addRole(object);
+	public void addRole(Role object, String pid) {
+		roleDao.addRole(object);
+        if(StringUtils.isNotBlank(pid)){
+            Role role = roleDao.queryRoleByName(object.getName());
+            RolePermission rp = new RolePermission();
+            rp.setRoleId(role.getRoleId());
+            String[] pds = pid.split(",");
+            for(String ps: pds) {
+                rp.setPermissionId(Long.parseLong(ps));
+                roleDao.addRolePermission(rp);
+            }
+        }
 	}
 
+    @Transactional(rollbackFor=Exception.class)
 	@Override
-	public int updateRole(Role object) {
+	public int updateRole(Role object, String pid) {
 	    String key = "role_" + object.getRoleId();
 	    commonService.deleteRedis(key);
-		return roleDao.updateRole(object);
+		int rs = roleDao.updateRole(object);
+		roleDao.deleteRolePermission(object.getRoleId());
+        if(StringUtils.isNotBlank(pid)){
+            String[] pds = pid.split(",");
+            RolePermission rp = new RolePermission();
+            rp.setRoleId(object.getRoleId());
+            for(String ps: pds) {
+                rp.setPermissionId(Long.parseLong(ps));
+                roleDao.addRolePermission(rp);
+            }
+        }
+        return rs;
 	}
 
 	@Override

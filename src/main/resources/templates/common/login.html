@@ -4,15 +4,78 @@
     <meta charset="UTF-8">
     <title>用户登录</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+   <!-- <script type="text/javascript" src="/js/login.js"></script>-->
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <form id="form" action="/common/login"  method="post">
-    账号：<input type="text" name="username" /><br/><br/><br/>
-    密码：<input type="text" name="password" /><br/>
-    <input type="submit" value="登录">
-    <input type="reset" value="取消">
+    用户名：<input class="field" type="text" name="username" /><br/><span class="err"></span><br/>
+    密码：&nbsp;<input class="field" type="text" name="password" /><br/><span class="err"></span><br/>
+    验证码:&nbsp;<input class="field" type="text" name="code" />
+    <img src="/common/getCode"+new Date().getTime() id="checkImg" alt="验证码" /><br/><span class="err"></span><br/>
+    <input class="btn" type="submit" value="登录" onclick="return checkLogin();">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input class="btn" type="reset" value="取消">
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+function checkLogin() {
+    var username = document.getElementsByClassName("field")[0];
+    var nameerr = document.getElementsByClassName("err")[0];
+    if(username.value == null || username.value == ""){
+        nameerr.innerHTML = "用户名不能为空";
+        return false;
+    }
+    //用户名正则，2到20位（汉字、字母，数字，下划线，减号）
+    var uPattern = /^[\u4e00-\u9fa5a-zA-Z0-9_-]{2,20}$/;
+    if(uPattern.test(username.value) == false){
+        nameerr.innerHTML = "用户名只能由汉字、字母、数字、下划线、减号组成，长度为2-20位";
+        return false;
+    }
+    var password = document.getElementsByClassName("field")[1];
+    var passworderr = document.getElementsByClassName("err")[1];
+    if(password.value == null || password.value == ""){
+        passworderr.innerHTML = "密码不能为空";
+        return false;
+    }
+    //密码强度正则，6-30，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+    //var pPattern = /^.*(?=.{6,30})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+    /*if(pPattern.test(password.value) == false){
+        passworderr.innerHTML = "密码长度6-30，包括至少1个大写字母、小写字母、数字、特殊字符";
+        return false;
+    }*/
+    var code = document.getElementsByClassName("field")[2];
+    var codeerr = document.getElementsByClassName("err")[2];
+    if(code.value == null || code.value == ""){
+        codeerr.innerHTML = "验证码不能为空";
+        return false;
+    }
+    //验证码正则，4位数字
+    var cPattern = /^[0-9]{4,4}$/;
+    if(cPattern.test(code.value) == false){
+        codeerr.innerHTML = "验证码错误";
+        return false;
+    }
+    var rs = null;
+    $.ajax({
+        async : false,
+        type : "get",
+        url : "/common/checkCode?code="+$("input[name='code']").val(),
+        dataType : "html",
+        success : function (data) {
+            rs = data;
+        },
+        error:function (data) {
+            alert("系统错误，请稍候再试");
+            return false;
+        }
+    });
+    if(rs == "true") {
+        return true;
+    }
+    codeerr.innerHTML = "验证码错误";
+    return false;
+};
+</script>
 </html>

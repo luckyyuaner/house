@@ -6,6 +6,7 @@
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div>
+    <a href="/role/showAdd">添加角色</a>
     <form th:action="@{/role/listRole}"  method="get">
         <input name="number" type="hidden" th:value="1" />
         <input name="msg" type="text" />
