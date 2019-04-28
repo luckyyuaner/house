@@ -23,7 +23,6 @@ import org.springframework.web.servlet.ModelAndView;
  * 公共Controller，不限制权限
  */
 @Controller
-@RequestMapping("/")
 public class CommonController extends BaseController {
 
 	@Autowired
@@ -33,6 +32,25 @@ public class CommonController extends BaseController {
 	@Autowired
 	private RoleService roleService;
 
+    @RequestMapping("")
+    public String index() {
+        return "/tenant/index";
+    }
+
+    @RequestMapping("/common/tenant")
+    public String showTenant() {
+        return "/tenant/index";
+    }
+
+    @RequestMapping("/common/landlord")
+    public String showLandlord() {
+        return "/landlord/index";
+    }
+
+    @RequestMapping("/common/manager")
+    public String showManager() {
+        return "/manager/index";
+    }
 
     @RequestMapping(value="/common/checkCode")
     @ResponseBody
