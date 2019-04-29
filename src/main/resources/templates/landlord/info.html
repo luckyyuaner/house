@@ -2,11 +2,23 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>租客首页</title>
+    <title>房东个人主页</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
+<div class="left">
+    <ul class="menu">
+        <li><img src="" /><a>发布新房源</a></li>
+        <li><img src="" /><a>房源管理</a></li>
+        <li><img src="" /><a>合同管理</a></li>
+        <li><img src="" /><a>评价管理</a></li>
+        <li><img src="" /><a>反馈管理</a></li>
+        <li><img src="" /><a>信息管理</a></li>
+        <li><img src="" /><a>钱包管理</a></li>
+        <li><img src="" /><a>联系管家</a></li>
+    </ul>
+</div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
 </html>
