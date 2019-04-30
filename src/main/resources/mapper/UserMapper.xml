@@ -92,4 +92,18 @@
         VALUES
         (#{object.userId}, #{object.roleId})
     </insert>
+
+    <select id="getUsersByRole" resultType="com.yuan.house.model.User">
+        SELECT
+        <include refid="allColumns"/>
+        FROM
+        user
+        WHERE
+        user_id in (
+          select user_id from user_role where role_id in (
+            select role_id from role where name = #{name}
+          )
+        )
+        AND status = 0;
+    </select>
 </mapper>

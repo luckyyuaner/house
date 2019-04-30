@@ -1,0 +1,18 @@
+body{
+    width:100%;
+    height:400px;
+    background-image: url(/images/bg.jpg);
+    color:rgba(0,0,0,0.69);
+    font-family:SimHei;
+}
+.manager_list img{
+    width:100px;
+    height:100px;
+    object-fit: cover;
+}
+.manager_list a{
+    width:200px;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+}

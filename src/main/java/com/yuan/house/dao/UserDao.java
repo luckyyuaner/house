@@ -68,4 +68,11 @@ public interface UserDao {
 	 * @return
 	 */
 	int addUserRole(@Param("object") UserRole object);
+
+	/**
+	 * 根据角色名查找用户
+	 * @param name
+	 * @return
+	 */
+	List<User> getUsersByRole(@Param("name") String name);
 }

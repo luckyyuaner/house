@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>房东咨询页</title>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="/js/landlord/chat.js"></script>-->
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+<div class="div_name">管理员列表</div>
+<input type="hidden" name="manager_name" />
+<ul class="manager_list" th:if="${managers != null}" th:each="manager:${managers}" >
+    <li><a href="javascript:void(0)" th:onclick="|javascript:choose(${manager.username})|"><img src="/images/head.jpg" /><span th:text="${manager.username}" /></a></li>
+</ul>
+<input id="connect" type="submit" onclick="connection()" value="连接" />
+<div class="div_name">聊天室</div>
+<form>
+    <textarea class="chat_input"></textarea>
+    <input id="send" type="submit" disabled="true" value="发送" />
+</form>
+<div th:replace="~{fragments/footer :: footer}">...</div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

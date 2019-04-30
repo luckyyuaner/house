@@ -1,5 +1,6 @@
 package com.yuan.house.service.impl;
 
+import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.ResultEnum;
 import com.yuan.house.dao.UserDao;
 import com.yuan.house.model.User;
@@ -34,6 +35,9 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private PermissionService permissionService;
+
+    @Autowired
+    WebSocketConfig webSocketConfig;
 
 	/**
 	 * 用户登录
@@ -133,6 +137,12 @@ public class UserServiceImpl implements UserService {
             }
         }
     }
+
+    @Override
+    public List<User> getUsersByRole(String roleName) {
+        return userDao.getUsersByRole(roleName);
+    }
+
 
     @Override
     public int updateUser(User object, String rid) {

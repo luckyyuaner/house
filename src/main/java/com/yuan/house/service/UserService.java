@@ -62,6 +62,13 @@ public interface UserService {
 	 */
 	void addUser(User object, String id);
 
+    /**
+     * 根据角色名查找用户
+     * @param roleName
+     * @return
+     */
+    List<User> getUsersByRole(String roleName);
+
 	/**
 	 * 更新用户
 	 * @param object
