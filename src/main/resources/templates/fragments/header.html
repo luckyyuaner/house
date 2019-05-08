@@ -9,6 +9,11 @@
     <script src="http://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
 </head>
 <body>
+<noscript>
+    <h2 style="color:#ff0000">
+        你的浏览器不支持JavaScript 或者关闭了JavaScript， 请启用JavaScript,重新加载！
+    </h2>
+</noscript>
 <div  data-th-fragment="header" style="width:100%;height:40px;font-size:20px;line-height:40px;">
     <img src="/images/logo.png" style="margin-left:20px;height:30px;" />
     <div th:if="${session.currUser==null}" style="position: relative;float:right;margin-right:80px;">

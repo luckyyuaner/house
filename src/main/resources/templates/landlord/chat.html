@@ -1,27 +1,117 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>房东咨询页</title>
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <!--<script src="/js/landlord/chat.js"></script>-->
+    <title>Hello WebSocket</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/js/landlord/chat.js"></script>
 </head>
 <body>
-<div th:replace="fragments/header :: header">...</div>
-<div class="div_name">管理员列表</div>
-<input type="hidden" name="manager_name" />
-<ul class="manager_list" th:if="${managers != null}" th:each="manager:${managers}" >
-    <li><a href="javascript:void(0)" th:onclick="|javascript:choose(${manager.username})|"><img src="/images/head.jpg" /><span th:text="${manager.username}" /></a></li>
-</ul>
-<input id="connect" type="submit" onclick="connection()" value="连接" />
-<div class="div_name">聊天室</div>
-<form>
-    <textarea class="chat_input"></textarea>
-    <input id="send" type="submit" disabled="true" value="发送" />
-</form>
-<div th:replace="~{fragments/footer :: footer}">...</div>
+<div id="main-content" class="container">
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="connect">用户名：</label>
+                <div class="input-group">
+                    <input type="text" name="username" id="username" class="form-control"
+                           th:value="${session.currUser.username}"/>
+                    <span class="input-group-btn">
+      <button id="connect" class="btn btn-default" type="submit" onclick="return connect();">连接</button>
+      <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled" onclick="return disconnect();">断开
+      </button></span></div>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+        <div class="col-md-2">
+            <table id="userlist" class="table">
+                <thead onclick='javascript:hidetuser()'>
+                <tr>
+                    <th>在线管理员</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="u:${onlines}" th:if="${onlines != null}">
+                    <td>
+                        <a href="javascript:void(0)" class="choose">
+                            <img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                            <span class="username" th:text="${u.username}"/>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-5">
+            <table id="privatechat" class="table">
+                <thead onclick='javascript:hidetprivate()'>
+                <tr>
+                    <th id="privateuser">私信聊天</th>
+                </tr>
+                </thead>
+                <tbody id="private" style="height:350px; overflow-y:auto; display:block; ">
+                <tr class="msg-机器人" hidden>
+                    <td>00-00 00:00【机器人】对你说：欢迎你来到ocly的聊天室</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="input-group" style="height: 74px">
+                <textarea id="contentuser" class="form-control" rows="3" style="resize: none;"
+                          placeholder="单击一名在线用户，与其聊天吧...."></textarea>
+                <span class="input-group-btn">
+        <button id="sendtouser" class="btn btn-default" type="submit" disabled="disabled"
+                style="height: 100%">发送</button>
+        </span>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
 </body>
 <script type="text/javascript">
+    var socket = null;
+    var stompClient = null;
+    var sessionId = null;
+    $(".choose").click(function () {
+        var user1=$(this).children(".username").text();
+        var user2=$("#username").val();
+        stompClient.send("/app/private", {}, JSON.stringify({'name': user2, 'content': "咨询", 'receiver': user1}));
+    });
 
+    function connect() {
+        setConnected(true);
+        socket = new SockJS("/house/chat");
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, function (frame) {
+            sessionId = /\/([^\/]+)\/websocket/.exec(socket._transport.url)[1];
+            stompClient.subscribe('/user/topic/private', function (greeting) {
+                var parse = JSON.parse(greeting.body);
+                alert(parse.content);
+                //alert(parse.name);
+            });
+        });
+    }
+
+    function disconnect() {
+        if (stompClient !== null) {
+            stompClient.disconnect();
+        }
+        setConnected(false);
+    }
+
+    function setConnected(connected) {
+        $("#connect").html('连接');
+        if (connected) {
+            $("#connect").html('成功');
+        }
+        $("#connect").prop("disabled", connected);
+        $("#disconnect").prop("disabled", !connected);
+        $("#sendtouser").prop("disabled", !connected);
+    }
 </script>
 </html>

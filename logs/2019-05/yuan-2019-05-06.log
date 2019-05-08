@@ -1,0 +1,1360 @@
+2019-05-06 17:58:33.070 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5772 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 17:58:33.085 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 17:59:03.771 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 17:59:05.552 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 17:59:05.661 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 17:59:11.208 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 17:59:13.489 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 46.544 seconds (JVM running for 55.049)
+2019-05-06 18:03:55.367 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-06 18:03:56.706 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-06 18:03:56.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 18:03:57.205 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 18:03:57.454 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-05-06 18:03:57.516 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 18:03:57.525 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东(String)
+2019-05-06 18:03:57.603 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 20
+2019-05-06 18:05:41.966 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 18:05:41.971 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 一般管理员(String)
+2019-05-06 18:05:42.003 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 2
+2019-05-06 18:19:01.281 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14420 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 18:19:01.293 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 18:19:11.194 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:19:11.866 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:19:11.913 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:19:14.344 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 18:19:15.715 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.855 seconds (JVM running for 21.826)
+2019-05-06 18:19:56.003 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 18:19:57.049 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 18:19:57.080 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 18:19:57.455 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 18:19:57.602 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 18:19:57.633 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 18:19:57.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 18:19:57.710 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 18:20:19.834 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 18:20:19.839 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 一般管理员(String)
+2019-05-06 18:20:19.866 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 2
+2019-05-06 18:20:23.965 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-6] - Closing session due to exception for WebSocketServerSockJsSession[id=khot3v1q]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:24.027 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-6] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:41.722 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-4] - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2019-05-06 18:20:44.570 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-6] - Closing session due to exception for WebSocketServerSockJsSession[id=ye135r22]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:44.575 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-6] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:47.312 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-7] - Closing session due to exception for WebSocketServerSockJsSession[id=hjfgbut0]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:47.323 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-7] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:52.496 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-10] - Closing session due to exception for WebSocketServerSockJsSession[id=r1cgxwyp]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:52.502 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-10] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:55.107 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-2] - Closing session due to exception for WebSocketServerSockJsSession[id=wk4jweeu]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:55.111 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-2] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:56.009 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-4] - Closing session due to exception for WebSocketServerSockJsSession[id=1vch2hih]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:56.015 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-4] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:57.984 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-6] - Closing session due to exception for WebSocketServerSockJsSession[id=1nb5rvto]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:20:57.990 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-6] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:24:04.646 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14876 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 18:24:04.676 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 18:24:17.901 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:24:19.274 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:24:19.474 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:24:24.320 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 18:24:26.029 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 23.716 seconds (JVM running for 28.381)
+2019-05-06 18:24:59.892 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 18:25:02.080 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 18:25:02.111 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 18:25:02.318 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 18:25:02.484 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 18:25:02.504 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 18:25:02.505 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 18:25:02.557 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 18:25:16.402 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 18:25:16.406 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 一般管理员(String)
+2019-05-06 18:25:16.429 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 2
+2019-05-06 18:25:26.904 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-4] - Closing session due to exception for WebSocketServerSockJsSession[id=mopyqrk4]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:25:26.930 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-4] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:35:05.008 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 7832 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 18:35:05.019 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 18:35:15.852 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:35:16.840 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:35:16.990 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:35:20.167 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 18:35:21.534 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.19 seconds (JVM running for 22.686)
+2019-05-06 18:36:13.056 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 18:36:15.257 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 18:36:15.284 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 18:36:15.520 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 18:36:15.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 18:36:15.765 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 18:36:15.768 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 18:36:15.826 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 18:36:27.175 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 18:36:27.181 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 一般管理员(String)
+2019-05-06 18:36:27.231 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 2
+2019-05-06 18:36:57.560 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1904 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 18:36:57.572 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 18:37:09.404 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:37:10.285 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:37:10.343 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 18:37:13.627 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 18:37:15.377 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.91 seconds (JVM running for 26.501)
+2019-05-06 18:38:11.667 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 18:38:12.344 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 18:38:12.371 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 18:38:12.584 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 18:38:12.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 18:38:12.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 18:38:12.747 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 18:38:12.773 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 18:38:37.542 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 18:38:37.544 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 一般管理员(String)
+2019-05-06 18:38:37.554 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 2
+2019-05-06 18:38:47.958 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-5] - Closing session due to exception for WebSocketServerSockJsSession[id=hziklv30]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:38:48.063 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-5] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:39:40.238 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-6] - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2019-05-06 18:39:57.314 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-9] - Closing session due to exception for WebSocketServerSockJsSession[id=npwq3ns1]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:51)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 18:39:57.318 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-9] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:62)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 20:56:22.710 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16380 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 20:56:22.726 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 20:56:42.712 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 20:56:44.605 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 20:56:44.652 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 20:56:47.527 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 20:56:49.542 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 31.066 seconds (JVM running for 41.071)
+2019-05-06 20:58:19.281 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-06 20:58:21.030 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-06 20:58:21.069 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 20:58:21.197 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 20:58:21.996 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-06 20:58:22.029 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 20:58:22.032 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东(String)
+2019-05-06 20:58:22.206 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-06 20:58:50.435 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-10] - [THYMELEAF][http-nio-8888-exec-10] Exception processing template "landlord/onlineManagers": Error resolving template [landlord/onlineManagers], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [landlord/onlineManagers], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 20:58:50.469 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-10] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [landlord/onlineManagers], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [landlord/onlineManagers], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 21:00:47.621 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12836 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 21:00:47.621 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:00:53.199 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:00:53.605 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:00:53.652 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:00:56.496 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 21:00:58.496 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 12.187 seconds (JVM running for 15.532)
+2019-05-06 21:01:47.558 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 21:01:48.993 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 21:01:49.104 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 21:01:49.291 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 21:01:49.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 21:01:49.519 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 21:01:49.521 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 21:01:49.568 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 21:15:01.054 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5972 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 21:15:01.069 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:15:06.244 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:15:06.588 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:15:06.603 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:15:08.619 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 21:15:10.197 ERROR --- [SpringApplication.java:858][restartedMain] - Application run failed
+java.lang.IllegalStateException: Failed to register @ServerEndpoint class: class com.yuan.house.config.websocket.ChatRoomServerEndpoint
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:158)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoints(ServerEndpointExporter.java:133)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.afterSingletonsInstantiated(ServerEndpointExporter.java:111)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.yuan.house.HouseApplication.main(HouseApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.websocket.DeploymentException: The path [house-chat] is not valid.
+	at org.apache.tomcat.websocket.server.UriTemplate.<init>(UriTemplate.java:48)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:153)
+	at org.apache.tomcat.websocket.server.WsServerContainer.addEndpoint(WsServerContainer.java:232)
+	at org.springframework.web.socket.server.standard.ServerEndpointExporter.registerEndpoint(ServerEndpointExporter.java:155)
+	... 17 common frames omitted
+2019-05-06 21:32:12.601 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6568 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 21:32:12.663 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:32:20.100 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:32:20.897 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:32:20.944 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:32:24.569 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 21:32:26.756 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.53 seconds (JVM running for 20.496)
+2019-05-06 21:35:07.002 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 21:35:08.252 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 21:35:08.330 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 21:35:09.012 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 21:35:09.205 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 21:35:09.251 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 21:35:09.255 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 21:35:09.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 21:35:37.308 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 21:35:37.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 一般管理员(String)
+2019-05-06 21:35:37.337 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 2
+2019-05-06 21:38:25.840 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 21:38:25.847 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-06 21:38:25.858 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-06 21:38:25.870 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 21:38:25.876 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String)
+2019-05-06 21:38:25.914 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 20
+2019-05-06 21:38:37.294 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 21:38:37.297 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 一般管理员(String)
+2019-05-06 21:38:37.315 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 2
+2019-05-06 21:46:23.319 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2900 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 21:46:23.334 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:46:30.334 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:46:30.943 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:46:30.974 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:46:33.459 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 21:46:35.005 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.202 seconds (JVM running for 18.066)
+2019-05-06 21:47:20.293 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 21:47:20.918 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 21:47:20.984 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 21:47:21.460 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 21:47:21.699 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 21:47:21.806 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 21:47:21.811 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 21:47:21.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 21:47:48.314 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 21:47:48.318 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 一般管理员(String)
+2019-05-06 21:47:48.334 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 2
+2019-05-06 21:49:13.606 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13656 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 21:49:13.606 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:49:19.762 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:49:20.465 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:49:20.497 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 21:49:23.483 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 21:49:24.983 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 12.705 seconds (JVM running for 17.671)
+2019-05-06 21:50:43.737 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 21:50:44.613 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 21:50:44.648 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 21:50:44.795 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 21:50:45.033 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 21:50:45.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 21:50:45.065 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 21:50:45.127 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 21:51:01.456 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE user_id in ( select user_id from user_role where role_id in ( select role_id from role where name = ? ) ) AND status = 0; 
+2019-05-06 21:51:01.460 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 一般管理员(String)
+2019-05-06 21:51:01.471 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 2
+2019-05-06 22:00:56.637 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13368 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:00:56.645 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:01:07.015 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:01:07.919 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:01:07.951 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:01:11.904 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:01:14.049 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 18.897 seconds (JVM running for 24.303)
+2019-05-06 22:04:11.291 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 22:04:12.301 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 22:04:12.400 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 22:04:12.973 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 22:04:13.419 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 22:04:13.486 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 22:04:13.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 22:04:13.554 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 22:13:14.153 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2212 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:13:14.153 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:13:26.543 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:13:27.683 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:13:27.793 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:13:32.730 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:13:34.574 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 24.249 seconds (JVM running for 39.424)
+2019-05-06 22:14:13.937 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 22:14:14.727 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 22:14:14.801 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 22:14:15.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 22:14:15.510 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 22:14:15.593 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 22:14:15.597 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 22:14:15.661 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 22:14:26.868 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-9] - [THYMELEAF][http-nio-8888-exec-9] Exception processing template "userlist": Error resolving template [userlist], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [userlist], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:14:26.879 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-9] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [userlist], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [userlist], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:20:55.011 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12212 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:20:55.026 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:21:00.217 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:21:00.530 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:21:00.546 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:21:02.726 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:21:05.078 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 11.785 seconds (JVM running for 15.57)
+2019-05-06 22:21:54.396 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5612 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:21:54.396 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:21:59.583 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:21:59.974 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:22:00.005 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:22:01.505 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:22:02.458 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 9.172 seconds (JVM running for 13.128)
+2019-05-06 22:22:34.963 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 22:22:35.907 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 22:22:35.952 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 22:22:36.331 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 22:22:36.485 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 22:22:36.515 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 22:22:36.517 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 22:22:36.569 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 22:23:02.545 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-1] - Closing session due to exception for WebSocketServerSockJsSession[id=1bfgelj0]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:57)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:23:02.608 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-1] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:68)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:37:12.982 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 4180 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:37:12.998 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:37:17.872 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:37:18.184 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:37:18.216 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:37:20.729 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:37:22.771 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 10.996 seconds (JVM running for 15.368)
+2019-05-06 22:38:56.136 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 22:38:57.358 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 22:38:57.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 22:38:57.669 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 22:38:57.896 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 22:38:57.931 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 22:38:57.936 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 22:38:58.018 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 22:39:22.330 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-10] - Closing session due to exception for WebSocketServerSockJsSession[id=cbghcehx]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:57)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:39:22.357 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-10] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:68)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:40:59.082 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12860 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:40:59.097 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:41:05.175 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:41:05.910 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:41:05.941 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:41:09.296 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:41:11.343 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.48 seconds (JVM running for 17.588)
+2019-05-06 22:41:48.440 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 22:41:48.925 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 22:41:48.947 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 22:41:49.019 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 22:41:49.122 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 22:41:49.147 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 22:41:49.150 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 22:41:49.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 22:43:33.090 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 7180 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 22:43:33.090 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 22:43:40.589 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:43:41.339 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:43:41.371 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 22:43:44.058 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 22:43:46.026 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.108 seconds (JVM running for 18.184)
+2019-05-06 22:44:35.092 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 22:44:36.051 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 22:44:36.112 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 22:44:36.383 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 22:44:36.558 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 22:44:36.613 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 22:44:36.620 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 22:44:36.677 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 22:45:13.056 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-2] - Closing session due to exception for WebSocketServerSockJsSession[id=3u3war50]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:57)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:45:13.082 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-2] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:68)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:45:30.318 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-4] - Closing session due to exception for WebSocketServerSockJsSession[id=bzuzapvn]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:57)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 22:45:30.322 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-4] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:68)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 23:19:34.890 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15796 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 23:19:34.905 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 23:19:54.662 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:19:55.565 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:19:55.612 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:19:58.933 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 23:20:05.311 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 33.228 seconds (JVM running for 42.467)
+2019-05-06 23:21:21.118 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 23:21:25.359 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 23:21:25.421 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:21:25.796 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 23:21:27.067 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 23:21:27.102 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:21:27.104 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 23:21:27.241 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 23:21:49.274 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-10] - Closing session due to exception for WebSocketServerSockJsSession[id=xgjtjiwp]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:57)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 23:21:49.336 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-10] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:626)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:68)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-06 23:23:25.764 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15240 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 23:23:25.857 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 23:23:32.676 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:23:33.301 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:23:33.332 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:23:35.879 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 23:23:37.504 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 12.881 seconds (JVM running for 16.382)
+2019-05-06 23:25:08.492 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 23:25:08.899 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 23:25:08.927 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:25:09.016 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 23:25:09.192 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 23:25:09.219 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:25:09.221 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 23:25:09.256 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 23:28:36.920 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15872 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 23:28:36.920 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 23:28:44.304 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:28:44.928 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:28:44.960 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:28:47.397 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 23:28:48.959 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.68 seconds (JVM running for 19.492)
+2019-05-06 23:29:13.109 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 23:29:14.410 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 23:29:14.479 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:29:14.937 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 23:29:15.177 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 23:29:15.215 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:29:15.216 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 23:29:15.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 23:43:03.167 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 8148 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 23:43:03.183 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 23:43:10.834 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:43:11.819 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:43:11.850 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:43:16.477 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 23:43:18.919 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.0 seconds (JVM running for 22.712)
+2019-05-06 23:44:02.231 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-06 23:44:03.857 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-06 23:44:03.910 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:44:04.138 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 23:44:04.431 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-06 23:44:04.478 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:44:04.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-06 23:44:04.610 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-06 23:53:28.137 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1896 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-06 23:53:28.146 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 23:53:37.173 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:53:39.083 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:53:39.182 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-06 23:53:44.997 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-06 23:53:48.530 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 22.122 seconds (JVM running for 25.693)
+2019-05-06 23:55:12.756 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-06 23:55:13.910 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-06 23:55:13.970 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:55:14.151 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-06 23:55:14.346 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-06 23:55:14.397 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:55:14.400 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-06 23:55:14.450 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-06 23:58:52.624 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:58:52.671 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-06 23:59:01.836 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-06 23:59:01.883 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:59:01.883 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-06 23:59:02.101 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-06 23:59:51.615 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-06 23:59:51.662 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-06 23:59:52.287 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-05-06 23:59:52.303 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-06 23:59:52.303 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东1(String)
+2019-05-06 23:59:52.537 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 20
