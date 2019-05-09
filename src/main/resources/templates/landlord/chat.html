@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label for="connect">用户名：</label>
                 <div class="input-group">
-                    <input type="text" name="username" id="username" class="form-control"
+                    <input type="text" name="username" id="username" class="form-control" readonly="readonly"
                            th:value="${session.currUser.username}"/>
                     <span class="input-group-btn">
       <button id="connect" class="btn btn-default" type="submit" onclick="return connect();">连接</button>
@@ -55,13 +55,11 @@
                 </tr>
                 </thead>
                 <tbody id="private" style="height:350px; overflow-y:auto; display:block; ">
-                <tr class="msg-机器人" hidden>
-                    <td>00-00 00:00【机器人】对你说：欢迎你来到ocly的聊天室</td>
-                </tr>
+                <tr class="chatroom"></tr>
                 </tbody>
             </table>
             <div class="input-group" style="height: 74px">
-                <textarea id="contentuser" class="form-control" rows="3" style="resize: none;"
+                <textarea id="content" class="form-control" rows="3" style="resize: none;"
                           placeholder="单击一名在线用户，与其聊天吧...."></textarea>
                 <span class="input-group-btn">
         <button id="sendtouser" class="btn btn-default" type="submit" disabled="disabled"
@@ -77,10 +75,18 @@
     var socket = null;
     var stompClient = null;
     var sessionId = null;
+    var user1 = $("#username").val();
+    var user2 = null;
     $(".choose").click(function () {
-        var user1=$(this).children(".username").text();
-        var user2=$("#username").val();
-        stompClient.send("/app/private", {}, JSON.stringify({'name': user2, 'content': "咨询", 'receiver': user1}));
+        user2 = $(this).children(".username").text();
+        stompClient.send("/app/private", {}, JSON.stringify({'name': user1, 'content': "咨询", 'receiver': user2}));
+    });
+
+    $("#sendtouser").click(function () {
+        var ct = $("#content").val();
+        if (ct != "" && user2 != null) {
+            stompClient.send("/app/private", {}, JSON.stringify({'name': user1, 'content': ct, 'receiver': user2}));
+        }
     });
 
     function connect() {
@@ -91,9 +97,16 @@
             sessionId = /\/([^\/]+)\/websocket/.exec(socket._transport.url)[1];
             stompClient.subscribe('/user/topic/private', function (greeting) {
                 var parse = JSON.parse(greeting.body);
-                alert(parse.content);
-                //alert(parse.name);
+                var val = "<td>" + parse.content + "</td>";
+                $(".chatroom").append(val);
+                if (user2 == null) {
+                    user2 = parse.name;
+                }
             });
+            /*stompClient.subscribe('/user/topic/updateonline', function (greeting) {
+                var parse = JSON.parse(greeting.body);
+                $(".chatroom").append(parse.name);
+            });*/
         });
     }
 

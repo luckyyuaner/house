@@ -1,0 +1,123 @@
+2019-05-09 20:28:27.571 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12616 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-09 20:28:27.649 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-09 20:29:20.945 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-09 20:29:25.011 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-09 20:29:25.127 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-09 20:29:31.026 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-09 20:29:40.038 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 89.5 seconds (JVM running for 142.494)
+2019-05-09 20:34:25.453 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-09 20:34:27.281 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-09 20:34:27.347 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-09 20:34:27.588 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-09 20:34:28.544 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-09 20:34:28.566 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-09 20:34:28.569 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-09 20:34:28.836 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-09 20:34:45.477 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-8] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session q151i11g. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'q151i11g'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-09 20:35:35.603 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-3] - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2019-05-09 20:35:39.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-09 20:35:39.492 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东(String), 123456(String)
+2019-05-09 20:35:39.507 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-09 20:35:39.517 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-09 20:35:39.520 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东(String)
+2019-05-09 20:35:39.550 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-09 20:36:44.396 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-09 20:36:44.401 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-09 20:36:44.414 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-09 20:37:11.534 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-09 20:37:11.550 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东(String)
+2019-05-09 20:37:11.565 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-09 20:37:22.878 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-09 20:37:22.890 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-09 20:37:22.950 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-09 20:37:22.954 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-09 20:37:22.955 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-09 20:37:22.961 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-09 20:42:30.266 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-09 20:42:30.281 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东2(String), 123456(String)
+2019-05-09 20:42:30.281 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-09 20:42:30.297 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-09 20:42:30.297 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东2(String)
+2019-05-09 20:42:30.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 20
+2019-05-09 20:42:53.334 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-09 20:42:53.334 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String)
+2019-05-09 20:42:53.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-09 20:42:53.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-09 20:42:53.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-09 20:42:53.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1

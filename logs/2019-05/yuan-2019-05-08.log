@@ -886,3 +886,1394 @@ java.lang.NullPointerException: null
 2019-05-08 16:56:10.924 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
 2019-05-08 16:56:10.929 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东1(String)
 2019-05-08 16:56:10.933 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-08 17:09:04.359 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5700 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 17:09:04.374 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 17:09:51.707 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:09:53.637 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:09:53.723 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:09:59.461 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 17:10:02.106 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 59.042 seconds (JVM running for 63.737)
+2019-05-08 17:11:24.265 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-05-08 17:11:32.753 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-05-08 17:11:33.285 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:11:33.866 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 17:11:34.116 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-08 17:11:34.262 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:11:34.265 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String)
+2019-05-08 17:11:34.319 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 20
+2019-05-08 17:13:18.672 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-6] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session qopvjf4v. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'qopvjf4v'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 17:16:59.704 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5976 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 17:16:59.713 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 17:17:09.166 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:17:09.888 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:17:09.924 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:17:13.909 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 17:17:15.805 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.32 seconds (JVM running for 21.905)
+2019-05-08 17:17:43.617 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-08 17:17:44.327 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-08 17:17:44.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:17:44.473 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 17:17:44.688 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-08 17:17:44.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:17:44.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-08 17:17:44.763 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-08 17:20:36.455 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:20:36.462 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 17:20:36.477 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 17:20:36.484 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:20:36.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东(String)
+2019-05-08 17:20:36.519 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 17:21:04.423 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 17:21:04.439 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-08 17:21:04.456 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-08 17:23:24.614 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 3276 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 17:23:24.626 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 17:23:33.294 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:23:34.014 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:23:34.056 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:23:36.941 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 17:23:39.027 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.921 seconds (JVM running for 20.919)
+2019-05-08 17:24:43.498 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 17:24:44.506 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 17:24:44.552 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:24:44.734 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 17:24:44.963 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 17:24:44.990 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:24:44.993 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 17:24:45.034 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 17:27:35.663 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:27:35.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 17:27:35.786 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 17:27:35.799 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:27:35.805 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东(String)
+2019-05-08 17:27:35.887 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-08 17:27:51.325 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 17:27:51.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String)
+2019-05-08 17:27:51.337 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-08 17:30:35.294 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 68 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 17:30:35.306 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 17:30:45.595 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:30:46.272 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:30:46.300 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 17:30:49.136 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 17:30:52.511 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 18.651 seconds (JVM running for 22.546)
+2019-05-08 17:31:55.574 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 17:31:56.239 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 17:31:56.268 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:31:56.363 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 17:31:56.471 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 17:31:56.490 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:31:56.492 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 17:31:56.522 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 17:33:05.708 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 17:33:05.712 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 17:33:05.721 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-05-08 17:33:05.725 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 17:33:05.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东(String)
+2019-05-08 17:33:05.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 20
+2019-05-08 17:33:25.308 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 17:33:25.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东1(String)
+2019-05-08 17:33:25.322 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-08 17:34:04.988 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 17:34:04.990 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东(String)
+2019-05-08 17:34:05.000 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-08 18:18:48.992 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10124 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 18:18:49.013 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 18:19:11.838 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:19:13.190 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:19:13.305 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:19:17.543 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 18:19:19.560 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 34.472 seconds (JVM running for 47.11)
+2019-05-08 18:20:37.875 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-05-08 18:20:38.619 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-05-08 18:20:38.659 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 18:20:38.824 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 18:20:39.081 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-08 18:20:39.109 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 18:20:39.112 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String)
+2019-05-08 18:20:39.217 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 20
+2019-05-08 18:21:15.462 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-7] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session yuvv4cgw. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'yuvv4cgw'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 18:21:49.243 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 18:21:49.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 18:21:49.261 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-08 18:21:49.268 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 18:21:49.271 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东(String)
+2019-05-08 18:21:49.303 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 20
+2019-05-08 18:21:56.239 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 18:21:56.242 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String)
+2019-05-08 18:21:56.252 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 18:47:22.803 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6404 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 18:47:22.835 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 18:47:31.175 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:47:31.632 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:47:31.685 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:47:35.874 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 18:47:38.604 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.361 seconds (JVM running for 22.414)
+2019-05-08 18:47:59.566 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-4] - HikariPool-1 - Starting...
+2019-05-08 18:48:00.170 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-4] - HikariPool-1 - Start completed.
+2019-05-08 18:48:00.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 18:48:00.284 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 18:48:00.395 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-08 18:48:00.421 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 18:48:00.423 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东1(String)
+2019-05-08 18:48:00.457 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 20
+2019-05-08 18:48:42.026 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 18:48:42.054 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 18:48:42.083 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-05-08 18:48:42.091 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 18:48:42.093 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东(String)
+2019-05-08 18:48:42.111 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 20
+2019-05-08 18:48:58.387 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 18:49:00.314 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-08 18:49:00.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-08 18:54:33.956 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15508 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 18:54:33.966 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 18:54:46.034 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:54:46.873 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:54:46.936 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 18:54:51.525 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 18:54:53.367 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 21.43 seconds (JVM running for 27.552)
+2019-05-08 18:55:47.158 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-08 18:55:48.060 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-08 18:55:48.087 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 18:55:48.214 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 18:55:48.426 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 1
+2019-05-08 18:55:48.461 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 18:55:48.463 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - ==> Parameters: 房东1(String)
+2019-05-08 18:55:48.506 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-5] - <==      Total: 20
+2019-05-08 18:55:58.451 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-10] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session p4iv0x1j. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'p4iv0x1j'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 19:01:07.660 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15400 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 19:01:07.668 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 19:01:13.978 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:01:14.346 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:01:14.372 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:01:18.870 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 19:01:21.115 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.108 seconds (JVM running for 19.845)
+2019-05-08 19:01:33.212 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-05-08 19:01:34.865 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-05-08 19:01:34.896 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 19:01:35.227 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 19:01:35.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 19:01:35.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 19:01:35.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String)
+2019-05-08 19:01:35.834 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-08 19:03:52.935 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 19:03:53.003 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 19:03:53.051 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-08 19:03:53.061 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 19:03:53.064 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东(String)
+2019-05-08 19:03:53.098 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 20
+2019-05-08 19:04:09.042 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 19:04:09.047 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-08 19:04:09.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-08 19:42:03.128 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15652 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 19:42:03.155 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 19:42:10.588 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:42:12.029 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:42:12.129 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:42:17.709 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 19:42:19.084 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.462 seconds (JVM running for 22.211)
+2019-05-08 19:42:43.311 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-08 19:42:43.998 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-08 19:42:44.029 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 19:42:44.164 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 19:42:44.294 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-08 19:42:44.329 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 19:42:44.331 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-08 19:42:44.362 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-08 19:43:00.450 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 19:43:00.453 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 19:43:00.467 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-05-08 19:43:00.471 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 19:43:00.474 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东(String)
+2019-05-08 19:43:00.495 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 20
+2019-05-08 19:43:29.207 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 19:43:29.210 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-08 19:43:29.220 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-08 19:46:23.537 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 4176 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 19:46:23.555 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 19:46:30.140 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:46:30.621 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:46:30.648 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 19:46:37.274 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 19:46:38.977 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.081 seconds (JVM running for 22.752)
+2019-05-08 19:47:12.908 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-08 19:47:13.930 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-08 19:47:13.967 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 19:47:14.270 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 19:47:14.418 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-08 19:47:14.469 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 19:47:14.484 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-08 19:47:14.521 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-08 19:47:53.064 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 19:47:53.071 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 19:47:53.081 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 19:47:53.084 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 19:47:53.086 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东(String)
+2019-05-08 19:47:53.100 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 19:48:01.344 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 19:48:01.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 房东1(String)
+2019-05-08 19:48:01.361 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 1
+2019-05-08 20:47:30.492 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 17368 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 20:47:30.516 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 20:47:55.241 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 20:47:56.736 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 20:47:56.827 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 20:48:01.405 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 20:48:05.667 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 39.405 seconds (JVM running for 49.908)
+2019-05-08 20:52:54.675 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-08 20:52:56.591 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-08 20:52:56.620 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 20:52:56.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 20:52:57.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-08 20:52:57.761 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 20:52:57.763 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-08 20:52:57.901 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-08 20:53:15.024 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-3] - Closing session due to exception for WebSocketServerSockJsSession[id=arbhgip1]
+java.lang.IllegalStateException: No 'defaultDestination' configured
+	at org.springframework.util.Assert.state(Assert.java:73)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.getRequiredDefaultDestination(AbstractMessageSendingTemplate.java:103)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:136)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:117)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 20:53:15.089 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-3] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+java.lang.IllegalStateException: No 'defaultDestination' configured
+	at org.springframework.util.Assert.state(Assert.java:73)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.getRequiredDefaultDestination(AbstractMessageSendingTemplate.java:103)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:136)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:117)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:66)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 20:56:30.264 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6692 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 20:56:30.271 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 20:56:37.517 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 20:56:39.046 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 20:56:39.116 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 20:56:43.342 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 20:56:46.446 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 18.013 seconds (JVM running for 24.476)
+2019-05-08 20:59:43.066 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-05-08 20:59:44.890 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-05-08 20:59:44.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 20:59:45.247 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 20:59:45.713 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 20:59:45.805 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 20:59:45.809 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String)
+2019-05-08 20:59:45.895 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-08 21:00:50.211 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-6] - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2019-05-08 21:07:51.265 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 17236 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:07:51.297 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:08:08.470 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:08:10.126 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:08:10.485 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:08:17.618 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:08:20.154 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 30.869 seconds (JVM running for 46.057)
+2019-05-08 21:09:41.747 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 21:09:45.652 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 21:09:45.740 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:09:46.142 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:09:46.501 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 21:09:46.581 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:09:46.583 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 21:09:46.732 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 21:10:22.029 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-6] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session grw2mgco. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'grw2mgco'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 21:19:15.235 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 4468 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:19:15.251 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:19:38.327 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:19:39.672 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:19:39.731 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:19:43.402 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:19:51.905 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 38.179 seconds (JVM running for 42.215)
+2019-05-08 21:20:57.248 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 21:20:58.746 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 21:20:58.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:20:59.002 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:20:59.316 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 21:20:59.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:20:59.353 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 21:20:59.458 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 21:21:37.762 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-3] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session pshrl05g. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'pshrl05g'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 21:34:13.163 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1428 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:34:13.221 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:34:49.179 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:34:57.138 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:34:57.253 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:35:02.915 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:35:06.178 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 64.031 seconds (JVM running for 84.924)
+2019-05-08 21:37:28.151 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-08 21:37:30.315 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-08 21:37:30.381 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:37:30.739 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:37:31.438 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 1
+2019-05-08 21:37:31.502 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:37:31.504 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 房东1(String)
+2019-05-08 21:37:31.639 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 20
+2019-05-08 21:38:03.850 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-10] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session 4hxm553r. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id '4hxm553r'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 21:41:37.177 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16792 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:41:37.191 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:41:47.923 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:41:48.567 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:41:48.608 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:41:51.514 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:41:53.155 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 20.615 seconds (JVM running for 37.436)
+2019-05-08 21:42:48.233 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-05-08 21:42:48.821 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-05-08 21:42:48.844 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:42:48.958 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:42:49.118 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 21:42:49.141 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:42:49.146 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String)
+2019-05-08 21:42:49.213 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-08 21:43:12.322 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-3] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session yq0e5tgm. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'yq0e5tgm'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 21:45:52.184 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16308 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:45:52.193 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:46:03.831 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:46:04.466 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:46:04.535 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:46:06.773 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:46:08.096 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 18.031 seconds (JVM running for 24.193)
+2019-05-08 21:47:23.953 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-05-08 21:47:24.660 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-05-08 21:47:24.701 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:47:24.897 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:47:25.063 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 21:47:25.080 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:47:25.082 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String)
+2019-05-08 21:47:25.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-08 21:51:48.932 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 364 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:51:48.946 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:51:55.495 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:51:55.889 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:51:55.910 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:51:57.511 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:51:58.627 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 11.658 seconds (JVM running for 16.002)
+2019-05-08 21:52:34.558 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-05-08 21:52:35.259 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-05-08 21:52:35.285 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:52:35.487 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:52:35.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 1
+2019-05-08 21:52:35.912 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:52:35.915 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - ==> Parameters: 房东1(String)
+2019-05-08 21:52:35.973 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-7] - <==      Total: 20
+2019-05-08 21:53:16.917 ERROR --- [ExceptionWebSocketHandlerDecorator.java:90][http-nio-8888-exec-1] - Closing session due to exception for WebSocketServerSockJsSession[id=gnzms1bp]
+java.lang.IllegalStateException: No 'defaultDestination' configured
+	at org.springframework.util.Assert.state(Assert.java:73)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.getRequiredDefaultDestination(AbstractMessageSendingTemplate.java:103)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:136)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:117)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionEstablished(WebSocketConfig.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionEstablished(WebSocketHandlerDecorator.java:70)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionEstablished(LoggingWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:48)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 21:53:16.951 WARN  --- [ExceptionWebSocketHandlerDecorator.java:82][http-nio-8888-exec-1] - Unhandled exception after connection closed for ExceptionWebSocketHandlerDecorator [delegate=LoggingWebSocketHandlerDecorator [delegate= [delegate=SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]]]]
+java.lang.IllegalStateException: No 'defaultDestination' configured
+	at org.springframework.util.Assert.state(Assert.java:73)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.getRequiredDefaultDestination(AbstractMessageSendingTemplate.java:103)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:136)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.convertAndSend(AbstractMessageSendingTemplate.java:117)
+	at com.yuan.house.config.websocket.WebSocketConfig$1$1.afterConnectionClosed(WebSocketConfig.java:66)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.afterConnectionClosed(WebSocketHandlerDecorator.java:85)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.afterConnectionClosed(LoggingWebSocketHandlerDecorator.java:72)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionClosed(ExceptionWebSocketHandlerDecorator.java:78)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.close(AbstractSockJsSession.java:222)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.tryCloseWithError(ExceptionWebSocketHandlerDecorator.java:94)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.afterConnectionEstablished(ExceptionWebSocketHandlerDecorator.java:51)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateConnectionEstablished(AbstractSockJsSession.java:375)
+	at org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession.initializeDelegateSession(WebSocketServerSockJsSession.java:159)
+	at org.springframework.web.socket.sockjs.transport.handler.SockJsWebSocketHandler.afterConnectionEstablished(SockJsWebSocketHandler.java:88)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onOpen(StandardWebSocketHandlerAdapter.java:103)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:133)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:816)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 21:55:18.006 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15688 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 21:55:18.020 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 21:55:25.385 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:55:25.745 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:55:25.767 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 21:55:30.680 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 21:55:32.868 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.682 seconds (JVM running for 20.908)
+2019-05-08 21:56:47.445 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 21:56:47.976 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 21:56:47.991 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:56:48.073 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 21:56:48.186 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 21:56:48.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:56:48.241 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 21:56:48.289 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 21:58:25.255 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 21:58:25.362 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 21:58:25.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-05-08 21:58:25.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 21:58:25.429 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东(String)
+2019-05-08 21:58:25.462 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 20
+2019-05-08 21:58:47.018 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-08 21:58:47.024 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-08 21:58:47.032 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-08 22:28:10.049 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10636 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 22:28:10.069 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 22:28:42.420 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 22:28:43.251 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 22:28:43.298 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 22:28:51.081 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 22:28:57.018 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 51.213 seconds (JVM running for 69.464)
+2019-05-08 22:30:01.342 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 22:30:05.708 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 22:30:05.841 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 22:30:06.417 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 22:30:06.748 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 22:30:06.771 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 22:30:06.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 22:30:07.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 22:30:51.714 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-7] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session jtzrm2q5. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'jtzrm2q5'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 22:30:56.247 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-6] - Failed to parse TextMessage payload=[DISCONNECT..], byteCount=13, last=true] in session jtzrm2q5. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'jtzrm2q5'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 22:46:06.170 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16960 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 22:46:06.202 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 22:46:28.162 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 22:46:28.945 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 22:46:29.019 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 22:46:35.649 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 22:46:39.346 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 38.849 seconds (JVM running for 58.605)
+2019-05-08 22:48:18.392 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-05-08 22:48:19.818 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-05-08 22:48:19.846 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 22:48:20.224 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 22:48:20.706 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-08 22:48:20.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 22:48:20.722 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String)
+2019-05-08 22:48:20.832 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 20
+2019-05-08 22:49:03.272 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-6] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session avlxqcak. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id 'avlxqcak'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 23:00:31.390 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15364 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 23:00:31.409 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 23:00:52.072 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:00:52.947 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:00:53.019 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:00:55.936 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 23:00:57.233 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 32.282 seconds (JVM running for 62.758)
+2019-05-08 23:03:12.439 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 23:03:20.162 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 23:03:21.366 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 23:03:22.397 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 23:03:24.057 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 23:03:24.141 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 23:03:24.143 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 23:03:24.558 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 23:12:13.819 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16636 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 23:12:13.842 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 23:13:15.386 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:13:18.662 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:13:18.789 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:13:26.566 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 23:13:31.415 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 90.116 seconds (JVM running for 116.538)
+2019-05-08 23:15:35.190 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-08 23:15:37.422 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-08 23:15:37.455 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 23:15:37.916 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 23:15:38.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-08 23:15:38.263 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 23:15:38.265 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东1(String)
+2019-05-08 23:15:38.423 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-08 23:15:57.957 ERROR --- [StompSubProtocolHandler.java:248][http-nio-8888-exec-5] - Failed to parse TextMessage payload=[CONNECT
+ac..], byteCount=56, last=true] in session 52uarwe5. Sending STOMP ERROR to client.
+java.lang.IllegalStateException: No decoder for session id '52uarwe5'
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:233)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:324)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.delegateMessages(AbstractSockJsSession.java:386)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequestInternal(AbstractHttpReceivingTransportHandler.java:90)
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpReceivingTransportHandler.handleRequest(AbstractHttpReceivingTransportHandler.java:54)
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:312)
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:437)
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:133)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-08 23:16:53.602 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16460 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-08 23:16:53.615 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-08 23:16:59.965 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:17:00.633 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:17:00.694 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-08 23:17:04.854 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-08 23:17:07.782 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.756 seconds (JVM running for 19.876)
+2019-05-08 23:18:01.631 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-08 23:18:02.142 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-08 23:18:02.167 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 23:18:02.278 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-08 23:18:02.417 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-08 23:18:02.453 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 23:18:02.455 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 房东1(String)
+2019-05-08 23:18:02.488 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 20
+2019-05-08 23:20:44.332 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-08 23:20:44.453 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String), 123456(String)
+2019-05-08 23:20:44.555 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-08 23:20:44.586 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status, orders from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by orders asc 
+2019-05-08 23:20:44.593 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东(String)
+2019-05-08 23:20:44.631 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20

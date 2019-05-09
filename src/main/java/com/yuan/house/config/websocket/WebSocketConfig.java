@@ -1,5 +1,6 @@
 package com.yuan.house.config.websocket;
 
+import com.yuan.house.VO.ChatMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -51,7 +52,9 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
                     public void afterConnectionEstablished(final WebSocketSession session) throws Exception {
                         if (!users.containsKey(session.getPrincipal().getName())) {
                             users.put(session.getPrincipal().getName(), session.getId());
-                            //template.convertAndSend("/topic/userlist", JSON.toJSON(user));
+                            //ChatMessage cm = new ChatMessage();
+                            //cm.setName(session.getPrincipal().getName());
+                            //template.convertAndSend("/topic/updateonline" ,cm);
                             System.out.println("连接成功：" + session.getPrincipal().getName());
                             super.afterConnectionEstablished(session);
                         }
@@ -62,7 +65,9 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
                             throws Exception {
                         if (users.containsKey(session.getPrincipal().getName())) {
                             users.remove(session.getPrincipal().getName());
-                            //template.convertAndSend("/topic/userlist", JSON.toJSON(user));
+                            //ChatMessage cm = new ChatMessage();
+                            //cm.setName(session.getPrincipal().getName());
+                            //template.convertAndSend("/topic/updateonline" ,cm);
                             System.out.println("断开连接: " + session.getPrincipal().getName());
                             super.afterConnectionClosed(session, closeStatus);
                         }
