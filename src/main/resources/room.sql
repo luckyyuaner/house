@@ -10,31 +10,49 @@ Target Server Type    : MYSQL
 Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2019-04-29 12:21:42
+Date: 2019-05-15 12:40:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for cart
+-- Table structure for address
 -- ----------------------------
-DROP TABLE IF EXISTS `cart`;
-CREATE TABLE `cart` (
-  `cart_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(11) unsigned NOT NULL,
-  `house_id` bigint(11) unsigned NOT NULL,
-  `ctime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '收藏时间',
-  PRIMARY KEY (`cart_id`),
-  UNIQUE KEY `unique_idx` (`cart_id`,`user_id`,`house_id`,`ctime`) USING BTREE,
-  KEY `id_idx` (`cart_id`) USING BTREE,
-  KEY `ca_uid_f` (`user_id`),
-  KEY `ca_hid_f` (`house_id`),
-  CONSTRAINT `ca_hid_f` FOREIGN KEY (`house_id`) REFERENCES `house` (`house_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `ca_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE `address` (
+  `ad_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
+  `order` tinyint(4) NOT NULL DEFAULT '0' COMMENT '地点‪级别，0：省，1：市/区，2：小区',
+  `name` varchar(20) NOT NULL,
+  `count` int(11) NOT NULL DEFAULT '0' COMMENT '房源数量',
+  PRIMARY KEY (`ad_id`),
+  UNIQUE KEY `unique_idx` (`name`) USING BTREE,
+  KEY `id_idx` (`ad_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of cart
+-- Records of address
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for collect
+-- ----------------------------
+DROP TABLE IF EXISTS `collect`;
+CREATE TABLE `collect` (
+  `collect_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(11) unsigned NOT NULL,
+  `house_id` bigint(11) unsigned NOT NULL,
+  `ctime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '收藏时间',
+  PRIMARY KEY (`collect_id`),
+  UNIQUE KEY `unique_idx` (`collect_id`,`user_id`,`house_id`,`ctime`) USING BTREE,
+  KEY `id_idx` (`collect_id`) USING BTREE,
+  KEY `co_uid_f` (`user_id`) USING BTREE,
+  KEY `co_hid_f` (`house_id`) USING BTREE,
+  CONSTRAINT `co_hid_f` FOREIGN KEY (`house_id`) REFERENCES `house` (`house_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `co_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of collect
 -- ----------------------------
 
 -- ----------------------------
@@ -49,6 +67,7 @@ CREATE TABLE `comment` (
   `house_grade` double(8,0) NOT NULL DEFAULT '5' COMMENT '房源及房东分数，0-10',
   `info` varchar(300) NOT NULL COMMENT '评论内容',
   `url` varchar(100) DEFAULT NULL COMMENT '路径',
+  `ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '评论时间',
   PRIMARY KEY (`comment_id`),
   UNIQUE KEY `unique_idx` (`comment_id`,`user_id`,`contract_id`) USING BTREE,
   KEY `id_idx` (`comment_id`) USING BTREE,
@@ -107,6 +126,8 @@ CREATE TABLE `feedback` (
   `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '处理状态，0：未处理，1：处理中，2：处理完成',
   `info` text NOT NULL COMMENT '反馈内容',
   `url` varchar(30) DEFAULT NULL,
+  `utime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
+  `ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
   PRIMARY KEY (`feedback_id`),
   UNIQUE KEY `unique_idx` (`feedback_id`,`create_id`,`operate_id`) USING BTREE,
   KEY `id_idx` (`feedback_id`) USING BTREE,
@@ -145,10 +166,13 @@ CREATE TABLE `house` (
   `title` varchar(100) DEFAULT NULL COMMENT '房源装修、设施等描述，以英文分号间隔，结尾不加分号',
   `url` varchar(200) DEFAULT NULL COMMENT '房源图片视频路径，多个以英文分号间隔，结尾不加分号',
   `grade` double(8,0) NOT NULL DEFAULT '5' COMMENT '房源分数，0-10',
+  `ad_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`house_id`),
   UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`house_id`) USING BTREE,
   KEY `h_uid_f` (`user_id`),
+  KEY `h_aid_f` (`ad_id`),
+  CONSTRAINT `h_aid_f` FOREIGN KEY (`ad_id`) REFERENCES `address` (`ad_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `h_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -190,7 +214,6 @@ CREATE TABLE `permission` (
   `url` varchar(100) DEFAULT NULL COMMENT '权限路径',
   `icon` varchar(50) DEFAULT NULL COMMENT '权限图标',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '权限状态，0：有效，1：无效',
-  `orders` bigint(20) DEFAULT NULL COMMENT '排序',
   PRIMARY KEY (`permission_id`),
   UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`permission_id`) USING BTREE,
@@ -201,67 +224,67 @@ CREATE TABLE `permission` (
 -- ----------------------------
 -- Records of permission
 -- ----------------------------
-INSERT INTO `permission` VALUES ('1', null, '用户信息管理', '1', '', null, null, '0', '1');
-INSERT INTO `permission` VALUES ('2', null, '房屋资源管理', '1', null, null, null, '0', '2');
-INSERT INTO `permission` VALUES ('3', '1', '用户管理', '2', 'user:read', '/user/listUser', null, '0', '0');
-INSERT INTO `permission` VALUES ('4', '1', '角色管理', '2', 'role:read', '/role/listRole', null, '0', '0');
-INSERT INTO `permission` VALUES ('5', '3', '新增用户', '3', 'user:create', '/user/addUser', null, '0', '0');
-INSERT INTO `permission` VALUES ('6', '3', '编辑用户', '3', 'user:update', '/user/updateUser', null, '0', '0');
-INSERT INTO `permission` VALUES ('7', '3', '删除用户', '3', 'user:delete', '/user/deleteUser', null, '0', '0');
-INSERT INTO `permission` VALUES ('8', '4', '新增角色', '3', 'role:create', '/role/showAdd', null, '0', '0');
-INSERT INTO `permission` VALUES ('9', '4', '编辑角色', '3', 'role:update', '/role/showUpdate', null, '0', '0');
-INSERT INTO `permission` VALUES ('10', '4', '删除角色', '3', 'role:delete', '/role/deleteRole', null, '0', '0');
-INSERT INTO `permission` VALUES ('11', '1', '权限管理', '2', 'permission:read', '/permission/listPermission', null, '0', '0');
-INSERT INTO `permission` VALUES ('12', '11', '新增权限', '3', 'permission:create', '/permission/showAdd', null, '0', '0');
-INSERT INTO `permission` VALUES ('13', '11', '编辑权限', '3', 'permission:update', '/permission/showUpdate', null, '0', '0');
-INSERT INTO `permission` VALUES ('14', '11', '删除权限', '3', 'permission:delete', '/permission/deletePermission', null, '0', '0');
-INSERT INTO `permission` VALUES ('15', null, '租房业务管理', '1', null, null, null, '0', '3');
-INSERT INTO `permission` VALUES ('16', null, '反馈信息管理', '1', null, null, null, '0', '4');
-INSERT INTO `permission` VALUES ('17', '1', '评价管理', '2', 'comment:read', '/comment/index', null, '0', null);
-INSERT INTO `permission` VALUES ('18', '1', '钱包管理', '2', 'money:read', '/money/index', null, '0', null);
-INSERT INTO `permission` VALUES ('19', '17', '新增评价', '3', 'comment:create', '/comment/create', null, '0', null);
-INSERT INTO `permission` VALUES ('20', '17', '编辑评价', '3', 'comment:update', '/comment/update', null, '0', null);
-INSERT INTO `permission` VALUES ('21', '17', '删除评价', '3', 'comment:delete', '/comment/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('22', '18', '新增钱包', '3', 'money:create', '/money/create', null, '0', null);
-INSERT INTO `permission` VALUES ('23', '18', '编辑钱包', '3', 'money:update', '/money/update', null, '0', null);
-INSERT INTO `permission` VALUES ('24', '18', '删除钱包', '3', 'money:delete', '/money/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('25', '2', '房源管理', '2', 'house:read', '/house/read', null, '0', null);
-INSERT INTO `permission` VALUES ('26', '15', '合同管理', '2', 'contract:read', '/contract/index', null, '0', null);
-INSERT INTO `permission` VALUES ('27', '1', '收藏管理', '2', 'cart:read', '/cart/index', null, '0', null);
-INSERT INTO `permission` VALUES ('28', '16', '报修管理', '2', 'repair:read', '/repair/index', null, '0', null);
-INSERT INTO `permission` VALUES ('29', '16', '举报管理', '2', 'report:read', '/report/index', null, '0', null);
-INSERT INTO `permission` VALUES ('30', '16', '投诉管理', '2', 'complaint:read', '/complaint/index', null, '0', null);
-INSERT INTO `permission` VALUES ('31', '16', '建议管理', '2', 'suggest:read', '/suggest/read', null, '0', null);
-INSERT INTO `permission` VALUES ('32', '25', '新增房源', '3', 'house:create', '/house/create', null, '0', null);
-INSERT INTO `permission` VALUES ('33', '25', '编辑房源', '3', 'house:update', '/house/update', null, '0', null);
-INSERT INTO `permission` VALUES ('34', '25', '删除房源', '3', 'house:delete', '/house/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('35', '26', '新增合同', '3', 'contract:create', '/contract/create', null, '0', null);
-INSERT INTO `permission` VALUES ('36', '26', '编辑合同', '3', 'contract:update', '/contract/update', null, '0', null);
-INSERT INTO `permission` VALUES ('37', '26', '删除合同', '3', 'contract:delete', '/contract/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('38', '27', '新增收藏', '3', 'cart:create', '/cart/create', null, '0', null);
-INSERT INTO `permission` VALUES ('39', '27', '修改收藏', '3', 'cart:update', '/cart/update', null, '0', null);
-INSERT INTO `permission` VALUES ('40', '27', '删除收藏', '3', 'cart:delete', '/cart/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('41', '28', '新增报修', '3', 'repair:create', '/repair/create', null, '0', null);
-INSERT INTO `permission` VALUES ('44', '28', '编辑报修', '3', 'repair:update', '/repair/update', null, '0', null);
-INSERT INTO `permission` VALUES ('45', '28', '删除报修', '3', 'repair:delete', '/repair/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('46', '29', '新增举报', '3', 'report:create', '/report/create', null, '0', null);
-INSERT INTO `permission` VALUES ('47', '29', '编辑举报', '3', 'report:update', '/report/update', null, '0', null);
-INSERT INTO `permission` VALUES ('48', '29', '删除举报', '3', 'report:delete', '/report/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('49', '30', '新增投诉', '3', 'complaint:create', '/complaint/create', null, '0', null);
-INSERT INTO `permission` VALUES ('50', '30', '编辑投诉', '3', 'complaint:update', '/complaint/update', null, '0', null);
-INSERT INTO `permission` VALUES ('51', '30', '删除投诉', '3', 'complaint:delete', '/complaint/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('52', '31', '新增建议', '3', 'suggest:create', '/suggest/create', null, '0', null);
-INSERT INTO `permission` VALUES ('53', '31', '编辑建议', '3', 'suggest:update', '/suggest/update', null, '0', null);
-INSERT INTO `permission` VALUES ('54', '31', '删除建议', '3', 'suggest:delete', '/suggest/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('55', null, '系统管理', '1', null, null, null, '0', null);
-INSERT INTO `permission` VALUES ('56', '55', '日志管理', '2', 'log:read', '/log/read', null, '0', null);
-INSERT INTO `permission` VALUES ('57', '56', '新增日志', '3', 'log:create', '/log/create', null, '0', null);
-INSERT INTO `permission` VALUES ('58', '56', '编辑日志', '3', 'log:update', '/log/update', null, '0', null);
-INSERT INTO `permission` VALUES ('59', '56', '删除日志', '3', 'log:delete', '/log/delete', null, '0', null);
-INSERT INTO `permission` VALUES ('60', '16', '公告管理', '2', 'notice:read', '/notice/read', null, '0', null);
-INSERT INTO `permission` VALUES ('61', '60', '新增公告', '3', 'notice:create', '/notice/create', null, '0', null);
-INSERT INTO `permission` VALUES ('62', '60', '编辑公告', '3', 'notice:update', '/notice/update', null, '0', null);
-INSERT INTO `permission` VALUES ('63', '60', '删除公告', '3', 'notice:delete', '/notice/delete', null, '0', null);
+INSERT INTO `permission` VALUES ('1', null, '用户信息管理', '1', '', null, null, '0');
+INSERT INTO `permission` VALUES ('2', null, '房屋资源管理', '1', null, null, null, '0');
+INSERT INTO `permission` VALUES ('3', '1', '用户管理', '2', 'user:read', '/user/listUser', null, '0');
+INSERT INTO `permission` VALUES ('4', '1', '角色管理', '2', 'role:read', '/role/listRole', null, '0');
+INSERT INTO `permission` VALUES ('5', '3', '新增用户', '3', 'user:create', '/user/addUser', null, '0');
+INSERT INTO `permission` VALUES ('6', '3', '编辑用户', '3', 'user:update', '/user/updateUser', null, '0');
+INSERT INTO `permission` VALUES ('7', '3', '删除用户', '3', 'user:delete', '/user/deleteUser', null, '0');
+INSERT INTO `permission` VALUES ('8', '4', '新增角色', '3', 'role:create', '/role/showAdd', null, '0');
+INSERT INTO `permission` VALUES ('9', '4', '编辑角色', '3', 'role:update', '/role/showUpdate', null, '0');
+INSERT INTO `permission` VALUES ('10', '4', '删除角色', '3', 'role:delete', '/role/deleteRole', null, '0');
+INSERT INTO `permission` VALUES ('11', '1', '权限管理', '2', 'permission:read', '/permission/listPermission', null, '0');
+INSERT INTO `permission` VALUES ('12', '11', '新增权限', '3', 'permission:create', '/permission/showAdd', null, '0');
+INSERT INTO `permission` VALUES ('13', '11', '编辑权限', '3', 'permission:update', '/permission/showUpdate', null, '0');
+INSERT INTO `permission` VALUES ('14', '11', '删除权限', '3', 'permission:delete', '/permission/deletePermission', null, '0');
+INSERT INTO `permission` VALUES ('15', null, '租房业务管理', '1', null, null, null, '0');
+INSERT INTO `permission` VALUES ('16', null, '反馈信息管理', '1', null, null, null, '0');
+INSERT INTO `permission` VALUES ('17', '1', '评价管理', '2', 'comment:read', '/comment/index', null, '0');
+INSERT INTO `permission` VALUES ('18', '1', '钱包管理', '2', 'money:read', '/money/index', null, '0');
+INSERT INTO `permission` VALUES ('19', '17', '新增评价', '3', 'comment:create', '/comment/create', null, '0');
+INSERT INTO `permission` VALUES ('20', '17', '编辑评价', '3', 'comment:update', '/comment/update', null, '0');
+INSERT INTO `permission` VALUES ('21', '17', '删除评价', '3', 'comment:delete', '/comment/delete', null, '0');
+INSERT INTO `permission` VALUES ('22', '18', '新增钱包', '3', 'money:create', '/money/create', null, '0');
+INSERT INTO `permission` VALUES ('23', '18', '编辑钱包', '3', 'money:update', '/money/update', null, '0');
+INSERT INTO `permission` VALUES ('24', '18', '删除钱包', '3', 'money:delete', '/money/delete', null, '0');
+INSERT INTO `permission` VALUES ('25', '2', '房源管理', '2', 'house:read', '/house/read', null, '0');
+INSERT INTO `permission` VALUES ('26', '15', '合同管理', '2', 'contract:read', '/contract/index', null, '0');
+INSERT INTO `permission` VALUES ('27', '1', '收藏管理', '2', 'cart:read', '/cart/index', null, '0');
+INSERT INTO `permission` VALUES ('28', '16', '报修管理', '2', 'repair:read', '/repair/index', null, '0');
+INSERT INTO `permission` VALUES ('29', '16', '举报管理', '2', 'report:read', '/report/index', null, '0');
+INSERT INTO `permission` VALUES ('30', '16', '投诉管理', '2', 'complaint:read', '/complaint/index', null, '0');
+INSERT INTO `permission` VALUES ('31', '16', '建议管理', '2', 'suggest:read', '/suggest/read', null, '0');
+INSERT INTO `permission` VALUES ('32', '25', '新增房源', '3', 'house:create', '/house/create', null, '0');
+INSERT INTO `permission` VALUES ('33', '25', '编辑房源', '3', 'house:update', '/house/update', null, '0');
+INSERT INTO `permission` VALUES ('34', '25', '删除房源', '3', 'house:delete', '/house/delete', null, '0');
+INSERT INTO `permission` VALUES ('35', '26', '新增合同', '3', 'contract:create', '/contract/create', null, '0');
+INSERT INTO `permission` VALUES ('36', '26', '编辑合同', '3', 'contract:update', '/contract/update', null, '0');
+INSERT INTO `permission` VALUES ('37', '26', '删除合同', '3', 'contract:delete', '/contract/delete', null, '0');
+INSERT INTO `permission` VALUES ('38', '27', '新增收藏', '3', 'cart:create', '/cart/create', null, '0');
+INSERT INTO `permission` VALUES ('39', '27', '修改收藏', '3', 'cart:update', '/cart/update', null, '0');
+INSERT INTO `permission` VALUES ('40', '27', '删除收藏', '3', 'cart:delete', '/cart/delete', null, '0');
+INSERT INTO `permission` VALUES ('41', '28', '新增报修', '3', 'repair:create', '/repair/create', null, '0');
+INSERT INTO `permission` VALUES ('44', '28', '编辑报修', '3', 'repair:update', '/repair/update', null, '0');
+INSERT INTO `permission` VALUES ('45', '28', '删除报修', '3', 'repair:delete', '/repair/delete', null, '0');
+INSERT INTO `permission` VALUES ('46', '29', '新增举报', '3', 'report:create', '/report/create', null, '0');
+INSERT INTO `permission` VALUES ('47', '29', '编辑举报', '3', 'report:update', '/report/update', null, '0');
+INSERT INTO `permission` VALUES ('48', '29', '删除举报', '3', 'report:delete', '/report/delete', null, '0');
+INSERT INTO `permission` VALUES ('49', '30', '新增投诉', '3', 'complaint:create', '/complaint/create', null, '0');
+INSERT INTO `permission` VALUES ('50', '30', '编辑投诉', '3', 'complaint:update', '/complaint/update', null, '0');
+INSERT INTO `permission` VALUES ('51', '30', '删除投诉', '3', 'complaint:delete', '/complaint/delete', null, '0');
+INSERT INTO `permission` VALUES ('52', '31', '新增建议', '3', 'suggest:create', '/suggest/create', null, '0');
+INSERT INTO `permission` VALUES ('53', '31', '编辑建议', '3', 'suggest:update', '/suggest/update', null, '0');
+INSERT INTO `permission` VALUES ('54', '31', '删除建议', '3', 'suggest:delete', '/suggest/delete', null, '0');
+INSERT INTO `permission` VALUES ('55', null, '系统管理', '1', null, null, null, '0');
+INSERT INTO `permission` VALUES ('56', '55', '日志管理', '2', 'log:read', '/log/read', null, '0');
+INSERT INTO `permission` VALUES ('57', '56', '新增日志', '3', 'log:create', '/log/create', null, '0');
+INSERT INTO `permission` VALUES ('58', '56', '编辑日志', '3', 'log:update', '/log/update', null, '0');
+INSERT INTO `permission` VALUES ('59', '56', '删除日志', '3', 'log:delete', '/log/delete', null, '0');
+INSERT INTO `permission` VALUES ('60', '16', '公告管理', '2', 'notice:read', '/notice/read', null, '0');
+INSERT INTO `permission` VALUES ('61', '60', '新增公告', '3', 'notice:create', '/notice/create', null, '0');
+INSERT INTO `permission` VALUES ('62', '60', '编辑公告', '3', 'notice:update', '/notice/update', null, '0');
+INSERT INTO `permission` VALUES ('63', '60', '删除公告', '3', 'notice:delete', '/notice/delete', null, '0');
 
 -- ----------------------------
 -- Table structure for role
@@ -270,23 +293,21 @@ DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
   `role_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色编号',
   `name` varchar(20) NOT NULL COMMENT '角色名称',
-  `title` varchar(20) DEFAULT NULL COMMENT '角色标题',
   `description` text COMMENT '角色描述',
-  `orders` bigint(20) DEFAULT NULL COMMENT '排序',
   `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0:有效，1：无效',
   PRIMARY KEY (`role_id`),
   UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`role_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role
 -- ----------------------------
-INSERT INTO `role` VALUES ('1', '系统管理员', '系统管理员', null, '0', '0');
-INSERT INTO `role` VALUES ('2', '业务管理员', null, null, '0', '0');
-INSERT INTO `role` VALUES ('3', '一般管理员', null, null, null, '0');
-INSERT INTO `role` VALUES ('4', '租客', null, null, null, '0');
-INSERT INTO `role` VALUES ('5', '房东', null, null, null, '0');
+INSERT INTO `role` VALUES ('1', '系统管理员', null, '0');
+INSERT INTO `role` VALUES ('2', '业务管理员', null, '0');
+INSERT INTO `role` VALUES ('3', '一般管理员', null, '0');
+INSERT INTO `role` VALUES ('4', '租客', null, '0');
+INSERT INTO `role` VALUES ('5', '房东', null, '0');
 
 -- ----------------------------
 -- Table structure for role_permission
@@ -420,7 +441,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `unique_idx` (`username`) USING BTREE,
   KEY `id_idx` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
@@ -430,6 +451,13 @@ INSERT INTO `user` VALUES ('2', '业务管理员', '123456', '0', '0', null, '20
 INSERT INTO `user` VALUES ('3', '一般管理员', '123456', '0', '0', null, '2019-04-29 11:09:05', null, '0', null, null, null, null, '0', '5');
 INSERT INTO `user` VALUES ('4', '租客', '123456', '1', '0', null, '2019-04-29 11:10:03', null, '0', null, null, null, null, '0', '5');
 INSERT INTO `user` VALUES ('5', '房东', '123456', '2', '0', null, '2019-04-29 11:10:06', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('8', '系统管理员1', '123456', '0', '0', null, '2019-04-29 20:09:16', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('9', '业务管理员1', '123456', '0', '0', null, '2019-04-29 20:10:09', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('10', '业务管理员2', '123456', '0', '0', null, '2019-04-29 20:11:18', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('11', '一般管理员1', '123456', '0', '0', null, '2019-04-29 20:12:06', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('12', '租客1', '123456', '1', '0', null, '2019-04-29 20:12:21', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('13', '房东1', '123456', '2', '0', null, '2019-04-29 20:12:35', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('14', '房东2', '123456', '2', '0', null, '2019-05-09 20:41:09', null, '0', null, null, null, null, '0', '5');
 
 -- ----------------------------
 -- Table structure for user_role
@@ -445,7 +473,7 @@ CREATE TABLE `user_role` (
   KEY `rid_f` (`role_id`),
   CONSTRAINT `rid_f` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_role
@@ -455,3 +483,10 @@ INSERT INTO `user_role` VALUES ('2', '2', '2');
 INSERT INTO `user_role` VALUES ('3', '3', '3');
 INSERT INTO `user_role` VALUES ('4', '4', '4');
 INSERT INTO `user_role` VALUES ('5', '5', '5');
+INSERT INTO `user_role` VALUES ('6', '8', '1');
+INSERT INTO `user_role` VALUES ('7', '9', '2');
+INSERT INTO `user_role` VALUES ('8', '10', '2');
+INSERT INTO `user_role` VALUES ('9', '11', '3');
+INSERT INTO `user_role` VALUES ('10', '12', '4');
+INSERT INTO `user_role` VALUES ('11', '13', '5');
+INSERT INTO `user_role` VALUES ('12', '14', '5');

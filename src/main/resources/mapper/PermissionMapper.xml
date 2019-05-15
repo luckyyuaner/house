@@ -4,7 +4,7 @@
 <mapper namespace="com.yuan.house.dao.PermissionDao">
 
     <sql id="allColumns">
-        permission_id, parent_id, name, type, permission_value, url, icon, status, orders
+        permission_id, parent_id, name, type, permission_value, url, icon, status
     </sql>
 
     <select id="getUserPermissions" resultType="com.yuan.house.model.Permission">
@@ -23,7 +23,7 @@
             )
           )
         )
-        order by orders asc
+        order by permission_id asc
     </select>
 
     <select id="getAllPermissions" resultType="com.yuan.house.model.Permission">
@@ -31,7 +31,7 @@
         <include refid="allColumns"/>
         FROM permission
         WHERE status = 0
-        ORDER BY orders ASC
+        ORDER BY permission_id ASC
     </select>
 
     <select id="queryPermissionById" resultType="com.yuan.house.model.Permission">
@@ -40,7 +40,7 @@
         FROM permission
         WHERE status = 0
         AND permission_id = #{id}
-        ORDER BY orders ASC
+        ORDER BY permission_id ASC
     </select>
 
     <select id="queryPermissionLikeMsg" resultType="com.yuan.house.model.Permission">
@@ -54,21 +54,21 @@
         OR permission_value LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR url LIKE CONCAT(CONCAT('%', #{msg}), '%')
         )
-        ORDER BY orders ASC
+        ORDER BY permission_id ASC
     </select>
 
     <insert id="addPermission" parameterType="com.yuan.house.model.Permission">
         INSERT INTO permission
-        (parent_id, name, type, permission_value, url, icon, status, orders)
+        (parent_id, name, type, permission_value, url, icon, status)
         VALUES
         (#{object.parentId}, #{object.name}, #{object.type}, #{object.permissionValue},
-        #{object.url}, #{object.icon}, #{object.status}, #{object.orders})
+        #{object.url}, #{object.icon}, #{object.status})
     </insert>
 
     <update id="updatePermission" parameterType="com.yuan.house.model.Permission">
         UPDATE permission
         SET parent_id = #{object.parentId}, name = #{object.name}, type = #{object.type}, permission_value = #{object.permissionValue},
-        url = #{object.url}, icon = #{object.icon}, status = #{object.status}, orders = #{object.orders}
+        url = #{object.url}, icon = #{object.icon}, status = #{object.status}}
         WHERE permission_id = #{object.permissionId}
     </update>
 

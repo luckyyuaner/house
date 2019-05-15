@@ -4,7 +4,7 @@
 <mapper namespace="com.yuan.house.dao.RoleDao">
 
     <sql id="allColumns">
-        role_id, name, title, description, orders
+        role_id, name, description
     </sql>
 
     <select id="getAllRoles" resultType="com.yuan.house.model.Role">
@@ -38,7 +38,6 @@
         WHERE status = 0 AND
         (
         name LIKE CONCAT(CONCAT('%', #{msg}), '%')
-        OR title LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR description LIKE CONCAT(CONCAT('%', #{msg}), '%')
         )
         ORDER BY role_id ASC
@@ -46,16 +45,14 @@
 
     <insert id="addRole" parameterType="com.yuan.house.model.Role">
         INSERT INTO role
-        (name, title, description, orders, status)
+        (name, description, status)
         VALUES
-        (#{object.name}, #{object.title}, #{object.description},
-        #{object.orders}, #{object.status})
+        (#{object.name}, #{object.description}, #{object.status})
     </insert>
 
     <update id="updateRole" parameterType="com.yuan.house.model.Role">
         UPDATE role
-        SET name = #{object.name}, title = #{object.title}, description = #{object.description},
-        orders = #{object.orders}, status = #{object.status}
+        SET name = #{object.name}, description = #{object.description}, status = #{object.status}
         WHERE role_id = #{object.roleId}
     </update>
 
