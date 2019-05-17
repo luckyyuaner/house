@@ -21,6 +21,7 @@ body{
 .field:focus {
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
+    border-radius:10px;
 }
 #checkImg{
     float:right;

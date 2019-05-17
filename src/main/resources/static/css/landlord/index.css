@@ -1,7 +1,7 @@
 body{
     width:100%;
     height:400px;
-    background-image: url(/images/bg.jpg);
+    /*background-image: url(/images/bg.jpg);*/
     color:rgba(0,0,0,0.69);
     font-family:SimHei;
 }
@@ -35,6 +35,7 @@ body{
     width:280px;
     margin-left:10px;
     margin-right:10px;
+    object-fit: cover;
 }
 .img_list{
     height:300px;
@@ -91,6 +92,7 @@ body{
 .box .box1 .picbox .content{
     width:28%;
     height:370px;
+    background-color: rgba(44, 109, 1, 0.21);
     float:right;
     overflow-x: hidden;
     overflow-y: scroll;

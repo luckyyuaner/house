@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 public class House {
     private Long houseId;
     private Long userId;
-    private Long adId;
     private String name;
+    private String doorplate;
     private int order;
     private int type;
     private String kind;
@@ -27,4 +27,6 @@ public class House {
     private String title;
     private String url;
     private double grade;
+    private double longitude;
+    private double latitude;
 }

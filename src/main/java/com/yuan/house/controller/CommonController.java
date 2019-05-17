@@ -111,10 +111,10 @@ public class CommonController extends BaseController {
         }
         permissionService.getUserPermissions();
         if(1 == user.getUserType()){
-            return new ModelAndView("tenant/index");
+            return new ModelAndView("tenant/info");
         }
         if(2 == user.getUserType()){
-            return new ModelAndView("landlord/index");
+            return new ModelAndView("landlord/info");
         }
         return new ModelAndView("common/login");
 	}
@@ -153,13 +153,13 @@ public class CommonController extends BaseController {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
         if(0 == user.getUserType()){
-            return new ModelAndView("manager/index");
+            return new ModelAndView("manager/info");
         }
         if(1 == user.getUserType()){
-            return new ModelAndView("tenant/index");
+            return new ModelAndView("tenant/info");
         }
         if(2 == user.getUserType()){
-            return new ModelAndView("landlord/index");
+            return new ModelAndView("landlord/info");
         }
         return new ModelAndView("common/login");
     }
