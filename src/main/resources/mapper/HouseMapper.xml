@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yuan.house.dao.HouseDao">
+
+    <sql id="allColumns">
+        house_id, user_id, doorplate, name, orders, type, kind, money, cycle,
+        area, floor, elevator, orientation, address, description, words,
+        urls, grade, longitude, latitude
+    </sql>
+
+    <insert id="addHouse" parameterType="com.yuan.house.model.House">
+        INSERT INTO house
+        (
+            user_id, doorplate, name, orders, type, kind, money, cycle,
+            area, floor, elevator, orientation, address, description,
+            urls, grade, longitude, latitude, words
+        )
+        VALUES
+        (
+            #{object.userId}, #{object.doorplate}, #{object.name},#{object.orders},
+            #{object.type}, #{object.kind}, #{object.money},#{object.cycle},
+            #{object.area}, #{object.floor}, #{object.elevator},#{object.orientation},
+            #{object.address}, #{object.description},#{object.urls},
+            #{object.grade},#{object.longitude}, #{object.latitude},#{object.words}
+        )
+    </insert>
+
+</mapper>
