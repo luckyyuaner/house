@@ -26,4 +26,37 @@
         )
     </insert>
 
+
+    <select id="queryHousesByUserId" resultType="com.yuan.house.model.House">
+        SELECT
+        <include refid="allColumns"/>
+        FROM
+        house
+        WHERE
+        user_id = #{uid}
+        order by house_id desc;
+    </select>
+
+    <select id="queryHouseById" resultType="com.yuan.house.model.House">
+        SELECT
+        <include refid="allColumns"/>
+        FROM house
+        WHERE house_id = #{id}
+        ORDER BY house_id DESC
+    </select>
+
+
+    <update id="updateHouse" parameterType="com.yuan.house.model.House">
+        UPDATE house
+        SET doorplate = #{object.doorplate}, name = #{object.name}, orders = #{object.orders}, type = #{object.type},
+        kind = #{object.kind}, money = #{object.money}, cycle = #{object.cycle}, area = #{object.area},
+        floor = #{object.floor}, elevator = #{object.elevator}, orientation = #{object.orientation}, address = #{object.address},
+        description = #{object.description}, words = #{object.words}, urls = #{object.urls}, grade = #{object.grade},
+        longitude = #{object.longitude}, latitude = #{object.latitude}
+        WHERE house_id = #{object.houseId}
+    </update>
+
+    <delete id="deleteHouse" parameterType="Long">
+        DELETE FROM house WHERE house_id = #{id}
+    </delete>
 </mapper>

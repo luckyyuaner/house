@@ -66,7 +66,7 @@ public class FileUtil {
                     json.put("msg", "文件类型不是图片");
                     return json;
                 }
-                String newFileName = UUID.randomUUID() + filename.substring(filename.lastIndexOf("."));
+                String newFileName =  UUID.randomUUID() + filename.substring(filename.lastIndexOf("."));
                 File newFile = new File(Constants.UPLOAD_URL + newFileName);
                 // 将内存中的数据写入磁盘
                 item.transferTo(newFile);

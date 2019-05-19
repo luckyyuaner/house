@@ -1,18 +1,34 @@
-body{
-    width:100%;
-    height:400px;
+body {
+    width: 100%;
+    height: 400px;
     background-image: url(/images/bg.jpg);
-    color:rgba(0,0,0,0.69);
-    font-family:SimHei;
+    color: rgba(0, 0, 0, 0.69);
+    font-family: SimHei;
 }
-.menu img{
-    width:60px;
-    height:60px;
+
+.menu img {
+    width: 60px;
+    height: 60px;
     object-fit: cover;
 }
-.menu a{
-    width:200px;
-    height:60px;
+
+.menu a {
+    width: 200px;
+    height: 60px;
     line-height: 60px;
     text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: left;
+}
+
+.picbox .house-img {
+    width: 320px;
+    height: 300px;
+    object-fit: cover;
 }

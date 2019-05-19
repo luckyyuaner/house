@@ -68,7 +68,7 @@
     <update id="updatePermission" parameterType="com.yuan.house.model.Permission">
         UPDATE permission
         SET parent_id = #{object.parentId}, name = #{object.name}, type = #{object.type}, permission_value = #{object.permissionValue},
-        url = #{object.url}, icon = #{object.icon}, status = #{object.status}}
+        url = #{object.url}, icon = #{object.icon}, status = #{object.status}
         WHERE permission_id = #{object.permissionId}
     </update>
 

@@ -4,7 +4,7 @@ var showImgs=function(obj){
         var reader    = new FileReader();
         reader.readAsDataURL(file[i]);
         reader.onload=function(e){
-            $('#imgs').append('<img src="'+this.result+'" height="300" width="240" alt="照片" style="margin-left:10px;"/>&nbsp;&nbsp;');
+            $('#imgs').append('<img src="'+this.result+'" height="300" width="320" alt="照片" style="margin-left:10px;"/>&nbsp;&nbsp;');
         }
     }
 }

@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -62,6 +63,19 @@ public class LandlordController extends BaseController {
         return new ModelAndView("/landlord/new_house", "Model", model);
     }
 
+    @RequiresPermissions("house:read")
+    @RequestMapping("/house/show")
+    public ModelAndView showHouses(Model model) {
+        List<House> houses = houseService.getHousesByUser();
+        System.out.println("length:"+houses.size());
+        for(House h : houses) {
+            System.out.println("url:"+h.getUrls());
+        }
+        model.addAttribute("houses", houses);
+        model.addAttribute("type", "house_manager");
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
     @RequiresPermissions("house:create")
     @PostMapping("/house/new")
     public ModelAndView newHouse(@ModelAttribute(value = "house") House house, @RequestParam MultipartFile[] url, @RequestParam("location")String location, Model model) {
@@ -78,5 +92,27 @@ public class LandlordController extends BaseController {
         house.setUrls(json.getString("msg"));
         houseService.addHouse(house);
         return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("house:update")
+    @GetMapping("/house/showUpdate")
+    public ModelAndView showUpdateHouse(Model model, Long id) {
+        model.addAttribute("house", houseService.queryHouseById(id));
+        return new ModelAndView("/landlord/update_house", "Model", model);
+    }
+
+    @RequiresPermissions("house:update")
+    @PostMapping("/house/updateHouse")
+    public ModelAndView updateHouse(@ModelAttribute(value = "house") House house, Model model) {
+        houseService.updateHouse(house);
+        model.addAttribute("type", "house_manager");
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+    @RequiresPermissions("house:delete")
+    @GetMapping("/house/deleteHouse")
+    public ModelAndView deleteHouse(Model model, Long id) {
+        houseService.deleteHouse(id);
+        model.addAttribute("type", "house_manager");
+        return new ModelAndView("/landlord/show", "Model", model);
     }
 }
