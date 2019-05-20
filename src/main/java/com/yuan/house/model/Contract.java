@@ -4,12 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Contract {
+public class Contract implements Serializable {
+    private static final long serialVersionUID = -5246053609132892817L;
     private Long contractId;
     private Long houseId;
     private Long userId;

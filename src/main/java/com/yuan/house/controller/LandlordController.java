@@ -104,7 +104,19 @@ public class LandlordController extends BaseController {
 
     @RequiresPermissions("house:update")
     @PostMapping("/house/updateHouse")
-    public ModelAndView updateHouse(@ModelAttribute(value = "house") House house, Model model) {
+    public ModelAndView updateHouse(@ModelAttribute(value = "house") House house, @RequestParam MultipartFile[] url, @RequestParam("location")String location, Model model) {
+        if(StringUtils.isNotBlank(location)) {
+            String[] arr = location.split(",");
+            house.setLongitude(Double.parseDouble(arr[0]));
+            house.setLatitude(Double.parseDouble(arr[1]));
+        }
+        JSONObject json = FileUtil.uploads(url);
+        if("fail".equals(json.getString("rs"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/house/showUpdate?id="+house.getHouseId());
+        }
+        house.setStatus(0);
+        house.setUrls(json.getString("msg"));
         houseService.updateHouse(house);
         model.addAttribute("type", "house_manager");
         return new ModelAndView("/landlord/info", "Model", model);
@@ -114,6 +126,6 @@ public class LandlordController extends BaseController {
     public ModelAndView deleteHouse(Model model, Long id) {
         houseService.deleteHouse(id);
         model.addAttribute("type", "house_manager");
-        return new ModelAndView("/landlord/show", "Model", model);
+        return new ModelAndView("/landlord/info", "Model", model);
     }
 }

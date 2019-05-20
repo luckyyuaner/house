@@ -4,10 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class House {
+public class House implements Serializable {
+
+    private static final long serialVersionUID = 4463820760323164061L;
     private Long houseId;
     private Long userId;
     private String name;
