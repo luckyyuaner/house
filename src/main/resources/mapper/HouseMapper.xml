@@ -6,7 +6,7 @@
     <sql id="allColumns">
         house_id, user_id, doorplate, name, orders, type, kind, money, cycle,
         area, floor, elevator, orientation, address, description, words,
-        urls, grade, longitude, latitude
+        urls, grade, longitude, latitude, status
     </sql>
 
     <insert id="addHouse" parameterType="com.yuan.house.model.House">
@@ -14,15 +14,15 @@
         (
             user_id, doorplate, name, orders, type, kind, money, cycle,
             area, floor, elevator, orientation, address, description,
-            urls, grade, longitude, latitude, words
+            urls, grade, longitude, latitude, words, status
         )
         VALUES
         (
             #{object.userId}, #{object.doorplate}, #{object.name},#{object.orders},
             #{object.type}, #{object.kind}, #{object.money},#{object.cycle},
             #{object.area}, #{object.floor}, #{object.elevator},#{object.orientation},
-            #{object.address}, #{object.description},#{object.urls},
-            #{object.grade},#{object.longitude}, #{object.latitude},#{object.words}
+            #{object.address}, #{object.description},#{object.urls}, #{object.grade},
+            #{object.longitude}, #{object.latitude},#{object.words}, #{object.status}
         )
     </insert>
 
@@ -52,7 +52,7 @@
         kind = #{object.kind}, money = #{object.money}, cycle = #{object.cycle}, area = #{object.area},
         floor = #{object.floor}, elevator = #{object.elevator}, orientation = #{object.orientation}, address = #{object.address},
         description = #{object.description}, words = #{object.words}, urls = #{object.urls}, grade = #{object.grade},
-        longitude = #{object.longitude}, latitude = #{object.latitude}
+        longitude = #{object.longitude}, latitude = #{object.latitude}, status = #{object.status}
         WHERE house_id = #{object.houseId}
     </update>
 

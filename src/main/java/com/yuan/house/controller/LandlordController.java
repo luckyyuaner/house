@@ -89,6 +89,7 @@ public class LandlordController extends BaseController {
             model.addAttribute("msg", json.getString("msg"));
             return new ModelAndView("/landlord/new_house", "Model", model);
         }
+        house.setStatus(0);
         house.setUrls(json.getString("msg"));
         houseService.addHouse(house);
         return new ModelAndView("/landlord/info", "Model", model);

@@ -28,4 +28,5 @@ public class House {
     private double grade;
     private double longitude;
     private double latitude;
+    private int status;
 }

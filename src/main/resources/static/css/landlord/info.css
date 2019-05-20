@@ -1,34 +1,103 @@
 body {
     width: 100%;
     height: 400px;
-    background-image: url(/images/bg.jpg);
+    /*background-image: url(/images/bg.jpg);*/
     color: rgba(0, 0, 0, 0.69);
     font-family: SimHei;
 }
 
+li {
+    list-style: none;
+}
+
+.clear-box {
+    clear: both;
+}
+
 .menu img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
 }
 
 .menu a {
     width: 200px;
-    height: 60px;
-    line-height: 60px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
+    text-decoration: none;
+    color: #404040;
+    display: block;
 }
 
-.left {
-    float: left;
-}
 
 .right {
-    float: left;
+    margin-top:-320px;
+    margin-left:240px;
 }
 
-.picbox .house-img {
-    width: 320px;
+.house-manager .house-box{
+    width:280px;
+    float: left;
+    margin-left: 8px;
+}
+.house-manager .picbox .pics img {
+    width: 280px;
     height: 300px;
     object-fit: cover;
+}
+
+.house-manager .pre {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    padding-top: 120px;
+}
+
+.house-manager .box {
+    position: absolute;
+    z-index: -1;
+}
+
+.house-manager .next {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    margin-top: -50px;
+    margin-left: 210px;
+}
+
+.house-manager .content {
+    width: 280px;
+    margin-top:110px;
+    background-color:rgba(89, 151, 136, 0.76) ;
+}
+
+.house-manager .content p {
+    text-align: center;
+    height:16px;
+    line-height:16px;
+}
+.house-manager .house-operation{
+    width: 280px;
+    background-color:rgba(89, 151, 136, 0.76) ;
+    height:60px;
+    line-height: 40px;
+    margin-top:-16px;
+}
+.house-manager .house-operation a{
+    padding-top:10px;
+    padding-bottom: 10px;
+    width: 80px;
+    text-align: center;
+    font-size:24px;
+    text-decoration: none;
+    color: #284390;
+    margin-left:30px;
+    margin-right:20px;
+    float:left;
 }
