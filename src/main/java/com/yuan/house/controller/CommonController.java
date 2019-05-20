@@ -153,7 +153,7 @@ public class CommonController extends BaseController {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
         if(0 == user.getUserType()){
-            return new ModelAndView("manager/info");
+            return new ModelAndView("manager/index");
         }
         if(1 == user.getUserType()){
             return new ModelAndView("tenant/info");

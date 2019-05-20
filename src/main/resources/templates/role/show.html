@@ -20,8 +20,7 @@
         <tr>
             <th>编号</th>
             <th>角色名称</th>
-            <th>角色排序</th>
-            <th>权限状态</th>
+            <th>角色状态</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -29,7 +28,6 @@
         <tr th:each="role:${rolePageInfo.getList()}" th:if="${role != null}">
             <td th:text="${role.roleId}"></td>
             <td th:text="${role.name}"></td>
-            <td th:text="${role.orders}"></td>
             <td th:text="${role.status}"></td>
             <td>
                 <a th:href="@{/role/showUpdate?(id=${role.roleId})}">更新</a>
