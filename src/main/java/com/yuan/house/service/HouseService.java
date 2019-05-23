@@ -1,5 +1,6 @@
 package com.yuan.house.service;
 
+import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.model.House;
 
 import java.util.List;
@@ -40,4 +41,11 @@ public interface HouseService {
      * @return
      */
     int deleteHouse(Long id);
+
+    /**
+     * 租客条件搜索房源
+     * @param ts
+     * @return
+     */
+    List<House> queryHousesLikeMsg(TenantSearchPOJO ts);
 }

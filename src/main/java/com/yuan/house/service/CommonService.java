@@ -20,6 +20,13 @@ public interface CommonService {
     void deleteRedis(String key);
 
     /**
+     * redis删除操作，删除特定前缀的所有缓存
+     * @param prex
+     * @return
+     */
+    void deleteByPrex(String prex);
+
+    /**
      * redis添加操作
      * @param key
      * @param object

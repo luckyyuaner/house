@@ -2,11 +2,13 @@ package com.yuan.house.service.impl;
 
 import com.yuan.house.service.CommonService;
 import com.yuan.house.util.LoggerUtil;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -33,6 +35,15 @@ public class CommonServiceImpl implements CommonService {
         if(exist) {
             LoggerUtil.info("redis缓存中删除{}", key);
             redisTemplate.delete(key);
+        }
+    }
+
+    @Override
+    public void deleteByPrex(String prex) {
+        String key = prex+"**";
+        Set<String> keys = redisTemplate.keys(key);
+        if (CollectionUtils.isNotEmpty(keys)) {
+            redisTemplate.delete(keys);
         }
     }
 

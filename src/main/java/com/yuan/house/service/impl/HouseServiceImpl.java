@@ -1,5 +1,6 @@
 package com.yuan.house.service.impl;
 
+import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.dao.HouseDao;
@@ -43,7 +44,14 @@ public class HouseServiceImpl implements HouseService {
     public List<House> getHousesByUser() {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
-        return houseDao.queryHousesByUserId(user.getUserId());
+        String key = "houses_user_" + user.getUserId();
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<House>)rs;
+        }
+        List<House> houses = houseDao.queryHousesByUserId(user.getUserId());
+        commonService.insertRedis(key, houses);
+        return houses;
     }
 
     @Override
@@ -62,6 +70,7 @@ public class HouseServiceImpl implements HouseService {
     public int updateHouse(House object) {
         String key = "house_" + object.getHouseId();
         commonService.deleteRedis(key);
+        commonService.deleteByPrex("houses");
         return houseDao.updateHouse(object);
     }
 
@@ -69,6 +78,19 @@ public class HouseServiceImpl implements HouseService {
     public int deleteHouse(Long id) {
         String key = "house_" + id;
         commonService.deleteRedis(key);
+        commonService.deleteByPrex("houses");
         return houseDao.deleteHouse(id);
+    }
+
+    @Override
+    public List<House> queryHousesLikeMsg(TenantSearchPOJO ts) {
+        String key = "houses_like_" + ts.toString();
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<House>)rs;
+        }
+        List<House> houses = houseDao.queryHousesLikeMsg(ts);
+        commonService.insertRedis(key, ts.toString());
+        return null;
     }
 }

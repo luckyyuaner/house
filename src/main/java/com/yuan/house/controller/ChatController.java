@@ -1,6 +1,6 @@
 package com.yuan.house.controller;
 
-import com.yuan.house.VO.ChatMessage;
+import com.yuan.house.POJO.ChatMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;

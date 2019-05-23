@@ -1,4 +1,4 @@
-package com.yuan.house.VO;
+package com.yuan.house.POJO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

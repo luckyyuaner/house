@@ -106,12 +106,19 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User queryUserByName(String name) {
-        return userDao.queryUserByName(name);
+        String key = "user_" + name;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (User)rs;
+        }
+        User user = userDao.queryUserByName(name);
+        commonService.insertRedis(key, user);
+        return user;
     }
 
     @Override
     public List<User> queryUserLikeMsg(String msg) {
-        String key = "user_like_" + msg;
+        String key = "users_like_" + msg;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<User>)rs;
@@ -140,7 +147,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getUsersByRole(String roleName) {
-        return userDao.getUsersByRole(roleName);
+        String key = "users_role_" + roleName;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<User>)rs;
+        }
+        List<User> users = userDao.getUsersByRole(roleName);
+        commonService.insertRedis(key, users);
+        return users;
     }
 
 
@@ -148,6 +162,8 @@ public class UserServiceImpl implements UserService {
     public int updateUser(User object, String rid) {
         String key = "user_" + object.getUserId();
         commonService.deleteRedis(key);
+        commonService.deleteByPrex("users_");
+        commonService.deleteByPrex("houses_");
         int rs= userDao.updateUser(object);
         userDao.deleteUserRole(object.getUserId());
         if(StringUtils.isNotBlank(rid)){
@@ -166,6 +182,8 @@ public class UserServiceImpl implements UserService {
     public int deleteUser(Long id) {
         String key = "user_" + id;
         commonService.deleteRedis(key);
+        commonService.deleteByPrex("users_");
+        commonService.deleteByPrex("houses_");
         return userDao.deleteUser(id);
     }
 

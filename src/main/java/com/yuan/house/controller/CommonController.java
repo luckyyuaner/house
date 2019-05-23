@@ -1,9 +1,14 @@
 package com.yuan.house.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.constants.ResultEnum;
+import com.yuan.house.model.House;
 import com.yuan.house.model.Role;
 import com.yuan.house.model.User;
+import com.yuan.house.service.HouseService;
 import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.RoleService;
 import com.yuan.house.service.UserService;
@@ -18,6 +23,9 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * 公共Controller，不限制权限
@@ -31,6 +39,9 @@ public class CommonController extends BaseController {
 	private PermissionService permissionService;
 	@Autowired
 	private RoleService roleService;
+
+    @Autowired
+    private HouseService houseService;
 
     @RequestMapping("")
     public String index() {
@@ -177,4 +188,59 @@ public class CommonController extends BaseController {
         }
         return new ModelAndView("common/login", "userModel", model);
 	}
+
+    /**
+     * 地图找房
+     * @param model
+     * @return
+     */
+    @RequestMapping("/common/map/show")
+    public ModelAndView showMap(Model model) {
+        return new ModelAndView("/tenant/map", "Model", model);
+    }
+
+    @RequestMapping("/common/search")
+    public ModelAndView showSearch(@RequestParam("type")int type, @RequestParam("msg")String msg, @RequestParam("province")String province,
+                                   @RequestParam("city")String city, @RequestParam("area")String area, @RequestParam("counts")int counts,
+                                   @RequestParam("orientation")String orientation,@RequestParam("number")int number, Model model) {
+        System.out.println("number:"+number);
+        TenantSearchPOJO ts = new TenantSearchPOJO();
+        ts.setType(type);
+        if(StringUtils.isNotBlank(orientation)) {
+            ts.setOrientation(orientation);
+        }
+        if(counts != 0) {
+            ts.setKind(counts+"0000");
+        }
+        List<String> msgs = new ArrayList<>();
+        if(StringUtils.isNotBlank(province) && !Constants.SEARCH_EXCEPT_WORDS.contains(province)) {
+            msgs.add(province);
+        }
+        if(StringUtils.isNotBlank(city) && !Constants.SEARCH_EXCEPT_WORDS.contains(city)) {
+            msgs.add(city);
+        }
+        if(StringUtils.isNotBlank(area) && !Constants.SEARCH_EXCEPT_WORDS.contains(area)) {
+            msgs.add(area);
+        }
+        if(StringUtils.isNotBlank(msg)) {
+            String[] arr = msg.trim().split("\\s+");
+            int len = arr.length;
+            if(len > 0) {
+                for(int i = 0; i<len; i++) {
+                    if(!Constants.SEARCH_EXCEPT_WORDS.contains(arr[i])) {
+                        msgs.add(arr[i]);
+                    }
+                }
+            }
+        }
+        if(msgs != null) {
+            ts.setMsg(msgs);
+        }
+        PageHelper.startPage(number, 8);
+        //System.out.println("ts.toString()"+ts.toString());
+        List<House> houses = houseService.queryHousesLikeMsg(ts);
+        PageInfo<House> housePageInfo = new PageInfo<House>(houses);
+        model.addAttribute("housePageInfo", housePageInfo);
+        return new ModelAndView("/tenant/show_search", "Model", model);
+    }
 }

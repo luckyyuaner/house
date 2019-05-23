@@ -1,5 +1,6 @@
 package com.yuan.house.dao;
 
+import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.model.House;
 import org.apache.ibatis.annotations.Param;
 
@@ -21,6 +22,13 @@ public interface HouseDao {
      * @return
      */
 	List<House> queryHousesByUserId(@Param("uid") Long userId);
+
+    /**
+     * 根据条件模糊查询房源
+     * @param object
+     * @return
+     */
+	List<House> queryHousesLikeMsg(@Param("object") TenantSearchPOJO object);
 
     /**
      * 根据id查询house

@@ -37,6 +37,43 @@
         order by house_id desc;
     </select>
 
+    <select id="queryHousesLikeMsg" resultType="com.yuan.house.model.House">
+        SELECT
+        <include refid="allColumns"/>
+        FROM
+        house
+        WHERE
+        status = 1
+        and
+        type = #{object.type}
+        <if test="object.orientation != null" >
+          and orientation = #{object.orientation}
+        </if>
+        <if test="object.kind != null" >
+            <choose>
+                <when test="object.kind = '50000'">
+                    and kind != '00000' and kind != '10000' and kind != '20000'
+                    and kind != '30000' and kind != '40000'
+                </when>
+                <otherwise>
+                    and kind = #{object.kind}
+                </otherwise>
+            </choose>
+        </if>
+        <if test="object.msg != null" >
+            <foreach collection="object.msg" open="[" close="]" separator="," item="it">
+                and
+                (
+                name LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
+                OR address LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
+                OR description LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
+                OR words LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
+                )
+            </foreach>
+        </if>
+        order by money asc;
+    </select>
+
     <select id="queryHouseById" resultType="com.yuan.house.model.House">
         SELECT
         <include refid="allColumns"/>

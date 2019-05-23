@@ -1,6 +1,5 @@
 package com.yuan.house.config.websocket;
 
-import com.yuan.house.VO.ChatMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.SimpMessagingTemplate;

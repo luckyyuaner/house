@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <title>租客首页</title>
     <link rel="stylesheet" type="text/css" href="/css/tenant/index.css" />
-    <style type="text/css">
-
-    </style>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/tenant/location.js"></script>
+    <link rel="stylesheet" href="../../static/css/tenant/index.css">
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
@@ -30,7 +29,8 @@
         </div>
     </div>
     <div class="search">
-        <form method="post">
+        <form method="post" th:action="@{/common/search}">
+            <input name="number" type="hidden" th:value="1" />
             <div class="select">
                 <select name="type">
                     <option value="0" selected>合租</option>
@@ -40,12 +40,38 @@
             </div>
             <input type="text" class="search-text" name="msg" placeholder="输入区域、地铁、小区名" />
             <button class="search_btn">搜索</button>
-            <button class="search_btn" style="font-size:18px;">地图找房</button>
+            <a th:href="@{/common/map/show}" title="地图找房" class="map-search"><img src="/images/icon15.png" /></a>
+            <div class="clear-box"></div>
+            <div class="search-keys">
+                <select id="province" name="province"></select>
+                <select id="city" name="city"></select>
+                <select id="area" name="area"></select>
+                <select name="counts">
+                    <option value="0" selected>不限</option>
+                    <option value="1">1居</option>
+                    <option value="2">2居</option>
+                    <option value="3">3居</option>
+                    <option value="4">4居</option>
+                    <option value="5">4居以上</option>
+                </select>
+                <select name="orientation">
+                    <option value="0" selected>不限</option>
+                    <option value="东">东</option>
+                    <option value="南">南</option>
+                    <option value="西">西</option>
+                    <option value="北">北</option>
+                </select>
+            </div>
         </form>
     </div>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        addressInit('province', 'city', 'area');
+    });
+</script>
 <script type="text/javascript">
     /**
      *

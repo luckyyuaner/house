@@ -7,5 +7,6 @@ mybatis:
    mapperLocations: classpath:/mapper/*.xml
    configuration:
        map-underscore-to-camel-case: true
+       logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
 server:
   port: 8888

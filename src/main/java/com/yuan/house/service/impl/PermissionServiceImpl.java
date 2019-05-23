@@ -81,6 +81,11 @@ public class PermissionServiceImpl implements PermissionService {
 	public int updatePermission(Permission object) {
 	    String key = "permission_" + object.getPermissionId();
 	    commonService.deleteRedis(key);
+	    commonService.deleteByPrex("permissions_");
+	    //commonService.deleteByPrex("role_");
+		//commonService.deleteByPrex("roles_");
+		//commonService.deleteByPrex("user_");
+		//commonService.deleteByPrex("users_");
 		return permissionDao.updatePermission(object);
 	}
 
@@ -88,6 +93,11 @@ public class PermissionServiceImpl implements PermissionService {
 	public int deletePermission(Long id) {
         String key = "permission_" + id;
         commonService.deleteRedis(key);
+		commonService.deleteByPrex("permissions_");
+		//commonService.deleteByPrex("role_");
+		//commonService.deleteByPrex("roles_");
+		//commonService.deleteByPrex("user_");
+		//commonService.deleteByPrex("users_");
 		return permissionDao.deletePermission(id);
 	}
 }

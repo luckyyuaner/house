@@ -45,7 +45,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
 	public List<Role> queryRoleLikeMsg(String msg) {
-        String key = "role_like_" + msg;
+        String key = "roles_like_" + msg;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<Role>)rs;
@@ -76,6 +76,10 @@ public class RoleServiceImpl implements RoleService {
 	public int updateRole(Role object, String pid) {
 	    String key = "role_" + object.getRoleId();
 	    commonService.deleteRedis(key);
+	    commonService.deleteByPrex("roles_");
+        commonService.deleteByPrex("users_role_");
+        //commonService.deleteByPrex("user_");
+        //commonService.deleteByPrex("users_");
 		int rs = roleDao.updateRole(object);
 		roleDao.deleteRolePermission(object.getRoleId());
         if(StringUtils.isNotBlank(pid)){
@@ -94,6 +98,10 @@ public class RoleServiceImpl implements RoleService {
 	public int deleteRole(Long id) {
         String key = "role_" + id;
         commonService.deleteRedis(key);
+        commonService.deleteByPrex("roles_");
+        commonService.deleteByPrex("users_role_");
+        //commonService.deleteByPrex("user_");
+        //commonService.deleteByPrex("users_");
 		return roleDao.deleteRole(id);
 	}
 }

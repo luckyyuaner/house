@@ -13,8 +13,5 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class TenantController extends BaseController {
-    @RequestMapping("/map/show")
-    public ModelAndView showMap(Model model) {
-        return new ModelAndView("/tenant/map", "Model", model);
-    }
+
 }
