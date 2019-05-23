@@ -1,0 +1,159 @@
+2019-05-22 09:09:21.077 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 328 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:09:21.092 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:09:46.580 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:09:53.915 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:09:54.072 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:10:06.132 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:10:19.713 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 67.156 seconds (JVM running for 78.952)
+2019-05-22 09:11:49.468 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-4] - HikariPool-1 - Starting...
+2019-05-22 09:11:50.976 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-4] - HikariPool-1 - Start completed.
+2019-05-22 09:11:51.165 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:11:51.521 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 租客1(String), 123456(String)
+2019-05-22 09:11:52.654 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-22 09:11:52.673 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:11:52.675 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 租客1(String)
+2019-05-22 09:11:53.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 21
+2019-05-22 09:13:38.924 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15032 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:13:38.937 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:13:58.899 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:13:59.909 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:13:59.971 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:14:02.280 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:14:03.973 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 26.786 seconds (JVM running for 31.425)
+2019-05-22 09:18:32.721 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15680 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:18:32.737 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:18:38.117 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:18:38.743 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:18:38.790 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:18:42.601 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:18:45.037 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.659 seconds (JVM running for 18.213)
+2019-05-22 09:21:10.353 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15920 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:21:10.368 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:21:18.352 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:21:19.464 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:21:19.511 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:21:22.702 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:21:25.190 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.384 seconds (JVM running for 20.513)
+2019-05-22 09:22:44.758 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15480 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:22:44.773 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:22:52.197 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:22:52.838 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:22:52.900 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:22:56.990 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:22:58.974 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.388 seconds (JVM running for 19.534)
+2019-05-22 09:25:07.748 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-05-22 09:25:09.611 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-05-22 09:25:09.653 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:25:09.820 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 租客1(String), 123456(String)
+2019-05-22 09:25:09.999 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 1
+2019-05-22 09:25:10.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:25:10.039 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - ==> Parameters: 租客1(String)
+2019-05-22 09:25:10.128 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-8] - <==      Total: 21
+2019-05-22 09:28:07.661 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15492 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:28:07.732 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:28:17.932 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:28:18.651 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:28:18.682 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:28:22.708 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:28:25.379 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 20.171 seconds (JVM running for 25.313)
+2019-05-22 09:29:45.068 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-22 09:29:46.230 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-22 09:29:46.264 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:29:46.512 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String), 123456(String)
+2019-05-22 09:29:46.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-22 09:29:46.799 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:29:46.801 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String)
+2019-05-22 09:29:46.855 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-22 09:29:48.931 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-05-22 09:29:48.972 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==>  Preparing: SELECT house_id, user_id, doorplate, name, orders, type, kind, money, cycle, area, floor, elevator, orientation, address, description, words, urls, grade, longitude, latitude, status FROM house WHERE user_id = ? order by house_id desc; 
+2019-05-22 09:29:48.976 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - ==> Parameters: 5(Long)
+2019-05-22 09:29:49.292 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-1] - <==      Total: 3
+2019-05-22 09:31:14.186 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-05-22 09:33:27.644 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:33:27.660 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-22 09:33:27.707 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-22 09:33:27.707 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:33:27.722 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-22 09:33:27.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-22 09:34:15.591 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:34:15.595 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 房东(String), 123456(String)
+2019-05-22 09:34:15.606 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 1
+2019-05-22 09:34:15.613 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:34:15.618 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 房东(String)
+2019-05-22 09:34:15.649 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 20
+2019-05-22 09:34:29.220 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-22 09:34:29.223 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东(String)
+2019-05-22 09:34:29.231 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-22 09:34:29.237 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-22 09:34:29.240 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - ==> Parameters: 房东1(String)
+2019-05-22 09:34:29.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-4] - <==      Total: 1
+2019-05-22 09:35:13.745 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-1] - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2019-05-22 09:38:34.658 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10132 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:38:34.674 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:38:40.615 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:38:41.646 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:38:41.693 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:38:45.783 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:38:47.720 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.263 seconds (JVM running for 17.891)
+2019-05-22 09:41:00.268 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15904 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:41:00.299 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:41:07.379 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:41:08.183 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:41:08.246 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:41:13.128 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:41:15.466 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.604 seconds (JVM running for 21.884)
+2019-05-22 09:41:50.985 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-22 09:41:52.003 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-22 09:41:52.038 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:41:52.231 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String), 123456(String)
+2019-05-22 09:41:52.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-22 09:41:52.446 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:41:52.454 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String)
+2019-05-22 09:41:52.496 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-22 09:42:03.549 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:42:03.549 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-22 09:42:03.549 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 1
+2019-05-22 09:42:03.565 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:42:03.565 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - ==> Parameters: 房东1(String)
+2019-05-22 09:42:03.580 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-6] - <==      Total: 20
+2019-05-22 09:42:18.989 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-22 09:42:18.993 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - ==> Parameters: 房东1(String)
+2019-05-22 09:42:19.002 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-2] - <==      Total: 1
+2019-05-22 09:44:32.400 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13804 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:44:32.410 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:44:42.009 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:44:42.600 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:44:42.615 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:44:44.605 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:44:45.865 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.08 seconds (JVM running for 20.1)
+2019-05-22 09:45:52.034 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-05-22 09:45:52.926 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-05-22 09:45:52.960 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:45:53.101 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String), 123456(String)
+2019-05-22 09:45:53.314 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 1
+2019-05-22 09:45:53.349 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:45:53.353 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - ==> Parameters: 房东(String)
+2019-05-22 09:45:53.399 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-9] - <==      Total: 20
+2019-05-22 09:46:23.877 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? AND password = ? AND status = 0; 
+2019-05-22 09:46:23.877 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东1(String), 123456(String)
+2019-05-22 09:46:23.892 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 1
+2019-05-22 09:46:23.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==>  Preparing: select permission_id, parent_id, name, type, permission_value, url, icon, status from permission where status = 0 and permission_id in ( select permission_id from role_permission where role_id in ( select role_id from user_role where user_id in ( select user_id from user where username = ? ) ) ) order by permission_id asc 
+2019-05-22 09:46:23.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - ==> Parameters: 房东1(String)
+2019-05-22 09:46:23.955 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-3] - <==      Total: 20
+2019-05-22 09:46:39.385 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==>  Preparing: SELECT user_id, username, password, user_type, status, ctime, utime, head, money, phone FROM user WHERE username = ? 
+2019-05-22 09:46:39.390 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - ==> Parameters: 房东1(String)
+2019-05-22 09:46:39.401 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8888-exec-10] - <==      Total: 1
+2019-05-22 09:51:01.656 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15944 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:51:01.687 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:51:07.487 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:51:07.908 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:51:07.940 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:51:09.705 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:51:10.658 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 10.314 seconds (JVM running for 14.533)
+2019-05-22 09:52:03.283 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13888 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-22 09:52:03.283 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-22 09:52:10.013 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:52:10.986 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:52:11.017 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-22 09:52:14.970 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-22 09:52:17.471 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.717 seconds (JVM running for 20.498)

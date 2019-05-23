@@ -8,6 +8,11 @@
     <script src="https://cdn.bootcss.com/sockjs-client/1.1.4/sockjs.min.js"></script>
     <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="/js/landlord/chat.js"></script>
+    <style type="text/css">
+        body{
+            background-image: url(/images/bg.jpg);
+        }
+    </style>
 </head>
 <body>
 <div id="main-content" class="container">
@@ -32,7 +37,7 @@
             <table id="userlist" class="table">
                 <thead onclick='javascript:hidetuser()'>
                 <tr>
-                    <th>在线管理员</th>
+                    <th>在线用户</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,7 +60,7 @@
                 </tr>
                 </thead>
                 <tbody id="private" style="height:350px; overflow-y:auto; display:block; ">
-                <tr class="chatroom"></tr>
+                <tr class="chatroom" style="width:600px;"></tr>
                 </tbody>
             </table>
             <div class="input-group" style="height: 74px">
@@ -97,7 +102,7 @@
             sessionId = /\/([^\/]+)\/websocket/.exec(socket._transport.url)[1];
             stompClient.subscribe('/user/topic/private', function (greeting) {
                 var parse = JSON.parse(greeting.body);
-                var val = "<td>" + parse.content + "</td>";
+                var val = '<td style="display: block;">' + parse.content + "</td>";
                 $(".chatroom").append(val);
                 if (user2 == null) {
                     user2 = parse.name;

@@ -32,14 +32,12 @@ body{
 }
 .step_img{
     height:300px;
-    width:280px;
+    width:260px;
     margin-left:10px;
-    margin-right:10px;
-    object-fit: cover;
 }
 .img_list{
     height:300px;
-    width:400px;
+    width:360px;
 }
 .title{
     text-align:center;
@@ -82,12 +80,10 @@ body{
 .box .box1 .picbox .person_img{
     width:28%;
     height:370px;
-    object-fit: cover;
 }
 .box .box1 .picbox .room_img{
     width:42%;
     height:370px;
-    object-fit: cover;
 }
 .box .box1 .picbox .content{
     width:28%;

@@ -2,350 +2,169 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>租客首页</title>
     <link rel="stylesheet" type="text/css" href="/css/tenant/index.css" />
     <style type="text/css">
-        #share {
-            display: none;
-            float: right;
-            font-size: 14px;
-            line-height: 170%
-        }
 
-        .mapDemo {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .demo-wrapper {
-            position: relative;
-            height: 100%;
-            background: rgba(0, 0, 0, .03);
-            border: 3px solid black;
-        }
-
-        .timeline-wrapper {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            height: 30px;
-            background: #fff;
-            transition: 1s ease all;
-            border-radius: 4px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, .65)
-        }
-
-        #loading {
-            position: absolute;
-            height: 100%;
-            display: table;
-            background: #2980B9;
-            width: 100%;
-            z-index: 9999;
-        }
-
-        .table-cell {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .py4 {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-        }
-
-        .mt2 {
-            margin-top: 2rem;
-        }
-
-        .mb0 {
-            margin-bottom: 0;
-        }
-
-        .mb2 {
-            margin-bottom: 2rem;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .bubble {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            transition: background-color .15s ease-in-out;
-            cursor: pointer
-        }
-
-        .bubble p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis
-        }
-
-        .bubble-1 {
-            background: url(/images/blue.png) no-repeat 0 0;
-            box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
-            border-radius: 50%;
-            overflow: hidden;
-            width: 92px;
-            height: 92px;
-            line-height: 1.6
-        }
-
-        .bubble-1 .name {
-            font-size: 14px;
-            font-weight: 800;
-            margin-top: 24px
-        }
     </style>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ONQ10cYkFc02WqsSlevIfyRmhOAWC0Gf"></script>
-    <!--<script type="text/javascript" src="http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay_min.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer_min.js"></script>-->
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<div class="demo-wrapper">
-    <div id="loading">
-        <div class="table-cell py4 center">
-            <img src="svg-loaders/bars.svg" width="40" alt="">
-            <h1 class="h1 mt2 mb0">Loading...</h1>
-            <p class="small mb2">数据加载中...</p>
+<div id="container">
+    <div class="box" id="box">
+        <div class="inner">
+            <!--轮播图-->
+            <ul>
+                <li><a href="javascript:void(0);" rel="external nofollow" ><img src="/images/ad3.jpg" /></a></li>
+                <li><a href="javascript:void(0);" rel="external nofollow" ><img src="/images/ad4.jpg" /></a></li>
+                <li><a href="javascript:void(0);" rel="external nofollow" ><img src="/images/ad1.jpg" /></a></li>
+                <li><a href="javascript:void(0);" rel="external nofollow" ><img src="/images/ad2.jpg" /></a></li>
+            </ul>
+            <ol class="bar"></ol>
+            <!--左右焦点-->
+            <div id="arr">
+                <span id="left"> <</span>
+                <span id="right">></span>
+            </div>
         </div>
     </div>
-    <div class="mapDemo" style="position: relative;">
-        <div id="container" width="100%" height="100%" style="position: absolute; left: 0px; top: 0px;"></div>
+    <div class="search">
+        <form method="post">
+            <div class="select">
+                <select name="type">
+                    <option value="0" selected>合租</option>
+                    <option value="1">整租</option>
+                    <option value="2">豪宅</option>
+                </select>
+            </div>
+            <input type="text" class="search-text" name="msg" placeholder="输入区域、地铁、小区名" />
+            <button class="search_btn">搜索</button>
+            <button class="search_btn" style="font-size:18px;">地图找房</button>
+        </form>
     </div>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
 <script type="text/javascript">
-    var o = void 0,
-        u = void 0,
-        f = {},
-        d = {
-            color: "#fff",
-            borderWidth: "0",
-            padding: "0",
-            zIndex: "2",
-            backgroundColor: "transparent",
-            textAlign: "center",
-            fontFamily: '"Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "微软雅黑", "Segoe UI", Tahoma, "宋体\\5b8b\\4f53", SimSun, sans-serif'
-        },
-        m = function(e) {
-            clearTimeout(u),
-                u = setTimeout(function() {
-                    /*List.default.trigger("update", {
-                        channel: e
-                    })*/
-                }, "zoom" === e || "drag" === e ? 100 / 3 : 100)
-        };
-    var g_conf = {
-        city: 'bj',
-        cityId: '100000',
-        cityName: '北京',
-        mapWrapper: 'container'
-    };
-
-    var area = ["海淀", "朝阳区", "昌平", "门头沟", "石景山", "东城", "西城", "大兴", "房山", "通州", "怀柔", "延庆", "顺义", "丰台", "密云"];
-
-    var MokaData = [];
-
     /**
-     * 工具函数集合
-     * @type {Object}
+     *
+     * @param id 传入元素的id
+     * @returns {HTMLElement | null} 返回标签对象，方便获取元素
      */
-    var Utils = {
-        init: function() {
-            this.addNewMethods();
-        },
-        rnd: function(n, m) {
-            var random = Math.floor(Math.random() * (m - n + 1) + n);
-            return random;
-        },
-        addNewMethods: function() {
-            String.trim || (String.prototype.trim = function() {
-                for (var e = this.replace(/^\s\s*/, ""), t = /\s/, a = e.length; t.test(e.charAt(--a)););
-                return e.slice(0, a + 1)
-            });
-            String.replaceTpl || (String.prototype.replaceTpl = function(e) {
-                return this.replace(/#\{([^}]*)\}/gm, function(t, a) {
-                    return e[a.trim()]
-                })
-            });
-            String.htmlEncode || (String.prototype.htmlEncode = function() {
-                return String(this).replace(/\x26/g, "&amp;").replace(/\x3c/g, "&lt;").replace(/\x3E/g, "&gt;").replace(/\x22/g, "&quot;").replace(/\x27/g, "&#39;").replace(/\xA9/g, "&copy;")
-            });
-        },
-        replaceTpl: function(e, t, a) {
-            var n = String(e),
-                i = a || /#\{([^}]*)\}/gm,
-                l = String.trim || function(e) {
-                    return e.replace(/^\s+|\s+$/g, "")
-                };
-            return n.replace(i, function(e, a) {
-                return t[l(a)]
-            })
-        }
-    };
-
-    Utils.init();
-
-    /**
-     * 地图组件
-     * @type {Object}
-     */
-    var Maps = {
-        tpl: '<div class="bubble bubble-1" style="background: url(/images/blue.png) no-repeat 0 0;box-shadow: 0 2px 2px rgba(0, 0, 0, .2);border-radius: 50%;overflow: hidden;width: 92px;height: 92px;line-height: 1.6" data-xftrack="10144" data-longitude="#{longitude}" data-latitude="#{latitude}" data-id="#{id}"><p class="name" title="#{name}" style="font-size: 14px;font-weight: 800;margin-top: 24px">#{name}</p><p><span class="count">#{count}</span>个楼盘</p></div>',
-        init: function() {
-            (o = new BMap.Map(g_conf.mapWrapper, {
-                enableMapClick: !1,
-                minZoom: 12
-            })).enableScrollWheelZoom(),
-                o.disableInertialDragging();
-            o.addEventListener("tilesloaded", function e() {
-                var t = $(".progress-bar");
-                t.addClass("progress-bar-done"),
-                    setTimeout(function() {
-                        t.addClass("progress-bar-over"),
-                            setTimeout(function() {
-                                t.hide(200)
-                            }, 150)
-                        $('#loading').hide();
-                    }, 20),
-                    o.addControl(new BMap.ScaleControl({
-                        anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
-                        offset: new BMap.Size(20, 20)
-                    })),
-                    setTimeout(function() {
-                        o.removeEventListener("tilesloaded", e)
-                    }, 0);
-                Maps.getBundury();
-            }),
-                o.centerAndZoom(g_conf.cityName, 11),
-                setTimeout(function() {
-                    o.addEventListener("zoomend", function() {
-                        console.log("zoom")
-                        m("zoom")
-                    });
-                    o.addEventListener("dragend", function() {
-                        console.log("drag")
-                        m("drag")
-                    });
-                }, 100)
-        },
-        boundary: {
-            add: function(e, t) {
-                if (!f[e]) {
-                    var a = new BMap.Polygon(t, {
-                        strokeWeight: 2,
-                        strokeColor: "#4285f4",
-                        strokeOpacity: 1,
-                        fillOpacity: .1,
-                        fillColor: "#4285f4",
-                        enableMassClear: !1
-                    });
-                    f[e] = a, f[e].hide(),
-                        o.addOverlay(a)
-                }
-            },
-            show: function(e) {
-                f[e] && f[e].show()
-            },
-            hide: function(e) {
-                f[e] && f[e].hide()
-            },
-        },
-        bubble: {
-            clear: function() {
-                o.clearOverlays()
-            },
-            render: function(data, tpl, a, n) {
-                $.each(data, function(e, i) {
-                    var r = void 0,
-                        s = [];
-
-                    r = new BMap.Label(Utils.replaceTpl(tpl, i), {
-                        position: new BMap.Point(i.longitude, i.latitude),
-                        offset: new BMap.Size(-46, -46)
-                    });
-                    if (void 0 !== i.border && i.border.length > 0) {
-                        var e = i.id;
-                        Maps.boundary.add(e, i.border);
-                    }
-                    r.addEventListener("mouseover", function() {
-                        this.setStyle({
-                            zIndex: "4"
-                        })
-                        Maps.boundary.show($(this.V).children(".bubble-1").data("id"))
-                    }),
-                        r.addEventListener("mouseout", function() {
-                            this.setStyle({
-                                zIndex: "2"
-                            })
-                            Maps.boundary.hide($(this.V).children(".bubble-1").data("id"))
-                        }),
-                        r.setStyle(d),
-                        o.addOverlay(r),
-                        function(e) {
-                            setTimeout(function() {
-                                e.setStyle({
-                                    zIndex: "2"
-                                })
-                            }, 1)
-                        }(r);
-                })
-            }
-        },
-
-        getBundury: function() {
-            var bdary = new BMap.Boundary();
-            $.each(area, function(index, item) {
-                (function(item) {
-                    bdary.get(item, function(rs) { //获取行政区域
-                        var a = {};
-                        a.id = item;
-                        a.name = item;
-                        a.border = rs.boundaries[0];
-                        a.count = Utils.rnd(333, 999);
-                        MokaData.push(a);
-                        if (MokaData.length == area.length) {
-                            Maps.getBunduryCenter();
-                        }
-                    });
-                })(item)
-            })
-        },
-
-        getBunduryCenter: function(param) {
-            var myGeo = new BMap.Geocoder();
-            // 将地址解析结果显示在地图上,并调整地图视野
-            var count = 0;
-            $.each(MokaData, function(index, item) {
-                (function(i, t) {
-                    myGeo.getPoint("北京市" + t.name, function(point) { //获取行政区域
-                        if (point) {
-                            MokaData[i].longitude = point.lng;
-                            MokaData[i].latitude = point.lat;
-                        }
-                        count++;
-                        if (count == MokaData.length) {
-                            console.info(MokaData);
-                            Maps.bubble.clear();
-                            Maps.bubble.render(MokaData, Maps.tpl, 1)
-                        }
-                    }, "北京市");
-                })(index, item)
-            })
-        },
+    function my$(id) {
+        return document.getElementById(id);
     }
 
-    Maps.init();
+    //获取各元素，方便操作
+    var box=my$("box");
+    var inner=box.children[0];
+    var ulObj=inner.children[0];
+    var list=ulObj.children;
+    var olObj=inner.children[1];
+    var arr=my$("arr");
+    var imgWidth=inner.offsetWidth;
+    var right=my$("right");
+    var pic=0;
+    //根据li个数，创建小按钮
+    for(var i=0;i<list.length;i++){
+        var liObj=document.createElement("li");
+
+        olObj.appendChild(liObj);
+        liObj.innerText=(i+1);
+        liObj.setAttribute("index",i);
+
+        //为按钮注册mouseover事件
+        liObj.onmouseover=function () {
+            //先清除所有按钮的样式
+
+            for (var j=0;j<olObj.children.length;j++){
+                olObj.children[j].removeAttribute("class");
+            }
+            this.className="current";
+            pic=this.getAttribute("index");
+            animate(ulObj,-pic*imgWidth);
+        }
+
+    }
+
+
+    //设置ol中第一个li有背景颜色
+    olObj.children[0].className = "current";
+    //克隆一个ul中第一个li,加入到ul中的最后=====克隆
+    ulObj.appendChild(ulObj.children[0].cloneNode(true));
+
+    var timeId=setInterval(onmouseclickHandle,5000);
+    //左右焦点实现点击切换图片功能
+    box.onmouseover=function () {
+        arr.style.display="block";
+        clearInterval(timeId);
+    };
+    box.onmouseout=function () {
+        arr.style.display="none";
+        timeId=setInterval(onmouseclickHandle,5000);
+    };
+
+    right.onclick=onmouseclickHandle;
+    function onmouseclickHandle() {
+        //如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,
+        //所以,如果用户再次点击按钮,用户应该看到第二个图片
+        if (pic == list.length - 1) {
+            //如何从第6个图,跳转到第一个图
+            pic = 0;//先设置pic=0
+            ulObj.style.left = 0 + "px";//把ul的位置还原成开始的默认位置
+        }
+        pic++;//立刻设置pic加1,那么此时用户就会看到第二个图片了
+        animate(ulObj, -pic * imgWidth);//pic从0的值加1之后,pic的值是1,然后ul移动出去一个图片
+        //如果pic==5说明,此时显示第6个图(内容是第一张图片),第一个小按钮有颜色,
+        if (pic == list.length - 1) {
+            //第五个按钮颜色干掉
+            olObj.children[olObj.children.length - 1].className = "";
+            //第一个按钮颜色设置上
+            olObj.children[0].className = "current";
+        } else {
+            //干掉所有的小按钮的背景颜色
+            for (var i = 0; i < olObj.children.length; i++) {
+                olObj.children[i].removeAttribute("class");
+            }
+            olObj.children[pic].className = "current";
+        }
+    }
+    left.onclick=function () {
+        if (pic==0){
+            pic=list.length-1;
+            ulObj.style.left=-pic*imgWidth+"px";
+        }
+        pic--;
+        animate(ulObj,-pic*imgWidth);
+        for (var i = 0; i < olObj.children.length; i++) {
+            olObj.children[i].removeAttribute("class");
+        }
+        //当前的pic索引对应的按钮设置颜色
+        olObj.children[pic].className = "current";
+    };
+
+    //设置任意的一个元素,移动到指定的目标位置
+    function animate(element, target) {
+        clearInterval(element.timeId);
+        //定时器的id值存储到对象的一个属性中
+        element.timeId = setInterval(function () {
+            //获取元素的当前的位置,数字类型
+            var current = element.offsetLeft;
+            //每次移动的距离
+            var step = 10;
+            step = current < target ? step : -step;
+            //当前移动到位置
+            current += step;
+            if (Math.abs(current - target) > Math.abs(step)) {
+                element.style.left = current + "px";
+            } else {
+                //清理定时器
+                clearInterval(element.timeId);
+                //直接到达目标
+                element.style.left = target + "px";
+            }
+        }, 10);
+    }
 </script>
 </html>
