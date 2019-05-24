@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2019-05-24 09:18:43
+Date: 2019-05-25 00:07:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -150,12 +150,12 @@ CREATE TABLE `house` (
   `grade` double(5,2) NOT NULL DEFAULT '5.00' COMMENT '房源分数，0-10',
   `longitude` double(10,6) NOT NULL COMMENT '经度',
   `latitude` double(10,6) NOT NULL COMMENT '纬度',
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0：未审核，1：审核成功，2：审核失败',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0：未审核，1：审核失败，2：出租中，3：空闲',
   PRIMARY KEY (`house_id`),
   KEY `id_idx` (`house_id`) USING BTREE,
   KEY `h_uid_f` (`user_id`),
   CONSTRAINT `h_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of house
@@ -163,6 +163,8 @@ CREATE TABLE `house` (
 INSERT INTO `house` VALUES ('1', '5', '2033', '完美生活小区新房', '1', '0', '11111', '0.00', '30', '43.00', '2/6', '0', '南', '湖南省长沙市滨湖西路36号', '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈', '精装修,电梯房,首次出租', '38b1103e-5fc3-49c1-9845-0923bd947aed.jpg,78298baf-7893-4818-a519-90fa093800fe.jpg,59eeb1f2-0e2c-44da-9679-36370a6a72a4.jpg,8548e8ed-6e67-49e3-beb2-8285fb959a52.jpg,f8481a38-6114-48f9-b6c2-fae07a59ec41.jpg,d1506cbd-50f1-4808-bf69-d967f51f771e.jpg,3da0583a-4721-48b2-94ec-a80ba803de62.jpg', '5.00', '113.072149', '28.277161', '0');
 INSERT INTO `house` VALUES ('2', '5', '4033', '霞凝小区3居室-01卧', '1', '0', '10000', '0.00', '30', '9.00', '4/6', '0', '南', '湖南省长沙市开福区霞凝小区(青秀路西80米) ', '这是三居室中的主卧，朝南；房间宽敞明亮，粉灰风格，水晶粉与金属灰，适合爱拍照的你。清风徐来，心情舒畅，美好的生活从这里开始，我在自如等您。', '精装修,电梯房,首次出租', 'cb89602f-2904-4f0f-9d73-208af9028705.jpg,5177d110-024c-43e5-837a-eb2a93baf4c0.jpg,62a30c83-a0ae-4445-9df3-cabaec1ac4c6.jpg,52cbbec1-42d4-4d71-b5eb-b4753c6cba38.jpg,486b6e8b-1516-4dcd-88bd-5df5cca8accd.jpg,316b38fd-7272-408d-ab4a-9838b3a92411.jpg,f748d45f-0db2-4410-8d4f-28377ae6b3cc.jpg,57e8c763-f782-4f0d-8eaa-1290d2a29aaf.jpg,8340d337-b7ce-4c69-a6d4-4ecb26a9a0fe.jpg', '5.00', '112.959810', '28.348695', '0');
 INSERT INTO `house` VALUES ('3', '5', '4033', '测试1', '0', '0', '00000', '0.00', '30', '0.00', '2/6', '0', '南', '湖南省长沙市滨湖西路36号', '', '0', 'a364f92e-4aa1-4599-b623-80d1f33989df.jpg', '5.00', '113.042940', '28.173869', '0');
+INSERT INTO `house` VALUES ('4', '5', '2033', ' 板塘小区', '1', '0', '21111', '3990.00', '30', '44.00', '2/6', '0', '南', '长沙市开福区中青路1202号', '', '精装修,电梯房,首次出租', '90b91f7a-3eaf-4ff6-8b17-16367c46b712.jpg,34da1f4c-7477-4ae4-8d44-dea1a3d47219.jpg', '5.00', '113.003634', '28.345989', '0');
+INSERT INTO `house` VALUES ('5', '5', '4033', ' 幸福家园', '1', '0', '21111', '3425.00', '30', '55.00', '2/6', '0', '南', '长沙市长沙县开元东路1307号', '', '精装修,电梯房,首次出租', '0de9645f-45c4-4136-89c1-d9b182f8c3a0.jpg,1c4ff698-438d-441a-ba0a-cdaaf77f532f.jpg', '5.00', '113.169851', '28.254541', '0');
 
 -- ----------------------------
 -- Table structure for log

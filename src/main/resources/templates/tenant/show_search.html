@@ -2,27 +2,108 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>房东个人主页</title>
-    <link rel="stylesheet" type="text/css" href="/css/landlord/info.css" />
+    <title>租客搜索页面</title>
+    <link rel="stylesheet" type="text/css" href="/css/tenant/show_search.css" />
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/tenant/location.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<div class="left">
-    <ul class="menu">
-        <li><a th:href="@{/house/showNew}"><img src="/images/icon4.png" />发布新房源</a></li>
-        <li><a th:href="@{/house/show}"><img src="/images/step4.jpg" />房源管理</a></li>
-        <li><a><img src="/images/step3.jpg" />合同管理</a></li>
-        <li><a><img src="/images/icon1.png" />评价管理</a></li>
-        <li><a><img src="/images/icon9.png" />反馈管理</a></li>
-        <li><a><img src="/images/step1.jpg" />信息管理</a></li>
-        <li><a><img src="/images/icon8.png" />钱包管理</a></li>
-        <li><a th:href="@{/landlord/chat}"><img src="/images/step2.jpg" />联系管家</a></li>
-    </ul>
+<div class="search">
+    <form method="post" th:action="@{/common/all/search}">
+        <input name="number" type="hidden" th:value="1" />
+        <div class="select">
+            <select name="type">
+                <option value="0" selected>合租</option>
+                <option value="1">整租</option>
+                <option value="2">豪宅</option>
+            </select>
+        </div>
+        <input type="text" class="search-text" name="msg" placeholder="输入区域、地铁、小区名" />
+        <a th:href="@{/common/map/show}" title="地图找房" class="map-search"><img src="/images/map.gif" /></a>
+        <button class="search_btn">搜索</button>
+        <div class="clear-box"></div>
+        <div class="search-keys">
+            <select id="province" name="province"></select>
+            <select id="city" name="city"></select>
+            <select id="area" name="area"></select>
+            <select name="counts">
+                <option value="0" selected>不限</option>
+                <option value="1">1居</option>
+                <option value="2">2居</option>
+                <option value="3">3居</option>
+                <option value="4">4居</option>
+                <option value="5">4居以上</option>
+            </select>
+            <select name="orientation">
+                <option value="0" selected>不限</option>
+                <option value="东">东</option>
+                <option value="南">南</option>
+                <option value="西">西</option>
+                <option value="北">北</option>
+            </select>
+            <select name="elevator">
+                <option value="-1">不限</option>
+                <option value="0" selected>电梯房</option>
+                <option value="1">非电梯房</option>
+            </select>
+            <select name="cycle">
+                <option value="0" selected>不限</option>
+                <option value="1">天付</option>
+                <option value="30">月付</option>
+                <option value="90">季付</option>
+                <option value="180">半年付</option>
+                <option value="365">年付</option>
+            </select>
+        </div>
+        <div class="clear-box"></div><br/>
+        <div class="search2-keys">
+            <span>面积：</span>
+            <input type="number" min="0" name="area1">
+            <span>~</span>
+            <input type="number" min="0" name="area2">
+            <span>m&sup2;</span>
+            &nbsp;&nbsp;
+            <span>租金：</span>
+            <input type="number" min="0" name="money1">
+            <span>~</span>
+            <input type="number" min="0" name="money2">
+            <span>元</span>
+        </div>
+        <div class="clear-box"></div><br/>
+        <div class="search3-keys">
+            <span>特色：</span>
+            <ul class="dowebok">
+                <li><input type="checkbox" name="words" value="不限" checked></li>
+                <li><input type="checkbox" name="words" class="check-box" value="独立阳台" data-labelauty="独立阳台"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="独立卫生间" data-labelauty="独立卫生间"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="智能锁" data-labelauty="智能锁"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="地铁附近" data-labelauty="地铁附近"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="商场附近" data-labelauty="商场附近"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="设施齐全" data-labelauty="设施齐全"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="首次出租" data-labelauty="首次出租"></li>
+                <li><input type="checkbox" name="words" class="check-box" value="精装修" data-labelauty="精装修"></li>
+            </ul>
+        </div>
+        <div class="clear-box"></div>
+        <div class="search4-keys">
+            <span>排序方式：</span>
+            <ul class="dowebok">
+                <li><input type="radio" class="radio-box" name="show" value="money" checked data-labelauty="租金"></li>
+                <li><input type="radio" class="radio-box" name="show" value="grade" data-labelauty="分数"></li>
+                <li><input type="radio" class="radio-box" name="show" value="area" data-labelauty="面积"></li>
+                <li><input type="radio" class="radio-box" name="sx" value="asc" checked data-labelauty="升序"></li>
+                <li><input type="radio" class="radio-box" name="sx" value="desc" data-labelauty="降序"></li>
+            </ul>
+        </div>
+        <div class="clear-box"></div>
+    </form>
 </div>
-<div class="right">
-    <div class="house-manager">
-        <div th:each="house:${houses}" th:if="${house != null}"  class="house-box">
+<div class="clear-box"></div>
+<div class="house-manager">
+        <div th:each="house:${housePageInfo.getList()}" th:if="${house != null}"  class="house-box">
             <div class="picbox" th:if="${house.urls != null}">
                 <img src="/images/icon3.png" class="pre" />
                 <div class="box">
@@ -90,9 +171,15 @@
             </div>
         </div>
     </div>
-</div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        addressInit('province', 'city', 'area');
+        $('.check-box').labelauty();
+        $('.radio-box').labelauty();
+    });
+</script>
 <script type="text/javascript">
     $(".pre").click(function () {
         var parent = $(this).next();

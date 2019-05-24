@@ -41,8 +41,9 @@
                 <p>
                     <span th:switch="${house.status}">
                         <b th:case="0">审核中</b>
-                        <b th:case="1">审核通过</b>
-                        <b th:case="2">审核失败</b>
+                        <b th:case="1">审核失败</b>
+                        <b th:case="2">出租中</b>
+                        <b th:case="3">空闲</b>
                     </span>
                 </p>
                 <p>

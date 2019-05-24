@@ -211,9 +211,7 @@ public class CommonController extends BaseController {
         if(StringUtils.isNotBlank(orientation) && !"0".equals(orientation)) {
             ts.setOrientation(orientation);
         }
-        if(counts != 0) {
-            ts.setKind(counts+"0000");
-        }
+        ts.setKind(counts+"0000");
         StringBuffer sb = new StringBuffer();
         if(StringUtils.isNotBlank(province) && !Constants.SEARCH_EXCEPT_WORDS.contains(province)) {
             sb.append(",").append(province);
@@ -239,8 +237,74 @@ public class CommonController extends BaseController {
             sb.deleteCharAt(0);
             ts.setMsg(sb.toString());
         }
+        ts.setElevator(-1);
         System.out.println("ts.toString()"+ts.toString());
-        PageHelper.startPage(number, 8);
+        PageHelper.startPage(number, 4);
+        List<House> houses = houseService.queryHousesLikeMsg(ts);
+        PageInfo<House> housePageInfo = new PageInfo<House>(houses);
+        model.addAttribute("housePageInfo", housePageInfo);
+        return new ModelAndView("/tenant/show_search", "Model", model);
+    }
+
+    @RequestMapping("/common/all/search")
+    public ModelAndView showAllSearch(@RequestParam("elevator")int elevator, @RequestParam("cycle")int cycle, @RequestParam("money1")int money1,
+                                      @RequestParam("area1")int area1, @RequestParam("area2")int area2, @RequestParam("money2")int money2,
+                                      @RequestParam("type")int type, @RequestParam("msg")String msg, @RequestParam("province")String province,
+                                      @RequestParam("city")String city, @RequestParam("area")String area, @RequestParam("counts")int counts,
+                                      @RequestParam("orientation")String orientation,@RequestParam("number")int number, @RequestParam("show")String show,
+                                      @RequestParam("words")String words, @RequestParam("sx")String sx, Model model) {
+        System.out.println("number="+number);
+        System.out.println("words="+words);
+        TenantSearchPOJO ts = new TenantSearchPOJO();
+        ts.setType(type);
+        ts.setShow(show);
+        ts.setSx(sx);
+        ts.setElevator(elevator);
+        ts.setCycle(cycle);
+        ts.setArea1(area1);
+        ts.setArea2(area2);
+        ts.setMoney1(money1);
+        ts.setMoney2(money2);
+        if(StringUtils.isNotBlank(orientation) && !"0".equals(orientation)) {
+            ts.setOrientation(orientation);
+        }
+        ts.setKind(counts+"0000");
+        StringBuffer sb = new StringBuffer();
+        if(StringUtils.isNotBlank(province) && !Constants.SEARCH_EXCEPT_WORDS.contains(province)) {
+            sb.append(",").append(province);
+        }
+        if(StringUtils.isNotBlank(city) && !Constants.SEARCH_EXCEPT_WORDS.contains(city)) {
+            sb.append(",").append(city);
+        }
+        if(StringUtils.isNotBlank(area) && !Constants.SEARCH_EXCEPT_WORDS.contains(area)) {
+            sb.append(",").append(area);
+        }
+        if(StringUtils.isNotBlank(msg)) {
+            String[] arr = msg.trim().split("\\s+");
+            int len = arr.length;
+            if(len > 0) {
+                for(int i = 0; i<len; i++) {
+                    if(!Constants.SEARCH_EXCEPT_WORDS.contains(arr[i])) {
+                        sb.append(",").append(arr[i]);
+                    }
+                }
+            }
+        }
+        if(StringUtils.isNotBlank(words)) {
+            String[] arr = words.split("\\s+");
+            int len = arr.length;
+            if(len > 0) {
+                for(int i = 1; i<len; i++) {
+                    sb.append(",").append(arr[i]);
+                }
+            }
+        }
+        if(sb != null && sb.length() > 0) {
+            sb.deleteCharAt(0);
+            ts.setMsg(sb.toString());
+        }
+        System.out.println("ts.toString()"+ts.toString());
+        PageHelper.startPage(number, 4);
         List<House> houses = houseService.queryHousesLikeMsg(ts);
         PageInfo<House> housePageInfo = new PageInfo<House>(houses);
         model.addAttribute("housePageInfo", housePageInfo);

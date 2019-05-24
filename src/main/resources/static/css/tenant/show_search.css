@@ -1,0 +1,217 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /*background-image: url(/images/bg1.jpg);*/
+}
+
+.clear-box {
+    clear: both;
+}
+
+.search {
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.search-text {
+    width: 400px;
+    height: 32px;
+    border: 1px solid #66af9b;
+}
+
+.search-text:focus {
+    border: 1px solid #66af9b;
+    box-shadow: 0 0 2px #284390;
+}
+
+.search_btn {
+    border: 1px rgba(26, 43, 93, 0.67);
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    float: right;
+    margin-right: 10px;
+}
+
+.map-search {
+    float: right;
+    margin-right: 160px;
+    margin-left: 10px;
+}
+
+.map-search img {
+    width: 400px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.select {
+    display: inline-block;
+    width: 100px;
+    position: relative;
+    vertical-align: middle;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #66af9b;
+    text-shadow: none;
+    border-radius: 4px;
+    transition: box-shadow 0.25s ease;
+    z-index: 2;
+}
+
+.select:hover {
+    box-shadow: 0 1px 1px rgba(137, 236, 255, 0.15);
+}
+
+.select:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ccc;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+    z-index: -2;
+}
+
+.select select {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #66af9b;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select:focus {
+    outline: none;
+}
+
+.search-keys {
+    margin-top: 10px;
+}
+
+.search-keys select {
+    width: 90px;
+    height: 40px;
+    margin-right: 20px;
+    border: 1px solid #66af9b;
+    border-radius: 2px;
+    box-shadow: 0 0 1px #CCFFFF;
+    -moz-box-shadow: 0 0 1px #CCFFFF;
+    -webkit-box-shadow: 0 0 1px #CCFFFF;
+}
+
+.house-manager {
+    margin-left: 80px;
+}
+
+.house-manager .house-box {
+    width: 280px;
+    float: left;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.house-manager .picbox .pics img {
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.house-manager .pre {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    padding-top: 120px;
+}
+
+.house-manager .box {
+    position: absolute;
+    z-index: -1;
+}
+
+.house-manager .next {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    margin-top: -50px;
+    margin-left: 210px;
+}
+
+.house-manager .content {
+    width: 280px;
+    margin-top: 110px;
+    background-color: rgba(89, 151, 136, 0.76);
+}
+
+.house-manager .content p {
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
+.house-manager .house-operation {
+    width: 280px;
+    background-color: rgba(89, 151, 136, 0.76);
+    height: 60px;
+    line-height: 40px;
+    margin-top: -16px;
+}
+
+.house-manager .house-operation a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    color: #284390;
+    margin-left: 30px;
+    margin-right: 20px;
+    float: left;
+}
+.search2-keys, .search3-keys, .search4-keys{
+    margtin-top:10px;
+}
+.search3-keys ul, .search4-keys ul {
+    list-style-type: none;
+    float:left;
+    margin-top:-20px;
+}
+
+.search3-keys li, .search4-keys li {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.search3-keys input.labelauty + label, .search4-keys input.labelauty + label {
+    font: 12px "Microsoft Yahei";
+}
+.search3-keys span, .search4-keys span {
+    font: 20px "Microsoft Yahei";
+    float:left;
+}
+.search2-keys input {
+    width: 80px;
+    height: 32px;
+    border: 1px solid #66af9b;
+}
+
+.search2-keys input:focus {
+    border: 1px solid #66af9b;
+    box-shadow: 0 0 2px #284390;
+}

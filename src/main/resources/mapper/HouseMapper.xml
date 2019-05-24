@@ -49,16 +49,41 @@
         <if test="object.orientation != null" >
           and orientation = #{object.orientation}
         </if>
+        <if test="object.area1 lt object.area2" >
+            and area &gt;= #{object.area1} and area &lt;= #{object.area2}
+        </if>
+        <if test="object.area1 gt object.area2" >
+            and area &lt;= #{object.area1} and area &gt;= #{object.area2}
+        </if>
+        <if test="object.area1 == object.area2 and object.area1 != 0" >
+            and area == #{object.area1}
+        </if>
+        <if test="object.money1 lt object.money2" >
+            and money &gt;= #{object.money1} and money &lt;= #{object.money2}
+        </if>
+        <if test="object.money1 gt object.money2" >
+            and money &lt;= #{object.money1} and money &gt;= #{object.money2}
+        </if>
+        <if test="object.money1 == object.money2 and object.money1 != 0" >
+            and money == #{object.money1}
+        </if>
+        <if test="object.elevator == 0" >
+            and elevator = 0
+        </if>
+        <if test="object.elevator == 1" >
+            and elevator = 1
+        </if>
+        <if test="object.cycle != 0" >
+            and cycle = #{object.cycle}
+        </if>
         <if test="object.kind != null" >
-            <choose>
-                <when test="object.kind = '50000'">
-                    and kind != '00000' and kind != '10000' and kind != '20000'
-                    and kind != '30000' and kind != '40000'
-                </when>
-                <otherwise>
-                    and kind = #{object.kind}
-                </otherwise>
-            </choose>
+            <if test="object.kind == '50000'">
+                and kind != '00000' and kind != '10000' and kind != '20000'
+                and kind != '30000' and kind != '40000'
+            </if>
+            <if test="object.kind != '00000' and  object.kind != '50000'">
+                and kind = #{object.kind}
+            </if>
         </if>
         <if test="object.msg != null" >
             <foreach item="item" index="index" collection="object.msg.split(',')"  separator=" " >

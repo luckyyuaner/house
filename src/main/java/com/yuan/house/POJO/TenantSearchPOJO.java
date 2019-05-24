@@ -15,4 +15,10 @@ public class TenantSearchPOJO {
     private String orientation;
     private String show;
     private String sx;
+    private int elevator;
+    private int cycle;
+    private int area1;
+    private int area2;
+    private int money1;
+    private int money2;
 }

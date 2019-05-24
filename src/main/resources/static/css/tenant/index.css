@@ -179,7 +179,7 @@ ol .current {
     margin-left:20px;
     border: 1px solid rgba(255,255,255,.8);
     border-radius: 2px;
-    box-shadow: 0 0 0.5px #CCFFFF;
-    -moz-box-shadow: 0 0 0.5px #CCFFFF;
-    -webkit-box-shadow: 0 0 0.5px #CCFFFF;
+    box-shadow: 0 0 1px #CCFFFF;
+    -moz-box-shadow: 0 0 1px #CCFFFF;
+    -webkit-box-shadow: 0 0 1px #CCFFFF;
 }

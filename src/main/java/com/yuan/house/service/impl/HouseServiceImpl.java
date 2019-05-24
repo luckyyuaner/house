@@ -86,9 +86,9 @@ public class HouseServiceImpl implements HouseService {
     public List<House> queryHousesLikeMsg(TenantSearchPOJO ts) {
         String key = "houses_like_" + ts.toString();
         Object rs = commonService.queryRedis(key);
-        if(null != rs) {
+        /*if(null != rs) {
             return (List<House>)rs;
-        }
+        }*/
         List<House> houses = houseDao.queryHousesLikeMsg(ts);
         commonService.insertRedis(key, ts.toString());
         return houses;
