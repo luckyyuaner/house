@@ -10,28 +10,10 @@ Target Server Type    : MYSQL
 Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2019-05-15 12:40:37
+Date: 2019-05-24 09:18:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for address
--- ----------------------------
-DROP TABLE IF EXISTS `address`;
-CREATE TABLE `address` (
-  `ad_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
-  `order` tinyint(4) NOT NULL DEFAULT '0' COMMENT '地点‪级别，0：省，1：市/区，2：小区',
-  `name` varchar(20) NOT NULL,
-  `count` int(11) NOT NULL DEFAULT '0' COMMENT '房源数量',
-  PRIMARY KEY (`ad_id`),
-  UNIQUE KEY `unique_idx` (`name`) USING BTREE,
-  KEY `id_idx` (`ad_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of address
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for collect
@@ -63,8 +45,8 @@ CREATE TABLE `comment` (
   `comment_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(11) unsigned NOT NULL COMMENT '评论人id',
   `contract_id` bigint(11) unsigned NOT NULL,
-  `user_grade` double(8,0) NOT NULL DEFAULT '5' COMMENT '被评论者分数，0-10',
-  `house_grade` double(8,0) NOT NULL DEFAULT '5' COMMENT '房源及房东分数，0-10',
+  `user_grade` double(5,2) NOT NULL DEFAULT '5.00' COMMENT '被评论者分数，0-10',
+  `house_grade` double(5,2) NOT NULL DEFAULT '5.00' COMMENT '房源及房东分数，0-10',
   `info` varchar(300) NOT NULL COMMENT '评论内容',
   `url` varchar(100) DEFAULT NULL COMMENT '路径',
   `ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '评论时间',
@@ -93,10 +75,10 @@ CREATE TABLE `contract` (
   `etime` datetime NOT NULL COMMENT '租房结束时间',
   `ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '合同创建时间',
   `utime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '合同最后更新时间',
-  `landlord_operation` tinyint(2) NOT NULL DEFAULT '0' COMMENT '房东操作状态,0：未处理，1：修改，2：同意，3：拒绝',
-  `tenant_operation` tinyint(2) NOT NULL COMMENT '租客操作状态，0:未操作，1：修改，2：同意，3：拒绝',
-  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0:租房，1：退房',
-  `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '合同状态，0：申请中，1：创建中，2：签约中，3：付款中，4：签约完成，5：正常结束，6：毁约申请中，7：退款处理中，8:毁约结束',
+  `landlord_operation` tinyint(1) NOT NULL DEFAULT '0' COMMENT '房东操作状态,0：未处理，1：修改，2：同意，3：拒绝',
+  `tenant_operation` tinyint(1) NOT NULL DEFAULT '0' COMMENT '租客操作状态，0:未操作，1：修改，2：同意，3：拒绝',
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0:租房，1：退房',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '合同状态，0：申请中，1：创建中，2：签约中，3：付款中，4：签约完成，5：正常结束，6：毁约申请中，7：退款处理中，8:毁约结束',
   `file` varchar(100) DEFAULT NULL COMMENT '合同文件路径',
   `landlord_info` varchar(300) DEFAULT NULL COMMENT '房东附加信息',
   `tenant_info` varchar(300) DEFAULT NULL COMMENT '租客附加信息',
@@ -122,10 +104,10 @@ CREATE TABLE `feedback` (
   `create_id` bigint(11) unsigned NOT NULL COMMENT '创建者',
   `role_id` bigint(11) unsigned NOT NULL COMMENT '处理反馈信息用户的角色',
   `operate_id` bigint(11) unsigned DEFAULT NULL COMMENT '反馈信息处理者',
-  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '反馈信息类型，0：咨询，1：建议，2：举报，3：投诉，4：报修，5：公告',
-  `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '处理状态，0：未处理，1：处理中，2：处理完成',
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '反馈信息类型，0：咨询，1：建议，2：举报，3：投诉，4：报修，5：公告',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '处理状态，0：未处理，1：处理中，2：处理完成',
   `info` text NOT NULL COMMENT '反馈内容',
-  `url` varchar(30) DEFAULT NULL,
+  `url` varchar(100) DEFAULT NULL,
   `utime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
   `ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
   PRIMARY KEY (`feedback_id`),
@@ -150,35 +132,37 @@ DROP TABLE IF EXISTS `house`;
 CREATE TABLE `house` (
   `house_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(11) unsigned NOT NULL COMMENT '房东账号',
-  `name` varchar(20) NOT NULL COMMENT '房源名称',
-  `order` int(4) NOT NULL DEFAULT '1' COMMENT '房源序号，默认1号房',
-  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '出租方式，0:合租，1：整租',
+  `doorplate` varchar(5) NOT NULL COMMENT '门牌号',
+  `name` varchar(40) NOT NULL COMMENT '房源名称',
+  `orders` int(1) NOT NULL DEFAULT '1' COMMENT '房源序号，默认1号房',
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '出租方式，0:合租，1：整租，2：豪宅',
   `kind` char(5) NOT NULL DEFAULT '00000' COMMENT '第一位表示房间数，第二位表示客厅数，第三位表示厕所数，第四位表示厨房数，第五位表示阳台数，00000表示0室0厅无厕所无厨房无阳台',
-  `money` double(8,0) NOT NULL DEFAULT '0' COMMENT '租金',
-  `cycle` int(4) NOT NULL DEFAULT '30' COMMENT '交费周期，天为单位，默认30天',
-  `area` double(8,0) NOT NULL DEFAULT '0' COMMENT '房源面积',
-  `floor` int(4) NOT NULL DEFAULT '1' COMMENT '房源楼层',
-  `elevator` tinyint(2) NOT NULL DEFAULT '0' COMMENT '房源是否电梯房，0：电梯房，1:非电梯房',
-  `orientation` varchar(10) DEFAULT NULL COMMENT '房源朝向',
-  `address` varchar(100) DEFAULT NULL COMMENT '房源地址',
+  `money` double(10,2) NOT NULL DEFAULT '0.00' COMMENT '租金',
+  `cycle` int(3) NOT NULL DEFAULT '30' COMMENT '交费周期，天为单位，默认30天',
+  `area` double(6,2) NOT NULL DEFAULT '0.00' COMMENT '房源面积',
+  `floor` varchar(5) NOT NULL DEFAULT '1/6' COMMENT '房源楼层',
+  `elevator` tinyint(1) NOT NULL DEFAULT '0' COMMENT '房源是否电梯房，0：电梯房，1:非电梯房',
+  `orientation` varchar(1) NOT NULL DEFAULT '南' COMMENT '房源朝向',
+  `address` varchar(100) NOT NULL COMMENT '房源地址',
   `description` text COMMENT '房源描述',
-  `keys` varchar(100) DEFAULT NULL COMMENT '搜索关键词，以英文分号间隔，最后一个不加分号',
-  `title` varchar(100) DEFAULT NULL COMMENT '房源装修、设施等描述，以英文分号间隔，结尾不加分号',
-  `url` varchar(200) DEFAULT NULL COMMENT '房源图片视频路径，多个以英文分号间隔，结尾不加分号',
-  `grade` double(8,0) NOT NULL DEFAULT '5' COMMENT '房源分数，0-10',
-  `ad_id` bigint(20) unsigned NOT NULL,
+  `words` varchar(20) NOT NULL COMMENT '搜索关键词，以英文分号间隔，最后一个不加分号',
+  `urls` varchar(500) NOT NULL COMMENT '房源图片视频路径，多个以英文分号间隔，结尾不加分号',
+  `grade` double(5,2) NOT NULL DEFAULT '5.00' COMMENT '房源分数，0-10',
+  `longitude` double(10,6) NOT NULL COMMENT '经度',
+  `latitude` double(10,6) NOT NULL COMMENT '纬度',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0：未审核，1：审核成功，2：审核失败',
   PRIMARY KEY (`house_id`),
-  UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`house_id`) USING BTREE,
   KEY `h_uid_f` (`user_id`),
-  KEY `h_aid_f` (`ad_id`),
-  CONSTRAINT `h_aid_f` FOREIGN KEY (`ad_id`) REFERENCES `address` (`ad_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `h_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of house
 -- ----------------------------
+INSERT INTO `house` VALUES ('1', '5', '2033', '完美生活小区新房', '1', '0', '11111', '0.00', '30', '43.00', '2/6', '0', '南', '湖南省长沙市滨湖西路36号', '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈', '精装修,电梯房,首次出租', '38b1103e-5fc3-49c1-9845-0923bd947aed.jpg,78298baf-7893-4818-a519-90fa093800fe.jpg,59eeb1f2-0e2c-44da-9679-36370a6a72a4.jpg,8548e8ed-6e67-49e3-beb2-8285fb959a52.jpg,f8481a38-6114-48f9-b6c2-fae07a59ec41.jpg,d1506cbd-50f1-4808-bf69-d967f51f771e.jpg,3da0583a-4721-48b2-94ec-a80ba803de62.jpg', '5.00', '113.072149', '28.277161', '0');
+INSERT INTO `house` VALUES ('2', '5', '4033', '霞凝小区3居室-01卧', '1', '0', '10000', '0.00', '30', '9.00', '4/6', '0', '南', '湖南省长沙市开福区霞凝小区(青秀路西80米) ', '这是三居室中的主卧，朝南；房间宽敞明亮，粉灰风格，水晶粉与金属灰，适合爱拍照的你。清风徐来，心情舒畅，美好的生活从这里开始，我在自如等您。', '精装修,电梯房,首次出租', 'cb89602f-2904-4f0f-9d73-208af9028705.jpg,5177d110-024c-43e5-837a-eb2a93baf4c0.jpg,62a30c83-a0ae-4445-9df3-cabaec1ac4c6.jpg,52cbbec1-42d4-4d71-b5eb-b4753c6cba38.jpg,486b6e8b-1516-4dcd-88bd-5df5cca8accd.jpg,316b38fd-7272-408d-ab4a-9838b3a92411.jpg,f748d45f-0db2-4410-8d4f-28377ae6b3cc.jpg,57e8c763-f782-4f0d-8eaa-1290d2a29aaf.jpg,8340d337-b7ce-4c69-a6d4-4ecb26a9a0fe.jpg', '5.00', '112.959810', '28.348695', '0');
+INSERT INTO `house` VALUES ('3', '5', '4033', '测试1', '0', '0', '00000', '0.00', '30', '0.00', '2/6', '0', '南', '湖南省长沙市滨湖西路36号', '', '0', 'a364f92e-4aa1-4599-b623-80d1f33989df.jpg', '5.00', '113.042940', '28.173869', '0');
 
 -- ----------------------------
 -- Table structure for log
@@ -188,8 +172,8 @@ CREATE TABLE `log` (
   `log_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(11) unsigned NOT NULL,
   `content` varchar(100) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `type` varchar(6) DEFAULT NULL COMMENT '操作类型，增删改查',
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `type` varchar(2) DEFAULT NULL COMMENT '操作类型，增删改查',
   `target` varchar(20) DEFAULT NULL COMMENT '操作对象',
   PRIMARY KEY (`log_id`),
   KEY `id_idx` (`log_id`) USING BTREE,
@@ -208,12 +192,12 @@ DROP TABLE IF EXISTS `permission`;
 CREATE TABLE `permission` (
   `permission_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '权限编号',
   `parent_id` bigint(11) unsigned DEFAULT NULL COMMENT '上级权限',
-  `name` varchar(20) NOT NULL COMMENT '权限名称',
-  `type` tinyint(4) DEFAULT NULL COMMENT '权限类型',
-  `permission_value` varchar(50) DEFAULT NULL COMMENT '权限值',
-  `url` varchar(100) DEFAULT NULL COMMENT '权限路径',
-  `icon` varchar(50) DEFAULT NULL COMMENT '权限图标',
-  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '权限状态，0：有效，1：无效',
+  `name` varchar(10) NOT NULL COMMENT '权限名称',
+  `type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '权限类型',
+  `permission_value` varchar(40) DEFAULT '' COMMENT '权限值',
+  `url` varchar(40) DEFAULT NULL COMMENT '权限路径',
+  `icon` varchar(100) DEFAULT NULL COMMENT '权限图标',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '权限状态，0：有效，1：无效',
   PRIMARY KEY (`permission_id`),
   UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`permission_id`) USING BTREE,
@@ -225,23 +209,23 @@ CREATE TABLE `permission` (
 -- Records of permission
 -- ----------------------------
 INSERT INTO `permission` VALUES ('1', null, '用户信息管理', '1', '', null, null, '0');
-INSERT INTO `permission` VALUES ('2', null, '房屋资源管理', '1', null, null, null, '0');
-INSERT INTO `permission` VALUES ('3', '1', '用户管理', '2', 'user:read', '/user/listUser', null, '0');
+INSERT INTO `permission` VALUES ('2', null, '房屋资源管理', '1', '', null, null, '0');
+INSERT INTO `permission` VALUES ('3', '1', '用户管理', '2', 'user:read', '/user/listUser', 'icon4.png', '0');
 INSERT INTO `permission` VALUES ('4', '1', '角色管理', '2', 'role:read', '/role/listRole', null, '0');
 INSERT INTO `permission` VALUES ('5', '3', '新增用户', '3', 'user:create', '/user/addUser', null, '0');
-INSERT INTO `permission` VALUES ('6', '3', '编辑用户', '3', 'user:update', '/user/updateUser', null, '0');
-INSERT INTO `permission` VALUES ('7', '3', '删除用户', '3', 'user:delete', '/user/deleteUser', null, '0');
-INSERT INTO `permission` VALUES ('8', '4', '新增角色', '3', 'role:create', '/role/showAdd', null, '0');
-INSERT INTO `permission` VALUES ('9', '4', '编辑角色', '3', 'role:update', '/role/showUpdate', null, '0');
-INSERT INTO `permission` VALUES ('10', '4', '删除角色', '3', 'role:delete', '/role/deleteRole', null, '0');
-INSERT INTO `permission` VALUES ('11', '1', '权限管理', '2', 'permission:read', '/permission/listPermission', null, '0');
+INSERT INTO `permission` VALUES ('6', '3', '编辑用户', '3', 'user:update', '/user/updateUser', 'icon4.png', '0');
+INSERT INTO `permission` VALUES ('7', '3', '删除用户', '3', 'user:delete', '/user/deleteUser', 'icon4.png', '0');
+INSERT INTO `permission` VALUES ('8', '4', '新增角色', '3', 'role:create', '/role/showAdd', 'icon4.png', '0');
+INSERT INTO `permission` VALUES ('9', '4', '编辑角色', '3', 'role:update', '/role/showUpdate', 'icon4.png', '0');
+INSERT INTO `permission` VALUES ('10', '4', '删除角色', '3', 'role:delete', '/role/deleteRole', 'icon4.png', '0');
+INSERT INTO `permission` VALUES ('11', '1', '权限管理', '2', 'permission:read', '/permission/listPermission', 'icon4.png', '0');
 INSERT INTO `permission` VALUES ('12', '11', '新增权限', '3', 'permission:create', '/permission/showAdd', null, '0');
 INSERT INTO `permission` VALUES ('13', '11', '编辑权限', '3', 'permission:update', '/permission/showUpdate', null, '0');
 INSERT INTO `permission` VALUES ('14', '11', '删除权限', '3', 'permission:delete', '/permission/deletePermission', null, '0');
 INSERT INTO `permission` VALUES ('15', null, '租房业务管理', '1', null, null, null, '0');
 INSERT INTO `permission` VALUES ('16', null, '反馈信息管理', '1', null, null, null, '0');
 INSERT INTO `permission` VALUES ('17', '1', '评价管理', '2', 'comment:read', '/comment/index', null, '0');
-INSERT INTO `permission` VALUES ('18', '1', '钱包管理', '2', 'money:read', '/money/index', null, '0');
+INSERT INTO `permission` VALUES ('18', '1', '钱包管理', '2', 'money:read', '/money/index', 'icon4.png', '0');
 INSERT INTO `permission` VALUES ('19', '17', '新增评价', '3', 'comment:create', '/comment/create', null, '0');
 INSERT INTO `permission` VALUES ('20', '17', '编辑评价', '3', 'comment:update', '/comment/update', null, '0');
 INSERT INTO `permission` VALUES ('21', '17', '删除评价', '3', 'comment:delete', '/comment/delete', null, '0');
@@ -292,9 +276,9 @@ INSERT INTO `permission` VALUES ('63', '60', '删除公告', '3', 'notice:delete
 DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
   `role_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色编号',
-  `name` varchar(20) NOT NULL COMMENT '角色名称',
+  `name` varchar(10) NOT NULL COMMENT '角色名称',
   `description` text COMMENT '角色描述',
-  `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0:有效，1：无效',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0:有效，1：无效',
   PRIMARY KEY (`role_id`),
   UNIQUE KEY `unique_idx` (`name`) USING BTREE,
   KEY `id_idx` (`role_id`) USING BTREE
@@ -426,18 +410,18 @@ CREATE TABLE `user` (
   `user_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户帐号',
   `username` varchar(20) NOT NULL COMMENT '用户名',
   `password` varchar(60) NOT NULL COMMENT '用户密码',
-  `user_type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '用户身份，0:"管理员"，1:"租房客"，2:"房东"',
-  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户状态，0：有效，1：无效',
-  `ctime` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+  `user_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '用户身份，0:"管理员"，1:"租房客"，2:"房东"',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '用户状态，0：有效，1：无效',
+  `ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
   `utime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  `head` varchar(30) DEFAULT NULL COMMENT '头像路径',
-  `money` double NOT NULL DEFAULT '0' COMMENT '用户钱包金额',
-  `phone` varchar(20) DEFAULT NULL COMMENT '电话号码',
-  `idcard` varchar(20) DEFAULT NULL COMMENT '身份证账号',
-  `photo` varchar(30) DEFAULT NULL COMMENT '身份证照片路径',
+  `head` varchar(100) DEFAULT NULL COMMENT '头像路径',
+  `money` double(10,2) NOT NULL DEFAULT '0.00' COMMENT '用户钱包金额',
+  `phone` varchar(15) DEFAULT NULL COMMENT '电话号码',
+  `idcard` varchar(20) DEFAULT NULL COMMENT '身份证号码',
+  `photo` varchar(100) DEFAULT NULL COMMENT '身份证照片路径',
   `birth` date DEFAULT NULL COMMENT '出生日期',
-  `sex` tinyint(2) NOT NULL DEFAULT '0' COMMENT '用户性别，0：女，1：男',
-  `reputation` double NOT NULL DEFAULT '5' COMMENT '用户信誉值，0-10分',
+  `sex` tinyint(1) NOT NULL DEFAULT '0' COMMENT '用户性别，0：女，1：男',
+  `reputation` double(5,2) NOT NULL DEFAULT '5.00' COMMENT '用户信誉值，0-10分',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `unique_idx` (`username`) USING BTREE,
   KEY `id_idx` (`user_id`) USING BTREE
@@ -446,18 +430,18 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '系统管理员', '123456', '0', '0', null, '2019-04-19 10:25:28', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('2', '业务管理员', '123456', '0', '0', null, '2019-04-29 11:08:40', null, '0', null, null, null, null, '0', '0');
-INSERT INTO `user` VALUES ('3', '一般管理员', '123456', '0', '0', null, '2019-04-29 11:09:05', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('4', '租客', '123456', '1', '0', null, '2019-04-29 11:10:03', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('5', '房东', '123456', '2', '0', null, '2019-04-29 11:10:06', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('8', '系统管理员1', '123456', '0', '0', null, '2019-04-29 20:09:16', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('9', '业务管理员1', '123456', '0', '0', null, '2019-04-29 20:10:09', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('10', '业务管理员2', '123456', '0', '0', null, '2019-04-29 20:11:18', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('11', '一般管理员1', '123456', '0', '0', null, '2019-04-29 20:12:06', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('12', '租客1', '123456', '1', '0', null, '2019-04-29 20:12:21', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('13', '房东1', '123456', '2', '0', null, '2019-04-29 20:12:35', null, '0', null, null, null, null, '0', '5');
-INSERT INTO `user` VALUES ('14', '房东2', '123456', '2', '0', null, '2019-05-09 20:41:09', null, '0', null, null, null, null, '0', '5');
+INSERT INTO `user` VALUES ('1', '系统管理员', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:39:56', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('2', '业务管理员', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:00', null, '0.00', null, null, null, null, '0', '0.00');
+INSERT INTO `user` VALUES ('3', '一般管理员', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:03', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('4', '租客', '123456', '1', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:04', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('5', '房东', '123456', '2', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:06', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('8', '系统管理员1', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:08', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('9', '业务管理员1', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:10', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('10', '业务管理员2', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:14', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('11', '一般管理员1', '123456', '0', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:12', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('12', '租客1', '123456', '1', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:17', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('13', '房东1', '123456', '2', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:19', null, '0.00', null, null, null, null, '0', '5.00');
+INSERT INTO `user` VALUES ('14', '房东2', '123456', '2', '0', '2019-04-19 10:25:28', '2019-05-23 09:40:22', null, '0.00', null, null, null, null, '0', '5.00');
 
 -- ----------------------------
 -- Table structure for user_role
