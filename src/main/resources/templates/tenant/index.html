@@ -31,6 +31,8 @@
     <div class="search">
         <form method="post" th:action="@{/common/search}">
             <input name="number" type="hidden" th:value="1" />
+            <input name="show" type="hidden" th:value="money" />
+            <input name="sx" type="hidden" th:value="asc" />
             <div class="select">
                 <select name="type">
                     <option value="0" selected>合租</option>

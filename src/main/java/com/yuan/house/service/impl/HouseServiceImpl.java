@@ -91,6 +91,6 @@ public class HouseServiceImpl implements HouseService {
         }
         List<House> houses = houseDao.queryHousesLikeMsg(ts);
         commonService.insertRedis(key, ts.toString());
-        return null;
+        return houses;
     }
 }

@@ -23,7 +23,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -202,25 +201,28 @@ public class CommonController extends BaseController {
     @RequestMapping("/common/search")
     public ModelAndView showSearch(@RequestParam("type")int type, @RequestParam("msg")String msg, @RequestParam("province")String province,
                                    @RequestParam("city")String city, @RequestParam("area")String area, @RequestParam("counts")int counts,
-                                   @RequestParam("orientation")String orientation,@RequestParam("number")int number, Model model) {
+                                   @RequestParam("orientation")String orientation,@RequestParam("number")int number, @RequestParam("show")String show,
+                                   @RequestParam("sx")String sx, Model model) {
         System.out.println("number:"+number);
         TenantSearchPOJO ts = new TenantSearchPOJO();
         ts.setType(type);
-        if(StringUtils.isNotBlank(orientation)) {
+        ts.setShow(show);
+        ts.setSx(sx);
+        if(StringUtils.isNotBlank(orientation) && !"0".equals(orientation)) {
             ts.setOrientation(orientation);
         }
         if(counts != 0) {
             ts.setKind(counts+"0000");
         }
-        List<String> msgs = new ArrayList<>();
+        StringBuffer sb = new StringBuffer();
         if(StringUtils.isNotBlank(province) && !Constants.SEARCH_EXCEPT_WORDS.contains(province)) {
-            msgs.add(province);
+            sb.append(",").append(province);
         }
         if(StringUtils.isNotBlank(city) && !Constants.SEARCH_EXCEPT_WORDS.contains(city)) {
-            msgs.add(city);
+            sb.append(",").append(city);
         }
         if(StringUtils.isNotBlank(area) && !Constants.SEARCH_EXCEPT_WORDS.contains(area)) {
-            msgs.add(area);
+            sb.append(",").append(area);
         }
         if(StringUtils.isNotBlank(msg)) {
             String[] arr = msg.trim().split("\\s+");
@@ -228,16 +230,17 @@ public class CommonController extends BaseController {
             if(len > 0) {
                 for(int i = 0; i<len; i++) {
                     if(!Constants.SEARCH_EXCEPT_WORDS.contains(arr[i])) {
-                        msgs.add(arr[i]);
+                        sb.append(",").append(arr[i]);
                     }
                 }
             }
         }
-        if(msgs != null) {
-            ts.setMsg(msgs);
+        if(sb != null && sb.length() > 0) {
+            sb.deleteCharAt(0);
+            ts.setMsg(sb.toString());
         }
+        System.out.println("ts.toString()"+ts.toString());
         PageHelper.startPage(number, 8);
-        //System.out.println("ts.toString()"+ts.toString());
         List<House> houses = houseService.queryHousesLikeMsg(ts);
         PageInfo<House> housePageInfo = new PageInfo<House>(houses);
         model.addAttribute("housePageInfo", housePageInfo);

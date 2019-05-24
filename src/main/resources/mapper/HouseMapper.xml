@@ -43,7 +43,7 @@
         FROM
         house
         WHERE
-        status = 1
+        status = 0
         and
         type = #{object.type}
         <if test="object.orientation != null" >
@@ -61,17 +61,17 @@
             </choose>
         </if>
         <if test="object.msg != null" >
-            <foreach collection="object.msg" open="[" close="]" separator="," item="it">
+            <foreach item="item" index="index" collection="object.msg.split(',')"  separator=" " >
                 and
                 (
-                name LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
-                OR address LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
-                OR description LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
-                OR words LIKE CONCAT(CONCAT('%', replace(#{it},' ','')), '%')
+                name LIKE CONCAT(CONCAT('%', #{item}), '%')
+                OR address LIKE CONCAT(CONCAT('%', #{item}), '%')
+                OR description LIKE CONCAT(CONCAT('%', #{item}), '%')
+                OR words LIKE CONCAT(CONCAT('%', #{item}), '%')
                 )
             </foreach>
         </if>
-        order by money asc;
+        order by #{object.show} #{object.sx}
     </select>
 
     <select id="queryHouseById" resultType="com.yuan.house.model.House">
