@@ -1,6 +1,7 @@
 package com.yuan.house.service;
 
 import com.yuan.house.POJO.TenantSearchPOJO;
+import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.model.House;
 
 import java.util.List;
@@ -48,4 +49,11 @@ public interface HouseService {
      * @return
      */
     List<House> queryHousesLikeMsg(TenantSearchPOJO ts);
+
+    /**
+     * 获取地名内的所有房源
+     * @param city
+     * @return
+     */
+    List<MapHouseVO> queryHousesByCity(String city);
 }

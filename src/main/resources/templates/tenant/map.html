@@ -1,33 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <style type="text/css">
-        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+        body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
     </style>
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg"/>
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/industry_map.css" rel="stylesheet">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ONQ10cYkFc02WqsSlevIfyRmhOAWC0Gf"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=ONQ10cYkFc02WqsSlevIfyRmhOAWC0Gf"></script>
     <title>地图找房</title>
 </head>
 <body>
 <div id="allmap"></div>
 </body>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var houses = [[${houses}]];
+    var city = [[${city}]];
+    var lng = [[${lng}]];
+    var lat = [[${lat}]];
+    console.dir(houses);
+    /*]]>*/
+</script>
 </html>
 <script type="text/javascript" src="/js/textIconOverlay.js"></script>
 <script type="text/javascript" src="/js/maplib.js"></script>
 <script type="text/javascript">
     // 百度地图API功能
-    var map = new BMap.Map("allmap",{minZoom:11,maxZoom:16});    // 创建Map实例
-    //map.disableDragging();
-    map.centerAndZoom(new BMap.Point(116.395645038,39.9299857781), 11);  // 初始化地图,设置中心点坐标和地图级别
+    var map = new BMap.Map("allmap", {minZoom: 11, maxZoom: 16});    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(lng*1, lat*1), 11);  // 初始化地图,设置中心点坐标和地图级别
     map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-    map.addControl(new BMap.NavigationControl({enableGeolocation:true}));
+    map.addControl(new BMap.NavigationControl({enableGeolocation: true}));
     map.addControl(new BMap.OverviewMapControl());
-    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.setCurrentCity(city);          // 设置地图显示的城市 此项是必须设置的
     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+    change(houses);
     //城市列表及切换
     var size = new BMap.Size(60, 20);
     map.addControl(new BMap.CityListControl({
@@ -38,42 +55,36 @@
         //    alert('before');
         // },
         // 切换城市之后事件
-        // onChangeAfter:function(){
-        //   alert
+        //onChangeAfter:function() {
+        //console.dir();
+        //},
+        // 切换城市成功响应事件
+        onChangeSuccess: function (e) {
+            console.dir(e);
+            window.location.href="/common/map/show?city="+e.title+"&lng="+e.point.lng+"&lat="+e.point.lat;
+        }
     }));
-    var xy = [
-        {'x':116.420861,'y':39.945229},
-        {'x':116.360495,'y':39.917344},
-        {'x':116.143752,'y':39.935935},
-        {'x':116.306453,'y':40.011355},
-        {'x':116.636454,'y':40.325396},
-        {'x':116.230564,'y':40.228517},
-        {'x':116.073037,'y':40.364109},
-        {'x':116.469109,'y':39.978365},
-        {'x':116.577193,'y':39.899144},
-        {'x':116.617437,'y':39.787016},
-        {'x':116.305258,'y':39.471809},
-        {'x':116.455311,'y':39.33532}
-    ];
-    var markers = [];
-    var pt = null;
-    for (var i in xy) {
-        pt = new BMap.Point(xy[i].x , xy[i].y);
-        var marker = new BMap.Marker(pt);
-        var label = new BMap.Label("文字");
-        marker.setLabel(label);
-        markers.push(marker);
+    function change(arr) {
+        var markers = [];
+        var pt = null;
+        for (var i in arr) {
+            pt = new BMap.Point(arr[i].longitude, arr[i].latitude);
+            var marker = new BMap.Marker(pt);
+            var label = new BMap.Label(arr[i].houseId+"&"+arr[i].name+"&"+arr[i].type+"&"+arr[i].money+"&"+arr[i].area+"&"+arr[i].grade);
+            marker.setLabel(label);
+            markers.push(marker);
+        }
+        //最简单的用法，生成一个marker数组，然后调用markerClusterer类即可。
+        var markerClusterer = new BMapLib.MarkerClusterer(map,
+            {
+                markers: markers,
+                girdSize: 100,
+                styles: [{
+                    size: new BMap.Size(92, 92),
+                    backgroundColor: '#3959bc'
+                }],
+            });
+        markerClusterer.setMaxZoom(13);
+        markerClusterer.setGridSize(100);
     }
-    //最简单的用法，生成一个marker数组，然后调用markerClusterer类即可。
-    var markerClusterer = new BMapLib.MarkerClusterer(map,
-        {
-            markers:markers,
-            girdSize : 100,
-            styles : [{
-                size: new BMap.Size(92, 92),
-                backgroundColor : '#3959bc'
-            }],
-        });
-    markerClusterer.setMaxZoom(13);
-    markerClusterer.setGridSize(100);
 </script>

@@ -3,6 +3,7 @@ package com.yuan.house.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yuan.house.POJO.TenantSearchPOJO;
+import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.constants.ResultEnum;
 import com.yuan.house.model.House;
@@ -194,7 +195,12 @@ public class CommonController extends BaseController {
      * @return
      */
     @RequestMapping("/common/map/show")
-    public ModelAndView showMap(Model model) {
+    public ModelAndView showMap(Model model, @RequestParam("city")String city, @RequestParam("lng")double lng, @RequestParam("lat")double lat) {
+        List<MapHouseVO> houses = houseService.queryHousesByCity(city);
+        model.addAttribute("houses", houses);
+        model.addAttribute("city", city);
+        model.addAttribute("lng", lng);
+        model.addAttribute("lat", lat);
         return new ModelAndView("/tenant/map", "Model", model);
     }
 

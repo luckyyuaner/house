@@ -1,6 +1,7 @@
 package com.yuan.house.service.impl;
 
 import com.yuan.house.POJO.TenantSearchPOJO;
+import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.dao.HouseDao;
@@ -86,11 +87,23 @@ public class HouseServiceImpl implements HouseService {
     public List<House> queryHousesLikeMsg(TenantSearchPOJO ts) {
         String key = "houses_like_" + ts.toString();
         Object rs = commonService.queryRedis(key);
-        /*if(null != rs) {
+        if(null != rs) {
             return (List<House>)rs;
-        }*/
+        }
         List<House> houses = houseDao.queryHousesLikeMsg(ts);
-        commonService.insertRedis(key, ts.toString());
+        commonService.insertRedis(key, houses);
+        return houses;
+    }
+
+    @Override
+    public List<MapHouseVO> queryHousesByCity(String city) {
+        String key = "houses_map_like_" + city;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<MapHouseVO>)rs;
+        }
+        List<MapHouseVO> houses = houseDao.queryHousesByCity(city);
+        commonService.insertRedis(key, houses);
         return houses;
     }
 }

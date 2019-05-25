@@ -9,6 +9,10 @@
         urls, grade, longitude, latitude, status
     </sql>
 
+    <sql id="allColumns2">
+        house_id, name, type, money, area, grade, longitude, latitude
+    </sql>
+
     <insert id="addHouse" parameterType="com.yuan.house.model.House">
         INSERT INTO house
         (
@@ -97,6 +101,16 @@
             </foreach>
         </if>
         order by #{object.show} #{object.sx}
+    </select>
+
+    <select id="queryHousesByCity" resultType="com.yuan.house.VO.MapHouseVO">
+        SELECT
+        <include refid="allColumns2"/>
+        FROM
+        house
+        WHERE
+        status = 0
+        and address LIKE CONCAT(CONCAT('%', #{city}), '%')
     </select>
 
     <select id="queryHouseById" resultType="com.yuan.house.model.House">
