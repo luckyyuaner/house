@@ -107,3 +107,46 @@
 2019-05-25 12:51:04.137 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_user_5
 2019-05-25 12:51:14.816 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)
 2019-05-25 12:51:14.976 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)
+2019-05-25 14:16:36.039 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15824 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-25 14:16:36.176 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-25 14:17:05.779 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 14:17:07.951 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 14:17:08.030 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 14:17:16.119 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-25 14:17:19.276 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 50.589 seconds (JVM running for 92.288)
+2019-05-25 14:18:49.102 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-05-25 14:18:49.119 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-05-25 14:18:52.702 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)
+2019-05-25 14:18:53.295 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-25 14:18:55.782 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-25 14:18:59.876 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)
+2019-05-25 14:27:30.563 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16632 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-25 14:27:30.833 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-25 14:27:42.612 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 14:27:43.636 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 14:27:43.676 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 14:27:47.902 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-25 14:27:49.644 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 22.308 seconds (JVM running for 28.321)
+2019-05-25 14:30:58.471 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-25 14:30:59.132 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-25 14:31:02.374 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-05-25 14:32:51.780 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-05-25 14:32:55.035 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-05-25 14:32:57.079 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-05-25 14:32:57.095 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-05-25 14:33:01.479 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_user_5
+2019-05-25 14:33:01.638 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_user_5
+2019-05-25 15:32:33.393 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16700 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-25 15:32:33.427 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-25 15:33:17.099 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 15:33:20.005 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 15:33:20.169 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 15:33:26.977 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-25 15:33:33.109 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 75.701 seconds (JVM running for 120.661)
+2019-05-25 20:46:04.801 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 18164 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-25 20:46:04.823 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-25 20:46:24.310 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 20:46:25.292 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 20:46:25.337 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-25 20:46:28.830 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-25 20:46:31.624 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 30.506 seconds (JVM running for 48.58)

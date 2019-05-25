@@ -1,0 +1,14 @@
+.BMapLabel span{
+	position: absolute;
+	font-size: 30px;
+	left:-13px;
+	top:-15px;
+}
+.BMapLabel a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.BMapLabel a:hover{
+	text-decoration: none;
+}
