@@ -135,4 +135,16 @@
     <delete id="deleteHouse" parameterType="Long">
         DELETE FROM house WHERE house_id = #{id}
     </delete>
+
+    <select id="queryLandlordByHouse" resultType="com.yuan.house.model.User">
+        SELECT
+        *
+        FROM
+        user
+        WHERE
+        user_id
+        in (
+        select user_id from house where house_id = #{hid}
+        )
+    </select>
 </mapper>

@@ -106,4 +106,16 @@ public class HouseServiceImpl implements HouseService {
         commonService.insertRedis(key, houses);
         return houses;
     }
+
+    @Override
+    public User queryLandlordByHouse(Long hid) {
+        String key = "user_house_" + hid;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (User)rs;
+        }
+        User u = houseDao.queryLandlordByHouse(hid);
+        commonService.insertRedis(key, u);
+        return u;
+    }
 }

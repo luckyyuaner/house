@@ -3,6 +3,7 @@ package com.yuan.house.dao;
 import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.model.House;
+import com.yuan.house.model.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -51,6 +52,8 @@ public interface HouseDao {
      * @return
      */
     int deleteHouse(@Param("id") Long id);
+
+    User queryLandlordByHouse(@Param("hid") Long hid);
 
 	List<MapHouseVO> queryHousesByCity(@Param("city") String city);
 }

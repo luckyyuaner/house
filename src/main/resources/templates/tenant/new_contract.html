@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>租房申请页</title>
+    <link rel="stylesheet" type="text/css" href="/css/tenant/new_contract.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/flatpickr.material_blue.min.css" />
+    <script src="/js/flatpickr.js"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+<form action="" method="post" th:object="${contract}">
+    <div th:if="${house != null}"  class="house-box">
+        <div class="picbox" th:if="${house.urls != null}">
+            <img src="/images/icon3.png" class="pre" />
+            <div class="box">
+                <div th:each='url,userStat:${house.urls.split(",")}' class="pics" th:name="${userStat.size}">
+                    <img th:if="${userStat.index ==0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="active" th:alt="${userStat.index}" style="display:block;"/>
+                    <img th:if="${userStat.index !=0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="house_img" th:alt="${userStat.index}" style="display: none;"/>
+                </div>
+            </div>
+            <img src="/images/icon5.png" class="next" />
+        </div>
+        <div class="clear-box"></div>
+        <div class="content">
+            <div class="landlord-info">
+                <p><a>
+                    <img src="/images/head.jpg" style="width:20px;height:20px;object-fit:cover;" />
+                    <span th:text="${landlord.username}"/>
+                    <span th:if="${landlord.sex == 0}">女</span>
+                    <span th:if="${landlord.sex == 1}">男</span>
+                </a>
+                    电话号码：<span th:text="${landlord.phone}"/>
+                    信誉值：<span th:text="${landlord.reputation}"/>分
+                </p>
+            </div>
+            <div class="landlord-operation">
+                <p>
+                    <a><img src="/images/like.png" /></a>
+                    <a class="zufan">租房</a>
+                </p>
+            </div>
+            <div class="clear-box"></div>
+            <input type="hidden" th:field="*{houseId}" th:value="${house.houseId}" />
+            <p>
+                <b th:text="${house.name}"></b>
+                <span th:switch="${house.status}">
+                    <b th:case="2">出租中</b>
+                    <b th:case="3">空闲</b>
+                </span>
+                <span th:switch="${house.type}">
+                    <b th:case="0">友家托管</b>
+                    <b th:case="1">整租托管</b>
+                    <b th:case="0">豪宅托管</b>
+                </span>
+                <span th:switch="${house.cycle}">
+                    <b th:case="1">日付</b>
+                    <b th:case="30">月付</b>
+                    <b th:case="90">季付</b>
+                    <b th:case="180">半年付</b>
+                    <b th:case="365">年付</b>
+                </span>
+            </p>
+            <p>
+                <span th:text="${house.money}"/>元/月
+                <span th:text="${house.area}"/>m&sup2;
+                朝<span th:text="${house.orientation}"/>
+                <span th:switch="${house.elevator}">
+                    <span th:case="0">电梯房</span>
+                    <span th:case="1">非电梯房</span>
+                </span>
+                <span th:text="${house.floor}"/>层
+                <span th:text="${house.doorplate}"/>号
+                <span th:text="${house.orders}"/>号房间
+                <span th:text="${house.kind.charAt(0)}"/>房间
+                <span th:text="${house.kind.charAt(1)}"/>客厅
+                <span th:text="${house.kind.charAt(2)}"/>卫生间
+                <span th:text="${house.kind.charAt(3)}"/>厨房
+                <span th:text="${house.kind.charAt(4)}"/>阳台
+            </p>
+            <p>
+                地址：<span th:text="${house.address}" />
+            </p>
+            <div class="miaoshu">
+                描述：<span th:text="${house.description}" />
+            </div>
+        </div>
+        <div class="clear-box"></div>
+        <div class="more">
+            --加载评论--
+        </div>
+    </div>
+    <div class="clear-box"></div>
+    <div class="contract-info">
+        <div class="empty"></div>
+        <span>开始时间</span>
+        <input id="st" name="stime" /><br/><br/><br/>
+        <span>结束时间</span>
+        <input id="et" name="etime" />
+        <p>请上传身份证正、反面照片及本人手持身份证照片，共三张照片</p>
+        <span class="filespan">证件图片</span>
+        <div class="filebtn">
+            <span class="fileinput-button">
+                <span>点击添加</span>
+                <input accept="image/*" name="url" onchange="showImgs(this);" type="file" multiple="multiple">
+            </span>
+        </div>
+    </div>
+</form>
+<div class="clear-box"></div>
+<div class="comment-info"></div>
+<div th:replace="~{fragments/footer :: footer}">...</div>
+</body>
+<script type="text/javascript">
+    $(function() {
+        $("#st").flatpickr();
+        $("#et").flatpickr();
+    });
+</script>
+<script type="text/javascript">
+    $(".pre").click(function () {
+        var parent = $(this).next();
+        var curr = parent.find(".active");
+        var ob = null;
+        if(curr.attr("alt")-1 < 0) {
+            ob = parent.find("img:eq("+(parent.find("div:eq(0)").attr("name")-1)+")");
+        }
+        else{
+            ob = parent.find("img:eq("+(curr.attr("alt")-1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+
+    $(".next").click(function () {
+        var parent = $(this).prev();
+        var curr = parent.find(".active");
+        var ob = null;
+        var len = parent.find("div:eq(0)").attr("name");
+        if((parseInt(curr.attr("alt"))+1) >= len) {
+            ob = parent.find("img:eq(0)");
+        }
+        else{
+            ob = parent.find("img:eq("+(parseInt(curr.attr("alt"))+1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+</script>
+</html>

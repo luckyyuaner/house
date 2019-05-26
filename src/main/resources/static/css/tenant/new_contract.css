@@ -1,0 +1,170 @@
+body {
+    width: 100%;
+    height: 400px;
+    /*background-image: url(/images/bg.jpg);*/
+    color: rgba(0, 0, 0, 0.69);
+    font-family: SimHei;
+}
+
+.clear-box {
+    clear: both;
+}
+
+.house-box{
+    margin-left:60px;
+    margin-top:20px;
+}
+.picbox{
+    float:left;
+}
+.picbox .pics img {
+    width: 400px;
+    height: 400px;
+}
+
+.house-box .pre {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    padding-top: 120px;
+}
+
+.house-box .box {
+    position: absolute;
+    z-index: -1;
+}
+
+.house-box .next {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    padding-top:126px;
+    margin-left: 248px;
+}
+
+.house-box .content {
+    float:left;
+    width: 800px;
+    margin-left:420px;
+    margin-top:-186px;
+    height:400px;
+    background-color:rgba(89, 151, 136, 0.76) ;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.landlord-operation img{
+    width:20px;
+    height:20px;
+    object-fit:cover;
+    float:left;
+    margin-left:360px;
+    margin-top:4px;
+}
+.house-box .content .zufan{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 80px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+    background-color: rgba(201, 201, 201, 0.28);
+    height:30px;
+    display: block;
+    float:left;
+    color: rgba(4, 4, 4, 0.9);
+}
+.house-box .content .miaoshu{
+    width: 800px;
+    height:240px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.house-box .content .miaoshu::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+.house-box .content .miaoshu::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    background-color: #FFF;
+}
+
+/*定义滑块 内阴影+圆角*/
+.house-box .content .miaoshu::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+    background-color: #AAA;
+}
+
+.house-box .content p {
+    text-align: center;
+    height:16px;
+    line-height:16px;
+}
+
+.house-box .more{
+    height:40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #000000;
+    background-color: rgba(82, 141, 127, 0.24);
+    margin-right:82px;
+    margin-top:20px;
+}
+.contract-info{
+    float:left;
+    margin-top:-460px;
+    width:100%;
+    height:600px;
+    background-color: black;
+    opacity: 0.7;
+}
+.contract-info .empty{
+    height:100px;
+}
+.contract-info span{
+    font-size: 20px;
+    margin-left:400px;
+    color:white;
+}
+#st,#et{
+    width:300px;
+    height:32px;
+}
+.contract-info p{
+    font-size: 16px;
+    color: white;
+    margin-left:400px;
+}
+.filespan{
+    float:left;
+}
+.filebtn{
+    float:left;
+    margin-left:-760px;
+}
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color:white;
+}
+
+.fileinput-button input {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+}

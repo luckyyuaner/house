@@ -126,10 +126,10 @@
 }
 
 .fileinput-button {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-}
+     position: relative;
+     display: inline-block;
+     overflow: hidden;
+ }
 
 .fileinput-button input {
     position: absolute;

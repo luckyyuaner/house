@@ -3,6 +3,7 @@ package com.yuan.house.service;
 import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.model.House;
+import com.yuan.house.model.User;
 
 import java.util.List;
 
@@ -56,4 +57,7 @@ public interface HouseService {
      * @return
      */
     List<MapHouseVO> queryHousesByCity(String city);
+
+
+    User queryLandlordByHouse(Long hid);
 }

@@ -76,7 +76,7 @@
         <div class="search3-keys">
             <span>特色：</span>
             <ul class="dowebok">
-                <li><input type="checkbox" name="words" value="不限" checked></li>
+                <li><input style="visibility: hidden" type="checkbox" name="words" value="不限" checked></li>
                 <li><input type="checkbox" name="words" class="check-box" value="独立阳台" data-labelauty="独立阳台"></li>
                 <li><input type="checkbox" name="words" class="check-box" value="独立卫生间" data-labelauty="独立卫生间"></li>
                 <li><input type="checkbox" name="words" class="check-box" value="智能锁" data-labelauty="智能锁"></li>
@@ -155,7 +155,7 @@
             </div>
             <div class="house-operation">
                 <a><img src="/images/like.png" /></a>
-                <a>详情</a>
+                <a th:href="@{/common/contract/showNew?(hid=${house.houseId})}">详情</a>
             </div>
         </div>
     </div>
