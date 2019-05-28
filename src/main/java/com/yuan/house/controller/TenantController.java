@@ -22,8 +22,8 @@ public class TenantController extends BaseController {
     private HouseService houseService;
 
 
-    //@RequiresPermissions("contract:create")
-    @RequestMapping("/common/contract/showNew")
+    @RequiresPermissions("contract:create")
+    @RequestMapping("/contract/showNew")
     public ModelAndView showContractNew(Model model, @RequestParam("hid")Long hid) {
         model.addAttribute("house",houseService.queryHouseById(hid));
         model.addAttribute("landlord",houseService.queryLandlordByHouse(hid));

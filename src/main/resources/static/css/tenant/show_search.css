@@ -217,9 +217,9 @@ html, body {
 }
 
 .search3-keys li, .search4-keys li {
-    display: inline-block;
-    margin: 10px 0;
-}
+     display: inline-block;
+     margin: 10px 0;
+ }
 
 .search3-keys input.labelauty + label, .search4-keys input.labelauty + label {
     font: 12px "Microsoft Yahei";

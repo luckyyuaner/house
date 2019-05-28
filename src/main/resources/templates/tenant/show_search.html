@@ -155,7 +155,7 @@
             </div>
             <div class="house-operation">
                 <a><img src="/images/like.png" /></a>
-                <a th:href="@{/common/contract/showNew?(hid=${house.houseId})}">详情</a>
+                <a th:href="@{/contract/showNew?(hid=${house.houseId})}">详情</a>
             </div>
         </div>
     </div>
@@ -170,7 +170,7 @@
 </script>
 <script type="text/javascript">
     $(".pre").click(function () {
-        alert("执行");
+        //alert("执行");
         var parent = $(this).next();
         var curr = parent.find(".active");
         var ob = null;

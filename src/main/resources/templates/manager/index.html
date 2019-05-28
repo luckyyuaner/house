@@ -6,15 +6,20 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<ul th:each="permission:${session.userPermissions}">
-    <li th:if="${permission.type==2}">
-        <a th:href="@{${permission.url}(type=, msg=, number=1)}">
-            <img th:if="${permission.icon != null }" th:src="@{/images/{imgname}(imgname=${permission.icon})}"/>
-            <img th:if="${permission.icon == null }" src="/images/icon9.png" />
-            <span th:text="${permission.name}"/>
-        </a>
-    </li>
-</ul>
+<div class="left">
+    <ul th:each="permission:${session.userPermissions}">
+        <li th:if="${permission.type==2}">
+            <a th:href="@{${permission.url}(type=, msg=, number=1)}">
+                <img th:if="${permission.icon != null }" th:src="@{/images/{imgname}(imgname=${permission.icon})}"/>
+                <img th:if="${permission.icon == null }" src="/images/icon9.png" />
+                <span th:text="${permission.name}"/>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="right">
+    <div class=""></div>
+</div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
 </html>

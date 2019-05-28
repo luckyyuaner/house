@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>合同生成页面</title>
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="/css/manager/show_contract.css" />-->
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            /*background-image: url(/images/bg.jpg);*/
+        }
+
+        .clear-box {
+            clear: both;
+        }
+        .left-box {
+            float: left;
+            width:400px;
+            margin-left:80px;
+        }
+        .right-box {
+            float: left;
+            margin-left: 40px;
+            width:800px;
+            height:570px;
+            background-color: rgba(89, 151, 136, 0.76);
+        }
+
+        .house-box {
+            width: 400px;
+        }
+        .house-box .picbox{
+            width: 400px;
+            height: 400px;
+        }
+        .house-box .picbox .pics img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .house-box .pre {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            float: left;
+            z-index: 10;
+            padding-top: 120px;
+        }
+
+        .house-box .box {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .house-box .next {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            float: left;
+            z-index: 10;
+            margin-top: 130px;
+            margin-left: 260px;
+        }
+
+        .house-box .content {
+            width: 400px;
+            height:155px;
+            background-color: rgba(89, 151, 136, 0.76);
+            margin-top:0px;
+            padding-top:20px;
+        }
+
+        .house-box .content p {
+            text-align: center;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        .contract-box p {
+            text-align: center;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        .landlord-box p {
+            text-align: center;
+            height: 16px;
+            line-height: 16px;
+        }
+        .tenant-box{
+            margin-top:-5px;
+        }
+        .tenant-box p {
+            text-align: center;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        .head {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+        .the-imgs{
+            height:200px;
+            width:800px;
+        }
+        .the-imgs .imgs{
+            float:left;
+            height: 160px;
+            width:250px;
+            margin-left:10px;
+        }
+        .operate-box{
+            width:1240px;
+            margin-left:40px;
+            height:200px;
+        }
+        .operate-box .op-type{
+           width:1200px;
+        }
+        .operate-box .op-type .dowebok{
+            margin-left:560px;
+            list-style-type: none;
+            float:left;
+        }
+        .dowebok li{
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .dowebok input.labelauty + label{
+            font: 12px "Microsoft Yahei";
+        }
+        .fileinput-button {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .fileinput-button input {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+        }
+    </style>
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+<form>
+    <div class="left-box">
+        <div th:if="${house != null}"  class="house-box">
+            <div class="picbox" th:if="${house.urls != null}">
+                <img src="/images/icon3.png" class="pre" />
+                <div class="box">
+                    <div th:each='url,userStat:${house.urls.split(",")}' class="pics" th:name="${userStat.size}">
+                        <img th:if="${userStat.index ==0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="active" th:alt="${userStat.index}" style="display:block;"/>
+                        <img th:if="${userStat.index !=0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="house_img" th:alt="${userStat.index}" style="display: none;"/>
+                    </div>
+                </div>
+                <img src="/images/icon5.png" class="next" />
+            </div>
+            <div class="clear-box"></div>
+            <div class="content">
+                <p>
+                    <b th:text="${house.name}"></b>
+                </p>
+                <p>
+                    <span th:text="${house.money}"/>元/月
+                    <span th:text="${house.area}"/>m&sup2;
+                    朝<span th:text="${house.orientation}"/>
+                </p>
+                <p>
+                    <span th:switch="${house.type}">
+                        <b th:case="0">友家托管</b>
+                        <b th:case="1">整租托管</b>
+                        <b th:case="0">豪宅托管</b>
+                    </span>
+                    <span th:switch="${house.cycle}">
+                        <b th:case="1">日付</b>
+                        <b th:case="30">月付</b>
+                        <b th:case="90">季付</b>
+                        <b th:case="180">半年付</b>
+                        <b th:case="365">年付</b>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="contract-box">
+            <p>
+                <input type="hidden" th:value="${contract.contractId}" />
+                起租时间：<span th:text="${contract.stime}"/>&nbsp;&nbsp;
+                结束时间：<span th:text="${contract.etime}"/>
+            </p>
+            <p>
+                房东操作状态：
+                <span th:if="${contract.landlordOperation == 0}">未处理</span>
+                <span th:if="${contract.landlordOperation == 1}">修改</span>
+                <span th:if="${contract.landlordOperation == 2}">同意</span>
+                <span th:if="${contract.landlordOperation == 3}">拒绝</span>
+                &nbsp;&nbsp;租客操作状态：
+                <span th:if="${contract.tenantOperation == 0}">未处理</span>
+                <span th:if="${contract.tenantOperation == 1}">修改</span>
+                <span th:if="${contract.tenantOperation == 2}">同意</span>
+                <span th:if="${contract.tenantOperation == 3}">拒绝</span>
+                &nbsp;&nbsp;合同类型：
+                <span th:if="${contract.type == 0}">租房</span>
+                <span th:if="${contract.type == 1}">退房</span>
+                &nbsp;&nbsp;合同状态：
+                <span th:if="${contract.status == 0}">申请中</span>
+                <span th:if="${contract.status == 1}">创建中</span>
+                <span th:if="${contract.status == 2}">签约中</span>
+                <span th:if="${contract.status == 3}">付款中</span>
+                <span th:if="${contract.status == 4}">签约完成</span>
+                <span th:if="${contract.status == 5}">正常结束</span>
+                <span th:if="${contract.status == 6}">毁约申请中</span>
+                <span th:if="${contract.status == 7}">退款处理中</span>
+                <span th:if="${contract.status == 8}">毁约结束</span>
+            </p>
+        </div>
+        <div class="landlord-box">
+            <p><a>
+                <img class="head" src="/images/head.jpg" />
+                <span th:text="${landlord.username}"/>
+                <span th:if="${landlord.sex == 0}">女</span>
+                <span th:if="${landlord.sex == 1}">男</span>
+            </a>
+                账号：<span th:text="${landlord.userId}"/>
+                电话号码：<span th:text="${landlord.phone}"/>
+                信誉值：<span th:text="${landlord.reputation}"/>分
+            </p><br/>
+            <div class="the-imgs">
+                <div th:each='url:${contract.landlordInfo.split(",")}'>
+                    <img class="imgs" th:src="@{/file/{imgname}(imgname=${url})}"/>
+                </div>
+            </div>
+        </div>
+        <div class="tenant-box">
+            <p><a>
+                <img class="head" src="/images/head.jpg"  />
+                <span th:text="${tenant.username}"/>
+                <span th:if="${tenant.sex == 0}">女</span>
+                <span th:if="${tenant.sex == 1}">男</span>
+            </a>
+                账号：<span th:text="${tenant.userId}"/>
+                电话号码：<span th:text="${tenant.phone}"/>
+                信誉值：<span th:text="${tenant.reputation}"/>分
+            </p><br/>
+            <div class="the-imgs">
+                <div th:each='url:${contract.tenantInfo.split(",")}'>
+                    <img class="imgs" th:src="@{/file/{imgname}(imgname=${url})}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear-box"></div>
+    <div class="operate-box">
+        <div class="op-type">
+            <ul class="dowebok">
+                <li><input type="radio" class="radio-box" name="" value="money" checked data-labelauty="同意"></li>
+                <li><input type="radio" class="radio-box" name="show" value="grade" data-labelauty="修改"></li>
+            </ul>
+        </div>
+        <!--<div class="op-info">
+                <span class="filespan">合同文件</span>
+                <div class="filebtn">
+                <span class="fileinput-button">
+                    <span>点击导入</span>
+                    <input accept=".txt,.doc,.docx" name="url" onchange="showTxt(this);" type="file">
+                </span>
+                </div>
+                <input type="button" value="创建合同" />
+                <texteara></texteara>
+        </div>-->
+    </div>
+</form>
+<div th:replace="~{fragments/footer :: footer}">...</div>
+</body>
+<!--<script th:inline="javascript">
+    /*<![CDATA[*/
+    var house = [[${house}]];
+    var contract = [[${contract}]];
+    var landlord = [[${landlord}]];
+    var tenant = [[${tenant}]];
+    console.dir(house);
+    console.dir(contract);
+    console.dir(landlord);
+    console.dir(tenant);
+    /*]]>*/
+</script>-->
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
+<script type="text/javascript">
+    $(".pre").click(function () {
+        var parent = $(this).next();
+        var curr = parent.find(".active");
+        var ob = null;
+        if(curr.attr("alt")-1 < 0) {
+            ob = parent.find("img:eq("+(parent.find("div:eq(0)").attr("name")-1)+")");
+        }
+        else{
+            ob = parent.find("img:eq("+(curr.attr("alt")-1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+
+    $(".next").click(function () {
+        var parent = $(this).prev();
+        var curr = parent.find(".active");
+        var ob = null;
+        var len = parent.find("div:eq(0)").attr("name");
+        if((parseInt(curr.attr("alt"))+1) >= len) {
+            ob = parent.find("img:eq(0)");
+        }
+        else{
+            ob = parent.find("img:eq("+(parseInt(curr.attr("alt"))+1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+</script>
+</html>
