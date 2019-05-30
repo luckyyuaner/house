@@ -2,11 +2,15 @@ package com.yuan.house.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.yuan.house.config.websocket.WebSocketConfig;
+import com.yuan.house.constants.Constants;
+import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
+import com.yuan.house.service.ContractService;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
 import com.yuan.house.util.FileUtil;
+import com.yuan.house.util.LoggerUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +20,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +39,9 @@ public class LandlordController extends BaseController {
 
     @Autowired
     private HouseService houseService;
+
+    @Autowired
+    private ContractService contractService;
 
     @RequestMapping("/landlord/chat")
     public ModelAndView showLandlordChat(Model model) {
@@ -127,5 +136,65 @@ public class LandlordController extends BaseController {
         houseService.deleteHouse(id);
         model.addAttribute("type", "house_manager");
         return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+
+    //@RequiresPermissions("contract:update")
+    @RequestMapping("/common/landlord/contract/showDetail")
+    public ModelAndView showContractDetail(Model model, @RequestParam("cid")Long cid) {
+        Contract contract = contractService.queryContractById(cid);
+        House house = houseService.queryHouseById(contract.getHouseId());
+        model.addAttribute("contract",contract);
+        model.addAttribute("house",house);
+        model.addAttribute("tenant", userService.queryUserById(contract.getUserId()));
+        return new ModelAndView("/landlord/show_contract", "Model", model);
+    }
+
+    //@RequiresPermissions("contract:read")
+    @RequestMapping("/common/landlord/contract/download")
+    public void contractDownload(HttpServletResponse res, @RequestParam("url")String url) {
+        res.setContentType("application/octet-stream");
+        res.setHeader("content-type", "application/octet-stream");
+        res.setHeader("Content-Disposition", "attachment;fileName=" + url);// 设置文件名
+        byte[] buff = new byte[1024];
+        BufferedInputStream bis = null;
+        OutputStream os = null;
+        File file = null;
+        FileInputStream fis = null;
+        try {
+            os = res.getOutputStream();
+            file = new File(Constants.UPLOAD_URL, url);
+            fis = new FileInputStream(file);
+            bis = new BufferedInputStream(fis);
+            int i = bis.read(buff);
+            while(i != -1) {
+                os.write(buff, 0, buff.length);
+                os.flush();
+                i = bis.read(buff);
+            }
+        }
+        catch(FileNotFoundException e) {
+            LoggerUtil.error("找不到相应文件", e);
+        }
+        catch(IOException e) {
+            LoggerUtil.error("下载文件失败", e);
+        }
+        finally {
+            try {
+                if(fis != null) {
+                    fis.close();
+                }
+                if(bis != null) {
+                    bis.close();
+                }
+                if(os != null) {
+                    os.close();
+                }
+            }
+            catch(IOException e) {
+                LoggerUtil.error("下载文件流关闭失败", e);
+            }
+        }
+        System.out.println("success");
     }
 }

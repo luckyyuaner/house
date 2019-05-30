@@ -6,6 +6,7 @@ import com.yuan.house.model.House;
 import com.yuan.house.service.ContractService;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
+import com.yuan.house.util.PdfUtil;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,6 +42,16 @@ public class ManagerController extends BaseController {
         model.addAttribute("landlord",houseService.queryLandlordByHouse(house.getHouseId()));
         model.addAttribute("tenant", userService.queryUserById(contract.getUserId()));
         return new ModelAndView("/manager/show_contract", "Model", model);
+    }
+
+    //@RequiresPermissions("contract:update")
+    @RequestMapping("/common/manager/contract/updateNew")
+    public ModelAndView updateContractNew(Model model, @RequestParam("file")String file) {
+        String rs = PdfUtil.changeTxtToPdf(file);
+        if(rs != null) {
+            System.out.println("file="+rs);
+        }
+        return new ModelAndView("/common/login", "Model", model);
     }
 
 }

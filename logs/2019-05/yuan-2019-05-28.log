@@ -764,3 +764,354 @@ java.lang.IllegalStateException: No decoder for session id 'phvivqxt'
 2019-05-28 17:31:38.875 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
 2019-05-28 17:31:38.882 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
 2019-05-28 17:31:38.906 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-05-28 20:54:02.073 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13168 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 20:54:02.095 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 20:54:23.463 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 20:54:24.760 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 20:54:24.941 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 20:54:29.243 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 20:54:32.215 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 34.571 seconds (JVM running for 50.735)
+2019-05-28 20:55:22.693 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional epoll library
+2019-05-28 20:55:22.699 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional kqueue library
+2019-05-28 20:55:26.898 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contract_1
+2019-05-28 20:55:26.975 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-05-28 20:55:32.287 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-05-28 20:55:36.908 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contract_1
+2019-05-28 20:55:37.405 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-05-28 20:55:37.449 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-05-28 20:55:37.455 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-05-28 20:55:37.555 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-05-28 20:55:37.561 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_4
+2019-05-28 20:55:37.576 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_4
+2019-05-28 20:56:47.612 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contract_1
+2019-05-28 20:56:47.682 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contract_1
+2019-05-28 20:56:47.693 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-05-28 20:56:47.742 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-05-28 20:56:47.755 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_2
+2019-05-28 20:56:47.856 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_2
+2019-05-28 20:56:47.865 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_4
+2019-05-28 20:56:47.888 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_4
+2019-05-28 20:58:23.009 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14276 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 20:58:23.019 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 20:58:33.439 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 20:58:34.680 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 20:58:34.767 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 20:58:40.374 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 20:58:42.283 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 20.613 seconds (JVM running for 27.929)
+2019-05-28 20:59:00.636 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 20:59:00.646 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 20:59:03.468 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 20:59:03.560 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 20:59:04.215 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 20:59:04.695 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 20:59:04.701 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 20:59:04.740 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 20:59:04.746 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 20:59:04.768 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 20:59:04.775 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 20:59:04.795 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 21:10:47.332 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14556 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:10:47.432 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:11:01.064 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:11:01.616 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:11:01.650 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:11:04.542 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:11:06.145 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 20.844 seconds (JVM running for 29.844)
+2019-05-28 21:11:58.633 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 21:11:58.639 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 21:12:00.348 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 21:12:00.427 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 21:12:00.931 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 21:12:01.243 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 21:12:01.251 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 21:12:01.298 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 21:12:01.305 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 21:12:01.326 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 21:12:01.333 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 21:12:01.348 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 21:18:00.581 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 692 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:18:00.609 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:18:14.335 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:18:14.995 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:18:15.042 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:18:17.273 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:18:18.428 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 20.018 seconds (JVM running for 27.016)
+2019-05-28 21:18:42.021 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 21:18:42.033 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 21:18:44.708 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 21:18:44.876 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 21:18:46.038 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 21:18:46.978 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 21:18:46.984 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 21:18:47.037 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 21:18:47.045 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 21:18:47.067 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 21:18:47.074 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 21:18:47.108 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 21:21:31.251 DEBUG --- [ResourceBundleMessageInterpolator.java:89][background-preinit] - Loaded expression factory via original TCCL
+2019-05-28 21:21:31.870 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11548 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:21:31.874 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:21:42.366 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:21:42.953 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:21:42.987 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:21:45.437 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:21:46.894 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.266 seconds (JVM running for 23.243)
+2019-05-28 21:22:31.834 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional epoll library
+2019-05-28 21:22:31.846 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional kqueue library
+2019-05-28 21:22:34.297 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contract_1
+2019-05-28 21:22:34.395 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-05-28 21:22:34.850 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-05-28 21:22:35.218 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contract_1
+2019-05-28 21:22:35.223 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-05-28 21:22:35.252 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-05-28 21:22:35.256 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-05-28 21:22:35.278 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-05-28 21:22:35.285 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_4
+2019-05-28 21:22:35.299 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_4
+2019-05-28 21:24:55.814 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12420 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:24:55.841 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:25:03.270 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:25:04.822 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:25:04.911 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:25:10.125 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:25:12.529 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.105 seconds (JVM running for 24.33)
+2019-05-28 21:25:19.329 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional epoll library
+2019-05-28 21:25:19.337 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional kqueue library
+2019-05-28 21:25:20.910 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contract_1
+2019-05-28 21:25:20.973 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-05-28 21:25:21.410 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-05-28 21:25:21.665 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contract_1
+2019-05-28 21:25:21.677 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-05-28 21:25:21.750 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-05-28 21:25:21.755 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_2
+2019-05-28 21:25:21.773 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_2
+2019-05-28 21:25:21.782 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_4
+2019-05-28 21:25:21.796 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_4
+2019-05-28 21:26:42.616 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15752 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:26:42.625 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:26:49.688 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:26:50.080 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:26:50.123 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:26:52.557 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:26:55.359 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.365 seconds (JVM running for 18.615)
+2019-05-28 21:33:43.771 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-05-28 21:33:43.788 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-05-28 21:33:45.941 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contract_1
+2019-05-28 21:33:46.054 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-28 21:33:46.486 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-28 21:33:47.841 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contract_1
+2019-05-28 21:33:47.847 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_2
+2019-05-28 21:33:47.885 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_2
+2019-05-28 21:33:47.891 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_2
+2019-05-28 21:33:47.912 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_2
+2019-05-28 21:33:47.921 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_4
+2019-05-28 21:33:47.970 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_4
+2019-05-28 21:40:02.710 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14436 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:40:02.743 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:40:20.888 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:40:22.245 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:40:22.294 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:40:27.005 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:40:29.732 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 29.261 seconds (JVM running for 41.854)
+2019-05-28 21:41:04.032 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-05-28 21:41:04.044 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-05-28 21:41:06.060 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contract_1
+2019-05-28 21:41:06.112 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-05-28 21:41:06.576 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-05-28 21:41:08.116 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contract_1
+2019-05-28 21:41:08.151 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_2
+2019-05-28 21:41:08.230 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_2
+2019-05-28 21:41:08.244 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_2
+2019-05-28 21:41:08.267 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_2
+2019-05-28 21:41:08.277 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_4
+2019-05-28 21:41:08.295 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_4
+2019-05-28 21:42:54.852 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 8136 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:42:54.863 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:43:03.164 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:43:03.705 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:43:03.737 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:43:05.689 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:43:06.983 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.294 seconds (JVM running for 19.713)
+2019-05-28 21:43:49.353 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 21:43:49.362 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 21:43:51.970 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 21:43:52.049 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 21:43:52.653 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 21:43:53.044 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 21:43:53.049 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 21:43:53.085 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 21:43:53.095 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 21:43:53.112 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 21:43:53.120 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 21:43:53.135 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 21:44:24.536 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contract_1
+2019-05-28 21:44:24.700 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contract_1
+2019-05-28 21:44:24.717 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-05-28 21:44:24.790 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-05-28 21:44:24.838 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-05-28 21:44:24.920 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-05-28 21:44:24.926 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_4
+2019-05-28 21:44:24.947 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_4
+2019-05-28 21:47:36.138 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1152 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:47:36.150 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:47:44.899 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:48:49.320 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 8368 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:48:49.351 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:48:58.801 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:48:59.292 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:48:59.333 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:49:01.547 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:49:02.920 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.063 seconds (JVM running for 21.484)
+2019-05-28 21:50:54.086 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6548 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:50:54.101 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:51:01.447 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:51:01.850 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:51:01.870 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:51:04.268 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:51:05.341 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.25 seconds (JVM running for 18.756)
+2019-05-28 21:51:58.053 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-05-28 21:51:58.080 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-05-28 21:52:00.644 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contract_1
+2019-05-28 21:52:00.644 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contract_1
+2019-05-28 21:52:00.883 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-05-28 21:52:02.451 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-05-28 21:52:05.019 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contract_1
+2019-05-28 21:52:05.019 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contract_1
+2019-05-28 21:52:05.033 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_2
+2019-05-28 21:52:05.033 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_2
+2019-05-28 21:52:05.166 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_2
+2019-05-28 21:52:05.166 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_2
+2019-05-28 21:52:05.173 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_2
+2019-05-28 21:52:05.173 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_2
+2019-05-28 21:52:05.199 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_2
+2019-05-28 21:52:05.199 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_2
+2019-05-28 21:52:05.209 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_4
+2019-05-28 21:52:05.209 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_4
+2019-05-28 21:52:05.226 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_4
+2019-05-28 21:52:05.226 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_4
+2019-05-28 21:52:30.469 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contract_1
+2019-05-28 21:52:30.495 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contract_1
+2019-05-28 21:52:30.500 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-05-28 21:52:30.521 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-05-28 21:52:30.930 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_2
+2019-05-28 21:52:30.947 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_2
+2019-05-28 21:52:30.953 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_4
+2019-05-28 21:52:30.966 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_4
+2019-05-28 21:57:12.279 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 7520 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 21:57:12.290 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 21:57:18.979 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:57:19.420 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:57:19.462 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 21:57:21.206 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 21:57:22.304 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 11.955 seconds (JVM running for 18.738)
+2019-05-28 21:57:42.182 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 21:57:42.188 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 21:57:43.768 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 21:57:43.825 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 21:57:44.224 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 21:57:44.481 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 21:57:44.488 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 21:57:44.547 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 21:57:44.555 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 21:57:44.568 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 21:57:44.597 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 21:57:44.638 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 22:04:23.186 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13020 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 22:04:23.234 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 22:04:32.192 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:04:32.573 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:04:32.597 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:04:38.177 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 22:04:40.283 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.147 seconds (JVM running for 25.758)
+2019-05-28 22:04:50.411 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional epoll library
+2019-05-28 22:04:50.422 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional kqueue library
+2019-05-28 22:04:52.958 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contract_1
+2019-05-28 22:04:53.032 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-05-28 22:04:53.734 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-05-28 22:04:54.153 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contract_1
+2019-05-28 22:04:54.159 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-05-28 22:04:54.242 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-05-28 22:04:54.250 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-05-28 22:04:54.281 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-05-28 22:04:54.289 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_4
+2019-05-28 22:04:54.346 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_4
+2019-05-28 22:36:57.687 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16868 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 22:36:58.572 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 22:37:38.830 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:37:41.476 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:37:41.599 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:37:49.702 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 22:37:55.808 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 68.146 seconds (JVM running for 93.257)
+2019-05-28 22:42:06.093 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 22:42:06.102 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 22:42:08.765 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 22:42:08.924 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 22:42:09.477 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 22:42:09.968 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 22:42:10.263 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 22:42:10.297 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 22:42:10.303 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 22:42:10.320 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 22:42:10.325 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 22:42:10.338 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 22:45:39.632 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 8696 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 22:45:39.655 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 22:45:53.209 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:45:53.984 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:45:54.054 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 22:45:56.594 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 22:45:58.481 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 21.19 seconds (JVM running for 30.005)
+2019-05-28 22:49:06.320 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 22:49:06.327 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 22:49:09.757 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 22:49:09.884 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 22:49:10.690 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 22:49:11.102 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 22:49:11.107 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 22:49:11.157 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 22:49:11.165 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 22:49:11.186 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 22:49:11.191 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 22:49:11.209 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 23:00:05.893 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6900 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 23:00:05.909 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 23:00:15.876 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 23:00:16.380 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 23:00:16.412 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 23:00:18.749 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 23:00:20.297 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.013 seconds (JVM running for 22.966)
+2019-05-28 23:00:24.603 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 23:00:24.609 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 23:00:25.901 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 23:00:25.935 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 23:00:26.224 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 23:00:26.466 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 23:00:26.480 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 23:00:26.526 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 23:00:26.532 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 23:00:26.556 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 23:00:26.563 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 23:00:26.614 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-28 23:00:33.427 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在contract_1
+2019-05-28 23:00:33.456 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在house_2
+2019-05-28 23:00:33.478 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_house_2
+2019-05-28 23:00:33.490 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_4
+2019-05-28 23:13:35.276 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15944 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-28 23:13:35.297 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-28 23:14:26.955 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 23:14:29.086 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 23:14:29.214 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-28 23:14:38.816 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-28 23:14:46.097 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 75.033 seconds (JVM running for 86.809)
+2019-05-28 23:15:36.185 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-28 23:15:36.192 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-28 23:15:37.859 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-28 23:15:37.903 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-28 23:15:38.300 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-28 23:15:38.626 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-28 23:15:38.634 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-28 23:15:38.678 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-28 23:15:38.684 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-05-28 23:15:38.702 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-05-28 23:15:38.709 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-28 23:15:38.722 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4

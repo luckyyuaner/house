@@ -1,0 +1,23 @@
+2019-05-30 11:09:32.669 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13612 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-05-30 11:09:32.705 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-30 11:10:08.808 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-30 11:10:16.394 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-30 11:10:16.527 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-05-30 11:10:30.993 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-05-30 11:10:39.306 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 71.292 seconds (JVM running for 101.098)
+2019-05-30 11:11:01.771 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-05-30 11:11:01.779 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-05-30 11:11:04.512 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_1
+2019-05-30 11:11:04.630 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-05-30 11:11:06.840 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-05-30 11:11:08.643 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_1
+2019-05-30 11:11:08.654 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-05-30 11:11:10.768 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-05-30 11:11:10.784 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-05-30 11:11:11.044 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-05-30 11:11:51.384 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contract_1
+2019-05-30 11:11:51.436 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contract_1
+2019-05-30 11:11:51.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-05-30 11:11:51.498 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-05-30 11:11:51.509 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_4
+2019-05-30 11:11:51.542 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_4
