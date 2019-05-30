@@ -11,6 +11,7 @@ import com.yuan.house.model.Role;
 import com.yuan.house.model.User;
 import com.yuan.house.service.*;
 import com.yuan.house.util.LoggerUtil;
+import com.yuan.house.util.PasswordUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
@@ -127,6 +128,7 @@ public class CommonController extends BaseController {
 	@PostMapping("/common/register")
 	public ModelAndView userRegister(@ModelAttribute(value = "user") User user, Model model) {
 	    Role role = null;
+	    user.setPassword(PasswordUtil.md5Password(user.getPassword()));
 	    if(user.getUserType() == 1) {
 	        role = roleService.queryRoleByName("房东");
 	        user.setUserType(2);
@@ -176,6 +178,7 @@ public class CommonController extends BaseController {
             model.addAttribute("msg", ResultEnum.R_required.getResMsg());
             return new ModelAndView("error","msgModel",model);
         }
+        password = PasswordUtil.md5Password(password);
         String rs = userService.userLogin(username, password);
         if(ResultEnum.R_wrong.getResCode().equals(rs)){
             model.addAttribute("msg", ResultEnum.R_error.getResMsg());
