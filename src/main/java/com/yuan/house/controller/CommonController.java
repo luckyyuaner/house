@@ -9,10 +9,8 @@ import com.yuan.house.constants.ResultEnum;
 import com.yuan.house.model.House;
 import com.yuan.house.model.Role;
 import com.yuan.house.model.User;
-import com.yuan.house.service.HouseService;
-import com.yuan.house.service.PermissionService;
-import com.yuan.house.service.RoleService;
-import com.yuan.house.service.UserService;
+import com.yuan.house.service.*;
+import com.yuan.house.util.LoggerUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
@@ -24,7 +22,9 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Random;
 
 
 /**
@@ -37,11 +37,15 @@ public class CommonController extends BaseController {
 	private UserService userService;
 	@Autowired
 	private PermissionService permissionService;
+
 	@Autowired
 	private RoleService roleService;
 
     @Autowired
     private HouseService houseService;
+
+    @Autowired
+    private MailService mailService;
 
     @RequestMapping("")
     public String index() {
@@ -74,6 +78,23 @@ public class CommonController extends BaseController {
         }
         else{
             return "false";
+        }
+    }
+
+    @RequestMapping(value="/common/mail/getCode")
+    @ResponseBody
+    public String getMailCode(HttpSession session, @RequestParam("email")String email) {
+        String checkCode = String.valueOf(new Random().nextInt(899999) + 100000);
+        String message = "您的邮箱验证码为："+checkCode;
+        try {
+            mailService.sendSimpleMail(email, "注册验证码", message);
+            session.setAttribute("emailCode", checkCode);
+            session.setMaxInactiveInterval(60);
+            return "success";
+        }
+        catch(Exception e) {
+            LoggerUtil.error("验证码发送失败",e);
+            return "fail";
         }
     }
 
