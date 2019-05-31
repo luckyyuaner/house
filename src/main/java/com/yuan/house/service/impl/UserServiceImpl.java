@@ -87,8 +87,15 @@ public class UserServiceImpl implements UserService {
 	}
 
     @Override
-    public List<User> getAllUsers() {
-        return userDao.getAllUsers();
+    public List<User> getAllUsers(int number) {
+        String key = "users_number_" + number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<User>)rs;
+        }
+        List<User> users = userDao.getAllUsers();
+        commonService.insertRedis(key, users);
+        return users;
     }
 
     @Override
@@ -117,8 +124,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> queryUserLikeMsg(String msg) {
-        String key = "users_like_" + msg;
+    public List<User> queryUserLikeMsg(String msg ,int number) {
+        String key = "users_like_" + msg + "_number_" + number;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<User>)rs;

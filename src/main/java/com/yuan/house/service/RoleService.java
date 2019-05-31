@@ -11,7 +11,7 @@ public interface RoleService {
      * 查询所有角色
      * @return
      */
-    List<Role> getAllRoles();
+    List<Role> getAllRoles(int number);
 
 	/**
 	 * 根据id查询角色
@@ -32,7 +32,7 @@ public interface RoleService {
 	 * @param msg
 	 * @return
 	 */
-    List<Role> queryRoleLikeMsg(String msg);
+    List<Role> queryRoleLikeMsg(String msg, int number);
 
 	/**
 	 * 添加角色

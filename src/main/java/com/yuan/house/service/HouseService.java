@@ -49,7 +49,7 @@ public interface HouseService {
      * @param ts
      * @return
      */
-    List<House> queryHousesLikeMsg(TenantSearchPOJO ts);
+    List<House> queryHousesLikeMsg(TenantSearchPOJO ts, int number);
 
     /**
      * 获取地名内的所有房源

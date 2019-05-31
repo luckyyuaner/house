@@ -84,8 +84,8 @@ public class HouseServiceImpl implements HouseService {
     }
 
     @Override
-    public List<House> queryHousesLikeMsg(TenantSearchPOJO ts) {
-        String key = "houses_like_" + ts.toString();
+    public List<House> queryHousesLikeMsg(TenantSearchPOJO ts, int number) {
+        String key = "houses_like_" + ts.toString()+"_number_"+number;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<House>)rs;

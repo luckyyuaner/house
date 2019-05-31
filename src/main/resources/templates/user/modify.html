@@ -9,6 +9,7 @@
         <input type="hidden" th:field="*{userId}" th:value="${user.userId}" />
         <input type="text" th:field="*{username}" th:value="${user.username}" />
         <input type="password" th:field="*{password}" th:value="${user.password}" />
+        <input name="number" type="hidden" th:value="1" />
         <div th:if="${roleList != null}" th:each="role:${roleList}">
             <input name="rid" type="checkbox" th:value="${role.roleId}" />
             <span th:text="${role.name}" />

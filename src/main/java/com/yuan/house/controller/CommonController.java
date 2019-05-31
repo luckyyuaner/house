@@ -229,11 +229,12 @@ public class CommonController extends BaseController {
     }
 
     @RequestMapping("/common/search")
-    public ModelAndView showSearch(@RequestParam("type")int type, @RequestParam("msg")String msg, @RequestParam("province")String province,
+    public ModelAndView showSearch(@RequestParam("pageType") String pageType, @RequestParam("type")int type, @RequestParam("msg")String msg, @RequestParam("province")String province,
                                    @RequestParam("city")String city, @RequestParam("area")String area, @RequestParam("counts")int counts,
                                    @RequestParam("orientation")String orientation,@RequestParam("number")int number, @RequestParam("show")String show,
                                    @RequestParam("sx")String sx, Model model) {
         System.out.println("number:"+number);
+        System.out.println("orientation="+orientation);
         TenantSearchPOJO ts = new TenantSearchPOJO();
         ts.setType(type);
         ts.setShow(show);
@@ -270,14 +271,16 @@ public class CommonController extends BaseController {
         ts.setElevator(-1);
         System.out.println("ts.toString()"+ts.toString());
         PageHelper.startPage(number, 4);
-        List<House> houses = houseService.queryHousesLikeMsg(ts);
+        List<House> houses = houseService.queryHousesLikeMsg(ts, number);
         PageInfo<House> housePageInfo = new PageInfo<House>(houses);
+        model.addAttribute("pageType", pageType);
+        model.addAttribute("number", 1);
         model.addAttribute("housePageInfo", housePageInfo);
         return new ModelAndView("/tenant/show_search", "Model", model);
     }
 
     @RequestMapping("/common/all/search")
-    public ModelAndView showAllSearch(@RequestParam("elevator")int elevator, @RequestParam("cycle")int cycle, @RequestParam("money1")int money1,
+    public ModelAndView showAllSearch(@RequestParam("pageType")String pageType, @RequestParam("elevator")int elevator, @RequestParam("cycle")int cycle, @RequestParam("money1")int money1,
                                       @RequestParam("area1")int area1, @RequestParam("area2")int area2, @RequestParam("money2")int money2,
                                       @RequestParam("type")int type, @RequestParam("msg")String msg, @RequestParam("province")String province,
                                       @RequestParam("city")String city, @RequestParam("area")String area, @RequestParam("counts")int counts,
@@ -335,8 +338,10 @@ public class CommonController extends BaseController {
         }
         System.out.println("ts.toString()"+ts.toString());
         PageHelper.startPage(number, 4);
-        List<House> houses = houseService.queryHousesLikeMsg(ts);
+        List<House> houses = houseService.queryHousesLikeMsg(ts, number);
         PageInfo<House> housePageInfo = new PageInfo<House>(houses);
+        model.addAttribute("pageType", pageType);
+        model.addAttribute("number", number);
         model.addAttribute("housePageInfo", housePageInfo);
         return new ModelAndView("/tenant/show_search", "Model", model);
     }

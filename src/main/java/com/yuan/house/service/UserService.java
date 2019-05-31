@@ -32,7 +32,7 @@ public interface UserService {
 	 * 查询所有用户
 	 * @return
 	 */
-	List<User> getAllUsers();
+	List<User> getAllUsers(int number);
 
 	/**
 	 * 根据id查询用户
@@ -53,7 +53,7 @@ public interface UserService {
 	 * @param msg
 	 * @return
 	 */
-	List<User> queryUserLikeMsg(String msg);
+	List<User> queryUserLikeMsg(String msg, int number);
 
 	/**
 	 * 添加用户

@@ -50,7 +50,7 @@
         status = 0
         and
         type = #{object.type}
-        <if test="object.orientation != null" >
+        <if test="object.orientation != null and object.orientation != '0'" >
           and orientation = #{object.orientation}
         </if>
         <if test="object.area1 lt object.area2" >
@@ -100,7 +100,9 @@
                 )
             </foreach>
         </if>
-        order by #{object.show} #{object.sx}
+        <if test="object.show != null and object.sx != null">
+            order by #{object.show} #{object.sx}
+        </if>
     </select>
 
     <select id="queryHousesByCity" resultType="com.yuan.house.VO.MapHouseVO">

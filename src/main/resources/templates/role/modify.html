@@ -8,6 +8,7 @@
     <form th:action="@{/role/updateRole}" th:object="${role}" method="post">
         <input type="hidden" th:field="*{roleId}" th:value="${role.roleId}" />
         <input type="text" th:field="*{name}" th:value="${role.name}" />
+        <input name="number" type="hidden" th:value="1" />
         <div th:if="${permissionList != null}" th:each="permission:${permissionList}">
             <input name="pid" type="checkbox" th:value="${permission.permissionId}" />
             <span th:text="${permission.name}" />

@@ -15,7 +15,7 @@ public interface PermissionService {
      * 查询所有权限
      * @return
      */
-    List<Permission> getAllPermissions();
+    List<Permission> getAllPermissions(int number);
 
 	/**
 	 * 根据id查询权限
@@ -29,7 +29,7 @@ public interface PermissionService {
 	 * @param msg
 	 * @return
 	 */
-    List<Permission> queryPermissionLikeMsg(String msg);
+    List<Permission> queryPermissionLikeMsg(String msg, int number);
 
 	/**
 	 * 添加权限

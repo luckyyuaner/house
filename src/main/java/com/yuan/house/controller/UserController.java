@@ -39,7 +39,7 @@ public class UserController extends BaseController {
     public ModelAndView listUser(Model model, int number, String msg, String type) {
         if("" == type) {
             PageHelper.startPage(number, 5);
-            List<User> users = userService.getAllUsers();
+            List<User> users = userService.getAllUsers(number);
             PageInfo<User> userPageInfo = new PageInfo<User>(users);
             model.addAttribute("userPageInfo", userPageInfo);
         }
@@ -53,7 +53,7 @@ public class UserController extends BaseController {
         }
         else if("msg".equals(type)) {
             PageHelper.startPage(number, 5);
-            List<User> users = userService.queryUserLikeMsg(msg);
+            List<User> users = userService.queryUserLikeMsg(msg, number);
             PageInfo<User> userPageInfo = new PageInfo<User>(users);
             model.addAttribute("userPageInfo", userPageInfo);
         }
@@ -64,8 +64,8 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("user:create")
     @GetMapping("/user/showAdd")
-    public ModelAndView showAddUser(Model model) {
-        List<Role> roleList = roleService.getAllRoles();
+    public ModelAndView showAddUser(Model model, int number) {
+        List<Role> roleList = roleService.getAllRoles(number);
         model.addAttribute("roleList", roleList);
         model.addAttribute("user", new User());
         return new ModelAndView("user/new", "Model", model);
@@ -79,8 +79,8 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("user:update")
     @GetMapping("/user/showUpdate")
-    public ModelAndView showUpdateUser(Model model, Long id) {
-        List<Role> roleList = roleService.getAllRoles();
+    public ModelAndView showUpdateUser(Model model, Long id, int number) {
+        List<Role> roleList = roleService.getAllRoles(number);
         model.addAttribute("roleList", roleList);
         model.addAttribute("user", userService.queryUserById(id));
         return new ModelAndView("user/modify", "Model", model);
@@ -104,7 +104,7 @@ public class UserController extends BaseController {
     public ModelAndView listPermission(Model model, int number, String msg, String type) {
         if("" == type) {
             PageHelper.startPage(number, 5);
-            List<Permission> permissions = permissionService.getAllPermissions();
+            List<Permission> permissions = permissionService.getAllPermissions(number);
             PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
             model.addAttribute("permissionPageInfo", permissionPageInfo);
         }
@@ -118,7 +118,7 @@ public class UserController extends BaseController {
         }
         else if("msg".equals(type)) {
             PageHelper.startPage(number, 5);
-            List<Permission> permissions = permissionService.queryPermissionLikeMsg(msg);
+            List<Permission> permissions = permissionService.queryPermissionLikeMsg(msg, number);
             PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
             model.addAttribute("permissionPageInfo", permissionPageInfo);
         }
@@ -166,7 +166,7 @@ public class UserController extends BaseController {
     public ModelAndView listRole(Model model, int number, String msg, String type) {
         if("" == type) {
             PageHelper.startPage(number, 5);
-            List<Role> roles = roleService.getAllRoles();
+            List<Role> roles = roleService.getAllRoles(number);
             PageInfo<Role> rolePageInfo = new PageInfo<Role>(roles);
             model.addAttribute("rolePageInfo", rolePageInfo);
         }
@@ -180,7 +180,7 @@ public class UserController extends BaseController {
         }
         else if("msg".equals(type)) {
             PageHelper.startPage(number, 5);
-            List<Role> roles = roleService.queryRoleLikeMsg(msg);
+            List<Role> roles = roleService.queryRoleLikeMsg(msg, number);
             PageInfo<Role> rolePageInfo = new PageInfo<Role>(roles);
             model.addAttribute("rolePageInfo", rolePageInfo);
         }
@@ -191,8 +191,8 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("role:create")
     @GetMapping("/role/showAdd")
-    public ModelAndView showAddRole(Model model) {
-        List<Permission> permissionList = permissionService.getAllPermissions();
+    public ModelAndView showAddRole(Model model, int number) {
+        List<Permission> permissionList = permissionService.getAllPermissions(number);
         model.addAttribute("permissionList", permissionList);
         model.addAttribute("role", new Role());
         return new ModelAndView("role/new", "Model", model);
@@ -207,8 +207,8 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("role:update")
     @GetMapping("/role/showUpdate")
-    public ModelAndView showUpdateRole(Model model, Long id) {
-        List<Permission> permissionList = permissionService.getAllPermissions();
+    public ModelAndView showUpdateRole(Model model, Long id, int number) {
+        List<Permission> permissionList = permissionService.getAllPermissions(number);
         model.addAttribute("permissionList", permissionList);
         model.addAttribute("role", roleService.queryRoleById(id));
         return new ModelAndView("role/modify", "Model", model);

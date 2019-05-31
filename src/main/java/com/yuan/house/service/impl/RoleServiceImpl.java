@@ -22,8 +22,15 @@ public class RoleServiceImpl implements RoleService {
 	private CommonService commonService;
 
 	@Override
-	public List<Role> getAllRoles() {
-		return roleDao.getAllRoles();
+	public List<Role> getAllRoles(int number) {
+        String key = "roles_number_" + number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Role>)rs;
+        }
+        List<Role> roles = roleDao.getAllRoles();
+        commonService.insertRedis(key, roles);
+        return roles;
 	}
 
 	@Override
@@ -44,8 +51,8 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-	public List<Role> queryRoleLikeMsg(String msg) {
-        String key = "roles_like_" + msg;
+	public List<Role> queryRoleLikeMsg(String msg, int number) {
+        String key = "roles_like_" + msg + "_number_" + number;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<Role>)rs;

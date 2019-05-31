@@ -12,8 +12,9 @@
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div class="search">
-    <form method="post" th:action="@{/common/all/search}">
-        <input name="number" type="hidden" th:value="1" />
+    <form method="post" th:action="@{/common/all/search}" id="search-form">
+        <input name="number" type="hidden" th:value="${number}" />
+        <input name="pageType" type="hidden" th:value="search" />
         <div class="select">
             <select name="type">
                 <option value="0" selected>合租</option>
@@ -23,7 +24,7 @@
         </div>
         <input type="text" class="search-text" name="msg" placeholder="输入区域、地铁、小区名" />
         <a th:href="@{/common/map/show?city=北京&lng=116.413554&lat=39.911013}" title="地图找房" class="map-search"><img src="/images/map.gif" /></a>
-        <button class="search_btn">搜索</button>
+        <button class="search_btn" type="submit" onclick="return checkSearch();">搜索</button>
         <div class="clear-box"></div>
         <div class="search-keys">
             <select id="province" name="province"></select>
@@ -102,15 +103,15 @@
     </form>
 </div>
 <div class="clear-box"></div>
-<div class="page-box">
-    <div  class="pre-box">
-        <a  aria-label="Previous">
+<div class="page-box" th:if="${pageType eq 'search'}">
+    <div th:if="${housePageInfo.hasPreviousPage}" class="pre-box">
+        <a href="javascript:void(0);" onclick="pagePre()" aria-label="Previous">
             <span aria-hidden="true">«</span>
         </a>
     </div>
     <div class="content-box"><span th:text="${housePageInfo.pageNum}"></span>/<span th:text="${housePageInfo.pages}"></span>页</div>
     <div th:if="${housePageInfo.hasNextPage}" class="next-box">
-        <a  aria-label="Next">
+        <a href="javascript:void(0);" onclick="pageNext()" aria-label="Next">
             <span aria-hidden="true">»</span>
         </a>
     </div>
@@ -161,6 +162,34 @@
     </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    function pagePre() {
+        $('input[name="number"]').val(parseInt($('input[name="number"]').val())-1);
+        alert($('input[name="number"]').val());
+        checkSearch();
+        $('#search-form').submit();
+    }
+    function pageNext() {
+        $('input[name="number"]').val(parseInt($('input[name="number"]').val())+1);
+        alert($('input[name="number"]').val());
+        checkSearch();
+        $('#search-form').submit();
+    }
+    function checkSearch() {
+        if($('input[name="area1"]').val() == "") {
+            $('input[name="area1"]').val(0);
+        }
+        if($('input[name="area2"]').val() == "") {
+            $('input[name="area2"]').val(0);
+        }
+        if($('input[name="money1"]').val() == "") {
+            $('input[name="money1"]').val(0);
+        }
+        if($('input[name="money2"]').val() == "") {
+            $('input[name="money2"]').val(0);
+        }
+    };
+</script>
 <script type="text/javascript">
     $(function() {
         addressInit('province', 'city', 'area');

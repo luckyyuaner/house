@@ -8,6 +8,7 @@
     <form th:action="@{/user/addUser}" th:object="${user}" method="post">
         <input type="text" th:field="*{username}" />
         <input type="password" th:field="*{password}" />
+        <input name="number" type="hidden" th:value="1" />
         <div th:if="${roleList != null}" th:each="role:${roleList}">
             <input name="rid" type="checkbox" th:value="${role.roleId}" />
             <span th:text="${role.name}" />

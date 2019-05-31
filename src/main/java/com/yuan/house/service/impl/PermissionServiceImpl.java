@@ -44,8 +44,15 @@ public class PermissionServiceImpl implements PermissionService {
 	}
 
 	@Override
-	public List<Permission> getAllPermissions() {
-		return permissionDao.getAllPermissions();
+	public List<Permission> getAllPermissions(int number) {
+        String key = "permissions_number_" + number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Permission>)rs;
+        }
+        List<Permission> pers = permissionDao.getAllPermissions();
+        commonService.insertRedis(key, pers);
+        return pers;
 	}
 
 	@Override
@@ -61,9 +68,10 @@ public class PermissionServiceImpl implements PermissionService {
 	}
 
 	@Override
-	public List<Permission> queryPermissionLikeMsg(String msg) {
-        String key = "permissions_like_" + msg;
+	public List<Permission> queryPermissionLikeMsg(String msg, int number) {
+        String key = "permissions_like_" + msg +"_number_" + number;
         Object rs = commonService.queryRedis(key);
+        System.out.println("key="+key);
         if(null != rs) {
             return (List<Permission>)rs;
         }
