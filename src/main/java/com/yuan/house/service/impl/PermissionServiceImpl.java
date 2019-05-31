@@ -71,7 +71,6 @@ public class PermissionServiceImpl implements PermissionService {
 	public List<Permission> queryPermissionLikeMsg(String msg, int number) {
         String key = "permissions_like_" + msg +"_number_" + number;
         Object rs = commonService.queryRedis(key);
-        System.out.println("key="+key);
         if(null != rs) {
             return (List<Permission>)rs;
         }

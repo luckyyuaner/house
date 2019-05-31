@@ -155,13 +155,57 @@
                 </p>
             </div>
             <div class="house-operation">
-                <a><img src="/images/like.png" /></a>
+                <input type="hidden" th:value="${house.houseId}"/>
+                <a href="javascript:void(0);" class="like-op">
+                    <img th:if="${hids != null && hids.contains(house.houseId)}" src="/images/liked.png" />
+                    <img th:if="${hids == null || !hids.contains(house.houseId)}" src="/images/like.png" />
+                </a>
                 <a th:href="@{/contract/showNew?(hid=${house.houseId})}">详情</a>
             </div>
         </div>
     </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $(".like-op").click(function () {
+        var curr = [[${session.currUser}]];
+        if(curr == null) {
+            window.location.href="/common/showLogin";
+        }
+        else{
+            var hid = $(this).prev().val();
+            //alert(hid);
+            var ob = $(this).children("img");
+            var url = ob.attr("src");
+            var val = 1;
+            if(url == "/images/like.png") {
+                val = 0;
+            }
+            $.ajax({
+                async : false,
+                type : "post",
+                url : "/tenant/collectHouse",
+                data: {hid:hid, val:val},
+                dataType : "html",
+                success : function (data) {
+                    if(data == "1") {
+                        ob.attr("src","/images/liked.png");
+                        //alert(ob.attr("src"));
+                    }
+                    else{
+                        ob.attr("src","/images/like.png");
+                    }
+                },
+                error:function (data) {
+                    alert("系统错误，请稍候再试");
+                    return false;
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
 <script type="text/javascript">
     function pagePre() {
         $('input[name="number"]').val(parseInt($('input[name="number"]').val())-1);
@@ -198,6 +242,7 @@
     });
 </script>
 <script type="text/javascript">
+
     $(".pre").click(function () {
         //alert("执行");
         var parent = $(this).next();

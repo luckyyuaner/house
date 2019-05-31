@@ -58,6 +58,25 @@ public interface HouseService {
      */
     List<MapHouseVO> queryHousesByCity(String city);
 
-
+    /**
+     * 通过房源获取房东
+     * @param hid
+     * @return
+     */
     User queryLandlordByHouse(Long hid);
+
+    /**
+     * 收藏房源
+     * @param hid
+     */
+    void addHouseCollect(Long hid, Long uid);
+
+    /**
+     * 取消收藏房源
+     * @param hid
+     * @return
+     */
+    int deleteHouseCollect(Long hid, Long uid);
+
+    List<Long> queryCollectHouseIdsByUser(Long uid);
 }

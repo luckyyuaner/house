@@ -4,6 +4,7 @@ import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
+import com.yuan.house.dao.CollectDao;
 import com.yuan.house.dao.HouseDao;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
@@ -25,6 +26,9 @@ public class HouseServiceImpl implements HouseService {
 
 	@Autowired
     private HouseDao houseDao;
+
+    @Autowired
+    private CollectDao collectDao;
 
     @Autowired
     WebSocketConfig webSocketConfig;
@@ -117,5 +121,30 @@ public class HouseServiceImpl implements HouseService {
         User u = houseDao.queryLandlordByHouse(hid);
         commonService.insertRedis(key, u);
         return u;
+    }
+
+    @Override
+    public void addHouseCollect(Long hid, Long uid) {
+        Long cid = collectDao.queryCollectByUserAndHouse(hid, uid);
+        if(cid == null) {
+            collectDao.addHouseCollect(hid, uid);
+        }
+    }
+
+    @Override
+    public int deleteHouseCollect(Long hid, Long uid) {
+        return collectDao.deleteHouseCollect(hid, uid);
+    }
+
+    @Override
+    public List<Long> queryCollectHouseIdsByUser(Long uid) {
+        String key = "houses_collect_hids_" + uid;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Long>)rs;
+        }
+        List<Long> cids = collectDao.queryCollectHouseIdsByUser(uid);
+        commonService.insertRedis(key, cids);
+        return cids;
     }
 }

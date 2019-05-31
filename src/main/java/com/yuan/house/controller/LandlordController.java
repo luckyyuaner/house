@@ -49,14 +49,11 @@ public class LandlordController extends BaseController {
         Set<User> managers = new HashSet<>();
         for(String name : onlines.keySet()) {
             User u = userService.queryUserByName(name);
-            //if(u.getUserType() == 0) {
+            if(u.getUserType() == 0) {
                 managers.add(u);
-            //}
+            }
         }
         model.addAttribute("onlines", managers);
-        System.out.println("================================");
-        System.out.println(onlines);
-        System.out.println("================================");
         return new ModelAndView("/landlord/chat", "Model", model);
     }
 

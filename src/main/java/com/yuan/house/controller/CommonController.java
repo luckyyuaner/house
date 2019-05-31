@@ -273,6 +273,13 @@ public class CommonController extends BaseController {
         PageHelper.startPage(number, 4);
         List<House> houses = houseService.queryHousesLikeMsg(ts, number);
         PageInfo<House> housePageInfo = new PageInfo<House>(houses);
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        List<Long> hids = null;
+        if(user != null) {
+            hids = houseService.queryCollectHouseIdsByUser(user.getUserId());
+        }
+        model.addAttribute("hids", hids);
         model.addAttribute("pageType", pageType);
         model.addAttribute("number", 1);
         model.addAttribute("housePageInfo", housePageInfo);
@@ -340,6 +347,13 @@ public class CommonController extends BaseController {
         PageHelper.startPage(number, 4);
         List<House> houses = houseService.queryHousesLikeMsg(ts, number);
         PageInfo<House> housePageInfo = new PageInfo<House>(houses);
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        List<Long> hids = null;
+        if(user != null) {
+            hids = houseService.queryCollectHouseIdsByUser(user.getUserId());
+        }
+        model.addAttribute("hids", hids);
         model.addAttribute("pageType", pageType);
         model.addAttribute("number", number);
         model.addAttribute("housePageInfo", housePageInfo);
