@@ -67,6 +67,14 @@
         WHERE user_id = #{object.userId}
     </update>
 
+    <update id="updateUserInfo" parameterType="com.yuan.house.model.User">
+        UPDATE user
+        SET
+        head = #{object.head}, phone = #{object.phone}, idcard = #{object.idcard}, photo = #{object.photo},
+        birth = #{object.birth}, sex = #{object.sex}
+        WHERE user_id = #{object.userId}
+    </update>
+
     <delete id="deleteUser" parameterType="Long">
         DELETE FROM user WHERE user_id = #{id}
     </delete>

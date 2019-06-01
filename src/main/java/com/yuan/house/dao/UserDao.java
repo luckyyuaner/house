@@ -53,6 +53,8 @@ public interface UserDao {
 	 */
 	int updateUser(@Param("object") User object);
 
+	int updateUserInfo(@Param("object") User object);
+
 	/**
 	 * 删除用户
 	 * @param id

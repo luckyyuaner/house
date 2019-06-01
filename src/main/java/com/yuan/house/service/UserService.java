@@ -76,6 +76,13 @@ public interface UserService {
 	 */
 	int updateUser(User object,String id);
 
+    /**
+     * 更新用户信息
+     * @param object
+     * @return
+     */
+	User updateUserInfo(User object);
+
 	/**
 	 * 删除用户
 	 * @param id

@@ -186,6 +186,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User updateUserInfo(User object) {
+        String key = "user_" + object.getUserId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("users_");
+        commonService.deleteByPrex("houses_");
+        int rs= userDao.updateUserInfo(object);
+        return userDao.queryUserById(object.getUserId());
+    }
+
+    @Override
     public int deleteUser(Long id) {
         String key = "user_" + id;
         commonService.deleteRedis(key);

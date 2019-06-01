@@ -5,6 +5,9 @@
     <title>租客个人主页</title>
     <link rel="stylesheet"  href="/css/tenant/info.css" />
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/tenant/info.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/flatpickr.material_blue.min.css" />
+    <script src="/js/flatpickr.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
@@ -14,7 +17,7 @@
         <li><a><img src="/images/icon1.png" />评价管理</a></li>
         <li><a><img src="/images/icon9.png" />反馈管理</a></li>
         <li><a th:href="@{/tenant/showCollect}"><img src="/images/like.png" />收藏管理</a></li>
-        <li><a><img src="/images/icon12.png" />个人信息管理</a></li>
+        <li><a th:href="@{/tenant/showUserInfo}"><img src="/images/icon12.png" />个人信息管理</a></li>
         <li><a><img src="/images/icon8.png" />钱包管理</a></li>
         <li><a th:href="@{/landlord/chat}"><img src="/images/step2.jpg" />联系管家</a></li>
     </ul>
@@ -68,8 +71,145 @@
             </div>
         </div>
     </div>
+    <div class="user-manager" th:if="${curruser != null}">
+        <form id="form" action="/tenant/updateUserInfo" th:object="${curruser}" enctype="multipart/form-data" method="post">
+            <input type="hidden" th:field="*{userId}" th:value="${curruser.userId}" />
+            用户名：&nbsp;&nbsp;<input class="field" readonly="readonly" type="text" th:field="*{username}" th:value="${curruser.username}" /><br/><br/>
+            手机号码：&nbsp;&nbsp;<input class="field" type="text" th:field="*{phone}" th:value="${curruser.phone}" /><br/><span class="err"></span><br/>
+            <br/>头像：&nbsp;&nbsp;
+            <span class="fileinput-button">
+            <span>更换头像</span>
+                <input accept="image/*" name="headd" onchange="showHead(this);" type="file">
+            </span><br/>
+            <img src="" style="display: none" id="head-img" />
+            <br/>身份证号：&nbsp;&nbsp;<input class="field" type="text" th:field="*{idcard}" th:value="${curruser.idcard}" /><br/><span class="err"></span><br/>
+            身份证照片：&nbsp;&nbsp;
+            <span class="fileinput-button">
+            <span>上传身份证照片</span>
+                <input accept="image/*" name="card" onchange="showCard(this);" type="file">
+            </span><br/>
+            <img src="" style="display: none" id="card-img" />
+            <br/>出生日期：&nbsp;&nbsp;<input class="field" type="text" id="time" name="birthh" /><br/><span class="err"></span><br/>
+            <div id="radiodiv">
+                <div style="float:left">
+                    <div class="div1">
+                        <input id="item3" type="radio" th:field="*{sex}" value="0" checked="checked">
+                        <label for="item3"></label>
+                        <span>女</span>
+                    </div>
+                    <div class="div1">
+                        <input id="item4" type="radio" th:field="*{sex}" value="1">
+                        <label for="item4"></label>
+                        <span>男</span>
+                    </div>
+                </div>
+            </div><br/>
+            <div class="btndiv">
+                <br/>
+                <input class="btn" type="submit" value="修改" onclick="return checkUserInfo();">
+                <input class="btn" type="reset" value="取消">
+            </div>
+        </form>
+        <br/><br/><br/><br/>
+        <form id="form2" action="/tenant/updateUserPassword" th:object="${curruser}" method="post">
+            <input type="hidden" th:field="*{userId}" th:value="${curruser.userId}" />
+            原密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" id="oldPassword" /><br/><span class="err" id="old"></span><br/>
+            新密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" id="pass" th:field="*{password}" /><br/><span class="err" id="cu"></span><br/>
+            确认密码:<input class="field" type="password" id="checkPassword" /><br/><span class="err" id="re"></span><br/>
+            验证码：&nbsp;&nbsp;<input class="field" type="text" name="code" id="check" />
+            <img src="/common/getCode"+new Date().getTime() id="checkImg" alt="验证码" /><br/><span class="err" id="ch"></span><br/>
+            邮箱绑定：&nbsp;&nbsp;<input class="field" type="text" th:field="*{email}" th:value="${curruser.email}" /><br/><span class="err"></span><br/>
+            <div class="btndiv">
+                <br/>
+                <input class="btn" type="submit" value="修改" onclick="return checkPassword();">
+                <input class="btn" type="reset" value="取消">
+            </div>
+        </form>
+    </div>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
+<script type="text/javascript">
+    $(function() {
+        $("#time").flatpickr();
+    });
+</script>
+<script type="text/javascript">
+    function checkPassword() {
+        var cu = document.getElementById("pass");
+        var cuerr = document.getElementById("cu");
+        if(cu.value == null || cu.value == ""){
+            cuerr.innerHTML = "密码不能为空";
+            return false;
+        }
+        //密码强度正则，6-30，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+        //var pPattern = /^.*(?=.{6,30})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+        /*if(pPattern.test(cu.value) == false){
+            cuerr.innerHTML = "密码长度6-30，包括至少1个大写字母、小写字母、数字、特殊字符";
+            return false;
+        }*/
+        var re = document.getElementById("checkPassword");
+        var reerr = document.getElementById("re");
+        if(re.value == null || re.value == "" || re.value != cu.value){
+            reerr.innerHTML = "密码不一致";
+            return false;
+        }
+        var check = document.getElementById("check");
+        var checkerr = document.getElementById("ch");
+        if(check.value == null || check.value == ""){
+            checkerr.innerHTML = "验证码不能为空";
+            return false;
+        }
+        //验证码正则，4位数字
+        var cPattern = /^[0-9]{4,4}$/;
+        if(cPattern.test(check.value) == false){
+            checkerr.innerHTML = "验证码错误";
+            return false;
+        }
+        var rs = null;
+        $.ajax({
+            async : false,
+            type : "get",
+            url : "/common/checkCode?code="+check.val(),
+            dataType : "html",
+            success : function (data) {
+                rs = data;
+            },
+            error:function (data) {
+                alert("系统错误，请稍候再试");
+                return false;
+            }
+        });
+        if(rs == "true") {
+            return true;
+        }
+        checkerr.innerHTML = "验证码错误";
+        return false;
+    };
+    function checkUserInfo() {
+        var phone = document.getElementsByClassName("field")[1];
+        var phoneerr = document.getElementsByClassName("err")[0];
+        if(phone.value != null && phone.value != ""){
+            //手机号码正则
+            var uPattern = /^1[34578]\d{9}$/;
+            if(uPattern.test(phone.value) == false){
+                phoneerr.innerHTML = "手机号码格式不正确";
+                return false;
+            }
+        }
+
+        var card = document.getElementsByClassName("field")[2];
+        var carderr = document.getElementsByClassName("err")[1];
+        if(card.value != null && card.value != ""){
+            //身份证号正则
+            var uPattern = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+            if(uPattern.test(card.value) == false){
+                carderr.innerHTML = "身份证号码格式不正确";
+                return false;
+            }
+        }
+
+    };
+</script>
 <script th:inline="javascript">
     /*<![CDATA[*/
     $(".like-op").click(function () {

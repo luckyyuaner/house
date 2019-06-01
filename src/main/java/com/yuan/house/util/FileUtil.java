@@ -14,7 +14,7 @@ import java.util.UUID;
 public class FileUtil {
     public static JSONObject upload(MultipartFile item) {
         JSONObject json = new JSONObject();
-        if (item.getSize() <= 0) {
+        if (item == null ||item.getSize() <= 0) {
             // 未选择文件
             json.put("rs", "fail");
             json.put("msg", "未选择文件");
@@ -46,7 +46,7 @@ public class FileUtil {
     public static JSONObject uploads(MultipartFile[] urls) {
         JSONObject json = new JSONObject();
         StringBuffer sb = new StringBuffer();
-        if (urls.length <= 0) {
+        if (urls == null || urls.length <= 0) {
             json.put("rs", "fail");
             json.put("msg", "未选择文件");
             return json;
