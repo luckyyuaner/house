@@ -31,4 +31,14 @@
         FROM collect
         WHERE user_id = #{uid}
     </select>
+
+    <select id="queryHousesByCollect" resultType="com.yuan.house.model.House">
+        SELECT
+        *
+        FROM house
+        WHERE house_id
+        in (
+            select house_id from collect where user_id = #{uid}
+        )
+    </select>
 </mapper>

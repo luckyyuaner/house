@@ -560,12 +560,50 @@ var BMapLib = window.BMapLib = BMapLib || {};
             fontWeight : 'bold',
             opacity : 0.9
         });
-        var content = '<span style="color:'+this._styles[0].backgroundColor+'"><i class="fa fa-map-marker"></i></span>'
-                    + '<p style="padding:0px 13px;text-align:center;margin-top:5px;cursor:pointer;">'+marker.getTitle()+'</p>';
-        label.setContent(content)
         label.setPosition(position);
+        var content = '<div style="color:black;font-size:20px;background-color:'+this._styles[0].backgroundColor+'">';
+        var arr = marker.getLabel().content.split("&");
+        content += '<input type="hidden" value="'+ arr[0] +'">';
+        content += arr[1]+'&nbsp;&nbsp;';
+        if(arr[2] == "0") {
+            content += '合租';
+        }
+        if(arr[2] == "1") {
+            content += '整租';
+        }
+        if(arr[2] == "2") {
+            content += '豪宅';
+        }
+        content += '&nbsp;&nbsp;' + arr[3] + '元&nbsp;&nbsp;';
+        content += arr[4]+'&sup2;&nbsp;&nbsp;';
+        content += arr[5]+'分';
+        content += '</div>';
+        console.dir(content);
+        label.setContent(content);
         label.addEventListener('click', function(){
-            console.dir(marker.getLabel().content);
+            alert("zhixing");
+            var map=document.getElementById("#allmap");
+            map.style.width="70%";
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("POST","/tenant/collectHouse",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("hid="+arr[0]);
+            xmlhttp.onreadystatechange=function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    var data=xmlhttp.responseText;
+                    //json字符串转换成为json对象  , data=eval("("+data+")");evel不存在兼容性问题，但是会有安全漏洞。
+                    data=JSON.parse(data);
+                    console.dir(data);
+                }
+            }
         });
         this._labels.push(label);
         this._map.addOverlay(label);

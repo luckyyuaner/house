@@ -24,7 +24,8 @@ import java.util.List;
 @Service
 public class HouseServiceImpl implements HouseService {
 
-	@Autowired
+
+    @Autowired
     private HouseDao houseDao;
 
     @Autowired
@@ -146,5 +147,19 @@ public class HouseServiceImpl implements HouseService {
         List<Long> cids = collectDao.queryCollectHouseIdsByUser(uid);
         commonService.insertRedis(key, cids);
         return cids;
+    }
+
+    @Override
+    public List<House> queryHousesByCollect() {
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        String key = "houses_collect_houses_" + user.getUserId();
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<House>)rs;
+        }
+        List<House> houses = collectDao.queryHousesByCollect(user.getUserId());
+        commonService.insertRedis(key, houses);
+        return houses;
     }
 }

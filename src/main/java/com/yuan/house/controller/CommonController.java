@@ -82,6 +82,14 @@ public class CommonController extends BaseController {
         }
     }
 
+    @RequestMapping(value="/common/showTheHouse")
+    @ResponseBody
+    public House showTheHouse(Long hid) {
+        System.out.println("hid:"+hid);
+        House h = houseService.queryHouseById(hid);
+        return h;
+    }
+
     @RequestMapping(value="/common/mail/getCode")
     @ResponseBody
     public String getMailCode(HttpSession session, @RequestParam("email")String email) {
@@ -90,7 +98,7 @@ public class CommonController extends BaseController {
         try {
             mailService.sendSimpleMail(email, "注册验证码", message);
             session.setAttribute("emailCode", checkCode);
-            session.setMaxInactiveInterval(60);
+            //session.setMaxInactiveInterval(60);
             return "success";
         }
         catch(Exception e) {

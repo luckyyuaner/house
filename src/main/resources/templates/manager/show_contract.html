@@ -14,14 +14,16 @@
     <div class="left-box">
         <div th:if="${house != null}"  class="house-box">
             <div class="picbox" th:if="${house.urls != null}">
-                <img src="/images/icon3.png" class="pre" />
+                <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!house.urls.contains(',')}" />
+                <img src="/images/icon3.png"  class="pre" th:if="${house.urls.contains(',')}" />
                 <div class="box">
                     <div th:each='url,userStat:${house.urls.split(",")}' class="pics" th:name="${userStat.size}">
                         <img th:if="${userStat.index ==0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="active" th:alt="${userStat.index}" style="display:block;"/>
                         <img th:if="${userStat.index !=0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="house_img" th:alt="${userStat.index}" style="display: none;"/>
                     </div>
                 </div>
-                <img src="/images/icon5.png" class="next" />
+                <img src="/images/icon5.png" class="next" style="visibility: hidden;" th:if="${!house.urls.contains(',')}" />
+                <img src="/images/icon5.png" class="next" th:if="${house.urls.contains(',')}" />
             </div>
             <div class="clear-box"></div>
             <div class="content">

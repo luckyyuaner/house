@@ -50,7 +50,7 @@ public class VertifyController {
 			g.drawString(rand, 13 * i + 6, 28);
 		}
 		session.setAttribute("sessionCode", strCode);
-		session.setMaxInactiveInterval(60);
+		//session.setMaxInactiveInterval(60);
 		g.dispose();
 
 		ImageIO.write(image, "JPEG", response.getOutputStream());

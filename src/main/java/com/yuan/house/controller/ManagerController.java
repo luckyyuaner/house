@@ -32,6 +32,11 @@ public class ManagerController extends BaseController {
     private ContractService contractService;
 
 
+    @RequestMapping("/manager/info")
+    public ModelAndView showManagerInfo(Model model) {
+        return new ModelAndView("/manager/info", "Model", model);
+    }
+
     //@RequiresPermissions("contract:update")
     @RequestMapping("/common/manager/contract/showNew")
     public ModelAndView showContractNew(Model model, @RequestParam("cid")Long cid) {

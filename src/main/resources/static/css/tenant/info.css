@@ -32,18 +32,24 @@ li {
 
 
 .right {
-    margin-top:-320px;
+    margin-top:-300px;
     margin-left:240px;
 }
 
-.house-manager .house-box{
-    width:280px;
-    float: left;
-    margin-left: 8px;
-    margin-right:8px;
+.house-manager {
+    margin-left: 80px;
 }
+
+.house-manager .house-box {
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 .house-manager .picbox .pics img {
-    width: 280px;
+    width: 300px;
     height: 300px;
     object-fit: cover;
 }
@@ -68,37 +74,45 @@ li {
     object-fit: cover;
     float: left;
     z-index: 10;
-    margin-top: -50px;
-    margin-left: 210px;
+    margin-top: 130px;
+    margin-left: 160px;
 }
 
 .house-manager .content {
-    width: 280px;
-    margin-top:110px;
-    background-color:rgba(89, 151, 136, 0.76) ;
+    width: 300px;
+    margin-top: 112px;
+    background-color: rgba(89, 151, 136, 0.76);
 }
 
 .house-manager .content p {
     text-align: center;
-    height:16px;
-    line-height:16px;
+    height: 16px;
+    line-height: 16px;
 }
-.house-manager .house-operation{
-    width: 280px;
-    background-color:rgba(89, 151, 136, 0.76) ;
-    height:60px;
+
+.house-manager .house-operation {
+    width: 300px;
+    background-color: rgba(89, 151, 136, 0.76);
+    height: 60px;
     line-height: 40px;
-    margin-top:-16px;
+    margin-top: -16px;
 }
-.house-manager .house-operation a{
-    padding-top:10px;
+
+.house-manager .house-operation img{
+    width:20px;
+    height:20px;
+    padding-left: 60px;
+    object-fit: cover;
+}
+
+.house-manager .house-operation a {
+    padding-top: 10px;
     padding-bottom: 10px;
     width: 80px;
     text-align: center;
-    font-size:24px;
+    font-size: 24px;
     text-decoration: none;
     color: #284390;
-    margin-left:30px;
-    margin-right:20px;
-    float:left;
+    margin-right: 10px;
+    float: left;
 }

@@ -79,4 +79,10 @@ public interface HouseService {
     int deleteHouseCollect(Long hid, Long uid);
 
     List<Long> queryCollectHouseIdsByUser(Long uid);
+
+    /**
+     * 获取当前用户所有收藏房源
+     * @return
+     */
+    List<House> queryHousesByCollect();
 }

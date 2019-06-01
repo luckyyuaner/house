@@ -11,7 +11,7 @@
 <div th:replace="fragments/header :: header">...</div>
 <form id="form" action="/common/login"  method="post">
     用户名：<input class="field" type="text" name="username" /><br/><span class="err"></span><br/>
-    密码：&nbsp;<input class="field" type="text" name="password" /><br/><span class="err"></span><br/>
+    密码：&nbsp;<input class="field" type="password" name="password" /><br/><span class="err"></span><br/>
     验证码:&nbsp;<input class="field" type="text" name="code" />
     <img src="/common/getCode"+new Date().getTime() id="checkImg" alt="验证码" /><br/><span class="err"></span><br/>
     <input class="btn" type="submit" value="登录" onclick="return checkLogin();">&nbsp;&nbsp;&nbsp;&nbsp;

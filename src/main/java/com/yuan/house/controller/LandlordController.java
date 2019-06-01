@@ -43,6 +43,7 @@ public class LandlordController extends BaseController {
     @Autowired
     private ContractService contractService;
 
+
     @RequestMapping("/landlord/chat")
     public ModelAndView showLandlordChat(Model model) {
         Map<String, String> onlines = WebSocketConfig.getUsers();

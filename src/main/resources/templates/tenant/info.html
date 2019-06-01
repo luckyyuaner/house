@@ -3,21 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <title>租客个人主页</title>
-    <link rel="stylesheet" type="text/css" href="/css/tenant/info.css" />
+    <link rel="stylesheet"  href="/css/tenant/info.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div class="left">
     <ul class="menu">
-        <li><img src="/images/icon12.png" /><a>个人信息管理</a></li>
-        <li><img src="/images/like.png" /><a>收藏管理</a></li>
-        <li><img src="/images/step3.jpg" /><a>合同管理</a></li>
-        <li><img src="/images/icon1.png" /><a>评价管理</a></li>
-        <li><img src="/images/icon9.png" /><a>反馈管理</a></li>
-        <li><img src="/images/icon8.png" /><a>钱包管理</a></li>
-        <li><img src="/images/step2.jpg" /><a th:href="@{/landlord/chat}">联系管家</a></li>
+        <li><a><img src="/images/step3.jpg" />合同管理</a></li>
+        <li><a><img src="/images/icon1.png" />评价管理</a></li>
+        <li><a><img src="/images/icon9.png" />反馈管理</a></li>
+        <li><a th:href="@{/tenant/showCollect}"><img src="/images/like.png" />收藏管理</a></li>
+        <li><a><img src="/images/icon12.png" />个人信息管理</a></li>
+        <li><a><img src="/images/icon8.png" />钱包管理</a></li>
+        <li><a th:href="@{/landlord/chat}"><img src="/images/step2.jpg" />联系管家</a></li>
     </ul>
 </div>
+<div class="right">
+    <div class="house-manager" th:if="${collects != null && collects.size() gt 0}">
+        <div class="house-box" th:each="house:${collects}">
+            <div class="picbox" th:if="${house.urls != null}">
+                <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!house.urls.contains(',')}" />
+                <img src="/images/icon3.png"  class="pre" th:if="${house.urls.contains(',')}" />
+                <div class="box">
+                    <div th:each='url,userStat:${house.urls.split(",")}' class="pics" th:name="${userStat.size}">
+                        <img th:if="${userStat.index ==0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="active" th:alt="${userStat.index}" style="display:block;"/>
+                        <img th:if="${userStat.index !=0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="house_img" th:alt="${userStat.index}" style="display: none;"/>
+                    </div>
+                </div>
+                <img src="/images/icon5.png" class="next" style="visibility: hidden;" th:if="${!house.urls.contains(',')}" />
+                <img src="/images/icon5.png" class="next" th:if="${house.urls.contains(',')}" />
+            </div>
+            <div class="clear-box"></div>
+            <div class="content">
+                <p>
+                    <b th:text="${house.name}"></b>
+                </p>
+                <p>
+                    <span th:text="${house.money}"/>元/月
+                    <span th:text="${house.area}"/>m&sup2;
+                    朝<span th:text="${house.orientation}"/>
+                </p>
+                <p>
+                    <span th:switch="${house.type}">
+                        <b th:case="0">友家托管</b>
+                        <b th:case="1">整租托管</b>
+                        <b th:case="0">豪宅托管</b>
+                    </span>
+                    <span th:switch="${house.cycle}">
+                        <b th:case="1">日付</b>
+                        <b th:case="30">月付</b>
+                        <b th:case="90">季付</b>
+                        <b th:case="180">半年付</b>
+                        <b th:case="365">年付</b>
+                    </span>
+                </p>
+            </div>
+            <div class="house-operation">
+                <input type="hidden" th:value="${house.houseId}"/>
+                <a href="javascript:void(0);" class="like-op">
+                    <img src="/images/liked.png" />
+                </a>
+                <a th:href="@{/contract/showNew?(hid=${house.houseId})}">详情</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $(".like-op").click(function () {
+        var hid = $(this).prev().val();
+        //alert(hid);
+        //var parent1 = $(this).parent().parent();
+        //var parent2 = parent1.parent();
+        var ob = $(this).children("img");
+        var url = ob.attr("src");
+        var val = 1;
+        if(url == "/images/like.png") {
+            val = 0;
+        }
+        $.ajax({
+            async : false,
+            type : "post",
+            url : "/tenant/collectHouse",
+            data: {hid:hid, val:val},
+            dataType : "html",
+            success : function (data) {
+                if(data == "1") {
+                    ob.attr("src","/images/liked.png");
+                    //alert(ob.attr("src"));
+                }
+                else{
+                    ob.attr("src","/images/like.png");
+                    //parent2.remove(parent1);
+                }
+            },
+            error:function (data) {
+                alert("系统错误，请稍候再试");
+                return false;
+            }
+        });
+    });
+    /*]]>*/
+</script>
 </body>
+<script type="text/javascript">
+
+    $(".pre").click(function () {
+        //alert("执行");
+        var parent = $(this).next();
+        var curr = parent.find(".active");
+        //alert(curr.attr("alt"));
+        var ob = null;
+        if(curr.attr("alt")-1 < 0) {
+            ob = parent.find("img:eq("+(parent.find("div:eq(0)").attr("name")-1)+")");
+        }
+        else{
+            ob = parent.find("img:eq("+(curr.attr("alt")-1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+
+    $(".next").click(function () {
+        var parent = $(this).prev();
+        var curr = parent.find(".active");
+        var ob = null;
+        var len = parent.find("div:eq(0)").attr("name");
+        if((parseInt(curr.attr("alt"))+1) >= len) {
+            ob = parent.find("img:eq(0)");
+        }
+        else{
+            ob = parent.find("img:eq("+(parseInt(curr.attr("alt"))+1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+</script>
 </html>
