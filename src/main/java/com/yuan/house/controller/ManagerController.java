@@ -1,6 +1,9 @@
 package com.yuan.house.controller;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.yuan.house.VO.HouseManagerVO;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.service.ContractService;
@@ -14,6 +17,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 
 /**
@@ -59,4 +64,35 @@ public class ManagerController extends BaseController {
         return new ModelAndView("/common/login", "Model", model);
     }
 
+    @RequiresPermissions("house:read")
+    @RequestMapping("/house/read")
+    public ModelAndView showUpdateHouse (Model model, int number) {
+        PageHelper.startPage(number, 3);
+        List<HouseManagerVO> houses = houseService.getAllHouses(number);
+        PageInfo<HouseManagerVO> housePageInfo = new PageInfo<HouseManagerVO>(houses);
+        model.addAttribute("housePageInfo", housePageInfo);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("house:delete")
+    @RequestMapping("/manager/deleteTheHouse")
+    public ModelAndView deleteTheHouse (Model model, Long hid,int number) {
+        houseService.deleteHouse(hid);
+        PageHelper.startPage(number, 3);
+        List<HouseManagerVO> houses = houseService.getAllHouses(number);
+        PageInfo<HouseManagerVO> housePageInfo = new PageInfo<HouseManagerVO>(houses);
+        model.addAttribute("housePageInfo", housePageInfo);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("house:update")
+    @RequestMapping("/manager/updateHouseStatus")
+    public ModelAndView updateHouseStatus (Model model, Long hid,int number, int status) {
+        houseService.updateHouseStatus(hid, status);
+        PageHelper.startPage(number, 3);
+        List<HouseManagerVO> houses = houseService.getAllHouses(number);
+        PageInfo<HouseManagerVO> housePageInfo = new PageInfo<HouseManagerVO>(houses);
+        model.addAttribute("housePageInfo", housePageInfo);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
 }

@@ -1,6 +1,7 @@
 package com.yuan.house.service.impl;
 
 import com.yuan.house.POJO.TenantSearchPOJO;
+import com.yuan.house.VO.HouseManagerVO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
@@ -78,6 +79,14 @@ public class HouseServiceImpl implements HouseService {
         commonService.deleteRedis(key);
         commonService.deleteByPrex("houses");
         return houseDao.updateHouse(object);
+    }
+
+    @Override
+    public int updateHouseStatus(Long hid, int status) {
+        String key = "house_" + hid;
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("houses");
+        return houseDao.updateHouseStatus(hid, status);
     }
 
     @Override
@@ -159,6 +168,18 @@ public class HouseServiceImpl implements HouseService {
             return (List<House>)rs;
         }
         List<House> houses = collectDao.queryHousesByCollect(user.getUserId());
+        commonService.insertRedis(key, houses);
+        return houses;
+    }
+
+    @Override
+    public List<HouseManagerVO> getAllHouses(int number) {
+        String key = "houses_user_number_"+number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<HouseManagerVO>)rs;
+        }
+        List<HouseManagerVO> houses = houseDao.getAllHouses();
         commonService.insertRedis(key, houses);
         return houses;
     }

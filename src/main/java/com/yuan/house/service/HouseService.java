@@ -1,6 +1,7 @@
 package com.yuan.house.service;
 
 import com.yuan.house.POJO.TenantSearchPOJO;
+import com.yuan.house.VO.HouseManagerVO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
@@ -36,6 +37,14 @@ public interface HouseService {
      * @return
      */
     int updateHouse(House object);
+
+    /**
+     * 更新房源状态
+     * @param hid
+     * @param status
+     * @return
+     */
+    int updateHouseStatus(Long hid, int status);
 
     /**
      * 删除房源
@@ -85,4 +94,10 @@ public interface HouseService {
      * @return
      */
     List<House> queryHousesByCollect();
+
+    /**
+     * 分页获取房源
+     * @return
+     */
+    List<HouseManagerVO> getAllHouses(int number);
 }

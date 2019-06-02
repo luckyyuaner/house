@@ -1,6 +1,7 @@
 package com.yuan.house.dao;
 
 import com.yuan.house.POJO.TenantSearchPOJO;
+import com.yuan.house.VO.HouseManagerVO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
@@ -46,6 +47,8 @@ public interface HouseDao {
      */
     int updateHouse(@Param("object") House object);
 
+    int updateHouseStatus(@Param("hid")Long hid, @Param("status")int status);
+
     /**
      * 删除房源
      * @param id
@@ -56,4 +59,6 @@ public interface HouseDao {
     User queryLandlordByHouse(@Param("hid") Long hid);
 
 	List<MapHouseVO> queryHousesByCity(@Param("city") String city);
+
+	List<HouseManagerVO> getAllHouses();
 }

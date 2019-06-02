@@ -1,41 +1,41 @@
-html, body {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: url(/images/bg.jpg);
+
+.left{
+  width:240px;
+  height:500px;
+}
+.left img{
+    width:30px;
+    height:30px;
+    object-fit: cover;
+}
+.left a{
+    text-decoration: none;
+    color:black;
+    font-size:24px;
+}
+.left li{
+    list-style: none;
+}
+.right{
+    float:left;
+    margin-left:300px;
+    margin-top:-480px;
 }
 
-.clear-box {
-    clear: both;
-}
-.left-box {
+.house-manager .house-box {
+    width: 300px;
     float: left;
-    width:400px;
-    margin-left:80px;
-}
-.right-box {
-    float: left;
-    margin-left: 40px;
-    width:800px;
-    height:570px;
-    background-color: rgba(89, 151, 136, 0.76);
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
-.house-box {
-    width: 400px;
-}
-.house-box .picbox{
-    width: 400px;
-    height: 400px;
-}
-.house-box .picbox .pics img {
-    width: 400px;
-    height: 400px;
+.house-manager .picbox .pics img {
+    width: 300px;
+    height: 300px;
     object-fit: cover;
 }
 
-.house-box .pre {
+.house-manager .pre {
     width: 60px;
     height: 60px;
     object-fit: cover;
@@ -44,135 +44,92 @@ html, body {
     padding-top: 120px;
 }
 
-.house-box .box {
+.house-manager .box {
     position: absolute;
     z-index: -1;
 }
 
-.house-box .next {
+.house-manager .next {
     width: 60px;
     height: 60px;
     object-fit: cover;
     float: left;
     z-index: 10;
-    margin-top: 130px;
-    margin-left: 260px;
+    margin-top: -50px;
+    margin-left: 220px;
 }
 
-.house-box .content {
-    width: 400px;
-    height:157px;
+.house-manager .content {
+    width: 300px;
+    margin-top: 300px;
     background-color: rgba(89, 151, 136, 0.76);
-    margin-top:0px;
-    padding-top:20px;
 }
 
-.house-box .content p {
+.house-manager .content p {
     text-align: center;
     height: 16px;
     line-height: 16px;
 }
 
-.contract-box p {
+.house-manager .house-operation {
+    width: 300px;
+    background-color: rgba(89, 151, 136, 0.76);
+    height: 120px;
+    line-height: 40px;
+    margin-top: -16px;
+}
+.house-manager .house-operation div{
+    width:300px;
     text-align: center;
-    height: 16px;
-    line-height: 16px;
+    height:18px;
+    margin-top:8px;
 }
-
-.landlord-box p {
-    text-align: center;
-    height: 16px;
-    line-height: 16px;
+.house-manager .house-operation a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #284390;
 }
-.tenant-box{
-    margin-top:-5px;
-}
-.tenant-box p {
-    text-align: center;
-    height: 16px;
-    line-height: 16px;
-}
-
-.head {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-.the-imgs{
-    height:200px;
-    width:800px;
-}
-.the-imgs .imgs{
+.house-page{
     float:left;
-    height: 160px;
-    width:250px;
-    margin-left:10px;
+    margin-top:20px;
+    margin-left:420px;
 }
-.operate-box{
-    width:1240px;
-    margin-left:40px;
-    height:200px;
-}
-.operate-box .op-type{
-    width:1200px;
-}
-.operate-box .op-type .dowebok{
-    margin-left:560px;
-    list-style-type: none;
+.house-page .pre-page{
     float:left;
 }
-.dowebok li{
-    display: inline-block;
-    margin: 10px 0;
-}
-.dowebok input.labelauty + label{
-    font: 12px "Microsoft Yahei";
-}
-.operate-box .op-info{
-    width:1200px;
-}
-.op-info{
+.house-page .page-content {
     float:left;
-    margin-left:80px;
-    margin-bottom: 10px;
+    margin-left:20px;
+    margin-right:20px;
 }
-.op-info .fileinput-button {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.op-info .fileinput-button input {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    opacity: 0;
-    -ms-filter: 'alpha(opacity=0)';
-}
-
-.operate-box .hetong{
+.house-page .next-page{
     float:left;
-    border:1px solid rgba(71, 119, 107, 0.37);
-    width:1000px;
-    cols:600;
-    height:400px;
-    wrap:hard;
-    resize:none;
-    margin-bottom: 100px;
+}
+.desc-div{
+    font-size:12px;
+    width:300px;
+    height:240px;
     overflow-y: scroll;
-    display: block;
 }
-.operate-box .hetong:focus{
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px rgba(74, 110, 241, 0.71);
+.desc-div::-webkit-scrollbar
+{
+    width: 2px;
+    height: 4px;
+    background-color: #F5F5F5;
 }
-.operate-box .sub-btn{
-    float:left;
-    margin-left:10px;
-    width:120px;
-    height:40px;
-    line-height:40px;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.62);
-    background-color: rgba(63, 110, 97, 0.75);
+
+/*定义滚动条轨道 内阴影+圆角*/
+.desc-div::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    background-color: #FFF;
+}
+
+/*定义滑块 内阴影+圆角*/
+.desc-div::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+    background-color: #AAA;
 }

@@ -604,6 +604,7 @@ var BMapLib = window.BMapLib = BMapLib || {};
                     //json字符串转换成为json对象  , data=eval("("+data+")");evel不存在兼容性问题，但是会有安全漏洞。
                     data=JSON.parse(data);
                     console.dir(data);
+
                 }
             }
         });

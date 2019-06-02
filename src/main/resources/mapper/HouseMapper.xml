@@ -134,6 +134,12 @@
         WHERE house_id = #{object.houseId}
     </update>
 
+    <update id="updateHouseStatus">
+        UPDATE house
+        SET status = #{status}
+        WHERE house_id = #{hid}
+    </update>
+
     <delete id="deleteHouse" parameterType="Long">
         DELETE FROM house WHERE house_id = #{id}
     </delete>
@@ -148,5 +154,15 @@
         in (
         select user_id from house where house_id = #{hid}
         )
+    </select>
+
+
+    <select id="getAllHouses" resultType="com.yuan.house.VO.HouseManagerVO">
+        SELECT
+        house.*,
+        username,head,phone,sex,reputation,email
+        FROM house,user
+        WHERE house.user_id = user.user_id
+        ORDER BY house.status asc
     </select>
 </mapper>

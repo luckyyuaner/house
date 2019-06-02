@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>管理员首页</title>
+    <link rel="stylesheet" href="/css/manager/index.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
@@ -18,8 +20,156 @@
     </ul>
 </div>
 <div class="right">
-    <div class=""></div>
+    <div class="clear-box"></div>
+    <div class="house-manager" th:if="${housePageInfo != null && housePageInfo.getList() != null && housePageInfo.getList().size() > 0}">
+        <div th:each="house:${housePageInfo.getList()}" th:if="${house != null}"  class="house-box">
+            <div class="picbox" th:if="${house.urls != null}">
+                <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!house.urls.contains(',')}" />
+                <img src="/images/icon3.png"  class="pre" th:if="${house.urls.contains(',')}" />
+                <div class="box">
+                    <div th:each='url,userStat:${house.urls.split(",")}' class="pics" th:name="${userStat.size}">
+                        <img th:if="${userStat.index ==0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="active" th:alt="${userStat.index}" style="display:block;"/>
+                        <img th:if="${userStat.index !=0 }" th:src="@{/file/{imgname}(imgname=${url})}" class="house_img" th:alt="${userStat.index}" style="display: none;"/>
+                    </div>
+                </div>
+                <img src="/images/icon5.png" class="next" style="visibility: hidden;" th:if="${!house.urls.contains(',')}" />
+                <img src="/images/icon5.png" class="next" th:if="${house.urls.contains(',')}" />
+            </div>
+            <div class="clear-box"></div>
+            <div class="content">
+                <p>
+                    <img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                    <b th:text="${house.username}"></b>
+                </p><br/>
+                <p>
+                    <b th:if="${house.sex == 0}">女</b>
+                    <b th:if="${house.sex == 1}">男</b>
+                    <b th:text="${house.reputation}"></b>分
+                </p>
+                <p>
+                    电话:<span th:text="${house.phone}"></span>
+                </p>
+                <p>
+                    邮箱:<span th:text="${house.email}"></span>
+                </p>
+                <p>
+                    <b th:text="${house.name}"></b>
+                    <b th:text="${house.grade}"></b>分
+                </p>
+                <p>
+                    经纬度：<b th:text="${house.longitude}"></b>,
+                    <b th:text="${house.latitude}"></b>
+                </p>
+                <p>
+                    <span th:switch="${house.status}">
+                        <b th:case="0">审核中</b>
+                        <b th:case="1">审核失败</b>
+                        <b th:case="2">出租中</b>
+                        <b th:case="3">空闲</b>
+                    </span>
+                </p>
+                <p>
+                    <span th:text="${house.money}"/>元/月
+                    <span th:text="${house.area}"/>m&sup2;
+                    朝<span th:text="${house.orientation}"/>
+                </p>
+                <p>
+                    <span th:switch="${house.type}">
+                        <b th:case="0">友家托管</b>
+                        <b th:case="1">整租托管</b>
+                        <b th:case="0">豪宅托管</b>
+                    </span>
+                    <span th:switch="${house.cycle}">
+                        <b th:case="1">日付</b>
+                        <b th:case="30">月付</b>
+                        <b th:case="90">季付</b>
+                        <b th:case="180">半年付</b>
+                        <b th:case="365">年付</b>
+                    </span>
+                    <span th:switch="${house.elevator}">
+                        <b th:case="0">电梯房</b>
+                        <b th:case="1">非电梯房</b>
+                    </span>
+                </p>
+                <p>
+                    <span th:text="${house.floor}"/>层
+                    <span th:text="${house.doorplate}"/>号
+                    <span th:text="${house.orders}"/>号房间
+                </p>
+                <p>
+                    <span th:text="${house.kind.charAt(0)}"/>房间
+                    <span th:text="${house.kind.charAt(1)}"/>客厅
+                    <span th:text="${house.kind.charAt(2)}"/>卫生间
+                    <span th:text="${house.kind.charAt(3)}"/>厨房
+                    <span th:text="${house.kind.charAt(4)}"/>阳台
+                </p>
+                <p>
+                    地址：<span th:text="${house.address}" />
+                </p>
+                <div th:text="${house.description}" class="desc-div"></div>
+            </div>
+            <div class="house-operation">
+                <input type="hidden" th:value="${house.houseId}"/>
+                <div><a th:href="@{/manager/updateHouseStatus?(hid=${house.houseId},number=1,status=2)}">审核通过，设为出租</a></div>
+                <div><a th:href="@{/manager/updateHouseStatus?(hid=${house.houseId},number=1,status=3)}">审核通过，设为空闲</a></div>
+                <div><a th:href="@{/manager/updateHouseStatus?(hid=${house.houseId},number=1,status=1)}">审核失败</a></div>
+                <div><a th:href="@{/manager/deleteTheHouse?(hid=${house.houseId},number=1)}">删除房源</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear-box"></div>
+    <div class="house-page" th:if="${housePageInfo != null && housePageInfo.getList() != null && housePageInfo.getList().size() > 0}">
+        <div th:if="${housePageInfo.hasPreviousPage}" class="pre-page">
+            <a th:href="@{/house/read?(type=${type},msg=${msg},number=${housePageInfo.pageNum}-1)}" aria-label="Previous">
+                <span aria-hidden="true">«</span>
+            </a>
+        </div>
+        <div class="page-content">
+            <span th:text="${housePageInfo.pageNum}"></span>/<span th:text="${housePageInfo.pages}"></span>页
+        </div>
+        <div th:if="${housePageInfo.hasNextPage}" class="next-page">
+            <a th:href="@{/house/read?(type=${type},msg=${msg},number=${housePageInfo.pageNum}+1)}" aria-label="Next">
+                <span aria-hidden="true">»</span>
+            </a>
+        </div>
+    </div>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
+<script type="text/javascript">
+
+    $(".pre").click(function () {
+        //alert("执行");
+        var parent = $(this).next();
+        var curr = parent.find(".active");
+        var ob = null;
+        if(curr.attr("alt")-1 < 0) {
+            ob = parent.find("img:eq("+(parent.find("div:eq(0)").attr("name")-1)+")");
+        }
+        else{
+            ob = parent.find("img:eq("+(curr.attr("alt")-1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+
+    $(".next").click(function () {
+        var parent = $(this).prev();
+        var curr = parent.find(".active");
+        var ob = null;
+        var len = parent.find("div:eq(0)").attr("name");
+        if((parseInt(curr.attr("alt"))+1) >= len) {
+            ob = parent.find("img:eq(0)");
+        }
+        else{
+            ob = parent.find("img:eq("+(parseInt(curr.attr("alt"))+1)+")");
+        }
+        ob.attr("class","active");
+        ob.css("display","block");
+        curr.attr("class","house_img");
+        curr.css("display","none");
+    });
+</script>
 </body>
 </html>
