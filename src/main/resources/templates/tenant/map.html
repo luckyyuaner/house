@@ -13,10 +13,15 @@
         }
         #allmap {
             width: 100%;
+            float:left;
             height: 100%;
             overflow: hidden;
             margin: 0;
             font-family: "微软雅黑";
+        }
+        #house-box{
+            float:left;
+            margin-left:60px;
         }
     </style>
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg"/>
@@ -29,6 +34,7 @@
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div id="allmap"></div>
+<div id="house-box"></div>
 </body>
 <script th:inline="javascript">
     /*<![CDATA[*/

@@ -90,6 +90,7 @@
             </span><br/>
             <img src="" style="display: none" id="card-img" />
             <br/>出生日期：&nbsp;&nbsp;<input class="field" type="text" id="time" name="birthh" /><br/><span class="err"></span><br/>
+            邮箱绑定：&nbsp;&nbsp;<input class="email" type="text" th:field="*{email}" th:value="${curruser.email}" /><br/><span class="emailerr"></span><br/>
             <div id="radiodiv">
                 <div style="float:left">
                     <div class="div1">
@@ -103,7 +104,7 @@
                         <span>男</span>
                     </div>
                 </div>
-            </div><br/>
+            </div><br/><br/>
             <div class="btndiv">
                 <br/>
                 <input class="btn" type="submit" value="修改" onclick="return checkUserInfo();">
@@ -111,17 +112,16 @@
             </div>
         </form>
         <br/><br/><br/><br/>
-        <form id="form2" action="/tenant/updateUserPassword" th:object="${curruser}" method="post">
-            <input type="hidden" th:field="*{userId}" th:value="${curruser.userId}" />
-            原密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" id="oldPassword" /><br/><span class="err" id="old"></span><br/>
-            新密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" id="pass" th:field="*{password}" /><br/><span class="err" id="cu"></span><br/>
-            确认密码:<input class="field" type="password" id="checkPassword" /><br/><span class="err" id="re"></span><br/>
-            验证码：&nbsp;&nbsp;<input class="field" type="text" name="code" id="check" />
+        <form id="form2" action="/tenant/updateUserPassword"  method="post">
+            原密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" name="oldPassword" /><br/><span class="err" id="old"></span><br/>
+            新密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" name="pass" /><br/><span class="err" id="cu"></span><br/>
+            确认密码:<input class="field" type="password" name="checkPassword" /><br/><span class="err" id="re"></span><br/>
+            验证码：&nbsp;&nbsp;<input class="field" type="text" name="check" />
             <img src="/common/getCode"+new Date().getTime() id="checkImg" alt="验证码" /><br/><span class="err" id="ch"></span><br/>
-            邮箱绑定：&nbsp;&nbsp;<input class="field" type="text" th:field="*{email}" th:value="${curruser.email}" /><br/><span class="err"></span><br/>
+            邮箱验证码：&nbsp;&nbsp;<input class="field" type="text" name="em"  /><br/><span class="err"></span><br/>
             <div class="btndiv">
                 <br/>
-                <input class="btn" type="submit" value="修改" onclick="return checkPassword();">
+                <input class="btn" type="submit" value="修改" onclick="return checkUserPassword();">
                 <input class="btn" type="reset" value="取消">
             </div>
         </form>
@@ -134,8 +134,8 @@
     });
 </script>
 <script type="text/javascript">
-    function checkPassword() {
-        var cu = document.getElementById("pass");
+    function checkUserPassword() {
+        var cu = document.getElementsByName("pass")[0];
         var cuerr = document.getElementById("cu");
         if(cu.value == null || cu.value == ""){
             cuerr.innerHTML = "密码不能为空";
@@ -147,13 +147,13 @@
             cuerr.innerHTML = "密码长度6-30，包括至少1个大写字母、小写字母、数字、特殊字符";
             return false;
         }*/
-        var re = document.getElementById("checkPassword");
+        var re = document.getElementsByName("checkPassword")[0];
         var reerr = document.getElementById("re");
         if(re.value == null || re.value == "" || re.value != cu.value){
             reerr.innerHTML = "密码不一致";
             return false;
         }
-        var check = document.getElementById("check");
+        var check = document.getElementsByName("check")[0];
         var checkerr = document.getElementById("ch");
         if(check.value == null || check.value == ""){
             checkerr.innerHTML = "验证码不能为空";
@@ -169,7 +169,7 @@
         $.ajax({
             async : false,
             type : "get",
-            url : "/common/checkCode?code="+check.val(),
+            url : "/common/checkCode?code="+check.value,
             dataType : "html",
             success : function (data) {
                 rs = data;
@@ -208,6 +208,16 @@
             }
         }
 
+        var email = document.getElementsByClassName("email")[0];
+        var emailerr = document.getElementsByClassName("emailerr")[0];
+        if(email.value != null && email.value != ""){
+            //邮箱正则
+            var uPattern = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(uPattern.test(email.value) == false){
+                emailerr.innerHTML = "邮箱格式不正确";
+                return false;
+            }
+        }
     };
 </script>
 <script th:inline="javascript">

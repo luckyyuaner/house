@@ -561,7 +561,7 @@ var BMapLib = window.BMapLib = BMapLib || {};
             opacity : 0.9
         });
         label.setPosition(position);
-        var content = '<div style="color:black;font-size:20px;background-color:'+this._styles[0].backgroundColor+'">';
+        var content = '<div style="color:white;font-size:14px;background-color:'+this._styles[0].backgroundColor+'">';
         var arr = marker.getLabel().content.split("&");
         content += '<input type="hidden" value="'+ arr[0] +'">';
         content += arr[1]+'&nbsp;&nbsp;';
@@ -582,8 +582,10 @@ var BMapLib = window.BMapLib = BMapLib || {};
         label.setContent(content);
         label.addEventListener('click', function(){
             alert("zhixing");
-            var map=document.getElementById("#allmap");
+            var map=document.getElementById("allmap");
             map.style.width="70%";
+            var hou=document.getElementById("house-box");
+            hou.style.width="300px";
             var xmlhttp;
             if (window.XMLHttpRequest) {
                 //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -593,7 +595,7 @@ var BMapLib = window.BMapLib = BMapLib || {};
                 // IE6, IE5 浏览器执行代码
                 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
             }
-            xmlhttp.open("POST","/tenant/collectHouse",true);
+            xmlhttp.open("POST","/common/showOneHouse",true);
             xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             xmlhttp.send("hid="+arr[0]);
             xmlhttp.onreadystatechange=function() {

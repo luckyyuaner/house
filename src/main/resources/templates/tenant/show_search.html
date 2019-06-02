@@ -162,7 +162,7 @@
                     <img th:if="${hids != null && hids.contains(house.houseId)}" src="/images/liked.png" />
                     <img th:if="${hids == null || !hids.contains(house.houseId)}" src="/images/like.png" />
                 </a>
-                <a th:href="@{/contract/showNew?(hid=${house.houseId})}">详情</a>
+                <a th:href="@{/common/showNew?(hid=${house.houseId})}">详情</a>
             </div>
         </div>
     </div>

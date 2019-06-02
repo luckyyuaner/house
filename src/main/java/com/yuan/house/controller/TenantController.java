@@ -44,6 +44,12 @@ public class TenantController extends BaseController {
         return new ModelAndView("/tenant/info", "Model", model);
     }
 
+    @RequestMapping(value="/common/showOneHouse")
+    @ResponseBody
+    public House showOneHouse(Long hid) {
+        return houseService.queryHouseById(hid);
+    }
+
     @RequiresPermissions({"cart:create", "cart:delete"})
     @RequestMapping(value="/tenant/collectHouse")
     @ResponseBody
@@ -58,8 +64,8 @@ public class TenantController extends BaseController {
         return 0;
     }
 
-    @RequiresPermissions("contract:create")
-    @RequestMapping("/contract/showNew")
+    //@RequiresPermissions("contract:create")
+    @RequestMapping("/common/showNew")
     public ModelAndView showContractNew(Model model, @RequestParam("hid")Long hid) {
         model.addAttribute("house",houseService.queryHouseById(hid));
         model.addAttribute("landlord",houseService.queryLandlordByHouse(hid));
@@ -101,21 +107,36 @@ public class TenantController extends BaseController {
         }
         JSONObject json = FileUtil.upload(headd);
         if("fail".equals(json.getString("rs"))) {
-            model.addAttribute("curruser",user);
-            model.addAttribute("msg", json.getString("msg"));
-            return new ModelAndView("/tenant/info", "Model", model);
+            if("未选择文件".equals(json.getString("msg"))) {
+                curruser.setHead(user.getHead());
+            }
+            else {
+                model.addAttribute("curruser",user);
+                model.addAttribute("msg", json.getString("msg"));
+                return new ModelAndView("/tenant/info", "Model", model);
+            }
         }
-        curruser.setHead(json.getString("msg"));
+        else {
+            curruser.setHead(json.getString("msg"));
+        }
         JSONObject json1 = FileUtil.upload(card);
         if("fail".equals(json1.getString("rs"))) {
-            model.addAttribute("curruser",user);
-            model.addAttribute("msg", json1.getString("msg"));
-            return new ModelAndView("/tenant/info", "Model", model);
+            if("未选择文件".equals(json1.getString("msg"))) {
+                curruser.setPhoto(user.getPhoto());
+            }
+            else {
+                model.addAttribute("curruser", user);
+                model.addAttribute("msg", json1.getString("msg"));
+                return new ModelAndView("/tenant/info", "Model", model);
+            }
         }
-        curruser.setPhoto(json1.getString("msg"));
+        else {
+            curruser.setPhoto(json1.getString("msg"));
+        }
         //System.out.println("phone"+curruser.getPhone());
         //System.out.println("birth"+birthh);
         User newUser = userService.updateUserInfo(curruser);
+        session.setAttribute(Constants.SESSION_CURR_USER, newUser);
         model.addAttribute("curruser",newUser);
         return new ModelAndView("/tenant/info", "Model", model);
     }
@@ -123,8 +144,8 @@ public class TenantController extends BaseController {
 
     @RequiresPermissions("user:update")
     @RequestMapping("/tenant/updateUserPassword")
-    public ModelAndView updateUserPassword(Model model, @ModelAttribute(value = "curruser")User curruser) {
-        model.addAttribute("curruser",curruser);
+    public ModelAndView updateUserPassword(Model model,@RequestParam("pass")String pass) {
+        System.out.println("ads");
         return new ModelAndView("/tenant/info", "Model", model);
     }
 }

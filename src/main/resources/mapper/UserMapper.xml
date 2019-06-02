@@ -5,7 +5,7 @@
 
     <sql id="allColumns">
         user_id, username, password, user_type, status,
-        ctime, utime, head, money, phone
+        ctime, utime, head, money, phone, email
     </sql>
 
     <select id="getAllUsers" resultType="com.yuan.house.model.User">
@@ -50,12 +50,12 @@
     <insert id="addUser" parameterType="com.yuan.house.model.User">
         INSERT INTO user
         (username, password, user_type, status, ctime, utime, head, money,
-        phone, idcard, photo, birth, sex, reputation)
+        phone, idcard, photo, birth, sex, reputation, email)
         VALUES
         (#{object.username}, #{object.password}, #{object.userType},
         #{object.status}, #{object.ctime}, #{object.utime}, #{object.head},
         #{object.money}, #{object.phone}, #{object.idcard}, #{object.photo},
-        #{object.birth}, #{object.sex}, #{object.reputation})
+        #{object.birth}, #{object.sex}, #{object.reputation}, #{object.email})
     </insert>
 
     <update id="updateUser" parameterType="com.yuan.house.model.User">
@@ -63,7 +63,7 @@
         SET username = #{object.username}, password = #{object.password}, user_type = #{object.userType},
         status = #{object.status}, ctime = #{object.ctime}, utime = #{object.utime}, head = #{object.head},
         money = #{object.money}, phone = #{object.phone}, idcard = #{object.idcard}, photo = #{object.photo},
-        birth = #{object.birth}, sex = #{object.sex}, reputation = #{object.reputation}
+        birth = #{object.birth}, sex = #{object.sex}, reputation = #{object.reputation},email = #{object.email}
         WHERE user_id = #{object.userId}
     </update>
 
@@ -71,7 +71,7 @@
         UPDATE user
         SET
         head = #{object.head}, phone = #{object.phone}, idcard = #{object.idcard}, photo = #{object.photo},
-        birth = #{object.birth}, sex = #{object.sex}
+        birth = #{object.birth}, sex = #{object.sex}, email = #{object.email}
         WHERE user_id = #{object.userId}
     </update>
 
