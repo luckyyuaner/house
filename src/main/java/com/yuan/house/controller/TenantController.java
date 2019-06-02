@@ -9,6 +9,7 @@ import com.yuan.house.model.User;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
 import com.yuan.house.util.FileUtil;
+import com.yuan.house.util.PasswordUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -145,7 +146,12 @@ public class TenantController extends BaseController {
     @RequiresPermissions("user:update")
     @RequestMapping("/tenant/updateUserPassword")
     public ModelAndView updateUserPassword(Model model,@RequestParam("pass")String pass) {
-        System.out.println("ads");
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        userService.updateUserPassword(PasswordUtil.md5Password(pass), user.getUserId());
+        user = userService.queryUserById(user.getUserId());
+        session.setAttribute(Constants.SESSION_CURR_USER, user);
+        model.addAttribute("curruser",user);
         return new ModelAndView("/tenant/info", "Model", model);
     }
 }

@@ -58,7 +58,7 @@ public class UserRealm extends AuthorizingRealm {
 				getName()
 		);
 		//session中不需要保存密码
-		user.setPassword("");
+		//user.setPassword("");
 		//将用户信息放入session中
 		SecurityUtils.getSubject().getSession().setAttribute(Constants.SESSION_CURR_USER, user);
 		return authenticationInfo;

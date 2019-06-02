@@ -137,7 +137,7 @@ li {
     box-shadow: 0 0 10px #9ecaed;
     border-radius:10px;
 }
-#checkImg, #checkImg2{
+#checkImg{
     float:right;
     margin-right:48px;
     margin-top:-33px;
@@ -222,4 +222,17 @@ li {
     top: 0px;
     opacity: 0;
     -ms-filter: 'alpha(opacity=0)';
+}
+
+#mail-btn{
+    float:left;
+    width:160px;
+    height:32px;
+    line-height: 32px;
+    font-size:16px;
+    color:black;
+    border: none;
+    margin-left:600px;
+    margin-top:-32px;
+    background-color: rgba(89, 151, 136, 0.76);
 }

@@ -117,8 +117,10 @@
             新密码：&nbsp;&nbsp;&nbsp;<input class="field" type="password" name="pass" /><br/><span class="err" id="cu"></span><br/>
             确认密码:<input class="field" type="password" name="checkPassword" /><br/><span class="err" id="re"></span><br/>
             验证码：&nbsp;&nbsp;<input class="field" type="text" name="check" />
-            <img src="/common/getCode"+new Date().getTime() id="checkImg" alt="验证码" /><br/><span class="err" id="ch"></span><br/>
-            邮箱验证码：&nbsp;&nbsp;<input class="field" type="text" name="em"  /><br/><span class="err"></span><br/>
+            <img src="/common/getCode"+new Date().getTime() id="checkImg" alt="验证码" />
+            <input type="hidden" id="curr-email" th:value="${curruser.email}" />
+            <button onclick="return checkCheckCode();"  id="mail-btn">获取邮箱验证码</button><br/><span class="err" id="ch"></span><br/>
+            邮箱验证码：&nbsp;&nbsp;<input class="field" type="text" name="em"  /><br/><span class="err" id="emerr"></span><br/>
             <div class="btndiv">
                 <br/>
                 <input class="btn" type="submit" value="修改" onclick="return checkUserPassword();">
@@ -134,25 +136,7 @@
     });
 </script>
 <script type="text/javascript">
-    function checkUserPassword() {
-        var cu = document.getElementsByName("pass")[0];
-        var cuerr = document.getElementById("cu");
-        if(cu.value == null || cu.value == ""){
-            cuerr.innerHTML = "密码不能为空";
-            return false;
-        }
-        //密码强度正则，6-30，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
-        //var pPattern = /^.*(?=.{6,30})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
-        /*if(pPattern.test(cu.value) == false){
-            cuerr.innerHTML = "密码长度6-30，包括至少1个大写字母、小写字母、数字、特殊字符";
-            return false;
-        }*/
-        var re = document.getElementsByName("checkPassword")[0];
-        var reerr = document.getElementById("re");
-        if(re.value == null || re.value == "" || re.value != cu.value){
-            reerr.innerHTML = "密码不一致";
-            return false;
-        }
+    function checkCheckCode() {
         var check = document.getElementsByName("check")[0];
         var checkerr = document.getElementById("ch");
         if(check.value == null || check.value == ""){
@@ -180,9 +164,109 @@
             }
         });
         if(rs == "true") {
+            $("#checkImg").attr('src', '/common/getCode?'+new Date().getTime());
+            checkerr.innerHTML = "验证码正确";
+            settime(10);
+            var msg = document.getElementById("curr-email");
+            $.ajax({
+                async : false,
+                type : "get",
+                url : "/common/mail/getCode?email="+msg.value,
+                dataType : "html",
+                success : function (dataa) {
+                    if(dataa == "success") {
+                        alert("邮箱验证码发送成功，请注意查收");
+                    }
+                    if(dataa == "fail") {
+                        alert("邮箱验证码发送失败，请稍候再试");
+                    }
+                },
+                error:function (dataa) {
+                    alert("系统错误，请稍候再试");
+                    return false;
+                }
+            });
+            return false;
+        }
+        else {
+            checkerr.innerHTML = "验证码错误";
+            return false;
+        }
+    }
+    function checkUserPassword() {
+        var old = document.getElementsByName("oldPassword")[0];
+        var olderr = document.getElementById("old");
+        if(old.value == null || old.value == ""){
+            olderr.innerHTML = "原密码不能为空";
+            return false;
+        }
+        var rss = null;
+        $.ajax({
+            async : false,
+            type : "get",
+            url : "/common/checkPassword?pass="+old.value,
+            dataType : "html",
+            success : function (data) {
+                rss = data;
+            },
+            error:function (data) {
+                alert("系统错误，请稍候再试");
+                return false;
+            }
+        });
+        if(rss == "false") {
+            olderr.innerHTML = "原密码错误";
+            return false;
+        }
+
+        var cu = document.getElementsByName("pass")[0];
+        var cuerr = document.getElementById("cu");
+        if(cu.value == null || cu.value == ""){
+            cuerr.innerHTML = "密码不能为空";
+            return false;
+        }
+        //密码强度正则，6-30，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+        //var pPattern = /^.*(?=.{6,30})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+        /*if(pPattern.test(cu.value) == false){
+            cuerr.innerHTML = "密码长度6-30，包括至少1个大写字母、小写字母、数字、特殊字符";
+            return false;
+        }*/
+        var re = document.getElementsByName("checkPassword")[0];
+        var reerr = document.getElementById("re");
+        if(re.value == null || re.value == "" || re.value != cu.value){
+            reerr.innerHTML = "密码不一致";
+            return false;
+        }
+        var mail = document.getElementsByName("em")[0];
+        var mailerr = document.getElementById("emerr");
+        if(mail.value == null || mail.value == ""){
+            mailerr.innerHTML = "验证码不能为空";
+            return false;
+        }
+        //邮箱验证码正则，6位数字
+        var cPattern = /^[0-9]{6,6}$/;
+        if(cPattern.test(mail.value) == false){
+            mailerr.innerHTML = "验证码错误";
+            return false;
+        }
+        var rs = null;
+        $.ajax({
+            async : false,
+            type : "get",
+            url : "/common/checkMail?mail="+mail.value,
+            dataType : "html",
+            success : function (data) {
+                rs = data;
+            },
+            error:function (data) {
+                alert("系统错误，请稍候再试");
+                return false;
+            }
+        });
+        if(rs == "true") {
             return true;
         }
-        checkerr.innerHTML = "验证码错误";
+        mailerr.innerHTML = "验证码错误";
         return false;
     };
     function checkUserInfo() {
@@ -219,6 +303,22 @@
             }
         }
     };
+
+    function settime(val) {
+        var btn = document.getElementById("mail-btn");
+        if (parseInt(val) == 0) {
+            btn.removeAttribute("disabled");
+            btn.innerHTML="获取邮箱验证码";
+        }
+        else {
+            btn.innerHTML="10秒后可重新发送";
+            btn.setAttribute("disabled", true);
+            val= parseInt(val)-1;
+        }
+        setTimeout(function() {
+            settime(val)
+        },1000)
+    }
 </script>
 <script th:inline="javascript">
     /*<![CDATA[*/
@@ -259,7 +359,9 @@
 </script>
 </body>
 <script type="text/javascript">
-
+    /*$("#checkImg").bind('click', function() {
+        $("#checkImg").attr('src', '/common/getCode?'+new Date().getTime());
+    });*/
     $(".pre").click(function () {
         //alert("执行");
         var parent = $(this).next();

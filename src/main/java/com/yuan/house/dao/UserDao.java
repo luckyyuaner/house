@@ -55,6 +55,8 @@ public interface UserDao {
 
 	int updateUserInfo(@Param("object") User object);
 
+	int updateUserPassword(@Param("pass") String pass, @Param("uid") Long uid);
+
 	/**
 	 * 删除用户
 	 * @param id

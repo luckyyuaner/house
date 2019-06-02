@@ -68,6 +68,19 @@ public class CommonController extends BaseController {
         return "/manager/index";
     }
 
+    @RequestMapping(value="/common/checkPassword")
+    @ResponseBody
+    public String checkPassword(String pass) {
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        if(user.getPassword().equals(PasswordUtil.md5Password(pass))){
+            return "true";
+        }
+        else{
+            return "false";
+        }
+    }
+
     @RequestMapping(value="/common/checkCode")
     @ResponseBody
     public String checkCode(String code) {
@@ -88,6 +101,20 @@ public class CommonController extends BaseController {
         System.out.println("hid:"+hid);
         House h = houseService.queryHouseById(hid);
         return h;
+    }
+
+    @RequestMapping(value="/common/checkMail")
+    @ResponseBody
+    public String checkMail(String mail) {
+        System.out.println("mail:"+mail);
+        String sessionCode=(String)((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession().getAttribute("emailCode");
+        System.out.println("sessionCode:"+sessionCode);
+        if(sessionCode.equalsIgnoreCase(mail)){
+            return "true";
+        }
+        else{
+            return "false";
+        }
     }
 
     @RequestMapping(value="/common/mail/getCode")

@@ -83,6 +83,13 @@ public interface UserService {
      */
 	User updateUserInfo(User object);
 
+    /**
+     * 修改用户密码
+     * @param pass
+     * @return
+     */
+	int updateUserPassword(String pass, Long uid);
+
 	/**
 	 * 删除用户
 	 * @param id
