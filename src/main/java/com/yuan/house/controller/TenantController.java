@@ -6,6 +6,7 @@ import com.yuan.house.constants.Constants;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
+import com.yuan.house.service.ContractService;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
 import com.yuan.house.util.FileUtil;
@@ -40,6 +41,9 @@ public class TenantController extends BaseController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ContractService contractService;
+
     @RequestMapping("/tenant/info")
     public ModelAndView showTenantInfo(Model model) {
         return new ModelAndView("/tenant/info", "Model", model);
@@ -71,6 +75,13 @@ public class TenantController extends BaseController {
         model.addAttribute("house",houseService.queryHouseById(hid));
         model.addAttribute("landlord",houseService.queryLandlordByHouse(hid));
         model.addAttribute("contract", new Contract());
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        List<Long> hids = null;
+        if(user != null) {
+            hids = houseService.queryCollectHouseIdsByUser(user.getUserId());
+        }
+        model.addAttribute("hids", hids);
         return new ModelAndView("/tenant/new_contract", "Model", model);
     }
 
@@ -152,6 +163,38 @@ public class TenantController extends BaseController {
         user = userService.queryUserById(user.getUserId());
         session.setAttribute(Constants.SESSION_CURR_USER, user);
         model.addAttribute("curruser",user);
+        return new ModelAndView("/tenant/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:create")
+    @RequestMapping("/tenant/createNewContract")
+    public ModelAndView createNewContract(Model model, String stime, String etime, MultipartFile[] url,Long hid) {
+        Contract con = new Contract() ;
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        if(StringUtils.isNotBlank(stime)) {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            ParsePosition pos = new ParsePosition(0);
+            Date time1 = formatter.parse(stime, pos);
+            con.setStime(new java.sql.Timestamp(time1.getTime()));
+        }
+        if(StringUtils.isNotBlank(etime)) {
+            SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
+            ParsePosition pos2 = new ParsePosition(0);
+            Date time2 = formatter2.parse(etime, pos2);
+            con.setEtime(new java.sql.Timestamp(time2.getTime()));
+        }
+        con.setHouseId(hid);
+        con.setUserId(user.getUserId());
+        con.setCtime(new java.sql.Timestamp(System.currentTimeMillis()));
+
+        JSONObject json = FileUtil.uploadByNumber(url, 3);
+        if("fail".equals(json.getString("rs"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/common/showNew?hid="+hid);
+        }
+        con.setTenantInfo(json.getString("msg"));
+        contractService.createNewContractByTenant(con);
         return new ModelAndView("/tenant/info", "Model", model);
     }
 }

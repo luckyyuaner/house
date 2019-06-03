@@ -11,4 +11,10 @@ public interface ContractService {
      */
     Contract queryContractById(Long cid);
 
+    /**
+     *租客创建租房申请
+     * @param contract
+     */
+    void createNewContractByTenant(Contract contract);
+
 }

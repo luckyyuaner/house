@@ -126,17 +126,21 @@ body {
     float:left;
     margin-top:-460px;
     width:100%;
-    height:600px;
-    background-color: black;
-    opacity: 0.7;
+    height:700px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
 }
-.contract-info .empty{
-    height:100px;
-}
-.contract-info span{
+.contract-info .cc{
+    opacity: 1;
     font-size: 20px;
     margin-left:400px;
     color:white;
+}
+.contract-info .err{
+    color:red;
+    font-size: 14px;
+    margin-left:10px;
+    opacity: 1;
 }
 #st,#et{
     width:300px;
@@ -146,15 +150,18 @@ body {
     font-size: 16px;
     color: white;
     margin-left:400px;
+    opacity: 1;
 }
 .filespan{
     float:left;
 }
 .filebtn{
+    opacity: 1;
     float:left;
     margin-left:-760px;
 }
 .fileinput-button {
+    opacity: 1;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -162,6 +169,7 @@ body {
 }
 
 .fileinput-button input {
+    opacity: 1;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -171,6 +179,7 @@ body {
 .new-operate{
     margin-top:40px;
     margin-left:460px;
+    opacity: 1;
 }
 .new-operate a{
     display:block;
@@ -183,4 +192,5 @@ body {
     float:left;
     margin-right:40px;
     background-color: #66af9b;
+    opacity: 1;
 }

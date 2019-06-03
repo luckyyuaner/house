@@ -7,10 +7,11 @@
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/flatpickr.material_blue.min.css" />
     <script src="/js/flatpickr.js"></script>
+    <script type="text/javascript" src="/js/tenant/new_contract.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<form action="" method="post" th:object="${contract}">
+<form action="/tenant/createNewContract" method="post" id="contract-form" enctype="multipart/form-data">
     <div th:if="${house != null}"  class="house-box">
         <div class="picbox" th:if="${house.urls != null}">
             <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!house.urls.contains(',')}" />
@@ -33,18 +34,20 @@
                     <span th:if="${landlord.sex == 0}">女</span>
                     <span th:if="${landlord.sex == 1}">男</span>
                 </a>
-                    电话号码：<span th:text="${landlord.phone}"/>
                     信誉值：<span th:text="${landlord.reputation}"/>分
                 </p>
             </div>
             <div class="landlord-operation">
                 <p>
-                    <a><img src="/images/like.png" /></a>
-                    <a class="zufan">租房</a>
+                    <a href="javascript:void(0);" class="like-op">
+                        <img th:if="${hids != null && hids.contains(house.houseId)}" src="/images/liked.png" />
+                        <img th:if="${hids == null || !hids.contains(house.houseId)}" src="/images/like.png" />
+                    </a>
+                    <a class="zufan" onclick="show()">租房</a>
                 </p>
             </div>
             <div class="clear-box"></div>
-            <input type="hidden" th:field="*{houseId}" th:value="${house.houseId}" />
+            <input type="hidden" name="hid" th:value="${house.houseId}" />
             <p>
                 <b th:text="${house.name}"></b>
                 <span th:switch="${house.status}">
@@ -94,12 +97,12 @@
         </div>
     </div>
     <div class="clear-box"></div>
-    <div class="contract-info">
-        <div class="empty"></div>
-        <span>开始时间</span>
-        <input id="st" name="stime" /><br/><br/><br/>
-        <span>结束时间</span>
-        <input id="et" name="etime" />
+    <div class="contract-info" style="display:none;">
+        <br/>
+        <span class="cc">开始时间</span>
+        <input id="st" name="stime" /><span class="err" id="serr"></span><br/><br/><br/>
+        <span class="cc">结束时间</span>
+        <input id="et" name="etime" /><span class="err" id="eerr"></span>
         <p>请上传身份证正、反面照片及本人手持身份证照片，共三张照片</p>
         <span class="filespan">证件图片</span>
         <div class="filebtn">
@@ -109,9 +112,11 @@
             </span>
         </div>
         <div class="clear-box"></div>
+        <div id="img-box"></div>
+        <div class="clear-box"></div>
         <div class="new-operate">
-            <a>申请</a>
-            <a>取消</a>
+            <a onclick="return sub();">申请</a>
+            <a onclick="reset()">取消</a>
         </div>
     </div>
 </form>
@@ -119,6 +124,105 @@
 <div class="comment-info"></div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var sub = function() {
+        var curr = [[${session.currUser}]];
+        if(curr == null) {
+            window.location.href="/common/showLogin";
+        }
+        else{
+            var s = $("#st").val();
+            if(s == ""){
+                $("#serr").html("请选择起租日期");
+                return false;
+            }
+            var cu = getDate(new Date(),0);
+            if(s < cu) {
+                $("#serr").html("起租日期不能小于当前日期");
+                return false;
+            }
+            var early = getDate(new Date(),15);
+            if(s > early) {
+                $("#serr").html("起租日期至多提前半个月");
+                return false;
+            }
+            var e = $("#et").val();
+            if(e == ""){
+                $("#eerr").html("请选择结束日期");
+                return false;
+            }
+            if(e <= s){
+                $("#eerr").html("结束日期应大于起租日期");
+                return false;
+            }
+            var days = [[${house.cycle}]];
+            var temp = s +" 00:00:00";
+            temp = temp.replace(/-/g,"/");
+            var ed = getDate(new Date(temp), parseInt(days));
+            //alert(ed);
+            if(e < ed){
+                $("#eerr").html("结束日期应大于租房周期");
+                return false;
+            }
+            $('#contract-form').submit();
+        }
+    }
+    $(".like-op").click(function () {
+        var curr = [[${session.currUser}]];
+        if(curr == null) {
+            window.location.href="/common/showLogin";
+        }
+        else{
+            var hid = $(this).prev().val();
+            //alert(hid);
+            var ob = $(this).children("img");
+            var url = ob.attr("src");
+            var val = 1;
+            if(url == "/images/like.png") {
+                val = 0;
+            }
+            $.ajax({
+                async : false,
+                type : "post",
+                url : "/tenant/collectHouse",
+                data: {hid:hid, val:val},
+                dataType : "html",
+                success : function (data) {
+                    if(data == "1") {
+                        ob.attr("src","/images/liked.png");
+                        //alert(ob.attr("src"));
+                    }
+                    else{
+                        ob.attr("src","/images/like.png");
+                    }
+                },
+                error:function (data) {
+                    alert("系统错误，请稍候再试");
+                    return false;
+                }
+            });
+        }
+    });
+    /*]]>*/
+</script>
+<script type="text/javascript">
+    var getDate = function(date, n){
+        var year,month,day ;
+        date.setDate(date.getDate()+n);
+        year = date.getFullYear();
+        month = date.getMonth()+1;
+        day = date.getDate() ;
+        s = year + '-' + ( month < 10 ? ( '0' + month ) : month ) + '-' + ( day < 10 ? ( '0' + day ) : day) ;
+        return s ;
+    }
+    var show = function() {
+        $(".contract-info").css('display','block');
+    }
+    var reset = function() {
+        $(".contract-info").css('display','none');
+    }
+</script>
 <script type="text/javascript">
     $(function() {
         $("#st").flatpickr();

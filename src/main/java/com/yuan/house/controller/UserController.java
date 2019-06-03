@@ -9,6 +9,7 @@ import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.RoleService;
 import com.yuan.house.service.UserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.jsoup.helper.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,6 +45,9 @@ public class UserController extends BaseController {
             model.addAttribute("userPageInfo", userPageInfo);
         }
         else if("id".equals(type)) {
+            if(StringUtil.isBlank(msg)) {
+                msg = "-1";
+            }
             PageHelper.startPage(number, 5);
             User user = userService.queryUserById(Long.parseLong(msg));
             List<User> users = new ArrayList<User>();
@@ -109,6 +113,9 @@ public class UserController extends BaseController {
             model.addAttribute("permissionPageInfo", permissionPageInfo);
         }
         else if("id".equals(type)) {
+            if(StringUtil.isBlank(msg)) {
+                msg = "-1";
+            }
             PageHelper.startPage(number, 5);
             Permission permission = permissionService.queryPermissionById(Long.parseLong(msg));
             List<Permission> permissions = new ArrayList<Permission>();
@@ -171,6 +178,9 @@ public class UserController extends BaseController {
             model.addAttribute("rolePageInfo", rolePageInfo);
         }
         else if("id".equals(type)) {
+            if(StringUtil.isBlank(msg)) {
+                msg = "-1";
+            }
             PageHelper.startPage(number, 5);
             Role role = roleService.queryRoleById(Long.parseLong(msg));
             List<Role> roles = new ArrayList<Role>();

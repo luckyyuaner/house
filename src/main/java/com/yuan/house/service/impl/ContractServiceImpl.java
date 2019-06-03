@@ -35,4 +35,12 @@ public class ContractServiceImpl implements ContractService {
         return c;
     }
 
+    @Override
+    public void createNewContractByTenant(Contract contract) {
+        contract.setTenantOperation(2);
+        contract.setType(0);
+        contract.setStatus(0);
+        contractDao.createNewContractByTenant(contract);
+    }
+
 }

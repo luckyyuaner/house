@@ -12,5 +12,6 @@ public interface ContractDao {
      */
 	Contract queryContractById(@Param("id") Long id);
 
+	void createNewContractByTenant(@Param("object") Contract object);
 
 }

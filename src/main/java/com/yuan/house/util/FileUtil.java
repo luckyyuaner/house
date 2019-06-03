@@ -43,6 +43,54 @@ public class FileUtil {
         return json;
     }
 
+
+    public static JSONObject uploadByNumber(MultipartFile[] urls, int number) {
+        JSONObject json = new JSONObject();
+        StringBuffer sb = new StringBuffer();
+        if (urls == null || urls.length <number) {
+            json.put("rs", "fail");
+            json.put("msg", "未选择文件");
+            return json;
+        }
+        try {
+            int count = 0;
+            for (MultipartFile item : urls) {
+                if(count >= number) {
+                    break;
+                }
+                if (item.getSize() <= 0) {
+                    // 未选择文件
+                    json.put("rs", "fail");
+                    json.put("msg", "未选择文件");
+                    return json;
+                }
+                String filename = item.getOriginalFilename();
+                if (!filename.endsWith("jpg") && !filename.endsWith("gif") && !filename.endsWith("png")) {
+                    // 限制文件上传类型
+                    json.put("rs", "fail");
+                    json.put("msg", "文件类型不是图片");
+                    return json;
+                }
+                String newFileName =  UUID.randomUUID() + filename.substring(filename.lastIndexOf("."));
+                File newFile = new File(Constants.UPLOAD_URL + newFileName);
+                // 将内存中的数据写入磁盘
+                item.transferTo(newFile);
+                sb.append(newFileName);
+                sb.append(",");
+                count++;
+            }
+            sb.deleteCharAt(sb.length() - 1);
+        } catch (IOException e) {
+            LoggerUtil.error("写入新文件出错：",e);
+            json.put("rs", "fail");
+            json.put("msg", "文件上传出错");
+            return json;
+        }
+        json.put("rs", "success");
+        json.put("msg", sb.toString());
+        return json;
+    }
+
     public static JSONObject uploads(MultipartFile[] urls) {
         JSONObject json = new JSONObject();
         StringBuffer sb = new StringBuffer();

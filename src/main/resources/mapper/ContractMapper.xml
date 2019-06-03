@@ -19,4 +19,18 @@
         WHERE contract_id = #{id}
     </select>
 
+
+    <insert id="createNewContractByTenant" parameterType="com.yuan.house.model.Contract">
+        INSERT INTO contract
+        (
+        house_id, user_id, stime, etime, ctime, tenant_operation, type, status, tenant_info
+        )
+        VALUES
+        (
+         #{object.houseId},#{object.userId}, #{object.stime},
+         #{object.etime},#{object.ctime}, #{object.tenantOperation},
+          #{object.type},#{object.status},#{object.tenantInfo}
+        )
+    </insert>
+
 </mapper>

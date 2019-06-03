@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
 			LoggerUtil.error("用户不存在异常：",e);
 			return ResultEnum.R_wrong.getResCode();
 		} catch (AuthenticationException e) {
-		    LoggerUtil.error("用户登录异常：",e);
+		    LoggerUtil.error("用户账号密码错误：",e);
             return ResultEnum.R_wrong.getResCode();
 		}
 	}
