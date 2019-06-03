@@ -1,5 +1,7 @@
 package com.yuan.house.util;
 
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TimeUtils {
@@ -32,4 +34,10 @@ public class TimeUtils {
         return "刚刚，";
     }
 
+    public static java.sql.Timestamp changeStringToTimestamp(String str) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        ParsePosition pos = new ParsePosition(0);
+        Date time = formatter.parse(str, pos);
+        return new java.sql.Timestamp(time.getTime());
+    }
 }

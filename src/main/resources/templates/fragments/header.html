@@ -25,7 +25,7 @@
     <div th:if="${session.currUser!=null}" style="position: relative;float:right;margin-right:80px;">
         <a th:href="@{/common/tenant}" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);">租房</a>
         <a th:href="@{/common/landlord}" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);">发布房源</a>
-        <a th:if="${session.currUser.userType == 0}" href="/manager/info" class="info" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);"><img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/><span th:text="${session.currUser.username}"/></a>
+        <a th:if="${session.currUser.userType == 0}" href="/manager/index" class="info" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);"><img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/><span th:text="${session.currUser.username}"/></a>
         <a th:if="${session.currUser.userType == 1}" href="/tenant/info" class="info" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);"><img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/><span th:text="${session.currUser.username}"/></a>
         <a th:if="${session.currUser.userType == 2}" href="/landlord/info" class="info" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);"><img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/><span th:text="${session.currUser.username}"/></a>
         &nbsp;&nbsp;<a th:href="@{/common/logout}" style="text-decoration: none;font-family:SimHei;color:rgba(0,0,0,0.69);">注销</a>

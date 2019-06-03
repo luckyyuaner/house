@@ -1,0 +1,288 @@
+2019-06-04 00:02:20.470 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2520 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:02:20.488 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:03:09.618 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:03:11.155 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:03:11.231 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:03:15.804 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:03:18.637 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 69.144 seconds (JVM running for 216.811)
+2019-06-04 00:03:46.254 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-06-04 00:03:46.276 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-06-04 00:03:50.751 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:03:51.495 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-04 00:03:54.356 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-04 00:04:00.352 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:04:09.870 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_4
+2019-06-04 00:04:09.966 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_4
+2019-06-04 00:04:09.977 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_4
+2019-06-04 00:04:10.026 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_4
+2019-06-04 00:05:44.644 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14948 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:05:44.779 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:05:53.467 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:05:53.865 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:05:53.923 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:05:59.576 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:06:01.580 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 21.66 seconds (JVM running for 29.178)
+2019-06-04 00:06:22.220 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-06-04 00:06:22.237 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-06-04 00:06:25.979 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:06:26.102 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-04 00:06:26.766 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-04 00:06:28.943 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:06:32.434 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_4
+2019-06-04 00:06:32.460 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_4
+2019-06-04 00:06:32.466 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_4
+2019-06-04 00:06:32.487 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_4
+2019-06-04 00:09:29.125 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 9584 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:09:29.147 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:09:36.637 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:09:37.299 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:09:37.324 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:09:41.032 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:09:42.614 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.361 seconds (JVM running for 19.561)
+2019-06-04 00:10:47.287 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional epoll library
+2019-06-04 00:10:47.300 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional kqueue library
+2019-06-04 00:10:49.624 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:10:49.797 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-4] - HikariPool-1 - Starting...
+2019-06-04 00:10:50.227 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-4] - HikariPool-1 - Start completed.
+2019-06-04 00:10:51.742 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:10:55.316 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_4
+2019-06-04 00:10:55.379 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_4
+2019-06-04 00:10:55.392 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_4
+2019-06-04 00:10:55.441 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_4
+2019-06-04 00:13:12.060 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16616 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:13:12.068 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:13:19.723 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:13:20.504 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:13:20.550 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:13:23.928 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:18:09.022 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13468 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:18:09.027 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:18:18.839 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:18:20.376 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:18:20.520 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:18:24.922 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:18:26.542 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 18.337 seconds (JVM running for 25.042)
+2019-06-04 00:18:42.066 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-06-04 00:18:42.087 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-06-04 00:18:44.583 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:18:44.938 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-04 00:18:45.364 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-04 00:18:46.418 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:18:46.719 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:18:46.725 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:18:50.339 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_4
+2019-06-04 00:18:50.393 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_4
+2019-06-04 00:18:50.403 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_4
+2019-06-04 00:18:50.480 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_4
+2019-06-04 00:20:30.287 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16668 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:20:30.296 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:20:36.768 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:20:37.173 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:20:37.193 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:20:38.780 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:20:40.811 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 11.83 seconds (JVM running for 15.775)
+2019-06-04 00:21:14.703 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional epoll library
+2019-06-04 00:21:14.719 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional kqueue library
+2019-06-04 00:21:17.533 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:21:17.933 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-4] - HikariPool-1 - Starting...
+2019-06-04 00:21:18.734 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-4] - HikariPool-1 - Start completed.
+2019-06-04 00:21:20.086 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:21:23.881 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_4
+2019-06-04 00:21:23.923 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_4
+2019-06-04 00:21:23.930 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_4
+2019-06-04 00:21:23.982 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_4
+2019-06-04 00:26:18.738 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5076 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:26:18.745 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:26:28.377 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:26:29.198 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:26:29.238 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:26:33.001 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:26:35.168 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.313 seconds (JVM running for 22.042)
+2019-06-04 00:27:26.355 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-06-04 00:27:26.369 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-06-04 00:27:28.103 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:27:28.285 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-04 00:27:28.692 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-04 00:27:29.835 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:27:33.584 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_4
+2019-06-04 00:27:33.601 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_4
+2019-06-04 00:27:33.606 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_4
+2019-06-04 00:27:33.626 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_4
+2019-06-04 00:29:41.755 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2316 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 00:29:41.765 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 00:29:49.954 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:29:50.679 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:29:50.721 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 00:29:53.978 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 00:29:56.300 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.914 seconds (JVM running for 20.699)
+2019-06-04 00:30:02.929 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional epoll library
+2019-06-04 00:30:02.937 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional kqueue library
+2019-06-04 00:30:05.833 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:30:05.996 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-06-04 00:30:06.576 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-06-04 00:30:07.581 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:30:12.212 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_4
+2019-06-04 00:30:12.251 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_4
+2019-06-04 00:30:12.263 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_4
+2019-06-04 00:30:12.743 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_4
+2019-06-04 00:30:43.458 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:30:43.475 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_1
+2019-06-04 00:30:43.867 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_1
+2019-06-04 00:30:43.929 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-04 00:30:43.982 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-04 00:30:43.995 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-04 00:30:44.025 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-04 00:30:44.038 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-04 00:30:44.094 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-04 00:30:52.819 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:30:53.340 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-04 00:30:53.354 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在houses_collect_hids_12
+2019-06-04 00:30:53.409 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加houses_collect_hids_12
+2019-06-04 00:30:58.302 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_4
+2019-06-04 00:30:58.348 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_4
+2019-06-04 00:30:58.361 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_4
+2019-06-04 00:30:58.398 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_4
+2019-06-04 00:30:58.409 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在houses_collect_hids_12
+2019-06-04 00:31:37.583 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:31:51.564 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:31:51.593 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_12_number_1
+2019-06-04 00:31:51.638 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_12_number_1
+2019-06-04 00:31:51.653 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_2
+2019-06-04 00:31:51.705 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_2
+2019-06-04 00:31:51.722 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_2
+2019-06-04 00:31:51.753 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_2
+2019-06-04 00:31:51.766 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_12
+2019-06-04 00:31:51.793 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_12
+2019-06-04 00:31:55.213 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:31:55.236 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contracts_user_12_number_2
+2019-06-04 00:31:55.294 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contracts_user_12_number_2
+2019-06-04 00:31:55.304 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_1
+2019-06-04 00:31:55.326 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_1
+2019-06-04 00:31:55.335 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_1
+2019-06-04 00:31:55.352 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_1
+2019-06-04 00:31:55.359 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在user_12
+2019-06-04 00:31:58.134 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:31:58.149 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_3
+2019-06-04 00:31:58.186 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_3
+2019-06-04 00:31:58.199 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_4
+2019-06-04 00:31:58.230 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_4
+2019-06-04 00:31:58.241 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_4
+2019-06-04 00:31:58.306 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_4
+2019-06-04 00:31:58.317 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在user_12
+2019-06-04 00:32:05.368 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:32:05.378 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-04 00:32:05.404 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-04 00:32:05.411 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-06-04 00:32:05.442 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-06-04 00:32:05.453 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_2
+2019-06-04 00:32:05.491 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_2
+2019-06-04 00:32:05.499 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-04 00:32:05.522 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-04 00:32:08.334 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:32:08.351 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contracts_user_12_number_2
+2019-06-04 00:32:08.389 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contracts_user_12_number_2
+2019-06-04 00:32:08.401 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_1
+2019-06-04 00:32:08.453 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_1
+2019-06-04 00:32:08.463 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_1
+2019-06-04 00:32:08.485 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_1
+2019-06-04 00:32:08.504 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在user_12
+2019-06-04 00:32:11.737 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:32:11.753 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_12_number_3
+2019-06-04 00:32:11.793 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_12_number_3
+2019-06-04 00:32:11.804 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_4
+2019-06-04 00:32:11.841 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_4
+2019-06-04 00:32:11.852 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_4
+2019-06-04 00:32:13.622 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_4
+2019-06-04 00:32:13.635 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_12
+2019-06-04 00:32:17.633 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:32:17.651 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contract_4
+2019-06-04 00:32:17.682 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contract_4
+2019-06-04 00:32:17.693 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在house_4
+2019-06-04 00:32:17.750 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在user_house_4
+2019-06-04 00:32:17.770 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在houses_collect_hids_12
+2019-06-04 00:32:17.790 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加houses_collect_hids_12
+2019-06-04 00:33:04.860 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:33:04.871 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contract_4
+2019-06-04 00:33:04.894 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contract_4
+2019-06-04 00:33:05.042 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:33:05.054 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中存在contract_4
+2019-06-04 00:33:05.070 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_4
+2019-06-04 00:33:05.098 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_4
+2019-06-04 00:33:05.114 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_4
+2019-06-04 00:33:05.135 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_4
+2019-06-04 00:33:05.146 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_collect_hids_12
+2019-06-04 00:33:05.165 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_collect_hids_12
+2019-06-04 00:33:54.968 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:33:54.977 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contract_4
+2019-06-04 00:33:54.998 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contract_4
+2019-06-04 00:33:55.115 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中删除contract_4
+2019-06-04 00:34:46.737 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:34:46.756 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_user_12_number_1
+2019-06-04 00:34:46.836 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_user_12_number_1
+2019-06-04 00:34:46.845 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_2
+2019-06-04 00:34:46.884 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_2
+2019-06-04 00:34:46.903 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_2
+2019-06-04 00:34:46.960 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_2
+2019-06-04 00:34:46.970 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_12
+2019-06-04 00:34:47.021 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_12
+2019-06-04 00:34:50.824 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:34:50.838 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contract_1
+2019-06-04 00:34:50.864 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contract_1
+2019-06-04 00:34:50.873 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在house_2
+2019-06-04 00:34:50.892 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在user_house_2
+2019-06-04 00:34:50.909 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在houses_collect_hids_12
+2019-06-04 00:34:50.956 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加houses_collect_hids_12
+2019-06-04 00:34:55.568 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:34:55.583 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_12_number_2
+2019-06-04 00:34:55.623 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_12_number_2
+2019-06-04 00:34:55.633 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_1
+2019-06-04 00:34:55.659 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_1
+2019-06-04 00:34:55.670 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_1
+2019-06-04 00:34:55.692 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_1
+2019-06-04 00:34:55.701 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在user_12
+2019-06-04 00:34:59.260 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:34:59.275 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_12_number_3
+2019-06-04 00:34:59.315 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_12_number_3
+2019-06-04 00:34:59.324 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_4
+2019-06-04 00:34:59.349 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_4
+2019-06-04 00:34:59.357 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_4
+2019-06-04 00:34:59.374 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_4
+2019-06-04 00:34:59.382 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_12
+2019-06-04 00:34:59.400 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_12
+2019-06-04 00:35:01.348 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:35:01.366 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contract_4
+2019-06-04 00:35:01.392 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contract_4
+2019-06-04 00:35:01.402 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在house_4
+2019-06-04 00:35:01.425 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_house_4
+2019-06-04 00:35:01.454 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_collect_hids_12
+2019-06-04 00:35:01.474 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_collect_hids_12
+2019-06-04 00:35:56.777 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:35:56.792 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contract_4
+2019-06-04 00:35:56.835 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contract_4
+2019-06-04 00:35:56.996 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中删除contract_4
+2019-06-04 00:36:13.029 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:36:13.040 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_12_number_1
+2019-06-04 00:36:13.077 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_12_number_1
+2019-06-04 00:36:13.089 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-06-04 00:36:13.123 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-06-04 00:36:13.132 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_2
+2019-06-04 00:36:13.148 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_2
+2019-06-04 00:36:13.156 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_12
+2019-06-04 00:36:13.172 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_12
+2019-06-04 00:36:15.357 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:36:15.377 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_user_12_number_2
+2019-06-04 00:36:15.409 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_user_12_number_2
+2019-06-04 00:36:15.419 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_1
+2019-06-04 00:36:15.438 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_1
+2019-06-04 00:36:15.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_1
+2019-06-04 00:36:15.464 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_1
+2019-06-04 00:36:15.472 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中存在user_12
+2019-06-04 00:36:18.018 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 00:36:18.031 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_12_number_3
+2019-06-04 00:36:18.064 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_12_number_3
+2019-06-04 00:36:18.073 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_4
+2019-06-04 00:36:18.094 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_4
+2019-06-04 00:36:18.103 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_4
+2019-06-04 00:36:18.122 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_4
+2019-06-04 00:36:18.131 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在user_12
+2019-06-04 00:36:31.085 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]

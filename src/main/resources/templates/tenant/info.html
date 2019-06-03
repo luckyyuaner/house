@@ -13,7 +13,7 @@
 <div th:replace="fragments/header :: header">...</div>
 <div class="left">
     <ul class="menu">
-        <li><a><img src="/images/step3.jpg" />合同管理</a></li>
+        <li><a th:href="@{/tenant/showContracts?(number=1)}"><img src="/images/step3.jpg" />合同管理</a></li>
         <li><a><img src="/images/icon1.png" />评价管理</a></li>
         <li><a><img src="/images/icon9.png" />反馈管理</a></li>
         <li><a th:href="@{/tenant/showCollect}"><img src="/images/like.png" />收藏管理</a></li>

@@ -99,7 +99,7 @@
                 电话号码：<span th:text="${landlord.phone}"/>
                 信誉值：<span th:text="${landlord.reputation}"/>分
             </p><br/>
-            <div class="the-imgs">
+            <div class="the-imgs" th:if='${contract.landlordInfo != null && contract.landlordInfo != "" }'>
                 <div th:each='url:${contract.landlordInfo.split(",")}'>
                     <img class="imgs" th:src="@{/file/{imgname}(imgname=${url})}"/>
                 </div>
@@ -116,7 +116,7 @@
                 电话号码：<span th:text="${tenant.phone}"/>
                 信誉值：<span th:text="${tenant.reputation}"/>分
             </p><br/>
-            <div class="the-imgs">
+            <div class="the-imgs" th:if='${contract.tenantInfo != null && contract.tenantInfo != "" }'>
                 <div th:each='url:${contract.tenantInfo.split(",")}'>
                     <img class="imgs" th:src="@{/file/{imgname}(imgname=${url})}"/>
                 </div>

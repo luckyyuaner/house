@@ -1406,3 +1406,851 @@ java.lang.NullPointerException: null
 2019-06-03 16:09:52.886 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_collect_hids_12
 2019-06-03 16:09:52.907 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_collect_hids_12
 2019-06-03 16:10:36.233 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 18:55:17.329 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 280 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 18:55:17.350 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 18:55:51.665 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 18:55:52.640 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 18:55:52.686 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 18:55:56.471 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 18:55:59.584 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 47.806 seconds (JVM running for 70.41)
+2019-06-03 18:56:48.508 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-06-03 18:56:48.538 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-06-03 18:56:53.377 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-03 18:56:54.260 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-06-03 18:57:00.465 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-06-03 18:57:08.807 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-03 18:57:46.534 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 18:57:46.570 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 18:57:46.843 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 18:57:46.856 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_1
+2019-06-03 18:57:46.887 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_1
+2019-06-03 18:57:46.895 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_1
+2019-06-03 18:57:46.949 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_1
+2019-06-03 19:23:29.855 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 776 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 19:23:29.867 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 19:23:37.810 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:23:38.503 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:23:38.540 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:23:41.689 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 19:23:43.646 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.27 seconds (JVM running for 20.885)
+2019-06-03 19:24:42.667 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-03 19:24:44.011 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-03 19:24:48.339 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 19:24:49.109 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional epoll library
+2019-06-03 19:24:49.121 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional kqueue library
+2019-06-03 19:24:53.111 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 19:24:53.331 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 19:24:53.344 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_1
+2019-06-03 19:24:53.433 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_1
+2019-06-03 19:24:53.451 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_1
+2019-06-03 19:24:53.481 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_1
+2019-06-03 19:24:53.959 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-10] - [THYMELEAF][http-nio-8888-exec-10] Exception processing template "/tenant/info": An error happened during template parsing (template: "class path resource [templates//tenant/info.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/info.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tenantContractPOJO.contract.landlordInfo.split(",")" (template: "/tenant/info" - line 223, col 26)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tenantContractPOJO.contract.landlordInfo.split(",")" (template: "/tenant/info" - line 223, col 26)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method split(java.lang.String) on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 91 common frames omitted
+2019-06-03 19:24:53.974 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-10] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/info.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method split(java.lang.String) on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-03 19:30:33.976 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10444 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 19:30:33.985 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 19:30:41.032 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:30:41.733 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:30:41.770 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:30:44.904 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 19:30:46.718 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.316 seconds (JVM running for 19.702)
+2019-06-03 19:35:30.652 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-06-03 19:35:31.426 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-06-03 19:35:38.514 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 19:35:39.129 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional epoll library
+2019-06-03 19:35:39.138 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional kqueue library
+2019-06-03 19:35:42.950 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 19:35:43.317 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 19:35:43.333 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_1
+2019-06-03 19:35:43.393 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_1
+2019-06-03 19:35:43.399 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_1
+2019-06-03 19:35:43.421 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_1
+2019-06-03 19:35:43.888 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-2] - [THYMELEAF][http-nio-8888-exec-2] Exception processing template "/tenant/info": An error happened during template parsing (template: "class path resource [templates//tenant/info.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/info.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tenantContractPOJO.contract.landlordInfo.split(",")" (template: "/tenant/info" - line 223, col 137)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tenantContractPOJO.contract.landlordInfo.split(",")" (template: "/tenant/info" - line 223, col 137)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method split(java.lang.String) on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 91 common frames omitted
+2019-06-03 19:35:43.907 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-2] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/info.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method split(java.lang.String) on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-03 19:38:18.590 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12532 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 19:38:18.597 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 19:38:25.767 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:38:26.491 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:38:26.532 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:38:29.757 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 19:38:31.522 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.327 seconds (JVM running for 19.655)
+2019-06-03 19:40:17.095 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-06-03 19:40:17.722 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-06-03 19:40:24.744 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 19:40:25.846 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-03 19:40:25.858 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-03 19:40:29.890 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 19:40:30.125 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 19:40:30.143 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_1
+2019-06-03 19:40:30.201 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_1
+2019-06-03 19:40:30.214 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_1
+2019-06-03 19:40:30.258 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_1
+2019-06-03 19:54:51.171 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15788 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 19:54:51.178 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 19:54:59.653 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:55:00.385 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:55:00.441 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:55:03.705 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 19:55:05.510 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.672 seconds (JVM running for 21.229)
+2019-06-03 19:55:57.595 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13880 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 19:55:57.624 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 19:56:05.980 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:56:06.768 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:56:06.818 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 19:56:10.789 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 19:56:12.769 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.597 seconds (JVM running for 23.39)
+2019-06-03 19:57:22.134 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-03 19:57:23.299 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-03 19:57:27.257 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 19:57:27.937 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 19:57:27.948 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 19:57:31.917 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 19:57:32.169 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 19:57:32.182 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_1
+2019-06-03 19:57:32.555 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_1
+2019-06-03 19:57:32.564 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_1
+2019-06-03 19:57:32.595 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_1
+2019-06-03 19:57:32.603 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-03 19:57:32.625 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-03 20:03:39.971 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 176 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 20:03:39.979 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 20:03:50.169 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:03:51.171 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:03:51.214 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:03:54.351 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 20:03:55.842 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.062 seconds (JVM running for 22.304)
+2019-06-03 20:04:23.247 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-03 20:04:24.086 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-03 20:04:27.917 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 20:04:28.673 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-06-03 20:04:28.682 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-06-03 20:04:32.179 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 20:04:32.357 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 20:04:32.364 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_1
+2019-06-03 20:04:32.397 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_1
+2019-06-03 20:04:32.403 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_1
+2019-06-03 20:04:32.424 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_1
+2019-06-03 20:04:32.430 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_12
+2019-06-03 20:04:32.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_12
+2019-06-03 20:04:35.944 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 20:04:35.962 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在contracts_user_12_number_1
+2019-06-03 20:04:36.001 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在house_1
+2019-06-03 20:04:36.023 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_house_1
+2019-06-03 20:04:36.041 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_12
+2019-06-03 20:06:09.995 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10620 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 20:06:10.006 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 20:06:17.350 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:06:18.673 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:06:18.808 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:06:23.170 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 20:06:25.418 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.642 seconds (JVM running for 21.006)
+2019-06-03 20:06:53.515 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-03 20:06:54.691 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-03 20:06:57.032 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 20:06:57.686 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 20:06:57.692 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 20:07:01.166 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 20:07:01.355 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 20:07:01.366 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_1
+2019-06-03 20:07:01.420 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_1
+2019-06-03 20:07:01.431 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_1
+2019-06-03 20:07:01.494 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_1
+2019-06-03 20:07:01.502 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-03 20:07:01.561 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-03 20:14:00.485 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1120 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 20:14:00.495 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 20:14:09.021 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:14:09.764 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:14:09.803 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:14:13.453 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 20:14:15.657 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.721 seconds (JVM running for 22.691)
+2019-06-03 20:15:28.491 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-06-03 20:15:29.821 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-06-03 20:15:35.699 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 20:15:36.802 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-03 20:15:36.817 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-03 20:15:40.012 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 20:15:40.211 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 20:15:40.220 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_1
+2019-06-03 20:15:40.259 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_1
+2019-06-03 20:15:40.265 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_1
+2019-06-03 20:15:40.286 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_1
+2019-06-03 20:15:40.293 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-03 20:15:40.387 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-03 20:56:04.818 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 9720 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 20:56:04.848 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 20:56:31.956 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:56:33.541 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:56:33.593 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 20:56:42.317 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 20:56:46.576 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 45.736 seconds (JVM running for 63.907)
+2019-06-03 21:05:26.264 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10936 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 21:05:26.272 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 21:05:33.377 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:05:33.875 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:05:33.903 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:05:35.968 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 21:05:37.839 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.421 seconds (JVM running for 20.406)
+2019-06-03 21:07:23.665 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-03 21:07:26.524 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-03 21:07:32.393 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:07:34.137 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-06-03 21:07:34.146 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-06-03 21:07:41.517 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 21:07:42.352 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 21:07:44.279 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_1
+2019-06-03 21:07:44.480 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_1
+2019-06-03 21:07:44.490 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_1
+2019-06-03 21:07:44.521 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_1
+2019-06-03 21:07:44.531 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_12
+2019-06-03 21:07:44.551 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_12
+2019-06-03 21:11:54.487 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11520 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 21:11:54.495 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 21:12:01.393 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:12:02.113 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:12:02.156 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:12:05.329 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 21:12:07.121 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.457 seconds (JVM running for 20.189)
+2019-06-03 21:13:19.095 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-06-03 21:13:20.079 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-06-03 21:13:23.636 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:13:24.337 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-03 21:13:24.345 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-03 21:13:28.260 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 21:13:28.662 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 21:13:28.670 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_1
+2019-06-03 21:13:28.710 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_1
+2019-06-03 21:13:28.716 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_1
+2019-06-03 21:13:28.732 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_1
+2019-06-03 21:13:28.740 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-03 21:13:28.756 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-03 21:18:43.784 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11924 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 21:18:43.806 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 21:18:51.900 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:18:52.661 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:18:52.703 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:18:55.889 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 21:18:57.833 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.535 seconds (JVM running for 20.615)
+2019-06-03 21:19:54.208 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-03 21:19:55.124 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-03 21:19:58.153 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:19:58.842 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 21:19:58.852 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 21:20:01.941 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 21:20:02.069 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 21:20:02.076 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_1
+2019-06-03 21:20:02.106 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_1
+2019-06-03 21:20:02.111 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_1
+2019-06-03 21:20:02.128 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_1
+2019-06-03 21:20:02.134 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-03 21:20:02.148 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-03 21:24:14.132 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 4444 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 21:24:14.139 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 21:24:20.313 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:24:21.272 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:24:21.453 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:24:26.673 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 21:24:28.357 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.565 seconds (JVM running for 20.76)
+2019-06-03 21:31:36.996 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2256 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 21:31:37.004 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 21:31:44.013 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:31:44.679 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:31:44.720 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:31:47.740 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 21:31:49.512 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.885 seconds (JVM running for 19.014)
+2019-06-03 21:32:43.917 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-03 21:32:44.794 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-03 21:32:50.523 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:32:51.062 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 21:32:51.068 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 21:32:54.758 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 21:32:54.962 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 21:32:54.971 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_1
+2019-06-03 21:32:55.011 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_1
+2019-06-03 21:32:55.018 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_1
+2019-06-03 21:32:55.045 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_1
+2019-06-03 21:32:55.055 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-03 21:32:55.074 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-03 21:36:20.145 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 3568 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 21:36:20.156 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 21:36:28.039 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:36:28.719 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:36:28.768 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 21:36:31.685 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 21:36:33.380 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.745 seconds (JVM running for 20.106)
+2019-06-03 21:36:57.562 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-03 21:36:58.382 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-03 21:37:02.343 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:37:03.164 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 21:37:03.180 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 21:37:06.466 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 21:37:06.610 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 21:37:06.616 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-06-03 21:37:06.697 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-06-03 21:37:06.701 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_2
+2019-06-03 21:37:06.718 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_2
+2019-06-03 21:37:06.725 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-03 21:37:06.738 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-03 21:37:17.772 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:37:17.807 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_2
+2019-06-03 21:37:17.896 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_2
+2019-06-03 21:37:17.905 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_1
+2019-06-03 21:37:17.939 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_1
+2019-06-03 21:37:17.947 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_1
+2019-06-03 21:37:17.979 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_1
+2019-06-03 21:37:17.985 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-03 21:37:18.007 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-03 21:37:22.729 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 21:37:22.741 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 21:37:22.795 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 21:37:22.857 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-03 21:37:22.884 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-03 21:37:22.891 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-06-03 21:37:22.928 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-06-03 21:37:22.936 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_12
+2019-06-03 22:35:10.621 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15420 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 22:35:10.651 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 22:35:32.959 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:35:33.854 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:35:33.923 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:35:37.872 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 22:35:40.286 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 33.137 seconds (JVM running for 49.788)
+2019-06-03 22:36:54.243 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-03 22:36:55.316 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-03 22:36:58.671 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:37:00.027 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-03 22:37:00.050 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-03 22:37:04.593 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 22:37:04.949 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 22:37:04.959 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-03 22:37:05.898 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-03 22:37:05.910 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-03 22:37:05.945 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-03 22:37:05.956 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-03 22:37:05.984 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-03 22:37:20.270 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:37:20.289 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 22:37:20.340 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 22:37:20.350 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-03 22:37:20.403 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-03 22:37:20.413 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-03 22:37:20.447 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-03 22:37:20.459 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_12
+2019-06-03 22:37:20.489 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_12
+2019-06-03 22:37:27.517 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:37:27.529 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_12_number_2
+2019-06-03 22:37:27.577 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_12_number_2
+2019-06-03 22:37:27.589 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_1
+2019-06-03 22:37:27.614 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_1
+2019-06-03 22:37:27.624 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_1
+2019-06-03 22:37:27.653 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_1
+2019-06-03 22:37:27.664 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在user_12
+2019-06-03 22:37:33.405 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:37:33.414 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contract_3
+2019-06-03 22:37:33.440 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contract_3
+2019-06-03 22:37:33.448 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在house_1
+2019-06-03 22:37:33.467 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在user_house_1
+2019-06-03 22:37:33.488 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在houses_collect_hids_12
+2019-06-03 22:37:33.545 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加houses_collect_hids_12
+2019-06-03 22:46:43.949 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15808 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 22:46:43.958 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 22:46:51.129 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:46:51.811 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:46:51.850 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:46:55.120 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 22:46:57.199 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.092 seconds (JVM running for 20.912)
+2019-06-03 22:47:41.890 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-03 22:47:42.815 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-03 22:47:46.445 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:47:47.542 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 22:47:47.558 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 22:47:50.577 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 22:47:50.715 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 22:47:50.725 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-06-03 22:47:50.757 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-06-03 22:47:50.763 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_2
+2019-06-03 22:47:50.778 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_2
+2019-06-03 22:47:50.787 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-03 22:47:50.803 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-03 22:47:57.657 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:47:57.673 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_12_number_2
+2019-06-03 22:47:57.724 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_12_number_2
+2019-06-03 22:47:57.737 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_1
+2019-06-03 22:47:57.777 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_1
+2019-06-03 22:47:57.790 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_1
+2019-06-03 22:47:57.824 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_1
+2019-06-03 22:47:57.837 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在user_12
+2019-06-03 22:48:05.621 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:48:05.637 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_12_number_1
+2019-06-03 22:48:05.681 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_12_number_1
+2019-06-03 22:48:05.693 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-03 22:48:05.743 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-03 22:48:05.754 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-06-03 22:48:06.098 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-06-03 22:48:06.110 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_12
+2019-06-03 22:48:06.182 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_12
+2019-06-03 22:48:08.922 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:48:08.935 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_12_number_2
+2019-06-03 22:48:08.981 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_12_number_2
+2019-06-03 22:48:08.990 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_1
+2019-06-03 22:48:09.020 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_1
+2019-06-03 22:48:09.027 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_1
+2019-06-03 22:48:09.052 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_1
+2019-06-03 22:48:09.063 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在user_12
+2019-06-03 22:48:13.297 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-03 22:48:13.313 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contract_3
+2019-06-03 22:48:13.347 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contract_3
+2019-06-03 22:48:13.360 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在house_1
+2019-06-03 22:48:13.384 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_house_1
+2019-06-03 22:48:13.403 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_collect_hids_12
+2019-06-03 22:48:13.427 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_collect_hids_12
+2019-06-03 22:51:52.090 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15388 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 22:51:52.098 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 22:52:03.496 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:52:04.441 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:52:04.484 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:52:07.531 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 22:52:08.712 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 17.945 seconds (JVM running for 23.673)
+2019-06-03 22:52:28.003 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-03 22:52:28.682 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-03 22:52:34.177 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-03 22:52:34.186 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-03 22:52:37.985 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-03 22:52:38.892 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-03 22:52:38.899 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_collect_hids_12
+2019-06-03 22:52:38.911 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_collect_hids_12
+2019-06-03 22:52:46.002 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_4
+2019-06-03 22:52:46.033 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_4
+2019-06-03 22:52:46.042 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_4
+2019-06-03 22:52:46.081 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_4
+2019-06-03 22:52:46.097 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在houses_collect_hids_12
+2019-06-03 22:55:10.198 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13680 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-03 22:55:10.206 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-03 22:55:18.849 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:55:19.598 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:55:19.645 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-03 22:55:22.862 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-03 22:55:24.753 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.844 seconds (JVM running for 21.578)
+2019-06-03 22:55:56.351 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional epoll library
+2019-06-03 22:55:56.361 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-2] - Starting without optional kqueue library
+2019-06-03 22:55:58.848 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-03 22:55:59.013 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-06-03 22:55:59.535 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-06-03 22:56:00.469 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-03 22:56:04.598 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_4
+2019-06-03 22:56:04.627 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_4
+2019-06-03 22:56:04.634 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_4
+2019-06-03 22:56:04.669 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_4

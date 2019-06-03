@@ -1,12 +1,18 @@
 package com.yuan.house.service.impl;
 
 import com.yuan.house.config.websocket.WebSocketConfig;
+import com.yuan.house.constants.Constants;
 import com.yuan.house.dao.ContractDao;
 import com.yuan.house.model.Contract;
+import com.yuan.house.model.User;
 import com.yuan.house.service.CommonService;
 import com.yuan.house.service.ContractService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  *
@@ -41,6 +47,40 @@ public class ContractServiceImpl implements ContractService {
         contract.setType(0);
         contract.setStatus(0);
         contractDao.createNewContractByTenant(contract);
+    }
+
+    @Override
+    public int updateContractByTenant(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setTenantOperation(2);
+        contract.setType(0);
+        contract.setStatus(0);
+        contract.setLandlordOperation(0);
+        return contractDao.updateContractByTenant(contract);
+    }
+
+    @Override
+    public List<Contract> queryContractsByTenant(int number) {
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        String key = "contracts_user_"+user.getUserId()+"_number_" + number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Contract>)rs;
+        }
+        List<Contract> cs = contractDao.queryContractsByTenant(user.getUserId());
+        commonService.insertRedis(key, cs);
+        return cs;
+    }
+
+    @Override
+    public int deleteContractById(Long cid) {
+        String key = "contract_" + cid;
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        return contractDao.deleteContract(cid);
     }
 
 }

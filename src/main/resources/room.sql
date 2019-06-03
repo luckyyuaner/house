@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2019-06-03 16:11:38
+Date: 2019-06-04 00:37:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -94,13 +94,13 @@ CREATE TABLE `contract` (
   KEY `c_hid_f` (`house_id`),
   CONSTRAINT `c_hid_f` FOREIGN KEY (`house_id`) REFERENCES `house` (`house_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `c_uid_f` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of contract
 -- ----------------------------
-INSERT INTO `contract` VALUES ('1', '2', '4', '2019-05-27 00:00:00', '2019-08-27 00:00:00', '2019-05-26 19:47:34', '2019-05-29 22:20:29', '2', '2', '0', '1', 'dab1d6fa-8197-4543-a0c3-080488f5f818.pdf', '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg', '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg');
-INSERT INTO `contract` VALUES ('3', '1', '12', '2019-06-05 00:00:00', '2019-07-20 00:00:00', '2019-06-03 16:10:36', '2019-06-03 16:10:36', '0', '2', '0', '0', null, null, '37523b04-7eab-4710-86b6-fd7b5cf168f3.jpg,799b3430-23c7-49cb-ae89-ce166a3db84d.jpg,41ba7314-b326-410f-9f10-99c52fc5b487.jpg');
+INSERT INTO `contract` VALUES ('1', '2', '12', '2019-05-27 00:00:00', '2019-08-27 00:00:00', '2019-05-26 19:47:34', '2019-06-03 21:33:54', '2', '2', '0', '1', 'dab1d6fa-8197-4543-a0c3-080488f5f818.pdf', '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg', '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg');
+INSERT INTO `contract` VALUES ('3', '1', '12', '2019-06-05 00:00:00', '2019-07-20 00:00:00', '2019-06-03 16:10:36', '2019-06-03 19:53:45', '0', '2', '0', '0', null, '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg', '37523b04-7eab-4710-86b6-fd7b5cf168f3.jpg,799b3430-23c7-49cb-ae89-ce166a3db84d.jpg,41ba7314-b326-410f-9f10-99c52fc5b487.jpg');
 
 -- ----------------------------
 -- Table structure for feedback

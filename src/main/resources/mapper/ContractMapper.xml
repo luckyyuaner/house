@@ -33,4 +33,22 @@
         )
     </insert>
 
+    <select id="queryContractsByTenant" resultType="com.yuan.house.model.Contract">
+        SELECT
+        *
+        FROM contract
+        WHERE user_id = #{uid}
+    </select>
+
+    <delete id="deleteContract" parameterType="Long">
+        DELETE FROM contract WHERE contract_id = #{id}
+    </delete>
+
+    <update id="updateContractByTenant" parameterType="com.yuan.house.model.Contract">
+        UPDATE contract
+        SET stime = #{object.stime}, etime = #{object.etime},landlord_operation = #{object.landlordOperation},
+        tenant_operation = #{object.tenantOperation}, type = #{object.type},
+        status = #{object.status}, tenant_info = #{object.tenantInfo}
+        WHERE contract_id = #{object.contractId}
+    </update>
 </mapper>
