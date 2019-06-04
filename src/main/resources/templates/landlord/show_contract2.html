@@ -87,7 +87,7 @@
                 <span th:if="${contract.status == 7}">退款处理中</span>
                 <span th:if="${contract.status == 8}">毁约结束</span>
             </p>
-            <p><a th:href="@{/common/landlord/contract/download?(url=${contract.file})}">下载合同</a></p>
+            <p><a th:href="@{/contract/download?(url=${contract.file})}">下载合同</a></p>
         </div>
         <div class="tenant-box">
             <p><a>

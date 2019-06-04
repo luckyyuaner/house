@@ -38,6 +38,20 @@
         *
         FROM contract
         WHERE user_id = #{uid}
+        <if test="sta == 0">
+            and status = 0
+        </if>
+        <if test="sta == 1">
+            and (
+            status = 1 or status = 2 or status = 3 or
+            status = 4 or status = 5
+            )
+        </if>
+        <if test="sta == 2">
+            and (
+            status = 6 or status = 7 or status = 8
+            )
+        </if>
     </select>
 
     <select id="queryContractsByLandlord" resultType="com.yuan.house.model.Contract">

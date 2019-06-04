@@ -155,8 +155,8 @@ public class LandlordController extends BaseController {
         return new ModelAndView("/landlord/show_contract2", "Model", model);
     }
 
-    //@RequiresPermissions("contract:read")
-    @RequestMapping("/common/landlord/contract/download")
+    @RequiresPermissions("contract:read")
+    @RequestMapping("/contract/download")
     public void contractDownload(HttpServletResponse res, @RequestParam("url")String url) {
         res.setContentType("application/octet-stream");
         res.setHeader("content-type", "application/octet-stream");

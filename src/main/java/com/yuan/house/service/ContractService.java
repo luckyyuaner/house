@@ -34,7 +34,7 @@ public interface ContractService {
      * @param number
      * @return
      */
-    List<Contract> queryContractsByTenant(int number);
+    List<Contract> queryContractsByTenant(int number, int sta);
 
     /**
      * 分页查询房东的合同

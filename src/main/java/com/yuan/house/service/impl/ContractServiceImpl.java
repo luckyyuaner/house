@@ -108,15 +108,15 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
-    public List<Contract> queryContractsByTenant(int number) {
+    public List<Contract> queryContractsByTenant(int number, int sta) {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
-        String key = "contracts_user_"+user.getUserId()+"_number_" + number;
+        String key = "contracts_tenant_"+user.getUserId()+"_number_" + number +"_sta_" + sta;
         Object rs = commonService.queryRedis(key);
         if(null != rs) {
             return (List<Contract>)rs;
         }
-        List<Contract> cs = contractDao.queryContractsByTenant(user.getUserId());
+        List<Contract> cs = contractDao.queryContractsByTenant(user.getUserId(), sta);
         commonService.insertRedis(key, cs);
         return cs;
     }

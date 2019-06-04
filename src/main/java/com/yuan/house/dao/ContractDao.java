@@ -26,7 +26,7 @@ public interface ContractDao {
 
     int updateContractByManagerWithRefuse(@Param("object") Contract object);
 
-    List<Contract> queryContractsByTenant(@Param("uid") Long uid);
+    List<Contract> queryContractsByTenant(@Param("uid") Long uid,@Param("sta") int sta);
 
     List<Contract> queryContractsByLandlord(@Param("uid") Long uid);
 

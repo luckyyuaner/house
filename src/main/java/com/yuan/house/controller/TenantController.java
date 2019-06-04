@@ -200,9 +200,10 @@ public class TenantController extends BaseController {
 
     @RequiresPermissions("contract:read")
     @RequestMapping("/tenant/showContracts")
-    public ModelAndView showContracts(Model model, int number) {
+    public ModelAndView showContracts(Model model, int number, int sta) {
+        model.addAttribute("sta", sta);
         PageHelper.startPage(number, 1);
-        List<Contract> contracts = contractService.queryContractsByTenant(number);
+        List<Contract> contracts = contractService.queryContractsByTenant(number, sta);
         PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
         model.addAttribute("contractPageInfo", contractPageInfo);
         if (contracts != null && contracts.size() > 0) {
