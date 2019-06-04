@@ -40,6 +40,16 @@
         WHERE user_id = #{uid}
     </select>
 
+    <select id="queryContractsByLandlord" resultType="com.yuan.house.model.Contract">
+        SELECT
+        *
+        FROM contract
+        WHERE house_id in
+        (
+          select house_id from house where user_id = #{uid}
+        )
+    </select>
+
     <delete id="deleteContract" parameterType="Long">
         DELETE FROM contract WHERE contract_id = #{id}
     </delete>
@@ -49,6 +59,20 @@
         SET stime = #{object.stime}, etime = #{object.etime},landlord_operation = #{object.landlordOperation},
         tenant_operation = #{object.tenantOperation}, type = #{object.type},
         status = #{object.status}, tenant_info = #{object.tenantInfo}
+        WHERE contract_id = #{object.contractId}
+    </update>
+
+    <update id="updateContractByLandlordWithAgree" parameterType="com.yuan.house.model.Contract">
+        UPDATE contract
+        SET landlord_operation = #{object.landlordOperation},
+        type = #{object.type},status = #{object.status}, landlord_info = #{object.landlordInfo}
+        WHERE contract_id = #{object.contractId}
+    </update>
+
+    <update id="updateContractByLandlordWithRefuse" parameterType="com.yuan.house.model.Contract">
+        UPDATE contract
+        SET landlord_operation = #{object.landlordOperation},
+        type = #{object.type},status = #{object.status}
         WHERE contract_id = #{object.contractId}
     </update>
 </mapper>

@@ -1,0 +1,207 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /*background-image: url(/images/bg.jpg);*/
+}
+
+.clear-box {
+    clear: both;
+}
+.left-box {
+    float: left;
+    width:400px;
+    margin-left:80px;
+}
+.right-box {
+    float: left;
+    margin-left: 40px;
+    width:800px;
+    height:570px;
+    background-color: rgba(89, 151, 136, 0.76);
+}
+
+.house-box {
+    width: 400px;
+}
+.house-box .picbox{
+    width: 400px;
+    height: 400px;
+}
+.house-box .picbox .pics img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.house-box .pre {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    padding-top: 120px;
+}
+
+.house-box .box {
+    position: absolute;
+    z-index: -1;
+}
+
+.house-box .next {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    float: left;
+    z-index: 10;
+    margin-top: 130px;
+    margin-left: 260px;
+}
+
+.house-box .content {
+    width: 400px;
+    height:157px;
+    background-color: rgba(89, 151, 136, 0.76);
+    margin-top:0px;
+    padding-top:20px;
+}
+
+.house-box .content p {
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
+.contract-box p {
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
+.tenant-box p {
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
+.landlord-box p {
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+
+.head {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.the-imgs{
+    height:260px;
+    width:800px;
+}
+.the-imgs .imgs{
+    float:left;
+    height: 160px;
+    width:250px;
+    height:260px;
+    margin-left:10px;
+}
+.operate-box a{
+    display: inline-block;
+    width:100px;
+    height:32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    background-color: rgba(28, 52, 101, 0.62);
+    margin-top:10px;
+    margin-left:100px;
+    border:1px solid rgba(83, 137, 227, 0.61);
+    color:black;
+    text-decoration: none;
+}
+
+.page-box{
+    margin-top:10px;
+    margin-left:360px;
+    font-size: 20px;
+}
+.page-box .pre-box{
+    float:left;
+}
+.page-box .content-box{
+    float:left;
+    margin-left:10px;
+}
+.page-box .next-box{
+    float:left;
+    margin-left:10px;
+}
+
+.contract-info{
+    float:left;
+    margin-top:-580px;
+    width:100%;
+    height:600px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+}
+
+.contract-info p{
+    font-size: 16px;
+    color: white;
+    margin-left:400px;
+    opacity: 1;
+}
+.filespan{
+    float:left;
+    opacity: 1;
+    font-size: 20px;
+    margin-left:400px;
+    color:white;
+}
+.filebtn{
+    opacity: 1;
+    float:left;
+    font-size: 20px;
+    color:white;
+    margin-left:20px;
+}
+.fileinput-button {
+    opacity: 1;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color:white;
+}
+
+.fileinput-button input {
+    opacity: 1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+}
+.new-operate{
+    margin-top:40px;
+    margin-left:460px;
+    opacity: 1;
+}
+.new-operate a{
+    display:block;
+    width:80px;
+    height:40px;
+    padding-left:24px;
+    line-height:40px;
+    color:white;
+    font-size:20px;
+    float:left;
+    margin-right:40px;
+    background-color: #66af9b;
+    opacity: 1;
+    z-index:10;
+
+}
+

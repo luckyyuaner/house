@@ -1,5 +1,8 @@
 package com.yuan.house.service;
 
+import com.yuan.house.POJO.TenantContractPOJO;
+import com.yuan.house.model.Contract;
+
 /**
  * 公共Service
  */
@@ -33,4 +36,6 @@ public interface CommonService {
      * @return
      */
     void insertRedis(String key, Object object);
+
+    TenantContractPOJO createTenantContractPOJO(Contract contract);
 }

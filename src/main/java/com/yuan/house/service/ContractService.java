@@ -21,12 +21,23 @@ public interface ContractService {
 
     int updateContractByTenant(Contract contract);
 
+    int updateContractByLandlordWithAgree(Contract contract);
+
+    int updateContractByLandlordWithRefuse(Contract contract);
+
     /**
      * 分页查询租客的合同
      * @param number
      * @return
      */
     List<Contract> queryContractsByTenant(int number);
+
+    /**
+     * 分页查询房东的合同
+     * @param number
+     * @return
+     */
+    List<Contract> queryContractsByLandlord(int number);
     
     int deleteContractById(Long cid);
 }

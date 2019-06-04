@@ -9,6 +9,7 @@ import com.yuan.house.constants.Constants;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
+import com.yuan.house.service.CommonService;
 import com.yuan.house.service.ContractService;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
@@ -48,6 +49,9 @@ public class TenantController extends BaseController {
 
     @Autowired
     private ContractService contractService;
+
+    @Autowired
+    private CommonService commonService;
 
     @RequestMapping("/tenant/info")
     public ModelAndView showTenantInfo(Model model) {
@@ -202,16 +206,7 @@ public class TenantController extends BaseController {
         PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
         model.addAttribute("contractPageInfo", contractPageInfo);
         if (contracts != null && contracts.size() > 0) {
-            TenantContractPOJO tenantContractPOJO = new TenantContractPOJO();
-            Contract contract = contracts.get(0);
-            tenantContractPOJO.setContract(contract);
-            House house = houseService.queryHouseById(contract.getHouseId());
-            tenantContractPOJO.setHouse(house);
-            User landlord = houseService.queryLandlordByHouse(house.getHouseId());
-            tenantContractPOJO.setLandlord(landlord);
-            User tenant = userService.queryUserById(contract.getUserId());
-            tenantContractPOJO.setTenant(tenant);
-            model.addAttribute("tenantContractPOJO", tenantContractPOJO);
+            model.addAttribute("tenantContractPOJO", commonService.createTenantContractPOJO(contracts.get(0)));
         }
         return new ModelAndView("/tenant/show_contract", "Model", model);
     }
@@ -238,7 +233,8 @@ public class TenantController extends BaseController {
     @RequiresPermissions("contract:update")
     @RequestMapping("/tenant/updateContract")
     public ModelAndView updateContract(Model model, String stime, String etime, MultipartFile[] url, Long cid) {
-        Contract contract = contractService.queryContractById(cid);
+        Contract contract = new Contract();
+        contract.setContractId(cid);
         if (StringUtils.isNotBlank(stime)) {
             contract.setStime(TimeUtils.changeStringToTimestamp(stime));
         }

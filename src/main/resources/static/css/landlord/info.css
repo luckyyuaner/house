@@ -37,13 +37,14 @@ li {
 }
 
 .house-manager .house-box{
-    width:280px;
+    width:300px;
     float: left;
     margin-left: 8px;
     margin-right:8px;
+    margin-bottom: 10px;
 }
 .house-manager .picbox .pics img {
-    width: 280px;
+    width: 300px;
     height: 300px;
     object-fit: cover;
 }
@@ -69,11 +70,11 @@ li {
     float: left;
     z-index: 10;
     margin-top: -50px;
-    margin-left: 210px;
+    margin-left: 220px;
 }
 
 .house-manager .content {
-    width: 280px;
+    width: 300px;
     margin-top:110px;
     background-color:rgba(89, 151, 136, 0.76) ;
 }
@@ -84,7 +85,7 @@ li {
     line-height:16px;
 }
 .house-manager .house-operation{
-    width: 280px;
+    width: 300px;
     background-color:rgba(89, 151, 136, 0.76) ;
     height:60px;
     line-height: 40px;

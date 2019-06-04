@@ -286,3 +286,1389 @@
 2019-06-04 00:36:18.122 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_4
 2019-06-04 00:36:18.131 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在user_12
 2019-06-04 00:36:31.085 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 09:07:17.183 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11528 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 09:07:17.199 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 09:07:36.845 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:07:39.151 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:07:39.200 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:07:43.165 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 09:07:45.595 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 32.584 seconds (JVM running for 49.896)
+2019-06-04 09:09:54.775 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-04 09:09:56.129 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-04 09:10:01.739 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:10:03.439 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional epoll library
+2019-06-04 09:10:03.459 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-10] - Starting without optional kqueue library
+2019-06-04 09:10:07.492 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 09:10:07.831 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 09:10:08.006 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-10] - [THYMELEAF][http-nio-8888-exec-10] Exception processing template "/landlord/show_contract": An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/landlord/show_contract" - line 13, col 14)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/landlord/show_contract" - line 13, col 14)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 92 common frames omitted
+2019-06-04 09:10:08.016 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-10] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-04 09:10:15.021 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:10:15.036 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_user_5
+2019-06-04 09:10:15.166 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_user_5
+2019-06-04 09:10:29.568 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:10:29.581 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在houses_user_5
+2019-06-04 09:10:29.648 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加houses_user_5
+2019-06-04 09:10:31.829 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:10:31.843 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 09:10:31.875 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 09:10:31.927 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-5] - [THYMELEAF][http-nio-8888-exec-5] Exception processing template "/landlord/show_contract": An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/landlord/show_contract" - line 13, col 14)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/landlord/show_contract" - line 13, col 14)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 92 common frames omitted
+2019-06-04 09:10:31.943 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-5] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-04 09:23:47.505 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 9604 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 09:23:47.513 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 09:23:52.520 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:23:53.263 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:23:53.312 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:23:57.749 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 09:24:04.302 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 18.385 seconds (JVM running for 23.558)
+2019-06-04 09:25:40.287 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12664 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 09:25:40.296 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 09:25:46.703 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:25:47.376 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:25:47.417 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:25:50.458 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 09:25:52.236 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.28 seconds (JVM running for 18.631)
+2019-06-04 09:29:23.627 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-10] - HikariPool-1 - Starting...
+2019-06-04 09:29:24.712 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-10] - HikariPool-1 - Start completed.
+2019-06-04 09:29:35.861 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:29:37.001 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional epoll library
+2019-06-04 09:29:37.014 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-1] - Starting without optional kqueue library
+2019-06-04 09:29:40.418 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_user_5
+2019-06-04 09:29:40.492 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_user_5
+2019-06-04 09:30:01.103 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:30:01.166 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_user_5
+2019-06-04 09:30:01.248 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_user_5
+2019-06-04 09:30:06.160 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:30:06.196 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 09:30:06.570 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 09:30:06.617 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_2
+2019-06-04 09:30:06.645 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_2
+2019-06-04 09:30:06.651 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_2
+2019-06-04 09:30:06.682 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_2
+2019-06-04 09:30:06.692 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_12
+2019-06-04 09:30:06.741 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_12
+2019-06-04 09:30:32.851 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:30:32.899 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_5_number_2
+2019-06-04 09:30:32.922 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_5_number_2
+2019-06-04 09:30:33.098 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-8] - [THYMELEAF][http-nio-8888-exec-8] Exception processing template "/tenant/show_contract": An error happened during template parsing (template: "class path resource [templates//tenant/show_contract.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/show_contract.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/tenant/show_contract" - line 13, col 14)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/tenant/show_contract" - line 13, col 14)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 92 common frames omitted
+2019-06-04 09:30:33.129 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-8] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/show_contract.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-04 09:30:39.427 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:30:39.438 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在contracts_user_5_number_2
+2019-06-04 09:30:39.513 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-9] - [THYMELEAF][http-nio-8888-exec-9] Exception processing template "/tenant/show_contract": An error happened during template parsing (template: "class path resource [templates//tenant/show_contract.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/show_contract.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/tenant/show_contract" - line 13, col 14)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tenantContractPOJO.house != null" (template: "/tenant/show_contract" - line 13, col 14)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 92 common frames omitted
+2019-06-04 09:30:39.520 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-9] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/show_contract.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'house' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:43)
+	at org.springframework.expression.spel.ast.OpNE.getValueInternal(OpNE.java:33)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-04 09:36:03.628 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10440 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 09:36:03.635 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 09:36:11.245 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:36:11.944 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:36:11.983 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:36:14.988 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 09:36:16.851 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.755 seconds (JVM running for 19.569)
+2019-06-04 09:39:08.430 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-04 09:39:09.507 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-04 09:39:44.359 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:39:45.373 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-04 09:39:45.384 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-04 09:39:49.624 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 09:39:49.949 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 09:39:49.966 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-04 09:39:50.037 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-04 09:39:50.047 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-04 09:39:50.072 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-04 09:39:50.086 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-04 09:39:50.411 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-04 09:40:05.332 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:40:05.349 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_5_number_2
+2019-06-04 09:40:05.421 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_5_number_2
+2019-06-04 09:40:05.430 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_1
+2019-06-04 09:40:05.453 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_1
+2019-06-04 09:40:05.462 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_1
+2019-06-04 09:40:05.488 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_1
+2019-06-04 09:40:05.497 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_12
+2019-06-04 09:40:05.524 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_12
+2019-06-04 09:40:08.605 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:40:08.615 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 09:40:08.647 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 09:40:08.655 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-04 09:40:08.687 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-04 09:40:08.695 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-04 09:40:08.727 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-04 09:40:08.733 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在user_12
+2019-06-04 09:40:11.397 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 09:40:11.412 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在contracts_user_5_number_2
+2019-06-04 09:40:11.430 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在house_1
+2019-06-04 09:40:11.441 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_house_1
+2019-06-04 09:40:11.452 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_12
+2019-06-04 09:44:08.189 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 9232 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 09:44:08.202 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 09:44:14.779 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:44:15.544 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:44:15.582 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 09:44:18.469 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 09:44:20.289 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.65 seconds (JVM running for 19.002)
+2019-06-04 09:45:04.420 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-04 09:45:05.543 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-04 09:45:08.809 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[notice:update, house:update, comment:create, house:read, house:delete, contract:create, notice:create, comment:update, comment:read, contract:update, contract:read, comment:delete, contract:delete, notice:read, notice:delete, house:create]
+2019-06-04 09:45:09.617 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-04 09:45:09.634 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-04 09:45:13.321 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_user_number_1
+2019-06-04 09:45:13.649 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_user_number_1
+2019-06-04 09:47:08.569 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 09:47:08.711 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_collect_houses_12
+2019-06-04 09:47:08.791 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_collect_houses_12
+2019-06-04 09:51:33.198 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-04 09:51:33.211 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_租客1
+2019-06-04 09:51:33.255 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_租客1
+2019-06-04 15:38:48.692 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1296 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 15:38:48.709 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 15:39:21.851 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:39:23.769 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:39:23.832 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:39:28.341 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 15:39:31.481 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 48.499 seconds (JVM running for 188.182)
+2019-06-04 15:43:13.632 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-06-04 15:43:15.006 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-06-04 15:43:25.619 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 15:43:26.856 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-3] - Starting without optional epoll library
+2019-06-04 15:43:26.869 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-3] - Starting without optional kqueue library
+2019-06-04 15:43:30.063 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 15:43:31.484 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 15:43:31.493 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-04 15:43:32.766 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-04 15:43:32.773 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-04 15:43:32.792 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-04 15:43:32.799 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_12
+2019-06-04 15:43:32.813 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_12
+2019-06-04 15:44:33.553 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11788 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 15:44:33.564 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 15:44:39.785 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:44:40.617 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:44:40.699 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:44:44.218 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 15:44:46.199 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 13.936 seconds (JVM running for 18.898)
+2019-06-04 15:46:58.308 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-04 15:46:59.095 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-04 15:47:02.758 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 15:47:03.076 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-06-04 15:47:03.080 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-06-04 15:47:04.869 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 15:47:04.970 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 15:47:04.975 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_2
+2019-06-04 15:47:04.997 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_2
+2019-06-04 15:47:05.001 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_2
+2019-06-04 15:47:05.013 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_2
+2019-06-04 15:47:05.017 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_12
+2019-06-04 15:47:05.026 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_12
+2019-06-04 15:49:18.889 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 176 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 15:49:18.898 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 15:49:26.798 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:49:27.268 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:49:27.290 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:49:29.889 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 15:49:32.295 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.681 seconds (JVM running for 21.545)
+2019-06-04 15:50:31.714 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-04 15:50:32.238 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-04 15:50:38.122 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 15:50:38.982 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-04 15:50:38.992 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-04 15:50:42.534 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在houses_user_5
+2019-06-04 15:50:42.678 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加houses_user_5
+2019-06-04 15:50:47.843 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 15:50:47.866 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 15:50:48.121 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 15:50:48.139 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-04 15:50:48.194 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-04 15:50:48.209 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-04 15:50:48.254 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-04 15:50:48.594 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_12
+2019-06-04 15:50:48.630 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_12
+2019-06-04 15:58:50.877 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12556 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 15:58:50.886 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 15:58:58.256 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:58:58.962 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:58:59.003 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 15:59:02.935 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 15:59:04.820 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.3 seconds (JVM running for 21.268)
+2019-06-04 16:00:21.495 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-2] - HikariPool-1 - Starting...
+2019-06-04 16:00:22.224 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-2] - HikariPool-1 - Start completed.
+2019-06-04 16:00:26.278 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:00:26.965 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional epoll library
+2019-06-04 16:00:26.973 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional kqueue library
+2019-06-04 16:00:30.539 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:00:30.733 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:00:30.742 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_2
+2019-06-04 16:00:30.797 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_2
+2019-06-04 16:00:30.811 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_2
+2019-06-04 16:00:30.833 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_2
+2019-06-04 16:00:30.843 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_12
+2019-06-04 16:00:30.878 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_12
+2019-06-04 16:29:00.812 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 12344 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 16:29:00.819 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 16:29:11.266 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 16:29:11.831 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 16:29:11.863 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 16:29:14.466 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 16:29:15.691 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.2 seconds (JVM running for 23.687)
+2019-06-04 16:30:17.558 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-04 16:30:18.366 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-04 16:30:22.610 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:30:23.361 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-04 16:30:23.369 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-04 16:30:26.646 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:30:26.812 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:30:26.821 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-06-04 16:30:27.110 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-06-04 16:30:27.117 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_2
+2019-06-04 16:30:27.134 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_2
+2019-06-04 16:30:27.142 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-04 16:30:27.156 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-04 16:30:27.592 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-8] - [THYMELEAF][http-nio-8888-exec-8] Exception processing template "/landlord/show_contract": An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "contract.contractId" (template: "/landlord/show_contract" - line 139, col 41)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "contract.contractId" (template: "/landlord/show_contract" - line 139, col 41)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79)
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241)
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327)
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'contractId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 90 common frames omitted
+2019-06-04 16:30:27.604 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-8] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//landlord/show_contract.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'contractId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79)
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241)
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327)
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-04 16:32:54.673 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14008 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-04 16:32:54.692 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-04 16:33:02.822 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 16:33:03.573 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 16:33:03.619 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-04 16:33:07.001 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-04 16:33:09.059 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.545 seconds (JVM running for 21.24)
+2019-06-04 16:35:09.483 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-06-04 16:35:10.559 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-06-04 16:35:18.187 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:35:19.235 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-04 16:35:19.248 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-04 16:35:21.923 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:35:23.329 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:35:23.336 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-04 16:35:23.378 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-04 16:35:23.384 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-04 16:35:23.401 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-04 16:35:23.405 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-04 16:35:23.419 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-04 16:35:43.003 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:35:58.590 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:35:58.609 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在houses_user_5
+2019-06-04 16:35:58.747 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加houses_user_5
+2019-06-04 16:36:02.285 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:36:02.293 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:36:02.354 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:36:02.359 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-04 16:36:02.389 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-04 16:36:02.396 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-04 16:36:02.610 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-04 16:36:02.621 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_12
+2019-06-04 16:36:02.646 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_12
+2019-06-04 16:36:11.178 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:36:11.187 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_user_5_number_2
+2019-06-04 16:36:11.266 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_user_5_number_2
+2019-06-04 16:36:11.275 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_1
+2019-06-04 16:36:11.315 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_1
+2019-06-04 16:36:11.326 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_1
+2019-06-04 16:36:11.364 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_1
+2019-06-04 16:36:11.372 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在user_12
+2019-06-04 16:36:16.071 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:36:16.085 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:36:16.139 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:36:16.148 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_2
+2019-06-04 16:36:16.187 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_2
+2019-06-04 16:36:16.195 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_2
+2019-06-04 16:36:16.219 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_2
+2019-06-04 16:36:16.228 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_12
+2019-06-04 16:36:16.254 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_12
+2019-06-04 16:36:23.266 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:36:23.546 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:36:23.559 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在contracts_user_5_number_1
+2019-06-04 16:36:23.580 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在house_2
+2019-06-04 16:36:23.596 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在user_house_2
+2019-06-04 16:36:23.623 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在user_12
+2019-06-04 16:36:55.538 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:36:55.555 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_user_5_number_2
+2019-06-04 16:36:55.621 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_user_5_number_2
+2019-06-04 16:36:55.630 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_1
+2019-06-04 16:36:55.667 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_1
+2019-06-04 16:36:55.673 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_1
+2019-06-04 16:36:55.702 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_1
+2019-06-04 16:36:55.753 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_12
+2019-06-04 16:36:55.775 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_12
+2019-06-04 16:37:01.286 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:37:01.299 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:37:01.356 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:37:01.363 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-06-04 16:37:01.393 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-06-04 16:37:01.400 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_2
+2019-06-04 16:37:01.420 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_2
+2019-06-04 16:37:01.428 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在user_12
+2019-06-04 16:37:19.068 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:37:22.114 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-04 16:37:22.131 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_1
+2019-06-04 16:37:22.218 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_1
+2019-06-04 16:37:22.227 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-04 16:37:25.388 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-04 16:37:25.395 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-04 16:37:25.422 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-04 16:37:25.429 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_12
+2019-06-04 16:37:25.449 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_12

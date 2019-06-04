@@ -2,27 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>房东个人主页</title>
-    <link rel="stylesheet" type="text/css" href="/css/landlord/info.css" />
+    <title>合同生成页面</title>
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
+    <link rel="stylesheet" href="/css/manager/show_contract.css" />
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<div class="left">
-    <ul class="menu">
-        <li><a th:href="@{/house/showNew}"><img src="/images/icon4.png" />发布新房源</a></li>
-        <li><a th:href="@{/house/show}"><img src="/images/step4.jpg" />房源管理</a></li>
-        <li><a th:href="@{/landlord/showContracts?(number=1)}"><img src="/images/step3.jpg" />合同管理</a></li>
-        <li><a><img src="/images/icon1.png" />评价管理</a></li>
-        <li><a><img src="/images/icon9.png" />反馈管理</a></li>
-        <li><a><img src="/images/step1.jpg" />信息管理</a></li>
-        <li><a><img src="/images/icon8.png" />钱包管理</a></li>
-        <li><a th:href="@{/landlord/chat}"><img src="/images/step2.jpg" />联系管家</a></li>
-    </ul>
-</div>
-<div class="right">
-    <div class="house-manager">
-        <div th:each="house:${houses}" th:if="${house != null}"  class="house-box">
+<form method="post" th:action="@{/common/manager/contract/updateNew}">
+    <div class="left-box">
+        <div th:if="${house != null}"  class="house-box">
             <div class="picbox" th:if="${house.urls != null}">
                 <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!house.urls.contains(',')}" />
                 <img src="/images/icon3.png"  class="pre" th:if="${house.urls.contains(',')}" />
@@ -39,15 +29,6 @@
             <div class="content">
                 <p>
                     <b th:text="${house.name}"></b>
-                    <b th:text="${house.grade}"></b>分
-                </p>
-                <p>
-                    <span th:switch="${house.status}">
-                        <b th:case="0">审核中</b>
-                        <b th:case="1">审核失败</b>
-                        <b th:case="2">出租中</b>
-                        <b th:case="3">空闲</b>
-                    </span>
                 </p>
                 <p>
                     <span th:text="${house.money}"/>元/月
@@ -67,36 +48,71 @@
                         <b th:case="180">半年付</b>
                         <b th:case="365">年付</b>
                     </span>
-                    <span th:switch="${house.elevator}">
-                        <b th:case="0">电梯房</b>
-                        <b th:case="1">非电梯房</b>
-                    </span>
                 </p>
                 <p>
-                    <span th:text="${house.floor}"/>层
-                    <span th:text="${house.doorplate}"/>号
-                    <span th:text="${house.orders}"/>号房间
+                    地址：<span th:text="${house.address}"/>
                 </p>
-                <p>
-                    <span th:text="${house.kind.charAt(0)}"/>房间
-                    <span th:text="${house.kind.charAt(1)}"/>客厅
-                    <span th:text="${house.kind.charAt(2)}"/>卫生间
-                    <span th:text="${house.kind.charAt(3)}"/>厨房
-                    <span th:text="${house.kind.charAt(4)}"/>阳台
-                </p>
-                <p>
-                    地址：<span th:text="${house.address}" />
-                </p>
-            </div>
-            <div class="house-operation">
-                <a th:href="@{/house/showUpdate?(id=${house.houseId})}">更新</a>
-                <a th:href="@{/house/deleteHouse?(id=${house.houseId})}">删除</a>
             </div>
         </div>
     </div>
-</div>
+    <div class="right-box">
+        <div class="contract-box">
+            <p>
+                <input type="hidden" th:value="${contract.contractId}" />
+                起租时间：<span th:text="${contract.stime}"/>&nbsp;&nbsp;
+                结束时间：<span th:text="${contract.etime}"/>
+            </p>
+            <p>
+                房东操作状态：
+                <span th:if="${contract.landlordOperation == 0}">未处理</span>
+                <span th:if="${contract.landlordOperation == 1}">修改</span>
+                <span th:if="${contract.landlordOperation == 2}">同意</span>
+                <span th:if="${contract.landlordOperation == 3}">拒绝</span>
+                &nbsp;&nbsp;租客操作状态：
+                <span th:if="${contract.tenantOperation == 0}">未处理</span>
+                <span th:if="${contract.tenantOperation == 1}">修改</span>
+                <span th:if="${contract.tenantOperation == 2}">同意</span>
+                <span th:if="${contract.tenantOperation == 3}">拒绝</span>
+                &nbsp;&nbsp;合同类型：
+                <span th:if="${contract.type == 0}">租房</span>
+                <span th:if="${contract.type == 1}">退房</span>
+                &nbsp;&nbsp;合同状态：
+                <span th:if="${contract.status == 0}">申请中</span>
+                <span th:if="${contract.status == 1}">创建中</span>
+                <span th:if="${contract.status == 2}">签约中</span>
+                <span th:if="${contract.status == 3}">付款中</span>
+                <span th:if="${contract.status == 4}">签约完成</span>
+                <span th:if="${contract.status == 5}">正常结束</span>
+                <span th:if="${contract.status == 6}">毁约申请中</span>
+                <span th:if="${contract.status == 7}">退款处理中</span>
+                <span th:if="${contract.status == 8}">毁约结束</span>
+            </p>
+            <p><a th:href="@{/common/landlord/contract/download?(url=${contract.file})}">下载合同</a></p>
+        </div>
+        <div class="tenant-box">
+            <p><a>
+                <img class="head" src="/images/head.jpg"  />
+                <span th:text="${tenant.username}"/>
+                <span th:if="${tenant.sex == 0}">女</span>
+                <span th:if="${tenant.sex == 1}">男</span>
+            </a>
+                信誉值：<span th:text="${tenant.reputation}"/>分
+            </p><br/>
+            <div class="the-imgs">
+                <div th:each='url:${contract.tenantInfo.split(",")}'>
+                    <img class="imgs" th:src="@{/file/{imgname}(imgname=${url})}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
 <script type="text/javascript">
     $(".pre").click(function () {
         var parent = $(this).next();

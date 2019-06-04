@@ -8,7 +8,7 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<form method="post" th:action="@{/common/manager/contract/updateNew}">
+<form>
     <div class="left-box">
         <div th:if="${tenantContractPOJO.house != null}"  class="house-box">
             <div class="picbox" th:if="${tenantContractPOJO.house.urls != null}">

@@ -5,7 +5,7 @@
 
     <sql id="allColumns">
         user_id, username, password, user_type, status,
-        ctime, utime, head, money, phone, email
+        ctime, utime, head, money, phone, email, reputation
     </sql>
 
     <select id="getAllUsers" resultType="com.yuan.house.model.User">
@@ -18,7 +18,7 @@
 
     <select id="queryUserById" resultType="com.yuan.house.model.User">
         SELECT
-        <include refid="allColumns"/>
+        *
         FROM user
         WHERE status = 0
         AND user_id = #{id}

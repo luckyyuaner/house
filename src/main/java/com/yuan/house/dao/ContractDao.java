@@ -18,7 +18,13 @@ public interface ContractDao {
 
     int updateContractByTenant(@Param("object") Contract object);
 
+    int updateContractByLandlordWithAgree(@Param("object") Contract object);
+
+    int updateContractByLandlordWithRefuse(@Param("object") Contract object);
+
     List<Contract> queryContractsByTenant(@Param("uid") Long uid);
+
+    List<Contract> queryContractsByLandlord(@Param("uid") Long uid);
 
     int deleteContract(@Param("id") Long id);
 }

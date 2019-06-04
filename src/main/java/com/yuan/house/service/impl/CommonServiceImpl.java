@@ -1,6 +1,12 @@
 package com.yuan.house.service.impl;
 
+import com.yuan.house.POJO.TenantContractPOJO;
+import com.yuan.house.model.Contract;
+import com.yuan.house.model.House;
+import com.yuan.house.model.User;
 import com.yuan.house.service.CommonService;
+import com.yuan.house.service.HouseService;
+import com.yuan.house.service.UserService;
 import com.yuan.house.util.LoggerUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +22,12 @@ public class CommonServiceImpl implements CommonService {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private HouseService houseService;
+
+    @Autowired
+    private UserService userService;
 
     @Override
     public Object queryRedis(String key) {
@@ -52,5 +64,18 @@ public class CommonServiceImpl implements CommonService {
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
         operations.set(key, object, 10, TimeUnit.SECONDS);
         LoggerUtil.info("redis缓存中添加{}", key);
+    }
+
+    @Override
+    public TenantContractPOJO createTenantContractPOJO(Contract contract) {
+        TenantContractPOJO tenantContractPOJO = new TenantContractPOJO();
+        tenantContractPOJO.setContract(contract);
+        House house = houseService.queryHouseById(contract.getHouseId());
+        tenantContractPOJO.setHouse(house);
+        User landlord = houseService.queryLandlordByHouse(house.getHouseId());
+        tenantContractPOJO.setLandlord(landlord);
+        User tenant = userService.queryUserById(contract.getUserId());
+        tenantContractPOJO.setTenant(tenant);
+        return tenantContractPOJO;
     }
 }

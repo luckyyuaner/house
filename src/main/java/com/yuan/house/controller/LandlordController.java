@@ -1,11 +1,15 @@
 package com.yuan.house.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.yuan.house.POJO.TenantContractPOJO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
+import com.yuan.house.service.CommonService;
 import com.yuan.house.service.ContractService;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
@@ -42,6 +46,9 @@ public class LandlordController extends BaseController {
 
     @Autowired
     private ContractService contractService;
+
+    @Autowired
+    private CommonService commonService;
 
 
     @RequestMapping("/landlord/chat")
@@ -138,14 +145,14 @@ public class LandlordController extends BaseController {
 
 
     //@RequiresPermissions("contract:update")
-    @RequestMapping("/common/landlord/contract/showDetail")
-    public ModelAndView showContractDetail(Model model, @RequestParam("cid")Long cid) {
+    @RequestMapping("/common/landlord/contract/showDetail2")
+    public ModelAndView showContractDetail2(Model model, @RequestParam("cid")Long cid) {
         Contract contract = contractService.queryContractById(cid);
         House house = houseService.queryHouseById(contract.getHouseId());
         model.addAttribute("contract",contract);
         model.addAttribute("house",house);
         model.addAttribute("tenant", userService.queryUserById(contract.getUserId()));
-        return new ModelAndView("/landlord/show_contract", "Model", model);
+        return new ModelAndView("/landlord/show_contract2", "Model", model);
     }
 
     //@RequiresPermissions("contract:read")
@@ -194,5 +201,43 @@ public class LandlordController extends BaseController {
             }
         }
         System.out.println("success");
+    }
+
+    @RequiresPermissions("contract:read")
+    @RequestMapping("/landlord/showContracts")
+    public ModelAndView showContracts(Model model, int number) {
+        PageHelper.startPage(number, 1);
+        List<Contract> contracts = contractService.queryContractsByLandlord(number);
+        PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
+        model.addAttribute("contractPageInfo", contractPageInfo);
+        if (contracts != null && contracts.size() > 0) {
+            model.addAttribute("tenantContractPOJO", commonService.createTenantContractPOJO(contracts.get(0)));
+        }
+        return new ModelAndView("/landlord/show_contract", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/updateContractWithAgree")
+    public ModelAndView updateContractWithAgree(Model model, MultipartFile[] url, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+
+        JSONObject json = FileUtil.uploadByNumber(url, 3);
+        if ("fail".equals(json.getString("rs"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/landlord/showContracts?number=1");
+        }
+        contract.setLandlordInfo(json.getString("msg"));
+        contractService.updateContractByLandlordWithAgree(contract);
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/updateContractWithRefuse")
+    public ModelAndView updateContractWithRefuse(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByLandlordWithRefuse(contract);
+        return new ModelAndView("/landlord/info", "Model", model);
     }
 }

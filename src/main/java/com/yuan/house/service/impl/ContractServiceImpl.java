@@ -62,6 +62,28 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
+    public int updateContractByLandlordWithAgree(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(2);
+        contract.setType(0);
+        contract.setStatus(1);
+        return contractDao.updateContractByLandlordWithAgree(contract);
+    }
+
+    @Override
+    public int updateContractByLandlordWithRefuse(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(3);
+        contract.setType(0);
+        contract.setStatus(0);
+        return contractDao.updateContractByLandlordWithRefuse(contract);
+    }
+
+    @Override
     public List<Contract> queryContractsByTenant(int number) {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
@@ -71,6 +93,20 @@ public class ContractServiceImpl implements ContractService {
             return (List<Contract>)rs;
         }
         List<Contract> cs = contractDao.queryContractsByTenant(user.getUserId());
+        commonService.insertRedis(key, cs);
+        return cs;
+    }
+
+    @Override
+    public List<Contract> queryContractsByLandlord(int number) {
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        String key = "contracts_user_"+user.getUserId()+"_number_" + number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Contract>)rs;
+        }
+        List<Contract> cs = contractDao.queryContractsByLandlord(user.getUserId());
         commonService.insertRedis(key, cs);
         return cs;
     }
