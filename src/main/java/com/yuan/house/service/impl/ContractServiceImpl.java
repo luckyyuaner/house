@@ -84,6 +84,30 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
+    public int updateContractByManagerWithAgree(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(0);
+        contract.setTenantOperation(0);
+        contract.setType(0);
+        contract.setStatus(2);
+        return contractDao.updateContractByManagerWithAgree(contract);
+    }
+
+    @Override
+    public int updateContractByManagerWithRefuse(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(0);
+        contract.setTenantOperation(0);
+        contract.setType(0);
+        contract.setStatus(0);
+        return contractDao.updateContractByManagerWithRefuse(contract);
+    }
+
+    @Override
     public List<Contract> queryContractsByTenant(int number) {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
@@ -107,6 +131,18 @@ public class ContractServiceImpl implements ContractService {
             return (List<Contract>)rs;
         }
         List<Contract> cs = contractDao.queryContractsByLandlord(user.getUserId());
+        commonService.insertRedis(key, cs);
+        return cs;
+    }
+
+    @Override
+    public List<Contract> queryAllContract(int number) {
+        String key = "contracts_all_number_" + number;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Contract>)rs;
+        }
+        List<Contract> cs = contractDao.queryAllContract();
         commonService.insertRedis(key, cs);
         return cs;
     }

@@ -6,10 +6,12 @@ import com.github.pagehelper.PageInfo;
 import com.yuan.house.VO.HouseManagerVO;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
+import com.yuan.house.service.CommonService;
 import com.yuan.house.service.ContractService;
 import com.yuan.house.service.HouseService;
 import com.yuan.house.service.UserService;
 import com.yuan.house.util.PdfUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,32 +38,53 @@ public class ManagerController extends BaseController {
     @Autowired
     private ContractService contractService;
 
+    @Autowired
+    private CommonService commonService;
 
-    @RequestMapping("/manager/info")
-    public ModelAndView showManagerInfo(Model model) {
-        return new ModelAndView("/manager/info", "Model", model);
+
+    @RequestMapping("/manager/index")
+    public ModelAndView showManagerIndex(Model model) {
+        return new ModelAndView("/manager/index", "Model", model);
     }
 
-    //@RequiresPermissions("contract:update")
-    @RequestMapping("/common/manager/contract/showNew")
-    public ModelAndView showContractNew(Model model, @RequestParam("cid")Long cid) {
-        Contract contract = contractService.queryContractById(cid);
-        House house = houseService.queryHouseById(contract.getHouseId());
-        model.addAttribute("contract",contract);
-        model.addAttribute("house",house);
-        model.addAttribute("landlord",houseService.queryLandlordByHouse(house.getHouseId()));
-        model.addAttribute("tenant", userService.queryUserById(contract.getUserId()));
+    @RequiresPermissions("contract:read")
+    @RequestMapping("/contract/index")
+    public ModelAndView showContracts(Model model, String number) {
+        if(StringUtils.isBlank(number)) {
+            number = "1";
+        }
+        PageHelper.startPage(Integer.parseInt(number), 1);
+        List<Contract> contracts = contractService.queryAllContract(Integer.parseInt(number));
+        PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
+        model.addAttribute("contractPageInfo", contractPageInfo);
+        if (contracts != null && contracts.size() > 0) {
+            model.addAttribute("tenantContractPOJO", commonService.createTenantContractPOJO(contracts.get(0)));
+        }
         return new ModelAndView("/manager/show_contract", "Model", model);
     }
 
-    //@RequiresPermissions("contract:update")
-    @RequestMapping("/common/manager/contract/updateNew")
-    public ModelAndView updateContractNew(Model model, @RequestParam("file")String file) {
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/contract/updateAgree")
+    public ModelAndView updateContractAgree(Model model, @RequestParam("file")String file, Long cid) {
         String rs = PdfUtil.changeTxtToPdf(file);
-        if(rs != null) {
-            System.out.println("file="+rs);
+        if(rs == null) {
+            return new ModelAndView("redirect:/contract/index?number=1");
         }
-        return new ModelAndView("/common/login", "Model", model);
+        System.out.println("file="+rs);
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contract.setFile(rs);
+        contractService.updateContractByManagerWithAgree(contract);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/contract/updateRefuse")
+    public ModelAndView updateContractRefuse(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByManagerWithRefuse(contract);
+        return new ModelAndView("/manager/index", "Model", model);
     }
 
     @RequiresPermissions("house:read")

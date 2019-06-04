@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50541
 File Encoding         : 65001
 
-Date: 2019-06-04 17:03:09
+Date: 2019-06-04 22:08:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -100,7 +100,7 @@ CREATE TABLE `contract` (
 -- Records of contract
 -- ----------------------------
 INSERT INTO `contract` VALUES ('1', '2', '12', '2019-05-27 00:00:00', '2019-08-27 00:00:00', '2019-05-26 19:47:34', '2019-06-04 17:00:58', '2', '2', '0', '1', 'dab1d6fa-8197-4543-a0c3-080488f5f818.pdf', 'acfe3aa5-82dc-4b85-8899-a111139cd1b3.jpg,c1f9997f-6d40-4f97-a163-fb1afe0ea21e.jpg,6d6ee135-0986-45ee-af52-56cf8e774206.jpg', '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg');
-INSERT INTO `contract` VALUES ('3', '1', '12', '2019-06-05 00:00:00', '2019-07-20 00:00:00', '2019-06-03 16:10:36', '2019-06-03 19:53:45', '0', '2', '0', '0', null, '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg', '37523b04-7eab-4710-86b6-fd7b5cf168f3.jpg,799b3430-23c7-49cb-ae89-ce166a3db84d.jpg,41ba7314-b326-410f-9f10-99c52fc5b487.jpg');
+INSERT INTO `contract` VALUES ('3', '1', '12', '2019-06-05 00:00:00', '2019-07-20 00:00:00', '2019-06-03 16:10:36', '2019-06-04 22:04:05', '0', '0', '0', '2', 'ef836965-dcd2-4793-b122-fd5d18c9b425.pdf', '身份证反面照.jpg,身份证正面照.jpg,手持身份证照.jpg', '37523b04-7eab-4710-86b6-fd7b5cf168f3.jpg,799b3430-23c7-49cb-ae89-ce166a3db84d.jpg,41ba7314-b326-410f-9f10-99c52fc5b487.jpg');
 
 -- ----------------------------
 -- Table structure for feedback

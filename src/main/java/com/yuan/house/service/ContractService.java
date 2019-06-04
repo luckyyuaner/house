@@ -25,6 +25,10 @@ public interface ContractService {
 
     int updateContractByLandlordWithRefuse(Contract contract);
 
+    int updateContractByManagerWithAgree(Contract contract);
+
+    int updateContractByManagerWithRefuse(Contract contract);
+
     /**
      * 分页查询租客的合同
      * @param number
@@ -38,6 +42,8 @@ public interface ContractService {
      * @return
      */
     List<Contract> queryContractsByLandlord(int number);
+
+    List<Contract> queryAllContract(int number);
     
     int deleteContractById(Long cid);
 }

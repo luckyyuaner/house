@@ -108,28 +108,52 @@ html, body {
     width:250px;
     margin-left:10px;
 }
+
+
+.page-box{
+    margin-top:30px;
+    margin-left:600px;
+    font-size: 20px;
+}
+.page-box .pre-box{
+    float:left;
+}
+.page-box .content-box{
+    float:left;
+    margin-left:10px;
+}
+.page-box .next-box{
+    float:left;
+    margin-left:10px;
+}
+
 .operate-box{
     width:1240px;
     margin-left:40px;
     height:200px;
+    margin-top:20px;
 }
 .operate-box .op-type{
-    width:1200px;
+    width:800px;
+    margin-left:300px;
 }
-.operate-box .op-type .dowebok{
-    margin-left:560px;
-    list-style-type: none;
-    float:left;
-}
-.dowebok li{
+
+.operate-box .op-type a{
     display: inline-block;
-    margin: 10px 0;
-}
-.dowebok input.labelauty + label{
-    font: 12px "Microsoft Yahei";
+    margin-right:20px;
+    width:160px;
+    height:32px;
+    line-height:32px;
+    font-size:20px;
+    text-align: center;
+    background-color: rgba(89, 151, 136, 0.76);
+    text-decoration: none;
+    color:black;
 }
 .operate-box .op-info{
     width:1200px;
+    display: none;
+    margin-top:20px;
 }
 .op-info{
     float:left;
@@ -140,6 +164,12 @@ html, body {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    width:200px;
+    height:32px;
+    line-height:32px;
+    font-size:20px;
+    text-align: center;
+    background-color: rgba(89, 151, 136, 0.76);
 }
 
 .op-info .fileinput-button input {
@@ -161,6 +191,7 @@ html, body {
     margin-bottom: 100px;
     overflow-y: scroll;
     display: block;
+    margin-top:10px;
 }
 .operate-box .hetong:focus{
     border-color: #9ecaed;
@@ -173,6 +204,9 @@ html, body {
     height:40px;
     line-height:40px;
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.62);
+    color:black;
     background-color: rgba(63, 110, 97, 0.75);
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: center;
 }
