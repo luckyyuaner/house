@@ -138,8 +138,10 @@
     <div class="clear-box"></div>
     <div class="operate-box">
         <div class="op-type">
-            <a onclick="show()">生成合同</a>
-            <a th:href="@{/manager/contract/updateRefuse?(cid=${tenantContractPOJO.contract.contractId})}">拒绝</a>
+            <a onclick="show()" th:if="${tenantContractPOJO.contract.status==1&&tenantContractPOJO.contract.landlordOperation==2&&tenantContractPOJO.contract.tenantOperation==2}">生成合同</a>
+            <a th:href="@{/manager/contract/updateRefuse?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==1&&tenantContractPOJO.contract.landlordOperation==2&&tenantContractPOJO.contract.tenantOperation==2}">拒绝</a>
+            <a th:href="@{/manager/contract/updateAgree2?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==2&&tenantContractPOJO.contract.landlordOperation==1&&tenantContractPOJO.contract.tenantOperation==1}">通过</a>
+            <a th:href="@{/manager/contract/updateRefuse2?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==2&&tenantContractPOJO.contract.landlordOperation==1&&tenantContractPOJO.contract.tenantOperation==1}">打回修改</a>
             <a href="/manager/index">返回</a>
         </div>
         <div class="clear-box"></div>

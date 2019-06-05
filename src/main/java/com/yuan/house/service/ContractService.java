@@ -31,6 +31,10 @@ public interface ContractService {
 
     int updateContractByManagerWithRefuse(Contract contract);
 
+    int updateContractByManagerWithRefuse2(Contract contract);
+
+    int updateContractByManagerWithAgree2(Contract contract);
+
     int updateContractByLandlord2(Contract contract);
     /**
      * 分页查询租客的合同

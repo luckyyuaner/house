@@ -118,4 +118,23 @@ public class ManagerController extends BaseController {
         model.addAttribute("housePageInfo", housePageInfo);
         return new ModelAndView("/manager/index", "Model", model);
     }
+
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/contract/updateAgree2")
+    public ModelAndView updateContractAgree2(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByManagerWithAgree2(contract);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/contract/updateRefuse2")
+    public ModelAndView updateContractRefuse2(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByManagerWithRefuse2(contract);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
 }

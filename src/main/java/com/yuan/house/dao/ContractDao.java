@@ -28,6 +28,8 @@ public interface ContractDao {
 
     int updateContractByManagerWithAgree(@Param("object") Contract object);
 
+    int updateContractByManagerWithAgree2(@Param("object") Contract object);
+
     int updateContractByManagerWithRefuse(@Param("object") Contract object);
 
     List<Contract> queryContractsByTenant(@Param("uid") Long uid,@Param("sta") int sta);

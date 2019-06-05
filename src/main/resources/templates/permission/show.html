@@ -2,19 +2,29 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <link rel="stylesheet" type="text/css" href="/css/manager/permission.css" />
+    <script src="/js/jquery-labelauty.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div>
-    <form th:action="@{/permission/listPermission}"  method="get">
+    <div class="operate-box">
+        <a href="/permission/showAdd">添加新权限</a>
+        <a href="/manager/index">返回</a>
+    </div>
+    <form th:action="@{/permission/listPermission}"  method="get" class="search-form">
         <input name="number" type="hidden" th:value="1" />
-        <input name="msg" type="text" />
-        <input name="type" type="radio" value="id" checked="checked" />id查询<br/>
-        <input name="type" type="radio" value="msg" />条件查询<br/>
-        <input type="submit" value="搜索"/>
-        <input type="reset" value="取消"/>
+        <input name="msg" type="text" class="msg-input" />
+        <ul class="dowebok">
+            <li><input type="radio" class="radio-box" name="type" value="id" checked data-labelauty="id查询"></li>
+            <li><input type="radio" class="radio-box" name="type" value="msg" data-labelauty="条件查询"></li>
+        </ul>
+        <input type="submit" class="btn1" value="搜索"/>
+        <input type="reset" class="btn2" value="取消"/>
     </form>
-    <table>
+    <table class="table-box">
         <thead>
         <tr>
             <th>编号</th>
@@ -39,20 +49,28 @@
         </tr>
         </tbody>
         <tfoot>
-        <div th:if="${permissionPageInfo.hasPreviousPage}">
-            <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-            </a>
-        </div>
-        <span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页
-        <div th:if="${permissionPageInfo.hasNextPage}">
-            <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
-                <span aria-hidden="true">»</span>
-            </a>
+        <div class="clear-box"></div>
+        <div class="page-box">
+            <div th:if="${permissionPageInfo.hasPreviousPage}" class="page">
+                <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                </a>
+            </div>
+            <div class="content-box"><span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页</div>
+            <div th:if="${permissionPageInfo.hasNextPage}" class="page">
+                <a th:href="@{/permission/listPermission?(type=${type},msg=${msg},number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                </a>
+            </div>
         </div>
         </tfoot>
     </table>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
 </html>
