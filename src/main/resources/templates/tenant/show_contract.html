@@ -5,17 +5,18 @@
     <title>合同管理页面</title>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/tenant/show_contract.css" />
+    <script type="text/javascript" src="/js/tenant/show_contract.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<form>
+<form action="/tenant/updateContract2" method="post" id="contract-form" enctype="multipart/form-data">
     <div th:if="${tenantContractPOJO==null}">
         <div style="text-align:center;width:100%;color:red;font-size:40px;">
             内容为空
         </div>
     </div>
-    <div class="left-box">
-        <div th:if="${tenantContractPOJO!=null && tenantContractPOJO.house != null}"  class="house-box">
+    <div class="left-box" th:if="${tenantContractPOJO!=null}">
+        <div th:if="${tenantContractPOJO.house != null}"  class="house-box">
             <div class="picbox" th:if="${tenantContractPOJO.house.urls != null}">
                 <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!tenantContractPOJO.house.urls.contains(',')}" />
                 <img src="/images/icon3.png"  class="pre" th:if="${tenantContractPOJO.house.urls.contains(',')}" />
@@ -58,22 +59,23 @@
             </div>
         </div>
     </div>
-    <div class="right-box">
-        <div class="contract-box" th:if="${tenantContractPOJO!=null && tenantContractPOJO.contract != null}">
+    <div class="right-box" th:if="${tenantContractPOJO!=null}">
+        <div class="contract-box" th:if="${tenantContractPOJO.contract != null}">
             <p>
                 <input type="hidden" name="cid" th:value="${tenantContractPOJO.contract.contractId}" />
+                <input type="hidden" name="sta" th:value="${sta}" />
                 起租时间：<span th:text="${tenantContractPOJO.contract.stime}"/>&nbsp;&nbsp;
                 结束时间：<span th:text="${tenantContractPOJO.contract.etime}"/>
             </p>
             <p>
                 房东操作状态：
                 <span th:if="${tenantContractPOJO.contract.landlordOperation == 0}">未处理</span>
-                <span th:if="${tenantContractPOJO.contract.landlordOperation == 1}">修改</span>
+                <span th:if="${tenantContractPOJO.contract.landlordOperation == 1}">完成</span>
                 <span th:if="${tenantContractPOJO.contract.landlordOperation == 2}">同意</span>
                 <span th:if="${tenantContractPOJO.contract.landlordOperation == 3}">拒绝</span>
                 &nbsp;&nbsp;租客操作状态：
                 <span th:if="${tenantContractPOJO.contract.tenantOperation == 0}">未处理</span>
-                <span th:if="${tenantContractPOJO.contract.tenantOperation == 1}">修改</span>
+                <span th:if="${tenantContractPOJO.contract.tenantOperation == 1}">完成</span>
                 <span th:if="${tenantContractPOJO.contract.tenantOperation == 2}">同意</span>
                 <span th:if="${tenantContractPOJO.contract.tenantOperation == 3}">拒绝</span>
                 &nbsp;&nbsp;合同类型：
@@ -94,7 +96,7 @@
                 <a th:href="@{/contract/download?(url=${tenantContractPOJO.contract.file})}" id="download">下载合同</a>
             </p>
         </div>
-        <div class="landlord-box" th:if="${tenantContractPOJO!=null && tenantContractPOJO.landlord != null}">
+        <div class="landlord-box" th:if="${tenantContractPOJO.landlord != null}">
             <p><a>
                 <img class="head" src="/images/head.jpg" />
                 <span th:text="${tenantContractPOJO.landlord.username}"/>
@@ -104,7 +106,7 @@
                 信誉值：<span th:text="${tenantContractPOJO.landlord.reputation}"/>分
             </p><br/>
         </div>
-        <div class="tenant-box" th:if="${tenantContractPOJO!=null && tenantContractPOJO.tenant != null}">
+        <div class="tenant-box" th:if="${tenantContractPOJO.tenant != null}">
             <p><a>
                 <img class="head" src="/images/head.jpg"  />
                 <span th:text="${tenantContractPOJO.tenant.username}"/>
@@ -121,13 +123,14 @@
                 </div>
             </div>
         </div>
-        <div class="operate-box" th:if="${tenantContractPOJO!=null && tenantContractPOJO.contract != null}">
+        <div class="operate-box" th:if="${tenantContractPOJO.contract != null}">
             <a th:href="@{/tenant/showContractUpdate?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">修改</a>
             <a th:href="@{/tenant/deleteContract?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">删除</a>
-            <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传合同签字照</a>
+            <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
             <a href="/tenant/info">返回</a>
         </div>
         <div class="page-box" th:if="${tenantContractPOJO!=null}">
+            <input type="hidden" name="number" th:value="${contractPageInfo.pageNum}" />
             <div th:if="${contractPageInfo.hasPreviousPage}" class="pre-box">
                 <a th:href="@{/tenant/showContracts?(number=${contractPageInfo.pageNum}-1,sta=${sta})}" aria-label="Previous">
                     <span aria-hidden="true">«</span>
@@ -148,10 +151,10 @@
         <div class="filebtn2">
             <span class="fileinput-button2">
                 <span>点击上传照片</span>
-                <input accept="image/*" name="url2" onchange="showImg(this);" type="file">
+                <input accept="image/*" name="url2" onchange="showImgs2(this);" type="file" multiple="multiple">
             </span>
         </div>
-        <div class="clear-box"></div>
+        <div class="clear-box"></div><br/>
         <div id="img-box2"></div>
         <div class="clear-box"></div>
         <div class="new-operate2">
@@ -162,6 +165,23 @@
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    var sub2 = function() {
+        console.dir($('#img-box2 img'));
+        if($('#img-box2 img').length <= 0) {
+            alert("请上传照片后提交");
+            return false;
+        }
+        $('#contract-form').submit();
+    }
+    var show2 = function() {
+        $(".contract-info2").css('display','block');
+    }
+    var reset2 = function() {
+        $("#img-box2").css('display',"none");
+        $(".contract-info2").css('display','none');
+    }
+</script>
 <script type="text/javascript">
     $(".pre").click(function () {
         var parent = $(this).next();

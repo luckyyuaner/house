@@ -65,12 +65,12 @@
             <p>
                 房东操作状态：
                 <span th:if="${contract.landlordOperation == 0}">未处理</span>
-                <span th:if="${contract.landlordOperation == 1}">修改</span>
+                <span th:if="${contract.landlordOperation == 1}">完成</span>
                 <span th:if="${contract.landlordOperation == 2}">同意</span>
                 <span th:if="${contract.landlordOperation == 3}">拒绝</span>
                 &nbsp;&nbsp;租客操作状态：
                 <span th:if="${contract.tenantOperation == 0}">未处理</span>
-                <span th:if="${contract.tenantOperation == 1}">修改</span>
+                <span th:if="${contract.tenantOperation == 1}">完成</span>
                 <span th:if="${contract.tenantOperation == 2}">同意</span>
                 <span th:if="${contract.tenantOperation == 3}">拒绝</span>
                 &nbsp;&nbsp;合同类型：

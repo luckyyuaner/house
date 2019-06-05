@@ -62,6 +62,17 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
+    public int updateContractByTenant2(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setTenantOperation(1);
+        contract.setType(0);
+        contract.setStatus(2);
+        return contractDao.updateContractByTenant2(contract);
+    }
+
+    @Override
     public int updateContractByLandlordWithAgree(Contract contract) {
         String key = "contract_" + contract.getContractId();
         commonService.deleteRedis(key);
