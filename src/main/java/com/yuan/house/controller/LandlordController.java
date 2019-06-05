@@ -205,9 +205,10 @@ public class LandlordController extends BaseController {
 
     @RequiresPermissions("contract:read")
     @RequestMapping("/landlord/showContracts")
-    public ModelAndView showContracts(Model model, int number) {
+    public ModelAndView showContracts(Model model, int number, int sta) {
+        model.addAttribute("sta", sta);
         PageHelper.startPage(number, 1);
-        List<Contract> contracts = contractService.queryContractsByLandlord(number);
+        List<Contract> contracts = contractService.queryContractsByLandlord(number, sta);
         PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
         model.addAttribute("contractPageInfo", contractPageInfo);
         if (contracts != null && contracts.size() > 0) {
@@ -238,6 +239,21 @@ public class LandlordController extends BaseController {
         Contract contract = new Contract();
         contract.setContractId(cid);
         contractService.updateContractByLandlordWithRefuse(contract);
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/updateContract2")
+    public ModelAndView updateContract2(Model model, MultipartFile[] url2, Long cid, int sta, int number) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        JSONObject json = FileUtil.uploads(url2);
+        if ("fail".equals(json.getString("rs"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/landlord/showContracts?number=" + number+"&sta="+sta);
+        }
+        contract.setLandlordInfo(json.getString("msg"));
+        contractService.updateContractByLandlord2(contract);
         return new ModelAndView("/landlord/info", "Model", model);
     }
 }

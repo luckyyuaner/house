@@ -39,11 +39,11 @@
         FROM contract
         WHERE user_id = #{uid}
         <if test="sta == 0">
-            and status = 0
+            and (status = 0 or status = 1)
         </if>
         <if test="sta == 1">
             and (
-            status = 1 or status = 2 or status = 3 or
+            status = 2 or status = 3 or
             status = 4 or status = 5
             )
         </if>
@@ -62,6 +62,20 @@
         (
           select house_id from house where user_id = #{uid}
         )
+        <if test="sta == 0">
+            and (status = 0 or status = 1)
+        </if>
+        <if test="sta == 1">
+            and (
+            status = 2 or status = 3 or
+            status = 4 or status = 5
+            )
+        </if>
+        <if test="sta == 2">
+            and (
+            status = 6 or status = 7 or status = 8
+            )
+        </if>
     </select>
 
     <select id="queryAllContract" resultType="com.yuan.house.model.Contract">
@@ -87,6 +101,14 @@
         SET
         tenant_operation = #{object.tenantOperation}, type = #{object.type},
         status = #{object.status}, tenant_info = #{object.tenantInfo}
+        WHERE contract_id = #{object.contractId}
+    </update>
+
+    <update id="updateContractByLandlord2" parameterType="com.yuan.house.model.Contract">
+        UPDATE contract
+        SET
+        landlord_operation = #{object.landlordOperation}, type = #{object.type},
+        status = #{object.status}, landlord_info = #{object.landlordInfo}
         WHERE contract_id = #{object.contractId}
     </update>
 

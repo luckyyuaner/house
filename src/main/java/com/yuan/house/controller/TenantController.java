@@ -256,7 +256,7 @@ public class TenantController extends BaseController {
 
     @RequiresPermissions("contract:update")
     @RequestMapping("/tenant/updateContract2")
-    public ModelAndView updateContract(Model model, MultipartFile[] url2, Long cid, int sta, int number) {
+    public ModelAndView updateContract2(Model model, MultipartFile[] url2, Long cid, int sta, int number) {
         Contract contract = new Contract();
         contract.setContractId(cid);
         JSONObject json = FileUtil.uploads(url2);

@@ -20,6 +20,8 @@ public interface ContractDao {
 
     int updateContractByTenant2(@Param("object") Contract object);
 
+    int updateContractByLandlord2(@Param("object") Contract object);
+
     int updateContractByLandlordWithAgree(@Param("object") Contract object);
 
     int updateContractByLandlordWithRefuse(@Param("object") Contract object);
@@ -30,7 +32,7 @@ public interface ContractDao {
 
     List<Contract> queryContractsByTenant(@Param("uid") Long uid,@Param("sta") int sta);
 
-    List<Contract> queryContractsByLandlord(@Param("uid") Long uid);
+    List<Contract> queryContractsByLandlord(@Param("uid") Long uid,@Param("sta") int sta);
 
     List<Contract> queryAllContract();
 

@@ -9,8 +9,13 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
-<form action="/landlord/updateContractWithAgree" method="post" id="contract-form" enctype="multipart/form-data">
-    <div class="left-box">
+<form action="" method="post" id="contract-form" enctype="multipart/form-data">
+    <div th:if="${tenantContractPOJO==null}">
+        <div style="text-align:center;width:100%;color:red;font-size:40px;">
+            内容为空
+        </div>
+    </div>
+    <div class="left-box" th:if="${tenantContractPOJO!=null}">
         <div th:if="${tenantContractPOJO.house != null}"  class="house-box">
             <div class="picbox" th:if="${tenantContractPOJO.house.urls != null}">
                 <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!tenantContractPOJO.house.urls.contains(',')}" />
@@ -54,10 +59,11 @@
             </div>
         </div>
     </div>
-    <div class="right-box">
-        <div class="contract-box">
+    <div class="right-box" th:if="${tenantContractPOJO!=null}">
+        <div class="contract-box" th:if="${tenantContractPOJO.contract != null}">
             <p>
-                <input type="hidden" th:value="${tenantContractPOJO.contract.contractId}" />
+                <input type="hidden" name="cid" th:value="${tenantContractPOJO.contract.contractId}" />
+                <input type="hidden" name="sta" th:value="${sta}" />
                 起租时间：<span th:text="${tenantContractPOJO.contract.stime}"/>&nbsp;&nbsp;
                 结束时间：<span th:text="${tenantContractPOJO.contract.etime}"/>
             </p>
@@ -86,8 +92,11 @@
                 <span th:if="${tenantContractPOJO.contract.status == 7}">退款处理中</span>
                 <span th:if="${tenantContractPOJO.contract.status == 8}">毁约结束</span>
             </p>
+            <p th:if="${tenantContractPOJO.contract.status == 2}">
+                <a th:href="@{/contract/download?(url=${tenantContractPOJO.contract.file})}" id="download">下载合同</a>
+            </p>
         </div>
-        <div class="landlord-box">
+        <div class="landlord-box" th:if="${tenantContractPOJO.landlord != null}">
             <p><a>
                 <img class="head" src="/images/head.jpg"  />
                 <span th:text="${tenantContractPOJO.landlord.username}"/>
@@ -104,7 +113,7 @@
                 </div>
             </div>
         </div>
-        <div class="tenant-box">
+        <div class="tenant-box" th:if="${tenantContractPOJO.tenant != null}">
             <p><a>
                 <img class="head" src="/images/head.jpg"  />
                 <span th:text="${tenantContractPOJO.tenant.username}"/>
@@ -114,29 +123,30 @@
                 信誉值：<span th:text="${tenantContractPOJO.tenant.reputation}"/>分
             </p><br/>
         </div>
-        <div class="operate-box">
-            <a onclick="show()">同意</a>
-            <a th:href="@{/landlord/updateContractWithRefuse?(cid=${tenantContractPOJO.contract.contractId})}">拒绝</a>
-            <a href="/tenant/info">返回</a>
+        <div class="operate-box" th:if="${tenantContractPOJO.contract != null}">
+            <a onclick="show()" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">同意</a>
+            <a th:href="@{/landlord/updateContractWithRefuse?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">拒绝</a>
+            <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
+            <a href="/landlord/info">返回</a>
         </div>
-        <div class="page-box">
+        <div class="page-box" th:if="${tenantContractPOJO!=null}">
+            <input type="hidden" name="number" th:value="${contractPageInfo.pageNum}" />
             <div th:if="${contractPageInfo.hasPreviousPage}" class="pre-box">
-                <a th:href="@{/landlord/showContracts?(number=${contractPageInfo.pageNum}-1)}" aria-label="Previous">
+                <a th:href="@{/landlord/showContracts?(number=${contractPageInfo.pageNum}-1,sta=${sta})}" aria-label="Previous">
                     <span aria-hidden="true">«</span>
                 </a>
             </div>
             <div class="content-box"><span th:text="${contractPageInfo.pageNum}"></span>/<span th:text="${contractPageInfo.pages}"></span>页</div>
             <div th:if="${contractPageInfo.hasNextPage}" class="next-box">
-                <a th:href="@{/landlord/showContracts?(number=${contractPageInfo.pageNum}+1)}"  aria-label="Next">
+                <a th:href="@{/landlord/showContracts?(number=${contractPageInfo.pageNum}+1,sta=${sta})}"  aria-label="Next">
                     <span aria-hidden="true">»</span>
                 </a>
             </div>
         </div>
     </div>
     <div class="clear-box"></div>
-    <div class="contract-info" style="display: none;">
+    <div class="contract-info" th:if="${tenantContractPOJO != null}" style="display: none;">
         <br/>
-        <input type="hidden" name="cid" th:value="${tenantContractPOJO.contract.contractId}" />
         <p>请上传身份证正、反面照片及本人手持身份证照片，共三张照片</p>
         <span class="filespan">证件图片</span>
         <div class="filebtn">
@@ -153,13 +163,56 @@
             <a onclick="reset()">取消</a>
         </div>
     </div>
+    <div class="clear-box"></div>
+    <div class="contract-info2" style="display: none;">
+        <br/>
+        <p>请将合同文件下载后打印，并本人签字后拍照上传</p>
+        <div class="filebtn2">
+            <span class="fileinput-button2">
+                <span>点击上传照片</span>
+                <input accept="image/*" name="url2" onchange="showImgs2(this);" type="file" multiple="multiple">
+            </span>
+        </div>
+        <div class="clear-box"></div><br/>
+        <div id="img-box2"></div>
+        <div class="clear-box"></div>
+        <div class="new-operate2">
+            <a onclick="return sub2();">提交</a>
+            <a onclick="reset2()">取消</a>
+        </div>
+    </div>
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
-<script type="text/javascript">
+<script th:inline="javascript">
+    /*<![CDATA[*/
     var sub = function() {
+        $("#contract-form").attr('action',"/landlord/updateContractWithAgree");
         $('#contract-form').submit();
     }
+    var sub2 = function() {
+        //console.dir($('#img-box2 img'));
+        if($('#img-box2 img').length <= 0) {
+            alert("请上传照片后提交");
+            return false;
+        }
+        $("#contract-form").attr('action',"/landlord/updateContract2");
+        $('#contract-form').submit();
+    }
+    /*]]>*/
+</script>
+<script type="text/javascript">
+    var show2 = function() {
+        $("#img-box2").css('display',"block");
+        $(".contract-info2").css('display','block');
+    }
+    var reset2 = function() {
+        $("#img-box2").empty();
+        $("#img-box2").css('display',"none");
+        $(".contract-info2").css('display','none');
+    }
+</script>
+<script type="text/javascript">
     var show = function() {
         $(".contract-info").css('display','block');
     }

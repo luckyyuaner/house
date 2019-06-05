@@ -12,7 +12,9 @@
     <ul class="menu">
         <li><a th:href="@{/house/showNew}"><img src="/images/icon4.png" />发布新房源</a></li>
         <li><a th:href="@{/house/show}"><img src="/images/step4.jpg" />房源管理</a></li>
-        <li><a th:href="@{/landlord/showContracts?(number=1)}"><img src="/images/step3.jpg" />合同管理</a></li>
+        <li><a th:href="@{/landlord/showContracts?(number=1,sta=0)}"><img src="/images/step3.jpg" />租房申请管理</a></li>
+        <li><a th:href="@{/landlord/showContracts?(number=1,sta=1)}"><img src="/images/step3.jpg" />租房合同管理</a></li>
+        <li><a th:href="@{/landlord/showContracts?(number=1,sta=2)}"><img src="/images/step3.jpg" />退房申请管理</a></li>
         <li><a><img src="/images/icon1.png" />评价管理</a></li>
         <li><a><img src="/images/icon9.png" />反馈管理</a></li>
         <li><a><img src="/images/step1.jpg" />信息管理</a></li>

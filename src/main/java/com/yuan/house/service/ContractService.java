@@ -31,6 +31,7 @@ public interface ContractService {
 
     int updateContractByManagerWithRefuse(Contract contract);
 
+    int updateContractByLandlord2(Contract contract);
     /**
      * 分页查询租客的合同
      * @param number
@@ -43,7 +44,7 @@ public interface ContractService {
      * @param number
      * @return
      */
-    List<Contract> queryContractsByLandlord(int number);
+    List<Contract> queryContractsByLandlord(int number, int sta);
 
     List<Contract> queryAllContract(int number);
     
