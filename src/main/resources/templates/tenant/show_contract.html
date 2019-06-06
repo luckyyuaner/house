@@ -127,6 +127,7 @@
             <a th:href="@{/tenant/showContractUpdate?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">修改</a>
             <a th:href="@{/tenant/deleteContract?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">删除</a>
             <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
+            <a onclick="show3()" th:if="${tenantContractPOJO.contract.status == 4}">添加评论</a>
             <a href="/tenant/info">返回</a>
         </div>
         <div class="page-box" th:if="${tenantContractPOJO!=null}">
@@ -145,7 +146,7 @@
         </div>
     </div>
     <div class="clear-box"></div>
-    <div class="contract-info2" style="display: none;">
+    <div class="contract-info2" th:if="${tenantContractPOJO!=null}" style="display: none;">
         <br/>
         <p>请将合同文件下载后打印，并本人签字后拍照上传</p>
         <div class="filebtn2">
@@ -162,16 +163,55 @@
             <a onclick="reset2()">取消</a>
         </div>
     </div>
+    <div class="clear-box"></div>
+    <div class="contract-info3" th:if="${tenantContractPOJO!=null}" style="display: none;">
+        <br/><br/>
+        <span class="cc" th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.tenantOperation ==0}">房源分数</span>
+        <input th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.tenantOperation ==0}" type="text" name="grade" class="input3"/><br/><br/>
+        <span class="cc">评论信息</span>
+        <textarea name="info" class="textarea3"></textarea><br/><br/>
+        <span class="cc">评论图片</span>
+        <div class="filebtn3">
+            <span class="fileinput-button3">
+                <span>点击上传照片</span>
+                <input accept="image/*" name="url3" onchange="showImg3(this);" type="file">
+            </span>
+        </div>
+        <div id="img-box3"></div>
+        <div class="clear-box"></div>
+        <div class="new-operate3">
+            <a onclick="return sub3();">评论</a>
+            <a onclick="reset3()">取消</a>
+        </div>
+    </div>
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
 <script type="text/javascript">
+    var sub3 = function() {
+        if($(".textarea3").val().trim()=="") {
+            alert("评论内容不能为空");
+            return false;
+        }
+        $("#contract-form").attr('action',"/tenant/addComment");
+        $('#contract-form').submit();
+    }
+    var show3 = function() {
+        $("#img-box3").css('display','block');
+        $(".contract-info3").css('display','block');
+    }
+    var reset3 = function() {
+        $("#img-box3").css('display',"none");
+        $(".contract-info3").css('display','none');
+    }
+</script>
+<script type="text/javascript">
     var sub2 = function() {
-        console.dir($('#img-box2 img'));
         if($('#img-box2 img').length <= 0) {
             alert("请上传照片后提交");
             return false;
         }
+        $("#contract-form").attr('action',"/tenant/updateContract2");
         $('#contract-form').submit();
     }
     var show2 = function() {

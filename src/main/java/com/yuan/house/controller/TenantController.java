@@ -6,13 +6,11 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yuan.house.POJO.TenantContractPOJO;
 import com.yuan.house.constants.Constants;
+import com.yuan.house.model.Comment;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
-import com.yuan.house.service.CommonService;
-import com.yuan.house.service.ContractService;
-import com.yuan.house.service.HouseService;
-import com.yuan.house.service.UserService;
+import com.yuan.house.service.*;
 import com.yuan.house.util.FileUtil;
 import com.yuan.house.util.PasswordUtil;
 import com.yuan.house.util.TimeUtils;
@@ -49,6 +47,9 @@ public class TenantController extends BaseController {
 
     @Autowired
     private ContractService contractService;
+
+    @Autowired
+    private CommentService commentService;
 
     @Autowired
     private CommonService commonService;
@@ -266,6 +267,28 @@ public class TenantController extends BaseController {
         }
         contract.setTenantInfo(json.getString("msg"));
         contractService.updateContractByTenant2(contract);
+        return new ModelAndView("/tenant/info", "Model", model);
+    }
+
+    @RequiresPermissions("comment:create")
+    @RequestMapping("/tenant/addComment")
+    public ModelAndView addComment(Model model, MultipartFile url3, Long cid, String info,String grade) {
+        Comment comment = new Comment();
+        comment.setContractId(cid);
+        JSONObject json = FileUtil.upload(url3);
+        if ("fail".equals(json.getString("rs")) && !"未选择文件".equals(json.getString("msg"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/tenant/info");
+        }
+        if("success".equals(json.getString("rs"))) {
+            comment.setUrl(json.getString("msg"));
+        }
+        comment.setInfo(info);
+        if(grade != null) {
+            System.out.println("grade:"+grade);
+            comment.setHouseGrade(Double.parseDouble(grade));
+        }
+        commentService.addCommentByTenant(comment);
         return new ModelAndView("/tenant/info", "Model", model);
     }
 }
