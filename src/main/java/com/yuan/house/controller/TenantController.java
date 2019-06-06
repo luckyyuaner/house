@@ -203,6 +203,7 @@ public class TenantController extends BaseController {
     @RequestMapping("/tenant/showContracts")
     public ModelAndView showContracts(Model model, int number, int sta) {
         model.addAttribute("sta", sta);
+        model.addAttribute("number", number);
         PageHelper.startPage(number, 1);
         List<Contract> contracts = contractService.queryContractsByTenant(number, sta);
         PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
@@ -290,5 +291,12 @@ public class TenantController extends BaseController {
         }
         commentService.addCommentByTenant(comment);
         return new ModelAndView("/tenant/info", "Model", model);
+    }
+
+    @RequiresPermissions("comment:delete")
+    @RequestMapping("/comment/delete")
+    public ModelAndView deleteComment(Model model, Long cid, int sta ,int number) {
+        commentService.deleteComment(cid);
+        return new ModelAndView("redirect:/tenant/showContracts?number=" + number+"&sta="+sta);
     }
 }

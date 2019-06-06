@@ -1,6 +1,8 @@
 package com.yuan.house.service.impl;
 
 import com.yuan.house.POJO.TenantContractPOJO;
+import com.yuan.house.dao.CommentDao;
+import com.yuan.house.model.Comment;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
@@ -14,6 +16,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -28,6 +31,9 @@ public class CommonServiceImpl implements CommonService {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private CommentDao commentDao;
 
     @Override
     public Object queryRedis(String key) {
@@ -76,6 +82,8 @@ public class CommonServiceImpl implements CommonService {
         tenantContractPOJO.setLandlord(landlord);
         User tenant = userService.queryUserById(contract.getUserId());
         tenantContractPOJO.setTenant(tenant);
+        List<Comment> comments = commentDao.queryCommentsByContract(contract.getContractId());
+        tenantContractPOJO.setComments(comments);
         return tenantContractPOJO;
     }
 }

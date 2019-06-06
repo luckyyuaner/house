@@ -3,6 +3,7 @@ package com.yuan.house.service.impl;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.dao.CommentDao;
 import com.yuan.house.dao.ContractDao;
+import com.yuan.house.dao.HouseDao;
 import com.yuan.house.model.Comment;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.User;
@@ -24,6 +25,9 @@ public class CommentServiceImpl implements CommentService {
     private ContractDao contractDao;
 
     @Autowired
+    private HouseDao houseDao;
+
+    @Autowired
     private CommonService commonService;
 
 
@@ -33,7 +37,6 @@ public class CommentServiceImpl implements CommentService {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
         comment.setUserId(user.getUserId());
-        commentDao.addCommentByTenant(comment);
         Contract contract = new Contract();
         contract.setContractId(comment.getContractId());
         contract.setType(0);
@@ -41,8 +44,21 @@ public class CommentServiceImpl implements CommentService {
         contract.setTenantOperation(1);
         contractDao.updateContractByTenant3(contract);
         if(comment.getHouseGrade() != 0) {
-            commentDao.updateHouseGrade(comment.getContractId(), comment.getHouseGrade());
-            commentDao.updateLandlordGrade(comment.getContractId(), comment.getHouseGrade());
+            int count1= commentDao.queryHouseCommentCount(comment.getContractId());
+            commentDao.updateHouseGrade(comment.getContractId(), comment.getHouseGrade(), (double)count1);
+            Long hid = contractDao.queryHouseIDByContract(comment.getContractId());
+            User landlord = houseDao.queryLandlordByHouse(hid);
+            int count2 = commentDao.queryLandlordCommentCount(user.getUserId());
+            commentDao.updateLandlordGrade(comment.getContractId(), comment.getHouseGrade(), (double)count2, user.getUserId());
         }
+        commentDao.addCommentByTenant(comment);
+    }
+
+    @Override
+    public int deleteComment(Long cid) {
+        String key = "comment_" + cid;
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("comments");
+        return commentDao.deleteComment(cid);
     }
 }

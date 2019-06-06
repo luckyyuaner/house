@@ -19,6 +19,13 @@
         WHERE contract_id = #{id}
     </select>
 
+    <select id="queryHouseIDByContract" resultType="Long">
+        SELECT
+        house_id
+        FROM contract
+        WHERE contract_id = #{id}
+    </select>
+
 
     <insert id="createNewContractByTenant" parameterType="com.yuan.house.model.Contract">
         INSERT INTO contract

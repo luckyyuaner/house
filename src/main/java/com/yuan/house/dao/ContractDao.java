@@ -1,6 +1,7 @@
 package com.yuan.house.dao;
 
 import com.yuan.house.model.Contract;
+import com.yuan.house.model.House;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -41,4 +42,6 @@ public interface ContractDao {
     List<Contract> queryAllContract();
 
     int deleteContract(@Param("id") Long id);
+
+    Long queryHouseIDByContract(@Param("id") Long id);
 }

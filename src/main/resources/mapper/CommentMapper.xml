@@ -21,16 +21,48 @@
         )
     </insert>
 
+    <select id="queryHouseCommentCount" resultType="Integer">
+        SELECT
+        count(contract_id)
+        FROM
+        comment
+        WHERE
+        contract_id in (select contract_id from contract where house_id in (select house_id from contract where contract_id = #{cid}))
+    </select>
+
     <update id="updateHouseGrade">
         UPDATE house
-        SET grade = <![CDATA[grade+ (#{grade}-grade)/((select count(contract_id) from comment where contract_id =#{cid})+1)]]>
+        SET grade = <![CDATA[grade+ ((#{grade}-grade)/(#{count}+1))]]>
         WHERE house_id in (select house_id from contract where contract_id =#{cid})
     </update>
 
+    <select id="queryLandlordCommentCount"  resultType="Integer">
+        SELECT
+        count(contract_id)
+        FROM
+        comment
+        WHERE
+        contract_id in (select contract_id from contract where house_id in (select house_id from house where user_id = #{uid}))
+    </select>
+
     <update id="updateLandlordGrade">
         UPDATE user
-        SET reputation = <![CDATA[reputation+ (#{grade}-reputation)/((select count(user_id) from house where house_id in (select house_id from contract where contract_id = #{cid}))+1)]]>
-        WHERE user_id in (select user_id from house where house_id in (select house_id from contract where contract_id =#{cid}))
+        SET reputation = <![CDATA[reputation+ ((#{grade}-reputation)/(#{count}+1))]]>
+        WHERE user_id =#{uid}
     </update>
 
+
+    <select id="queryCommentsByContract" resultType="com.yuan.house.model.Comment">
+        SELECT
+        *
+        FROM
+        comment
+        WHERE
+        contract_id = #{cid}
+        order by comment_id asc;
+    </select>
+
+    <delete id="deleteComment" parameterType="Long">
+        DELETE FROM comment WHERE comment_id = #{cid}
+    </delete>
 </mapper>
