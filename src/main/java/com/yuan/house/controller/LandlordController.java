@@ -6,13 +6,11 @@ import com.github.pagehelper.PageInfo;
 import com.yuan.house.POJO.TenantContractPOJO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
+import com.yuan.house.model.Comment;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.User;
-import com.yuan.house.service.CommonService;
-import com.yuan.house.service.ContractService;
-import com.yuan.house.service.HouseService;
-import com.yuan.house.service.UserService;
+import com.yuan.house.service.*;
 import com.yuan.house.util.FileUtil;
 import com.yuan.house.util.LoggerUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -46,6 +44,9 @@ public class LandlordController extends BaseController {
 
     @Autowired
     private ContractService contractService;
+
+    @Autowired
+    private CommentService commentService;
 
     @Autowired
     private CommonService commonService;
@@ -207,6 +208,7 @@ public class LandlordController extends BaseController {
     @RequestMapping("/landlord/showContracts")
     public ModelAndView showContracts(Model model, int number, int sta) {
         model.addAttribute("sta", sta);
+        model.addAttribute("number", number);
         PageHelper.startPage(number, 1);
         List<Contract> contracts = contractService.queryContractsByLandlord(number, sta);
         PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
@@ -255,5 +257,34 @@ public class LandlordController extends BaseController {
         contract.setLandlordInfo(json.getString("msg"));
         contractService.updateContractByLandlord2(contract);
         return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("comment:create")
+    @RequestMapping("/landlord/addComment")
+    public ModelAndView addComment(Model model, MultipartFile url3, Long cid, String info,String grade) {
+        Comment comment = new Comment();
+        comment.setContractId(cid);
+        JSONObject json = FileUtil.upload(url3);
+        if ("fail".equals(json.getString("rs")) && !"未选择文件".equals(json.getString("msg"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/landlord/info");
+        }
+        if("success".equals(json.getString("rs"))) {
+            comment.setUrl(json.getString("msg"));
+        }
+        comment.setInfo(info);
+        if(grade != null) {
+            System.out.println("grade:"+grade);
+            comment.setUserGrade(Double.parseDouble(grade));
+        }
+        commentService.addCommentByLandlord(comment);
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("comment:delete")
+    @RequestMapping("/landlord/comment/delete")
+    public ModelAndView deleteComment(Model model, Long cid, int sta ,int number) {
+        commentService.deleteComment(cid);
+        return new ModelAndView("redirect:/landlord/showContracts?number=" + number+"&sta="+sta);
     }
 }

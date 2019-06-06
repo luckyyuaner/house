@@ -21,6 +21,24 @@
         )
     </insert>
 
+    <insert id="addCommentByLandlord" parameterType="com.yuan.house.model.Comment">
+        INSERT INTO comment
+        (
+        user_id, contract_id, info, url
+        <if test="object.userGrade != 0">
+            , user_grade
+        </if>
+        )
+        VALUES
+        (
+        #{object.userId},#{object.contractId}, #{object.info},
+        #{object.url}
+        <if test="object.userGrade != 0">
+            ,#{object.userGrade}
+        </if>
+        )
+    </insert>
+
     <select id="queryHouseCommentCount" resultType="Integer">
         SELECT
         count(contract_id)
@@ -45,12 +63,26 @@
         contract_id in (select contract_id from contract where house_id in (select house_id from house where user_id = #{uid}))
     </select>
 
+    <select id="queryTenantCommentCount"  resultType="Integer">
+        SELECT
+        count(contract_id)
+        FROM
+        comment
+        WHERE
+        contract_id in (select contract_id from contract where  user_id = #{uid})
+    </select>
+
     <update id="updateLandlordGrade">
         UPDATE user
         SET reputation = <![CDATA[reputation+ ((#{grade}-reputation)/(#{count}+1))]]>
         WHERE user_id =#{uid}
     </update>
 
+    <update id="updateTenantGrade">
+        UPDATE user
+        SET reputation = <![CDATA[reputation+ ((#{grade}-reputation)/(#{count}+1))]]>
+        WHERE user_id =#{uid}
+    </update>
 
     <select id="queryCommentsByContract" resultType="com.yuan.house.model.Comment">
         SELECT
@@ -59,7 +91,7 @@
         comment
         WHERE
         contract_id = #{cid}
-        order by comment_id asc;
+        order by comment_id asc
     </select>
 
     <delete id="deleteComment" parameterType="Long">

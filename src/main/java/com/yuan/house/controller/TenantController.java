@@ -294,7 +294,7 @@ public class TenantController extends BaseController {
     }
 
     @RequiresPermissions("comment:delete")
-    @RequestMapping("/comment/delete")
+    @RequestMapping("/tenant/comment/delete")
     public ModelAndView deleteComment(Model model, Long cid, int sta ,int number) {
         commentService.deleteComment(cid);
         return new ModelAndView("redirect:/tenant/showContracts?number=" + number+"&sta="+sta);

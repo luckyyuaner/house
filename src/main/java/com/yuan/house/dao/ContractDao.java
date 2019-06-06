@@ -25,6 +25,8 @@ public interface ContractDao {
 
     int updateContractByLandlord2(@Param("object") Contract object);
 
+    int updateContractByLandlord3(@Param("object") Contract object);
+
     int updateContractByLandlordWithAgree(@Param("object") Contract object);
 
     int updateContractByLandlordWithRefuse(@Param("object") Contract object);

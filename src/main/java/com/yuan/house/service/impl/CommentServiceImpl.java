@@ -49,9 +49,29 @@ public class CommentServiceImpl implements CommentService {
             Long hid = contractDao.queryHouseIDByContract(comment.getContractId());
             User landlord = houseDao.queryLandlordByHouse(hid);
             int count2 = commentDao.queryLandlordCommentCount(user.getUserId());
-            commentDao.updateLandlordGrade(comment.getContractId(), comment.getHouseGrade(), (double)count2, user.getUserId());
+            commentDao.updateLandlordGrade(comment.getHouseGrade(), (double)count2, user.getUserId());
         }
         commentDao.addCommentByTenant(comment);
+    }
+
+    @Override
+    @Transactional(rollbackFor=Exception.class)
+    public void addCommentByLandlord(Comment comment) {
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        comment.setUserId(user.getUserId());
+        Contract contract = new Contract();
+        contract.setContractId(comment.getContractId());
+        contract.setType(0);
+        contract.setStatus(4);
+        contract.setLandlordOperation(1);
+        contractDao.updateContractByLandlord3(contract);
+        if(comment.getUserGrade() != 0) {
+            Long uid = contractDao.queryContractById(comment.getContractId()).getUserId();
+            int count = commentDao.queryTenantCommentCount(uid);
+            commentDao.updateTenantGrade(comment.getUserGrade(),uid,count);
+        }
+        commentDao.addCommentByLandlord(comment);
     }
 
     @Override

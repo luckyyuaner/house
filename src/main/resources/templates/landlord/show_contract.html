@@ -127,6 +127,7 @@
             <a onclick="show()" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">同意</a>
             <a th:href="@{/landlord/updateContractWithRefuse?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">拒绝</a>
             <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
+            <a onclick="show3()" th:if="${tenantContractPOJO.contract.status == 4}">添加评论</a>
             <a href="/landlord/info">返回</a>
         </div>
         <div class="page-box" th:if="${tenantContractPOJO!=null}">
@@ -181,6 +182,42 @@
             <a onclick="reset2()">取消</a>
         </div>
     </div>
+    <div class="clear-box"></div>
+    <div class="contract-info3" th:if="${tenantContractPOJO!=null}" style="display: none;">
+        <br/><br/>
+        <span class="cc" th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.landlordOperation ==0}">租客分数</span>
+        <input th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.landlordOperation ==0}" type="text" name="grade" class="input3"/><br/><br/>
+        <span class="cc">评论信息</span>
+        <textarea name="info" class="textarea3"></textarea><br/><br/>
+        <span class="cc">评论图片</span>
+        <div class="filebtn3">
+            <span class="fileinput-button3">
+                <span>点击上传照片</span>
+                <input accept="image/*" name="url3" onchange="showImg3(this);" type="file">
+            </span>
+        </div>
+        <div id="img-box3"></div>
+        <div class="clear-box"></div>
+        <div class="new-operate3">
+            <a onclick="return sub3();">评论</a>
+            <a onclick="reset3()">取消</a>
+        </div>
+    </div>
+    <div class="clear-box"></div>
+    <div class="comment-box" th:if="${tenantContractPOJO!=null&&tenantContractPOJO.comments!=null&&tenantContractPOJO.comments.size()>0}">
+        <br/>
+        <div class="tit">----评论列表----</div>
+        <div th:each="comment:${tenantContractPOJO.comments}" style="margin-top:10px;">
+            <img  class="h" th:if="${comment.userId == tenantContractPOJO.landlord.userId}" src="/images/head.jpg" />
+            <img class="h" th:if="${comment.userId == tenantContractPOJO.tenant.userId}" src="/images/head.jpg" />
+            <span th:if="${comment.userId == tenantContractPOJO.landlord.userId}" th:text="${tenantContractPOJO.landlord.username}" />
+            <span th:if="${comment.userId == tenantContractPOJO.tenant.userId}" th:text="${tenantContractPOJO.tenant.username}" />
+            <span th:text="${comment.ctime}" /><br/><br/><br/>
+            <textarea class="i" readonly="readonly" th:text="${comment.info}"></textarea>
+            <img class="u" th:if="${comment.url!=null}" th:src="@{/file/{imgname}(imgname=${comment.url})}"/>
+            <a class="op" th:if="${comment.userId == session.currUser.userId}"  th:href="@{/landlord/comment/delete?(cid=${comment.commentId},sta=${sta},number=${number})}">删除</a>
+        </div>
+    </div>
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
@@ -200,6 +237,24 @@
         $('#contract-form').submit();
     }
     /*]]>*/
+</script>
+<script type="text/javascript">
+    var sub3 = function() {
+        if($(".textarea3").val().trim()=="") {
+            alert("评论内容不能为空");
+            return false;
+        }
+        $("#contract-form").attr('action',"/landlord/addComment");
+        $('#contract-form').submit();
+    }
+    var show3 = function() {
+        $("#img-box3").css('display','block');
+        $(".contract-info3").css('display','block');
+    }
+    var reset3 = function() {
+        $("#img-box3").css('display',"none");
+        $(".contract-info3").css('display','none');
+    }
 </script>
 <script type="text/javascript">
     var show2 = function() {
