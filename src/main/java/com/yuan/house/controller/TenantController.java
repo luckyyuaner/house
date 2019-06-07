@@ -83,6 +83,7 @@ public class TenantController extends BaseController {
     @RequestMapping("/common/showNew")
     public ModelAndView showContractNew(Model model, @RequestParam("hid") Long hid) {
         model.addAttribute("house", houseService.queryHouseById(hid));
+        model.addAttribute("comments", commentService.queryCommentsByHouse(hid));
         model.addAttribute("landlord", houseService.queryLandlordByHouse(hid));
         model.addAttribute("contract", new Contract());
         Session session = SecurityUtils.getSubject().getSession();

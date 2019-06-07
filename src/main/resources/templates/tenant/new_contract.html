@@ -91,10 +91,6 @@
                 描述：<span th:text="${house.description}" />
             </div>
         </div>
-        <div class="clear-box"></div>
-        <div class="more">
-            --加载评论--
-        </div>
     </div>
     <div class="clear-box"></div>
     <div class="contract-info" style="display:none;">
@@ -121,7 +117,17 @@
     </div>
 </form>
 <div class="clear-box"></div>
-<div class="comment-info"></div>
+<div class="comment-box" th:if="${comments!=null&&comments.size()>0}">
+    <br/>
+    <div class="tit">----评论列表----</div>
+    <div th:each="pojo:${comments}" style="margin-top:10px;">
+        <img  class="h" src="/images/head.jpg" />
+        <span th:text="${pojo.username}" />
+        <span th:text="${pojo.ctime}" /><br/><br/><br/>
+        <textarea class="i" readonly="readonly" th:text="${pojo.info}"></textarea>
+        <img class="u" th:if="${pojo.url!=null}" th:src="@{/file/{imgname}(imgname=${pojo.url})}"/>
+    </div>
+</div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
 <script th:inline="javascript">

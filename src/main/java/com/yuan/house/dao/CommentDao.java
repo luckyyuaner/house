@@ -1,5 +1,6 @@
 package com.yuan.house.dao;
 
+import com.yuan.house.POJO.CommentPOJO;
 import com.yuan.house.model.Comment;
 import org.apache.ibatis.annotations.Param;
 
@@ -17,6 +18,8 @@ public interface CommentDao {
     int updateTenantGrade(@Param("grade")double grade, @Param("uid")Long uid,  @Param("count")double count);
 
     List<Comment> queryCommentsByContract(@Param("cid")Long cid);
+
+    List<CommentPOJO> queryCommentsByHouse(@Param("hid")Long hid);
 
     int queryHouseCommentCount(@Param("cid")Long cid);
 

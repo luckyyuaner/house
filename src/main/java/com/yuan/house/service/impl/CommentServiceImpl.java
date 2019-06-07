@@ -1,5 +1,6 @@
 package com.yuan.house.service.impl;
 
+import com.yuan.house.POJO.CommentPOJO;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.dao.CommentDao;
 import com.yuan.house.dao.ContractDao;
@@ -14,6 +15,8 @@ import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -80,5 +83,17 @@ public class CommentServiceImpl implements CommentService {
         commonService.deleteRedis(key);
         commonService.deleteByPrex("comments");
         return commentDao.deleteComment(cid);
+    }
+
+    @Override
+    public List<CommentPOJO> queryCommentsByHouse(Long hid) {
+        String key = "comments_hid_" + hid;
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<CommentPOJO>)rs;
+        }
+        List<CommentPOJO> comments = commentDao.queryCommentsByHouse(hid);
+        commonService.insertRedis(key, comments);
+        return comments;
     }
 }

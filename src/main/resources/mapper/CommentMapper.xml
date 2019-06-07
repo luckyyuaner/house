@@ -94,6 +94,19 @@
         order by comment_id asc
     </select>
 
+    <select id="queryCommentsByHouse" resultType="com.yuan.house.POJO.CommentPOJO">
+        SELECT
+        comment.*,user.username,user.head
+        FROM
+        comment,user
+        WHERE
+        user.user_id = comment.user_id
+        and
+        contract_id in
+        (select contract_id from contract where house_id =#{hid})
+        order by comment_id asc
+    </select>
+
     <delete id="deleteComment" parameterType="Long">
         DELETE FROM comment WHERE comment_id = #{cid}
     </delete>
