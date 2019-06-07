@@ -2,63 +2,64 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <style type="text/css">
-        body {
-            width: 100%;
-            background-image: url(/images/bg.jpg);
-            color: rgba(0, 0, 0, 0.69);
-            font-family: SimHei;
-            text-align: center;
-        }
-        form{
-            width:400px;
-            margin-top:100px;
-            margin-left:300px;
-        }
-        input{
-            border:1px #5d9aff solid;
-            width:300px;
-            height:32px;
-            border-radius:10px;
-            float:left;
-        }
-
-        input:focus{
-            border-color: #9ecaed;
-            box-shadow: 0 0 10px #9ecaed;
-            border-radius:10px;
-        }
-        .btn{
-            display: inline-block;
-            width:160px;
-            height:32px;
-            line-height:32px;
-            text-align: center;
-            font-size:20px;
-            text-decoration: none;
-            color:black;
-            background-color: rgba(72, 144, 119, 0.67);
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/manager/new_permission.css" />
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
 <div>
     <form th:action="@{/permission/addPermission}" th:object="${permission}" method="post">
-        <span>权限名</span>
-        <input type="text" th:field="*{name}" /><br/>
-        <span>权限值</span>
-        <input type="text" th:field="*{permissionValue}" /><br/>
-        <span>权限路径</span>
-        <input type="text" th:field="*{url}" /><br/>
-        <span>权限状态</span>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <span class="v">权限名</span>
+        <input class="z" type="text" th:field="*{name}" /><br/><br/>
+        <span class="v">权限值</span>
+        <input  class="z" type="text" th:field="*{permissionValue}" /><br/><br/>
+        <span class="v">权限路径</span>
+        <input class="z" type="text" th:field="*{url}" /><br/><br/>
+        <span class="v">权限状态</span><br/>
         <ul class="dowebok">
             <li><input type="radio" class="radio-box" th:field="*{status}" value="0" checked data-labelauty="有效"></li>
             <li><input type="radio" class="radio-box" th:field="*{status}" value="1" data-labelauty="无效"></li>
         </ul>
-        <input type="submit" value="添加" class="btn"/>
+        <div class="clear-box"></div>
+        <div class="list-box" th:if="${permissionPageInfo!=null&&permissionPageInfo.getList()!=null&&permissionPageInfo.getList().size()>0}">
+            <div th:each="per:${permissionPageInfo.getList()}">
+                <input name="pid" type="radio" th:value="${per.permissionId}" />
+                名称：<span th:text="${per.name}" />&nbsp;&nbsp;
+                权限值：<span th:text="${per.permissionValue}" />&nbsp;&nbsp;
+                权限路径：<span th:text="${per.url}" />&nbsp;&nbsp;
+                权限类型：<span th:text="${per.type}" />&nbsp;&nbsp;
+                权限状态：<span th:if="${per.status==0}">有效</span>
+                <span th:if="${per.status==1}">无效</span>
+            </div><br/>
+            <div class="clear-box"></div>
+            <div class="page-box">
+                <div th:if="${permissionPageInfo.hasPreviousPage}" class="page">
+                    <a th:href="@{/permission/showAdd?(number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </div>
+                <div class="content-box"><span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页</div>
+                <div th:if="${permissionPageInfo.hasNextPage}" class="page">
+                    <a th:href="@{/permission/showAdd?(number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </div>
+            </div>
+        </div><br/>
+        <div class="clear-box"></div>
+        <input type="submit" value="添加" class="btn1"/>
         <input type="reset" value="取消" class="btn"/>
         <a href="/manager/index" class="btn">返回</a>
     </form>
 </div>
+<div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
 </html>

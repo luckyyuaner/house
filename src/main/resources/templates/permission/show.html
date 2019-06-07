@@ -11,7 +11,7 @@
 <div th:replace="fragments/header :: header">...</div>
 <div>
     <div class="operate-box">
-        <a href="/permission/showAdd">添加新权限</a>
+        <a th:href="@{/permission/showAdd?(number=1)}">添加新权限</a>
         <a href="/manager/index">返回</a>
     </div>
     <form th:action="@{/permission/listPermission}"  method="get" class="search-form">

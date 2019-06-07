@@ -39,7 +39,7 @@ public class UserController extends BaseController {
     @GetMapping("/user/listUser")
     public ModelAndView listUser(Model model, int number, String msg, String type) {
         if("" == type) {
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             List<User> users = userService.getAllUsers(number);
             PageInfo<User> userPageInfo = new PageInfo<User>(users);
             model.addAttribute("userPageInfo", userPageInfo);
@@ -48,7 +48,7 @@ public class UserController extends BaseController {
             if(StringUtil.isBlank(msg)) {
                 msg = "-1";
             }
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             User user = userService.queryUserById(Long.parseLong(msg));
             List<User> users = new ArrayList<User>();
             users.add(user);
@@ -56,7 +56,7 @@ public class UserController extends BaseController {
             model.addAttribute("userPageInfo", userPageInfo);
         }
         else if("msg".equals(type)) {
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             List<User> users = userService.queryUserLikeMsg(msg, number);
             PageInfo<User> userPageInfo = new PageInfo<User>(users);
             model.addAttribute("userPageInfo", userPageInfo);
@@ -107,7 +107,7 @@ public class UserController extends BaseController {
     @GetMapping("/permission/listPermission")
     public ModelAndView listPermission(Model model, int number, String msg, String type) {
         if("" == type) {
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             List<Permission> permissions = permissionService.getAllPermissions(number);
             PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
             model.addAttribute("permissionPageInfo", permissionPageInfo);
@@ -116,7 +116,7 @@ public class UserController extends BaseController {
             if(StringUtil.isBlank(msg)) {
                 msg = "-1";
             }
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             Permission permission = permissionService.queryPermissionById(Long.parseLong(msg));
             List<Permission> permissions = new ArrayList<Permission>();
             permissions.add(permission);
@@ -124,7 +124,7 @@ public class UserController extends BaseController {
             model.addAttribute("permissionPageInfo", permissionPageInfo);
         }
         else if("msg".equals(type)) {
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             List<Permission> permissions = permissionService.queryPermissionLikeMsg(msg, number);
             PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
             model.addAttribute("permissionPageInfo", permissionPageInfo);
@@ -136,15 +136,22 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("permission:create")
     @GetMapping("/permission/showAdd")
-    public ModelAndView showAddPermission(Model model) {
+    public ModelAndView showAddPermission(Model model,int number) {
+        PageHelper.startPage(number, 10);
+        List<Permission> permissions = permissionService.getAllPermissions(number);
+        PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
+        model.addAttribute("permissionPageInfo", permissionPageInfo);
         model.addAttribute("permission", new Permission());
         return new ModelAndView("permission/new", "Model", model);
     }
     @RequiresPermissions("permission:create")
     @PostMapping("/permission/addPermission")
-    public ModelAndView addPermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
+    public ModelAndView addPermission(@ModelAttribute(value = "permission") Permission permission, Model model, String pid) {
+        if(pid!=null) {
+            permission.setParentId(Long.parseLong(pid));
+        }
         permissionService.addPermission(permission);
-        return new ModelAndView("permission/new", "Model", model);
+        return new ModelAndView("redirect:/permission/showAdd?number=1");
     }
 
     @RequiresPermissions("permission:update")
@@ -172,7 +179,7 @@ public class UserController extends BaseController {
     @GetMapping("/role/listRole")
     public ModelAndView listRole(Model model, int number, String msg, String type) {
         if("" == type) {
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             List<Role> roles = roleService.getAllRoles(number);
             PageInfo<Role> rolePageInfo = new PageInfo<Role>(roles);
             model.addAttribute("rolePageInfo", rolePageInfo);
@@ -181,7 +188,7 @@ public class UserController extends BaseController {
             if(StringUtil.isBlank(msg)) {
                 msg = "-1";
             }
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             Role role = roleService.queryRoleById(Long.parseLong(msg));
             List<Role> roles = new ArrayList<Role>();
             roles.add(role);
@@ -189,7 +196,7 @@ public class UserController extends BaseController {
             model.addAttribute("rolePageInfo", rolePageInfo);
         }
         else if("msg".equals(type)) {
-            PageHelper.startPage(number, 5);
+            PageHelper.startPage(number, 10);
             List<Role> roles = roleService.queryRoleLikeMsg(msg, number);
             PageInfo<Role> rolePageInfo = new PageInfo<Role>(roles);
             model.addAttribute("rolePageInfo", rolePageInfo);
