@@ -2,21 +2,55 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/manager/new_permission.css" />
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
 <div>
     <form th:action="@{/user/updateUser}" th:object="${user}" method="post">
+        <br/><br/><br/><br/><br/><br/><br/><br/>
         <input type="hidden" th:field="*{userId}" th:value="${user.userId}" />
-        <input type="text" th:field="*{username}" th:value="${user.username}" />
-        <input type="password" th:field="*{password}" th:value="${user.password}" />
-        <input name="number" type="hidden" th:value="1" />
-        <div th:if="${roleList != null}" th:each="role:${roleList}">
-            <input name="rid" type="checkbox" th:value="${role.roleId}" />
-            <span th:text="${role.name}" />
-        </div>
-        <input type="submit" value="修改"/>
-        <input type="reset" value="取消"/>
+        <span class="v">用户名</span>
+        <input class="z" type="text" th:field="*{username}" th:value="${user.username}"  /><br/><br/>
+        <span class="v">密码</span>
+        <input  class="z" type="password" th:field="*{password}" /><br/><br/>
+        <span class="v">用户信誉值</span>
+        <input  class="z" type="text" th:field="*{reputation}" th:value="${user.reputation}" /><br/><br/>
+        <span class="v">用户类型</span><br/>
+        <ul class="dowebok">
+            <li><input type="radio" class="radio-box" th:field="*{userType}" value="0" checked data-labelauty="管理员"></li>
+            <li><input type="radio" class="radio-box" th:field="*{userType}" value="1" data-labelauty="租客"></li>
+            <li><input type="radio" class="radio-box" th:field="*{userType}" value="2" data-labelauty="房东"></li>
+        </ul><br/>
+        <div class="clear-box"></div>
+        <span class="v">用户状态</span><br/>
+        <ul class="dowebok">
+            <li><input type="radio" class="radio-box" th:field="*{status}" value="0" checked data-labelauty="有效"></li>
+            <li><input type="radio" class="radio-box" th:field="*{status}" value="1" data-labelauty="无效"></li>
+        </ul><br/>
+        <div class="list-box" th:if="${roles!=null&&roles.size()>0}">
+            <div th:each="ro:${roles}">
+                <input name="rid" type="checkbox" th:value="${ro.roleId}" />
+                名称：<span th:text="${ro.name}" />&nbsp;&nbsp;
+                角色描述：<span th:text="${ro.description}" />&nbsp;&nbsp;
+                角色状态：<span th:if="${ro.status==0}">有效</span>
+                <span th:if="${ro.status==1}">无效</span>
+            </div><br/>
+        </div><br/>
+        <div class="clear-box"></div>
+        <input type="submit" value="修改" class="btn1"/>
+        <input type="reset" value="取消" class="btn"/>
+        <a href="/manager/index" class="btn">返回</a>
     </form>
 </div>
+<div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
 </html>

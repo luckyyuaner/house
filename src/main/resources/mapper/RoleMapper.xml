@@ -68,4 +68,11 @@
         VALUES
         (#{object.roleId}, #{object.permissionId})
     </insert>
+
+    <select id="getAllRolesByNoPage" resultType="com.yuan.house.model.Role">
+        SELECT
+        *
+        FROM role
+        ORDER BY role_id ASC;
+    </select>
 </mapper>

@@ -65,4 +65,6 @@ public interface RoleDao {
      * @return
      */
     int addRolePermission(@Param("object") RolePermission object);
+
+    List<Role> getAllRolesByNoPage();
 }

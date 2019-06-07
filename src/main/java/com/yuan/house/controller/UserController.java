@@ -8,6 +8,7 @@ import com.yuan.house.model.User;
 import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.RoleService;
 import com.yuan.house.service.UserService;
+import com.yuan.house.util.PasswordUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.session.Session;
@@ -70,24 +71,25 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("user:create")
     @GetMapping("/user/showAdd")
-    public ModelAndView showAddUser(Model model, int number) {
-        List<Role> roleList = roleService.getAllRoles(number);
-        model.addAttribute("roleList", roleList);
+    public ModelAndView showAddUser(Model model) {
+        List<Role> roles = roleService.getAllRolesByNoPage();
+        model.addAttribute("roles", roles);
         model.addAttribute("user", new User());
         return new ModelAndView("user/new", "Model", model);
     }
     @RequiresPermissions("user:create")
     @PostMapping("/user/addUser")
     public ModelAndView addUser(@ModelAttribute(value = "user") User user, Model model, String rid) {
+        user.setPassword(PasswordUtil.md5Password(user.getPassword()));
         userService.addUser(user, rid);
-        return new ModelAndView("user/new", "Model", model);
+        return new ModelAndView("redirect:/user/showAdd");
     }
 
     @RequiresPermissions("user:update")
     @GetMapping("/user/showUpdate")
-    public ModelAndView showUpdateUser(Model model, Long id, int number) {
-        List<Role> roleList = roleService.getAllRoles(number);
-        model.addAttribute("roleList", roleList);
+    public ModelAndView showUpdateUser(Model model, Long id) {
+        List<Role> roles = roleService.getAllRolesByNoPage();
+        model.addAttribute("roles", roles);
         model.addAttribute("user", userService.queryUserById(id));
         return new ModelAndView("user/modify", "Model", model);
     }
@@ -95,14 +97,15 @@ public class UserController extends BaseController {
     @RequiresPermissions("user:update")
     @PostMapping("/user/updateUser")
     public ModelAndView updateUser(@ModelAttribute(value = "user") User user, Model model, String rid) {
+        user.setPassword(PasswordUtil.md5Password(user.getPassword()));
         userService.updateUser(user, rid);
-        return new ModelAndView("user/show", "Model", model);
+        return new ModelAndView("redirect:/user/showUpdate?id="+user.getUserId());
     }
     @RequiresPermissions("user:delete")
     @GetMapping("/user/deleteUser")
     public ModelAndView deleteUser(Model model, Long id) {
         userService.deleteUser(id);
-        return new ModelAndView("user/show", "Model", model);
+        return new ModelAndView("redirect:/user/listUser?number=1&type=&msg=");
     }
 
     @RequiresPermissions("permission:read")

@@ -54,4 +54,6 @@ public interface RoleService {
 	 * @return
 	 */
 	int deleteRole(Long id);
+
+	List<Role> getAllRolesByNoPage();
 }

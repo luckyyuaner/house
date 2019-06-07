@@ -111,4 +111,16 @@ public class RoleServiceImpl implements RoleService {
         //commonService.deleteByPrex("users_");
 		return roleDao.deleteRole(id);
 	}
+
+    @Override
+    public List<Role> getAllRolesByNoPage() {
+        String key = "roles_all";
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Role>)rs;
+        }
+        List<Role> roles = roleDao.getAllRolesByNoPage();
+        commonService.insertRedis(key, roles);
+        return roles;
+    }
 }
