@@ -12,9 +12,9 @@
 <div>
     <form th:action="@{/permission/updatePermission}" th:object="${permission}" method="post">
         <br/><br/><br/><br/><br/><br/><br/><br/>
-        <input type="hidden" th:field="*{permissionId}" th:value="${permission.permissionId}" />
+        <input type="hidden" th:field="*{permissionId}"  th:value="${permission.permissionId}" />
         <span class="v">权限名</span>
-        <input class="z" type="text" th:field="*{name}" th:value="${permission.name}"/><br/><br/>
+        <input class="z" type="text" th:field="*{name}" id="pname" th:value="${permission.name}"/><br/><br/>
         <span class="v">权限值</span>
         <input  class="z" type="text" th:field="*{permissionValue}" th:value="${permission.permissionValue}" /><br/><br/>
         <span class="v">权限路径</span>
@@ -25,8 +25,8 @@
             <li><input type="radio" class="radio-box" th:field="*{status}" value="1" data-labelauty="无效"></li>
         </ul>
         <div class="clear-box"></div>
-        <div class="list-box" th:if="${permissionPageInfo!=null&&permissionPageInfo.getList()!=null&&permissionPageInfo.getList().size()>0}">
-            <div th:each="per:${permissionPageInfo.getList()}">
+        <div class="list-box" th:if="${permissions!=null&&permissions.size()>0}">
+            <div th:each="per:${permissions}">
                 <input name="pid" type="radio" th:value="${per.permissionId}" />
                 名称：<span th:text="${per.name}" />&nbsp;&nbsp;
                 权限值：<span th:text="${per.permissionValue}" />&nbsp;&nbsp;
@@ -35,20 +35,6 @@
                 权限状态：<span th:if="${per.status==0}">有效</span>
                 <span th:if="${per.status==1}">无效</span>
             </div><br/>
-            <div class="clear-box"></div>
-            <div class="page-box">
-                <div th:if="${permissionPageInfo.hasPreviousPage}" class="page">
-                    <a th:href="@{/permission/showAdd?(number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
-                        <span aria-hidden="true">«</span>
-                    </a>
-                </div>
-                <div class="content-box"><span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页</div>
-                <div th:if="${permissionPageInfo.hasNextPage}" class="page">
-                    <a th:href="@{/permission/showAdd?(number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
-                        <span aria-hidden="true">»</span>
-                    </a>
-                </div>
-            </div>
         </div><br/>
         <div class="clear-box"></div>
         <input type="submit" value="修改" class="btn1"/>

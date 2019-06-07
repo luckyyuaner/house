@@ -2,25 +2,36 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <link rel="stylesheet" type="text/css" href="/css/manager/permission.css" />
+    <script src="/js/jquery-labelauty.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div>
-    <a href="/role/showAdd">添加角色</a>
-    <form th:action="@{/role/listRole}"  method="get">
+    <div class="operate-box">
+        <a th:href="@{/role/showAdd}">添加新角色</a>
+        <a href="/manager/index">返回</a>
+    </div>
+    <form th:action="@{/role/listRole}"  method="get" class="search-form">
         <input name="number" type="hidden" th:value="1" />
-        <input name="msg" type="text" />
-        <input name="type" type="radio" value="id" checked="checked" />id查询<br/>
-        <input name="type" type="radio" value="msg" />条件查询<br/>
-        <input type="submit" value="搜索"/>
-        <input type="reset" value="取消"/>
-    </form>
-    <table>
+        <input name="msg" type="text" class="msg-input" />
+        <ul class="dowebok">
+            <li><input type="radio" class="radio-box" name="type" value="id" checked data-labelauty="id查询"></li>
+            <li><input type="radio" class="radio-box" name="type" value="msg" data-labelauty="条件查询"></li>
+        </ul>
+        <input type="submit" class="btn1" value="搜索"/>
+        <input type="reset" class="btn2" value="取消"/>
+    </form><br/><br/>
+    <div class="clear-box"></div>
+    <table class="table-box">
         <thead>
         <tr>
             <th>编号</th>
             <th>角色名称</th>
             <th>角色状态</th>
+            <th>角色描述</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -29,27 +40,34 @@
             <td th:text="${role.roleId}"></td>
             <td th:text="${role.name}"></td>
             <td th:text="${role.status}"></td>
+            <td th:text="${role.description}"></td>
             <td>
                 <a th:href="@{/role/showUpdate?(id=${role.roleId})}">更新</a>
                 <a th:href="@{/role/deleteRole?(id=${role.roleId})}">删除</a>
             </td>
         </tr>
         </tbody>
-        <tfoot>
-        <div th:if="${rolePageInfo.hasPreviousPage}">
+    </table>
+    <div class="clear-box"></div>
+    <div class="page-box">
+        <div th:if="${rolePageInfo.hasPreviousPage}" class="page">
             <a th:href="@{/role/listRole?(type=${type},msg=${msg},number=${rolePageInfo.pageNum}-1)}" aria-label="Previous">
                 <span aria-hidden="true">«</span>
             </a>
         </div>
-        <span th:text="${rolePageInfo.pageNum}"></span>/<span th:text="${rolePageInfo.pages}"></span>页
-        <div th:if="${rolePageInfo.hasNextPage}">
+        <div class="content-box"><span th:text="${rolePageInfo.pageNum}"></span>/<span th:text="${rolePageInfo.pages}"></span>页</div>
+        <div th:if="${rolePageInfo.hasNextPage}" class="page">
             <a th:href="@{/role/listRole?(type=${type},msg=${msg},number=${rolePageInfo.pageNum}+1)}" aria-label="Next">
                 <span aria-hidden="true">»</span>
             </a>
         </div>
-        </tfoot>
-    </table>
+    </div>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
 </html>

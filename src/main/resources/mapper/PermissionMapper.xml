@@ -56,6 +56,13 @@
         ORDER BY permission_id ASC
     </select>
 
+    <select id="getAllPermissionsByNoPage" resultType="com.yuan.house.model.Permission">
+        SELECT
+        *
+        FROM permission
+        ORDER BY permission_id ASC;
+    </select>
+
     <insert id="addPermission" parameterType="com.yuan.house.model.Permission">
         INSERT INTO permission
         (parent_id, name, type, permission_value, url, icon, status)

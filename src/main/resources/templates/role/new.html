@@ -2,19 +2,48 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/manager/new_permission.css" />
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
 <div>
     <form th:action="@{/role/addRole}" th:object="${role}" method="post">
-        <input type="text" th:field="*{name}" />
-        <input name="number" type="hidden" th:value="1" />
-        <div th:if="${permissionList != null}" th:each="permission:${permissionList}">
-            <input name="pid" type="checkbox" th:value="${permission.permissionId}" />
-            <span th:text="${permission.name}" />
-        </div>
-        <input type="submit" value="添加"/>
-        <input type="reset" value="取消"/>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <span class="v">角色名</span>
+        <input class="z" type="text" th:field="*{name}" /><br/><br/>
+        <span class="v">角色描述</span>
+        <input  class="z" type="text" th:field="*{description}" /><br/><br/>
+        <span class="v">角色状态</span><br/>
+        <ul class="dowebok">
+            <li><input type="radio" class="radio-box" th:field="*{status}" value="0" checked data-labelauty="有效"></li>
+            <li><input type="radio" class="radio-box" th:field="*{status}" value="1" data-labelauty="无效"></li>
+        </ul>
+        <div class="clear-box"></div>
+        <div class="list-box" th:if="${permissions!=null&&permissions.size()>0}">
+            <div th:each="per:${permissions}">
+                <input name="pid" type="checkbox" th:value="${per.permissionId}" />
+                名称：<span th:text="${per.name}" />&nbsp;&nbsp;
+                权限值：<span th:text="${per.permissionValue}" />&nbsp;&nbsp;
+                权限路径：<span th:text="${per.url}" />&nbsp;&nbsp;
+                权限类型：<span th:text="${per.type}" />&nbsp;&nbsp;
+                权限状态：<span th:if="${per.status==0}">有效</span>
+                <span th:if="${per.status==1}">无效</span>
+            </div><br/>
+        </div><br/>
+        <div class="clear-box"></div>
+        <input type="submit" value="添加" class="btn1"/>
+        <input type="reset" value="取消" class="btn"/>
+        <a href="/manager/index" class="btn">返回</a>
     </form>
 </div>
+<div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    $(function() {
+        $('.radio-box').labelauty();
+    });
+</script>
 </html>

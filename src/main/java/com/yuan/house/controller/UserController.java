@@ -8,7 +8,9 @@ import com.yuan.house.model.User;
 import com.yuan.house.service.PermissionService;
 import com.yuan.house.service.RoleService;
 import com.yuan.house.service.UserService;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.session.Session;
 import org.jsoup.helper.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -156,12 +158,11 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("permission:update")
     @GetMapping("/permission/showUpdate")
-    public ModelAndView showUpdatePermission(Model model, Long id,int number) {
-        PageHelper.startPage(number, 10);
-        List<Permission> permissions = permissionService.getAllPermissions(number);
-        PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
-        model.addAttribute("permissionPageInfo", permissionPageInfo);
-        model.addAttribute("permission", permissionService.queryPermissionById(id));
+    public ModelAndView showUpdatePermission(Model model, Long id) {
+        List<Permission> permissions = permissionService.getAllPermissionsByNoPage();
+        model.addAttribute("permissions", permissions);
+        Permission permission = permissionService.queryPermissionById(id);
+        model.addAttribute("permission", permission);
         return new ModelAndView("permission/modify", "Model", model);
     }
 
@@ -215,25 +216,24 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("role:create")
     @GetMapping("/role/showAdd")
-    public ModelAndView showAddRole(Model model, int number) {
-        List<Permission> permissionList = permissionService.getAllPermissions(number);
-        model.addAttribute("permissionList", permissionList);
+    public ModelAndView showAddRole(Model model) {
+        List<Permission> permissions = permissionService.getAllPermissionsByNoPage();
+        model.addAttribute("permissions", permissions);
         model.addAttribute("role", new Role());
         return new ModelAndView("role/new", "Model", model);
     }
     @RequiresPermissions("role:create")
     @PostMapping("/role/addRole")
     public ModelAndView addRole(@ModelAttribute(value = "role") Role role, Model model, String pid) {
-        System.out.println("5执行："+pid);
         roleService.addRole(role, pid);
-        return new ModelAndView("role/new", "Model", model);
+        return new ModelAndView("redirect:/role/showAdd");
     }
 
     @RequiresPermissions("role:update")
     @GetMapping("/role/showUpdate")
-    public ModelAndView showUpdateRole(Model model, Long id, int number) {
-        List<Permission> permissionList = permissionService.getAllPermissions(number);
-        model.addAttribute("permissionList", permissionList);
+    public ModelAndView showUpdateRole(Model model, Long id) {
+        List<Permission> permissions = permissionService.getAllPermissionsByNoPage();
+        model.addAttribute("permissions", permissions);
         model.addAttribute("role", roleService.queryRoleById(id));
         return new ModelAndView("role/modify", "Model", model);
     }
@@ -242,12 +242,12 @@ public class UserController extends BaseController {
     @PostMapping("/role/updateRole")
     public ModelAndView updateRole(@ModelAttribute(value = "role") Role role, Model model, String pid) {
         roleService.updateRole(role, pid);
-        return new ModelAndView("role/show", "Model", model);
+        return new ModelAndView("redirect:/role/showUpdate?id="+role.getRoleId());
     }
     @RequiresPermissions("role:delete")
     @GetMapping("/role/deleteRole")
     public ModelAndView deleteRole(Model model, Long id) {
         roleService.deleteRole(id);
-        return new ModelAndView("role/show", "Model", model);
+        return new ModelAndView("redirect:/role/listRole?number=1&type=&msg=");
     }
 }

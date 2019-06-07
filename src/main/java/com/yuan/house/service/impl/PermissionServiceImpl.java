@@ -107,7 +107,19 @@ public class PermissionServiceImpl implements PermissionService {
 		return permissionDao.updatePermission(object);
 	}
 
-	@Override
+    @Override
+    public List<Permission> getAllPermissionsByNoPage() {
+        String key = "permissions_all";
+        Object rs = commonService.queryRedis(key);
+        if(null != rs) {
+            return (List<Permission>)rs;
+        }
+        List<Permission> pers = permissionDao.getAllPermissionsByNoPage();
+        commonService.insertRedis(key, pers);
+        return pers;
+    }
+
+    @Override
 	public int deletePermission(Long id) {
         String key = "permission_" + id;
         commonService.deleteRedis(key);

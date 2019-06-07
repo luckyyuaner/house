@@ -45,6 +45,8 @@ public interface PermissionService {
 	 */
 	int updatePermission(Permission object);
 
+	List<Permission> getAllPermissionsByNoPage();
+
 	/**
 	 * 删除权限
 	 * @param id

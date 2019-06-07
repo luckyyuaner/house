@@ -11,7 +11,6 @@
         SELECT
         <include refid="allColumns"/>
         FROM role
-        WHERE status = 0
         ORDER BY role_id ASC
     </select>
 
@@ -19,23 +18,21 @@
         SELECT
         <include refid="allColumns"/>
         FROM role
-        WHERE status = 0
-        AND role_id = #{id}
+        WHERE role_id = #{id}
     </select>
 
     <select id="queryRoleByName" resultType="com.yuan.house.model.Role">
         SELECT
         <include refid="allColumns"/>
         FROM role
-        WHERE status = 0
-        AND name = #{name}
+        WHERE  name = #{name}
     </select>
 
     <select id="queryRoleLikeMsg" resultType="com.yuan.house.model.Role">
         SELECT
         <include refid="allColumns"/>
         FROM role
-        WHERE status = 0 AND
+        WHERE
         (
         name LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR description LIKE CONCAT(CONCAT('%', #{msg}), '%')

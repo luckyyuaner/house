@@ -33,6 +33,8 @@ public interface PermissionDao {
      */
     List<Permission> queryPermissionLikeMsg(@Param("msg") String msg);
 
+    List<Permission> getAllPermissionsByNoPage();
+
     /**
      * 添加权限
      * @param object
