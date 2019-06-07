@@ -156,22 +156,29 @@ public class UserController extends BaseController {
 
     @RequiresPermissions("permission:update")
     @GetMapping("/permission/showUpdate")
-    public ModelAndView showUpdatePermission(Model model, Long id) {
+    public ModelAndView showUpdatePermission(Model model, Long id,int number) {
+        PageHelper.startPage(number, 10);
+        List<Permission> permissions = permissionService.getAllPermissions(number);
+        PageInfo<Permission> permissionPageInfo = new PageInfo<Permission>(permissions);
+        model.addAttribute("permissionPageInfo", permissionPageInfo);
         model.addAttribute("permission", permissionService.queryPermissionById(id));
         return new ModelAndView("permission/modify", "Model", model);
     }
 
     @RequiresPermissions("permission:update")
     @PostMapping("/permission/updatePermission")
-    public ModelAndView updatePermission(@ModelAttribute(value = "permission") Permission permission, Model model) {
+    public ModelAndView updatePermission(@ModelAttribute(value = "permission") Permission permission, String pid, Model model) {
+        if(pid!=null) {
+            permission.setParentId(Long.parseLong(pid));
+        }
         permissionService.updatePermission(permission);
-        return new ModelAndView("permission/show", "Model", model);
+        return new ModelAndView("redirect:/permission/showUpdate?number=1&id="+permission.getPermissionId());
     }
     @RequiresPermissions("permission:delete")
     @GetMapping("/permission/deletePermission")
     public ModelAndView deletePermission(Model model, Long id) {
         permissionService.deletePermission(id);
-        return new ModelAndView("permission/show", "Model", model);
+        return new ModelAndView("redirect:/permission/listPermission?number=1&type=&msg=");
     }
 
 

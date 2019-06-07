@@ -24,6 +24,7 @@
         <input type="submit" class="btn1" value="搜索"/>
         <input type="reset" class="btn2" value="取消"/>
     </form>
+    <div class="clear-box"></div>
     <table class="table-box">
         <thead>
         <tr>
@@ -43,7 +44,7 @@
             <td th:text="${permission.url}"></td>
             <td th:text="${permission.status}"></td>
             <td>
-                <a th:href="@{/permission/showUpdate?(id=${permission.permissionId})}">更新</a>
+                <a th:href="@{/permission/showUpdate?(id=${permission.permissionId},number=1)}">更新</a>
                 <a th:href="@{/permission/deletePermission?(id=${permission.permissionId})}">删除</a>
             </td>
         </tr>

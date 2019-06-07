@@ -91,6 +91,7 @@ public class PermissionServiceImpl implements PermissionService {
 	}
 
 	@Override
+    @Transactional(rollbackFor=Exception.class)
 	public int updatePermission(Permission object) {
 	    String key = "permission_" + object.getPermissionId();
 	    commonService.deleteRedis(key);
@@ -99,6 +100,10 @@ public class PermissionServiceImpl implements PermissionService {
 		//commonService.deleteByPrex("roles_");
 		//commonService.deleteByPrex("user_");
 		//commonService.deleteByPrex("users_");
+        if(object.getParentId()!=0) {
+            Permission parent = permissionDao.queryPermissionById(object.getParentId());
+            object.setType(parent.getType()+1);
+        }
 		return permissionDao.updatePermission(object);
 	}
 

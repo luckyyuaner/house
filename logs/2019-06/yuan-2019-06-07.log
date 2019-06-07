@@ -2063,3 +2063,433 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/perm
 2019-06-07 17:06:50.895 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_number_7
 2019-06-07 17:06:54.296 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
 2019-06-07 17:06:54.310 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在permissions_number_6
+2019-06-07 17:22:00.691 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15568 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-07 17:22:00.699 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-07 17:22:08.973 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 17:22:09.584 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 17:22:09.628 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 17:22:12.254 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-07 17:22:13.668 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 15.092 seconds (JVM running for 20.655)
+2019-06-07 17:23:35.573 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-07 17:23:36.436 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-07 17:23:40.758 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:41.910 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-07 17:23:41.923 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-07 17:23:45.719 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在permissions_number_1
+2019-06-07 17:23:45.911 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加permissions_number_1
+2019-06-07 17:23:52.227 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:52.240 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在permissions_number_2
+2019-06-07 17:23:52.289 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加permissions_number_2
+2019-06-07 17:23:54.947 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:54.960 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permissions_number_3
+2019-06-07 17:23:55.005 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permissions_number_3
+2019-06-07 17:23:56.218 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:56.231 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permissions_number_4
+2019-06-07 17:23:56.265 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permissions_number_4
+2019-06-07 17:23:57.316 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:57.324 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_number_5
+2019-06-07 17:23:57.357 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_number_5
+2019-06-07 17:23:58.234 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:58.245 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在permissions_number_6
+2019-06-07 17:23:58.270 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加permissions_number_6
+2019-06-07 17:23:59.337 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:23:59.351 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在permissions_number_7
+2019-06-07 17:23:59.396 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加permissions_number_7
+2019-06-07 17:24:02.378 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:24:02.396 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中存在permissions_number_6
+2019-06-07 17:24:16.150 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:24:16.175 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permission_64
+2019-06-07 17:24:16.202 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permission_64
+2019-06-07 17:25:19.578 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:25:19.744 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permission_64
+2019-06-07 17:25:19.869 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permission_64
+2019-06-07 17:25:27.059 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:25:27.069 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_number_1
+2019-06-07 17:25:27.100 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_number_1
+2019-06-07 17:25:27.106 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在permission_64
+2019-06-07 17:25:34.883 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:25:35.444 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:25:35.457 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中存在permissions_number_1
+2019-06-07 17:25:35.477 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在permission_64
+2019-06-07 17:25:35.513 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加permission_64
+2019-06-07 17:25:57.819 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:25:57.828 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在permissions_number_1
+2019-06-07 17:25:57.855 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加permissions_number_1
+2019-06-07 17:26:13.087 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:26:13.205 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-2] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "角色"] with root cause
+java.lang.NumberFormatException: For input string: "角色"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.yuan.house.controller.UserController.listPermission(UserController.java:120)
+	at com.yuan.house.controller.UserController$$FastClassBySpringCGLIB$$bb2c73d3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.UserController$$EnhancerBySpringCGLIB$$ed67a6d3.listPermission(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-07 17:26:18.302 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:26:18.313 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_like_角色_number_1
+2019-06-07 17:26:18.472 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_like_角色_number_1
+2019-06-07 17:26:36.856 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:26:36.862 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在permission_64
+2019-06-07 17:26:36.895 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加permission_64
+2019-06-07 17:26:41.603 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:26:41.610 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中删除permission_64
+2019-06-07 17:26:41.787 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-6] - [THYMELEAF][http-nio-8888-exec-6] Exception processing template "permission/show": An error happened during template parsing (template: "class path resource [templates/permission/show.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/permission/show.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "permissionPageInfo.getList()" (template: "permission/show" - line 39, col 13)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "permissionPageInfo.getList()" (template: "permission/show" - line 39, col 13)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getList() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 91 common frames omitted
+2019-06-07 17:26:41.823 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-6] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/permission/show.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getList() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:153)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:82)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-07 17:34:52.917 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 15544 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-07 17:34:52.926 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-07 17:35:03.631 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 17:35:04.231 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 17:35:04.289 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 17:35:08.361 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-07 17:35:11.167 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 19.796 seconds (JVM running for 23.008)
+2019-06-07 17:35:33.392 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-07 17:35:33.846 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-07 17:36:09.428 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:36:10.346 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-06-07 17:36:10.354 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-06-07 17:36:14.999 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_number_1
+2019-06-07 17:36:15.186 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_number_1
+2019-06-07 17:36:17.788 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:36:17.804 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在permissions_number_1
+2019-06-07 17:36:36.667 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:36:36.949 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:36:36.965 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_number_1
+2019-06-07 17:36:37.028 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_number_1
+2019-06-07 17:36:42.697 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:36:42.711 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在permissions_number_1
+2019-06-07 17:37:10.809 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:37:10.882 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在permission_65
+2019-06-07 17:37:10.940 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加permission_65
+2019-06-07 17:37:16.219 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:37:16.230 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_number_1
+2019-06-07 17:37:16.273 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_number_1
+2019-06-07 17:37:16.282 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在permission_65
+2019-06-07 17:37:24.098 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:37:24.112 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permissions_number_2
+2019-06-07 17:37:24.155 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permissions_number_2
+2019-06-07 17:37:29.096 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:37:29.288 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:37:29.301 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permissions_number_1
+2019-06-07 17:37:29.340 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permissions_number_1
+2019-06-07 17:37:33.896 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:37:33.911 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中存在permissions_number_1
+2019-06-07 17:38:12.865 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:38:12.907 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在permission_65
+2019-06-07 17:38:13.001 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加permission_65
+2019-06-07 17:38:15.025 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:38:15.036 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在permissions_number_1
+2019-06-07 17:38:15.076 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加permissions_number_1
+2019-06-07 17:38:15.083 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在permission_65
+2019-06-07 17:38:19.925 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:38:19.940 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_number_2
+2019-06-07 17:38:19.988 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_number_2
+2019-06-07 17:38:28.957 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:38:29.154 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:38:29.161 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permissions_number_1
+2019-06-07 17:38:29.196 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permissions_number_1
+2019-06-07 17:38:29.206 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permission_65
+2019-06-07 17:38:29.224 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permission_65
+2019-06-07 17:38:52.280 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:38:52.296 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在permissions_number_1
+2019-06-07 17:38:52.348 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加permissions_number_1
+2019-06-07 17:39:03.364 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:39:03.372 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在permission_65
+2019-06-07 17:39:03.400 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加permission_65
+2019-06-07 17:39:09.205 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:39:09.229 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中删除permission_65
+2019-06-07 17:39:09.409 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:39:09.422 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_number_1
+2019-06-07 17:39:09.461 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_number_1
+2019-06-07 17:39:22.980 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:39:22.992 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permission_66
+2019-06-07 17:39:23.053 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permission_66
+2019-06-07 17:39:25.543 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:39:25.559 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中删除permission_66
+2019-06-07 17:39:25.742 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
+2019-06-07 17:39:25.759 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permissions_number_1
+2019-06-07 17:39:25.802 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permissions_number_1

@@ -30,7 +30,6 @@
         SELECT
         <include refid="allColumns"/>
         FROM permission
-        WHERE status = 0
         ORDER BY permission_id ASC
     </select>
 
@@ -38,8 +37,8 @@
         SELECT
         <include refid="allColumns"/>
         FROM permission
-        WHERE status = 0
-        AND permission_id = #{id}
+        WHERE
+        permission_id = #{id}
         ORDER BY permission_id ASC
     </select>
 
@@ -47,7 +46,7 @@
         SELECT
         <include refid="allColumns"/>
         FROM permission
-        WHERE status = 0 AND
+        WHERE
         (
         name LIKE CONCAT(CONCAT('%', #{msg}), '%')
         OR type LIKE CONCAT(CONCAT('%', #{msg}), '%')
