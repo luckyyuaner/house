@@ -6,10 +6,7 @@ import com.github.pagehelper.PageInfo;
 import com.yuan.house.VO.HouseManagerVO;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
-import com.yuan.house.service.CommonService;
-import com.yuan.house.service.ContractService;
-import com.yuan.house.service.HouseService;
-import com.yuan.house.service.UserService;
+import com.yuan.house.service.*;
 import com.yuan.house.util.PdfUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -41,6 +38,9 @@ public class ManagerController extends BaseController {
     @Autowired
     private CommonService commonService;
 
+    @Autowired
+    private CommentService commentService;
+
 
     @RequestMapping("/manager/index")
     public ModelAndView showManagerIndex(Model model) {
@@ -53,6 +53,7 @@ public class ManagerController extends BaseController {
         if(StringUtils.isBlank(number)) {
             number = "1";
         }
+        model.addAttribute("number", number);
         PageHelper.startPage(Integer.parseInt(number), 1);
         List<Contract> contracts = contractService.queryAllContract(Integer.parseInt(number));
         PageInfo<Contract> contractPageInfo = new PageInfo<Contract>(contracts);
@@ -136,5 +137,12 @@ public class ManagerController extends BaseController {
         contract.setContractId(cid);
         contractService.updateContractByManagerWithRefuse2(contract);
         return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("comment:delete")
+    @RequestMapping("/manager/comment/delete")
+    public ModelAndView deleteComment(Model model, Long cid, int number) {
+        commentService.deleteComment(cid);
+        return new ModelAndView("redirect:/contract/index?number=" + number);
     }
 }

@@ -157,6 +157,20 @@
             <a onclick="reset()" class="sub-btn">取消</a>
         </div>
     </div>
+    <div class="comment-box" th:if="${tenantContractPOJO!=null&&tenantContractPOJO.comments!=null&&tenantContractPOJO.comments.size()>0}">
+        <br/>
+        <div class="tit">----评论列表----</div>
+        <div th:each="comment:${tenantContractPOJO.comments}" style="margin-top:10px;">
+            <img  class="h" th:if="${comment.userId == tenantContractPOJO.landlord.userId}" src="/images/head.jpg" />
+            <img class="h" th:if="${comment.userId == tenantContractPOJO.tenant.userId}" src="/images/head.jpg" />
+            <span th:if="${comment.userId == tenantContractPOJO.landlord.userId}" th:text="${tenantContractPOJO.landlord.username}" />
+            <span th:if="${comment.userId == tenantContractPOJO.tenant.userId}" th:text="${tenantContractPOJO.tenant.username}" />
+            <span th:text="${comment.ctime}" /><br/><br/><br/>
+            <textarea class="i" readonly="readonly" th:text="${comment.info}"></textarea>
+            <img class="u" th:if="${comment.url!=null}" th:src="@{/file/{imgname}(imgname=${comment.url})}"/>
+            <a class="op" th:href="@{/manager/comment/delete?(cid=${comment.commentId},number=${number})}">删除</a>
+        </div>
+    </div>
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>

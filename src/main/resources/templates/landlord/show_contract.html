@@ -215,7 +215,7 @@
             <span th:text="${comment.ctime}" /><br/><br/><br/>
             <textarea class="i" readonly="readonly" th:text="${comment.info}"></textarea>
             <img class="u" th:if="${comment.url!=null}" th:src="@{/file/{imgname}(imgname=${comment.url})}"/>
-            <a class="op" th:if="${comment.userId == session.currUser.userId}"  th:href="@{/landlord/comment/delete?(cid=${comment.commentId},sta=${sta},number=${number})}">删除</a>
+            <a class="op" th:if="${comment.userId == session.currUser.userId}"  th:href="@{/landlord/comment/delete?(cid=${comment.commentId})}">删除</a>
         </div>
     </div>
 </form>

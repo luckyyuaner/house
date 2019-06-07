@@ -283,8 +283,8 @@ public class LandlordController extends BaseController {
 
     @RequiresPermissions("comment:delete")
     @RequestMapping("/landlord/comment/delete")
-    public ModelAndView deleteComment(Model model, Long cid, int sta ,int number) {
+    public ModelAndView deleteComment(Model model, Long cid) {
         commentService.deleteComment(cid);
-        return new ModelAndView("redirect:/landlord/showContracts?number=" + number+"&sta="+sta);
+        return new ModelAndView("/landlord/info", "Model", model);
     }
 }
