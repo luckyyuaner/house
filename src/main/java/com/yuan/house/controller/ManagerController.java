@@ -4,8 +4,10 @@ package com.yuan.house.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yuan.house.VO.HouseManagerVO;
+import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
+import com.yuan.house.model.User;
 import com.yuan.house.service.*;
 import com.yuan.house.util.PdfUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -17,7 +19,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 
 /**
@@ -41,6 +46,20 @@ public class ManagerController extends BaseController {
     @Autowired
     private CommentService commentService;
 
+
+    @RequestMapping("/manager/chat")
+    public ModelAndView showManagerChat(Model model) {
+        Map<String, String> onlines = WebSocketConfig.getUsers();
+        Set<User> users = new HashSet<>();
+        for(String name : onlines.keySet()) {
+            User u = userService.queryUserByName(name);
+            if(u.getUserType() == 1||u.getUserType() == 2) {
+                users.add(u);
+            }
+        }
+        model.addAttribute("onlines", users);
+        return new ModelAndView("/manager/chat", "Model", model);
+    }
 
     @RequestMapping("/manager/index")
     public ModelAndView showManagerIndex(Model model) {

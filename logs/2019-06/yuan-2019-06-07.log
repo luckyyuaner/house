@@ -3926,3 +3926,10 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'password' cannot be n
 2019-06-07 22:55:20.473 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
 2019-06-07 22:55:21.347 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, role:update, role:read, user:update, permission:update, permission:read, log:read, log:delete, user:create, permission:delete, role:create, log:update, user:read, role:delete, log:create]
 2019-06-07 22:55:21.364 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在users_number_1
+2019-06-07 23:56:07.465 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11656 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-07 23:56:07.486 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-07 23:57:02.766 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 23:57:04.946 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 23:57:05.050 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-07 23:57:14.502 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-07 23:57:19.644 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 77.299 seconds (JVM running for 95.36)

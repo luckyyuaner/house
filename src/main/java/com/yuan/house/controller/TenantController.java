@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yuan.house.POJO.TenantContractPOJO;
+import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.model.Comment;
 import com.yuan.house.model.Contract;
@@ -28,9 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -53,6 +52,20 @@ public class TenantController extends BaseController {
 
     @Autowired
     private CommonService commonService;
+
+    @RequestMapping("/tenant/chat")
+    public ModelAndView showTenantChat(Model model) {
+        Map<String, String> onlines = WebSocketConfig.getUsers();
+        Set<User> managers = new HashSet<>();
+        for(String name : onlines.keySet()) {
+            User u = userService.queryUserByName(name);
+            if(u.getUserType() == 0) {
+                managers.add(u);
+            }
+        }
+        model.addAttribute("onlines", managers);
+        return new ModelAndView("/tenant/chat", "Model", model);
+    }
 
     @RequestMapping("/tenant/info")
     public ModelAndView showTenantInfo(Model model) {
