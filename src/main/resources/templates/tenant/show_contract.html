@@ -127,6 +127,7 @@
             <a th:href="@{/tenant/showContractUpdate?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">修改</a>
             <a th:href="@{/tenant/deleteContract?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">删除</a>
             <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
+            <a th:href="@{/tenant/payMoneyContract?(cid=${tenantContractPOJO.contract.contractId},sta=${sta},number=${contractPageInfo.pageNum})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.tenantOperation==0}">付款</a>
             <a onclick="show3()" th:if="${tenantContractPOJO.contract.status == 4}">添加评论</a>
             <a href="/tenant/info">返回</a>
         </div>

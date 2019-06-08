@@ -46,4 +46,5 @@ public interface ContractDao {
     int deleteContract(@Param("id") Long id);
 
     Long queryHouseIDByContract(@Param("id") Long id);
+
 }

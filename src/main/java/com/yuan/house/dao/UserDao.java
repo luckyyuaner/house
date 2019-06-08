@@ -79,4 +79,6 @@ public interface UserDao {
 	 * @return
 	 */
 	List<User> getUsersByRole(@Param("name") String name);
+
+	int updateUserMoney(@Param("uid") Long uid,@Param("money") double money );
 }

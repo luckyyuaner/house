@@ -285,6 +285,17 @@ public class TenantController extends BaseController {
         return new ModelAndView("/tenant/info", "Model", model);
     }
 
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/tenant/payMoneyContract")
+    public ModelAndView payMoneyContract(Model model, Long cid, int sta, int number) {
+        int rs = contractService.payMoneyContract(cid);
+        if (rs == -1) {
+            model.addAttribute("msg", "账户余额不足");
+            return new ModelAndView("redirect:/tenant/showContracts?number=" + number+"&sta="+sta);
+        }
+        return new ModelAndView("/tenant/info", "Model", model);
+}
+
     @RequiresPermissions("comment:create")
     @RequestMapping("/tenant/addComment")
     public ModelAndView addComment(Model model, MultipartFile url3, Long cid, String info,String grade) {

@@ -220,6 +220,17 @@ public class LandlordController extends BaseController {
     }
 
     @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/getMoneyContract")
+    public ModelAndView getMoneyContract(Model model, Long cid, int sta, int number) {
+        int rs = contractService.getMoneyContract(cid);
+        if (rs == -1) {
+            model.addAttribute("msg", "收款失败，请稍候重试");
+            return new ModelAndView("redirect:/landlord/showContracts?number=" + number+"&sta="+sta);
+        }
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
     @RequestMapping("/landlord/updateContractWithAgree")
     public ModelAndView updateContractWithAgree(Model model, MultipartFile[] url, Long cid) {
         Contract contract = new Contract();

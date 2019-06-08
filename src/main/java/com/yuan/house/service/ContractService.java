@@ -36,6 +36,12 @@ public interface ContractService {
     int updateContractByManagerWithAgree2(Contract contract);
 
     int updateContractByLandlord2(Contract contract);
+
+    int payMoneyContract(Long cid);
+
+    int getMoneyContract(Long cid);
+
+    int checkMoneyContract(Long cid);
     /**
      * 分页查询租客的合同
      * @param number

@@ -127,6 +127,7 @@
             <a onclick="show()" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">同意</a>
             <a th:href="@{/landlord/updateContractWithRefuse?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">拒绝</a>
             <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
+            <a th:href="@{/landlord/getMoneyContract?(cid=${tenantContractPOJO.contract.contractId},sta=${sta},number=${contractPageInfo.pageNum})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.landlordOperation==0 &&tenantContractPOJO.contract.tenantOperation==1 }">收款</a>
             <a onclick="show3()" th:if="${tenantContractPOJO.contract.status == 4}">添加评论</a>
             <a href="/landlord/info">返回</a>
         </div>
