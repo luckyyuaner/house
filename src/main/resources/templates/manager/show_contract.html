@@ -145,6 +145,7 @@
             <a th:href="@{/manager/checkMoneyContract?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.landlordOperation==1 &&tenantContractPOJO.contract.tenantOperation==1 }">确认签约完成</a>
             <a th:href="@{/manager/contract/updateRefuse4?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==6&&tenantContractPOJO.contract.landlordOperation==2&&tenantContractPOJO.contract.tenantOperation==2}">拒绝</a>
             <a th:href="@{/manager/contract/updateAgree4?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==6&&tenantContractPOJO.contract.landlordOperation==2&&tenantContractPOJO.contract.tenantOperation==2}">通过</a>
+            <a th:href="@{/manager/checkMoneyContract2?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==7&&tenantContractPOJO.contract.landlordOperation==1 &&tenantContractPOJO.contract.tenantOperation==1 }">确认退房完成</a>
             <a href="/manager/index">返回</a>
         </div>
         <div class="clear-box"></div>

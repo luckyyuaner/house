@@ -49,9 +49,15 @@ public interface ContractService {
 
     int payMoneyContract(Long cid);
 
+    int payMoneyContract2(Long cid);
+
     int getMoneyContract(Long cid);
 
+    int getMoneyContract2(Long cid);
+
     int checkMoneyContract(Long cid);
+
+    int checkMoneyContract2(Long cid);
     /**
      * 分页查询租客的合同
      * @param number

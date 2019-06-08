@@ -106,6 +106,13 @@ public class ManagerController extends BaseController {
     }
 
     @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/checkMoneyContract2")
+    public ModelAndView checkMoneyContract2(Model model, Long cid) {
+        contractService.checkMoneyContract2(cid);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
     @RequestMapping("/manager/contract/updateRefuse")
     public ModelAndView updateContractRefuse(Model model, Long cid) {
         Contract contract = new Contract();

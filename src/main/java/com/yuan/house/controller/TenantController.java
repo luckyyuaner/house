@@ -309,7 +309,18 @@ public class TenantController extends BaseController {
             return new ModelAndView("redirect:/tenant/showContracts?number=" + number+"&sta="+sta);
         }
         return new ModelAndView("/tenant/info", "Model", model);
-}
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/tenant/getMoneyContract")
+    public ModelAndView getMoneyContract(Model model, Long cid, int sta, int number) {
+        int rs = contractService.getMoneyContract2(cid);
+        if (rs == -1) {
+            model.addAttribute("msg", "收款失败，请稍候重试");
+            return new ModelAndView("redirect:/tenant/showContracts?number=" + number+"&sta="+sta);
+        }
+        return new ModelAndView("/tenant/info", "Model", model);
+    }
 
     @RequiresPermissions("comment:create")
     @RequestMapping("/tenant/addComment")

@@ -130,6 +130,7 @@
             <a th:href="@{/tenant/payMoneyContract?(cid=${tenantContractPOJO.contract.contractId},sta=${sta},number=${contractPageInfo.pageNum})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.tenantOperation==0}">付款</a>
             <a onclick="show3()" th:if="${tenantContractPOJO.contract.status >= 4}">添加评论</a>
             <a onclick="show4()" th:if="${tenantContractPOJO.contract.status == 4}">申请退房</a>
+            <a th:href="@{/tenant/getMoneyContract?(cid=${tenantContractPOJO.contract.contractId},sta=${sta},number=${contractPageInfo.pageNum})}" th:if="${tenantContractPOJO.contract.status==7&&tenantContractPOJO.contract.landlordOperation==1 &&tenantContractPOJO.contract.tenantOperation==0 }">收款</a>
             <a href="/tenant/info">返回</a>
         </div>
         <div class="page-box" th:if="${tenantContractPOJO!=null}">

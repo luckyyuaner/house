@@ -232,6 +232,17 @@ public class LandlordController extends BaseController {
     }
 
     @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/payMoneyContract")
+    public ModelAndView payMoneyContract(Model model, Long cid, int sta, int number) {
+        int rs = contractService.payMoneyContract2(cid);
+        if (rs == -1) {
+            model.addAttribute("msg", "账户余额不足");
+            return new ModelAndView("redirect:/landlord/showContracts?number=" + number+"&sta="+sta);
+        }
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
     @RequestMapping("/landlord/updateContractWithAgree")
     public ModelAndView updateContractWithAgree(Model model, MultipartFile[] url, Long cid) {
         Contract contract = new Contract();

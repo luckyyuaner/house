@@ -2250,3 +2250,98 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2019-06-08 18:27:44.536 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_1
 2019-06-08 18:27:44.546 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_12
 2019-06-08 18:27:44.567 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_12
+2019-06-08 18:57:55.906 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 4676 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 18:57:55.917 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 18:58:01.426 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 18:58:01.756 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 18:58:01.775 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 18:58:04.748 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 18:58:07.100 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 12.517 seconds (JVM running for 16.001)
+2019-06-08 18:59:43.233 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-3] - HikariPool-1 - Starting...
+2019-06-08 18:59:44.184 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-3] - HikariPool-1 - Start completed.
+2019-06-08 19:00:29.200 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:00:30.107 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-08 19:00:30.116 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-08 19:00:33.764 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_5_number_1_sta_2
+2019-06-08 19:00:34.113 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_5_number_1_sta_2
+2019-06-08 19:00:34.131 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_1
+2019-06-08 19:00:34.473 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_1
+2019-06-08 19:00:34.486 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_1
+2019-06-08 19:00:34.515 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_1
+2019-06-08 19:00:34.525 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-08 19:00:34.556 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-08 19:00:43.553 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:02:08.951 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:02:09.161 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:02:09.170 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_1_sta_2
+2019-06-08 19:02:09.224 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_1_sta_2
+2019-06-08 19:02:09.233 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_1
+2019-06-08 19:02:09.263 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_1
+2019-06-08 19:02:09.272 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_1
+2019-06-08 19:02:09.296 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_1
+2019-06-08 19:02:09.304 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_12
+2019-06-08 19:02:09.323 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_12
+2019-06-08 19:02:26.189 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:02:26.202 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_5_number_1_sta_2
+2019-06-08 19:02:26.256 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_5_number_1_sta_2
+2019-06-08 19:02:26.266 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_1
+2019-06-08 19:02:26.296 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_1
+2019-06-08 19:02:26.307 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_1
+2019-06-08 19:02:26.334 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_1
+2019-06-08 19:02:26.345 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-08 19:02:26.373 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-08 19:02:28.612 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:02:28.770 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, money:create, comment:update, comment:read, money:update, user:create, contract:update, contract:read, user:read, comment:delete, money:read, contract:delete, money:delete, house:create]
+2019-06-08 19:02:28.787 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在contracts_user_5_number_1_sta_2
+2019-06-08 19:02:28.817 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在house_1
+2019-06-08 19:02:28.847 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在user_house_1
+2019-06-08 19:02:28.865 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在user_12
+2019-06-08 19:03:27.710 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-08 19:03:27.793 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_tenant_12_number_1_sta_2
+2019-06-08 19:03:27.829 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_tenant_12_number_1_sta_2
+2019-06-08 19:03:27.836 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_1
+2019-06-08 19:03:27.855 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_1
+2019-06-08 19:03:27.866 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_1
+2019-06-08 19:03:27.885 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_1
+2019-06-08 19:03:27.894 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_12
+2019-06-08 19:03:27.911 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_12
+2019-06-08 19:03:35.835 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-08 19:03:39.665 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, money:create, comment:update, comment:read, money:update, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, money:read, contract:delete, money:delete]
+2019-06-08 19:03:39.685 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_tenant_12_number_1_sta_2
+2019-06-08 19:03:39.753 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_tenant_12_number_1_sta_2
+2019-06-08 19:03:39.759 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_1
+2019-06-08 19:03:39.778 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_1
+2019-06-08 19:03:39.784 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_1
+2019-06-08 19:03:39.798 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_1
+2019-06-08 19:03:39.814 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-08 19:03:39.828 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-08 19:08:52.309 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 1596 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 19:08:52.318 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 19:09:01.713 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 19:09:02.309 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 19:09:02.336 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 19:09:04.217 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 19:09:06.010 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.985 seconds (JVM running for 18.176)
+2019-06-08 19:10:13.621 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-08 19:10:14.752 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-08 19:10:18.189 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[notice:update, house:update, comment:create, house:read, house:delete, contract:create, notice:create, comment:update, comment:read, contract:update, contract:read, comment:delete, contract:delete, notice:read, notice:delete, house:create]
+2019-06-08 19:10:18.894 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-06-08 19:10:18.902 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-06-08 19:10:22.011 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contracts_all_number_1
+2019-06-08 19:10:22.183 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contracts_all_number_1
+2019-06-08 19:10:22.195 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_2
+2019-06-08 19:10:22.243 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_2
+2019-06-08 19:10:22.257 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_2
+2019-06-08 19:10:22.291 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_2
+2019-06-08 19:10:22.305 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_12
+2019-06-08 19:10:22.337 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_12
+2019-06-08 19:11:19.039 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[notice:update, house:update, comment:create, house:read, house:delete, contract:create, notice:create, comment:update, comment:read, contract:update, contract:read, comment:delete, contract:delete, notice:read, notice:delete, house:create]
+2019-06-08 19:11:19.054 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_all_number_2
+2019-06-08 19:11:19.130 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_all_number_2
+2019-06-08 19:11:19.142 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_1
+2019-06-08 19:11:19.183 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_1
+2019-06-08 19:11:19.195 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_house_1
+2019-06-08 19:11:19.222 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_house_1
+2019-06-08 19:11:19.234 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
+2019-06-08 19:11:19.260 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
+2019-06-08 19:11:24.364 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[notice:update, house:update, comment:create, house:read, house:delete, contract:create, notice:create, comment:update, comment:read, contract:update, contract:read, comment:delete, contract:delete, notice:read, notice:delete, house:create]

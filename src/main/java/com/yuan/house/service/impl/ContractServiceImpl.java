@@ -228,31 +228,11 @@ public class ContractServiceImpl implements ContractService {
     @Override
     @Transactional(rollbackFor=Exception.class)
     public int payMoneyContract(Long cid) {
-        String key = "contract_" + cid;
-        commonService.deleteRedis(key);
-        commonService.deleteByPrex("contracts_");
         Contract contract = contractDao.queryContractById(cid);
-        House house = houseDao.queryHouseById(contract.getHouseId());
-        Session session = SecurityUtils.getSubject().getSession();
-        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //跨年不会出现问题
-        long days= 0;
-        try {
-            days = (sdf.parse(contract.getEtime().toString()).getTime()-sdf.parse(contract.getStime().toString()).getTime())/(1000*3600*24);
-            System.out.println("days="+days);
-        } catch (ParseException e) {
-            LoggerUtil.error("日期格式转换错误",e);
+        int rs = payMoney(contract);
+        if(rs==-1) {
             return -1;
         }
-        double money = (house.getMoney()/house.getCycle())*days;
-        System.out.println("money="+money);
-        if(user.getMoney()<money){
-            return -1;
-        }
-        user.setMoney(user.getMoney()-money);
-        userDao.updateUserMoney(user.getUserId(),user.getMoney());
-        session.setAttribute(Constants.SESSION_CURR_USER, user);
         contract.setStatus(3);
         contract.setType(0);
         contract.setTenantOperation(1);
@@ -261,33 +241,44 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     @Transactional(rollbackFor=Exception.class)
-    public int getMoneyContract(Long cid) {
-        String key = "contract_" + cid;
-        commonService.deleteRedis(key);
-        commonService.deleteByPrex("contracts_");
+    public int payMoneyContract2(Long cid) {
         Contract contract = contractDao.queryContractById(cid);
-        House house = houseDao.queryHouseById(contract.getHouseId());
-        Session session = SecurityUtils.getSubject().getSession();
-        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //跨年不会出现问题
-        long days= 0;
-        try {
-            days = (sdf.parse(contract.getEtime().toString()).getTime()-sdf.parse(contract.getStime().toString()).getTime())/(1000*3600*24);
-            System.out.println("days="+days);
-        } catch (ParseException e) {
-            LoggerUtil.error("日期格式转换错误",e);
+        int rs = payMoney(contract);
+        if(rs==-1) {
             return -1;
         }
-        double money = (house.getMoney()/house.getCycle())*days;
-        System.out.println("money="+money);
-        user.setMoney(user.getMoney()+money);
-        userDao.updateUserMoney(user.getUserId(),user.getMoney());
-        session.setAttribute(Constants.SESSION_CURR_USER, user);
+        contract.setStatus(7);
+        contract.setType(1);
+        contract.setLandlordOperation(1);
+        return contractDao.updateContractByLandlord3(contract);
+    }
+
+    @Override
+    @Transactional(rollbackFor=Exception.class)
+    public int getMoneyContract(Long cid) {
+        Contract contract = contractDao.queryContractById(cid);
+        int rs = getMoney(contract);
+        if(rs==-1) {
+            return -1;
+        }
         contract.setStatus(3);
         contract.setType(0);
         contract.setLandlordOperation(1);
         return contractDao.updateContractByLandlord3(contract);
+    }
+
+    @Override
+    @Transactional(rollbackFor=Exception.class)
+    public int getMoneyContract2(Long cid) {
+        Contract contract = contractDao.queryContractById(cid);
+        int rs = getMoney(contract);
+        if(rs==-1) {
+            return -1;
+        }
+        contract.setStatus(7);
+        contract.setType(1);
+        contract.setTenantOperation(1);
+        return contractDao.updateContractByTenant3(contract);
     }
 
     @Override
@@ -299,6 +290,20 @@ public class ContractServiceImpl implements ContractService {
         contract.setContractId(cid);
         contract.setStatus(4);
         contract.setType(0);
+        contract.setLandlordOperation(0);
+        contract.setTenantOperation(0);
+        return contractDao.updateContractByManagerWithAgree2(contract);
+    }
+
+    @Override
+    public int checkMoneyContract2(Long cid) {
+        String key = "contract_" + cid;
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contract.setStatus(8);
+        contract.setType(1);
         contract.setLandlordOperation(0);
         contract.setTenantOperation(0);
         return contractDao.updateContractByManagerWithAgree2(contract);
@@ -352,4 +357,55 @@ public class ContractServiceImpl implements ContractService {
         return contractDao.deleteContract(cid);
     }
 
+    private int getMoney(Contract contract){
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        House house = houseDao.queryHouseById(contract.getHouseId());
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //跨年不会出现问题
+        long days= 0;
+        try {
+            days = (sdf.parse(contract.getEtime().toString()).getTime()-sdf.parse(contract.getStime().toString()).getTime())/(1000*3600*24);
+            System.out.println("days="+days);
+        } catch (ParseException e) {
+            LoggerUtil.error("日期格式转换错误",e);
+            return -1;
+        }
+        double money = (house.getMoney()/house.getCycle())*days;
+        System.out.println("money="+money);
+        user.setMoney(user.getMoney()+money);
+        userDao.updateUserMoney(user.getUserId(),user.getMoney());
+        session.setAttribute(Constants.SESSION_CURR_USER, user);
+        return 1;
+    }
+    private int payMoney(Contract contract){
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        House house = houseDao.queryHouseById(contract.getHouseId());
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //跨年不会出现问题
+        long days= 0;
+        try {
+            days = (sdf.parse(contract.getEtime().toString()).getTime()-sdf.parse(contract.getStime().toString()).getTime())/(1000*3600*24);
+            System.out.println("days="+days);
+        } catch (ParseException e) {
+            LoggerUtil.error("日期格式转换错误",e);
+            return -1;
+        }
+        double money = (house.getMoney()/house.getCycle())*days;
+        System.out.println("money="+money);
+        if(user.getMoney()<money){
+            return -1;
+        }
+        user.setMoney(user.getMoney()-money);
+        userDao.updateUserMoney(user.getUserId(),user.getMoney());
+        session.setAttribute(Constants.SESSION_CURR_USER, user);
+        return 1;
+    }
 }
