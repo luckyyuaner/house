@@ -57,7 +57,7 @@
         <div class="contract-box" th:if="${tenantContractPOJO.contract != null}">
             <p>
                 <input type="hidden" name="cid" th:value="${tenantContractPOJO.contract.contractId}" />
-                起租时间：<span th:text="${tenantContractPOJO.contract.stime}"/>&nbsp;&nbsp;
+                起(退)租时间：<span th:text="${tenantContractPOJO.contract.stime}"/>&nbsp;&nbsp;
                 结束时间：<span th:text="${tenantContractPOJO.contract.etime}"/>
             </p>
             <p>
@@ -143,6 +143,8 @@
             <a th:href="@{/manager/contract/updateAgree2?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==2&&tenantContractPOJO.contract.landlordOperation==1&&tenantContractPOJO.contract.tenantOperation==1}">通过</a>
             <a th:href="@{/manager/contract/updateRefuse2?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==2&&tenantContractPOJO.contract.landlordOperation==1&&tenantContractPOJO.contract.tenantOperation==1}">打回修改</a>
             <a th:href="@{/manager/checkMoneyContract?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.landlordOperation==1 &&tenantContractPOJO.contract.tenantOperation==1 }">确认签约完成</a>
+            <a th:href="@{/manager/contract/updateRefuse4?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==6&&tenantContractPOJO.contract.landlordOperation==2&&tenantContractPOJO.contract.tenantOperation==2}">拒绝</a>
+            <a th:href="@{/manager/contract/updateAgree4?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status==6&&tenantContractPOJO.contract.landlordOperation==2&&tenantContractPOJO.contract.tenantOperation==2}">通过</a>
             <a href="/manager/index">返回</a>
         </div>
         <div class="clear-box"></div>

@@ -110,6 +110,17 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
+    public int updateContractByLandlordWithAgree2(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(2);
+        contract.setType(1);
+        contract.setStatus(6);
+        return contractDao.updateContractByLandlordWithAgree2(contract);
+    }
+
+    @Override
     public int updateContractByLandlordWithRefuse(Contract contract) {
         String key = "contract_" + contract.getContractId();
         commonService.deleteRedis(key);
@@ -117,6 +128,17 @@ public class ContractServiceImpl implements ContractService {
         contract.setLandlordOperation(3);
         contract.setType(0);
         contract.setStatus(0);
+        return contractDao.updateContractByLandlordWithRefuse(contract);
+    }
+
+    @Override
+    public int updateContractByLandlordWithRefuse2(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(3);
+        contract.setType(1);
+        contract.setStatus(6);
         return contractDao.updateContractByLandlordWithRefuse(contract);
     }
 
@@ -130,6 +152,18 @@ public class ContractServiceImpl implements ContractService {
         contract.setType(0);
         contract.setStatus(2);
         return contractDao.updateContractByManagerWithAgree(contract);
+    }
+
+    @Override
+    public int updateContractByManagerWithAgree4(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(0);
+        contract.setTenantOperation(0);
+        contract.setType(1);
+        contract.setStatus(7);
+        return contractDao.updateContractByManagerWithAgree2(contract);
     }
 
     @Override
@@ -153,6 +187,18 @@ public class ContractServiceImpl implements ContractService {
         contract.setTenantOperation(0);
         contract.setType(0);
         contract.setStatus(2);
+        return contractDao.updateContractByManagerWithRefuse(contract);
+    }
+
+    @Override
+    public int updateContractByManagerWithRefuse4(Contract contract) {
+        String key = "contract_" + contract.getContractId();
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("contracts_");
+        contract.setLandlordOperation(0);
+        contract.setTenantOperation(0);
+        contract.setType(1);
+        contract.setStatus(6);
         return contractDao.updateContractByManagerWithRefuse(contract);
     }
 

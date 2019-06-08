@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>合同管理页面</title>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/flatpickr.material_blue.min.css" />
+    <script src="/js/flatpickr.js"></script>
     <link rel="stylesheet" href="/css/landlord/show_contract.css" />
     <script type="text/javascript" src="/js/landlord/update_contract.js"></script>
 </head>
@@ -64,8 +66,9 @@
             <p>
                 <input type="hidden" name="cid" th:value="${tenantContractPOJO.contract.contractId}" />
                 <input type="hidden" name="sta" th:value="${sta}" />
-                起租时间：<span th:text="${tenantContractPOJO.contract.stime}"/>&nbsp;&nbsp;
-                结束时间：<span th:text="${tenantContractPOJO.contract.etime}"/>
+                起(退)租时间：<span th:text="${tenantContractPOJO.contract.stime}"/>
+                &nbsp;&nbsp;
+                结束时间：<span id="et" th:text="${tenantContractPOJO.contract.etime}"/>
             </p>
             <p>
                 房东操作状态：
@@ -129,6 +132,8 @@
             <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
             <a th:href="@{/landlord/getMoneyContract?(cid=${tenantContractPOJO.contract.contractId},sta=${sta},number=${contractPageInfo.pageNum})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.landlordOperation==0 &&tenantContractPOJO.contract.tenantOperation==1 }">收款</a>
             <a onclick="show3()" th:if="${tenantContractPOJO.contract.status == 4}">添加评论</a>
+            <a onclick="show4()" th:if="${tenantContractPOJO.contract.status == 6 && tenantContractPOJO.contract.tenantOperation == 2}">同意退房</a>
+            <a th:href="@{/landlord/updateContractWithRefuse2?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 6 && tenantContractPOJO.contract.tenantOperation == 2}" >拒绝退房</a>
             <a href="/landlord/info">返回</a>
         </div>
         <div class="page-box" th:if="${tenantContractPOJO!=null}">
@@ -205,6 +210,16 @@
         </div>
     </div>
     <div class="clear-box"></div>
+    <div class="contract-info4" style="display:none;">
+        <br/>
+        <span class="cc">退租时间</span>
+        <input id="st" name="stime" /><span class="err" id="serr"></span><br/><br/><br/>
+        <div class="new-operate4">
+            <a onclick="return sub4();">申请</a>
+            <a onclick="reset4()">取消</a>
+        </div>
+    </div>
+    <div class="clear-box"></div>
     <div class="comment-box" th:if="${tenantContractPOJO!=null&&tenantContractPOJO.comments!=null&&tenantContractPOJO.comments.size()>0}">
         <br/>
         <div class="tit">----评论列表----</div>
@@ -222,6 +237,42 @@
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    var sub4 = function() {
+        var s = $("#st").val();
+        if(s == ""){
+            $("#serr").html("请选择退租日期");
+            return false;
+        }
+        var cu = getDate(new Date(),0);
+        if(s < cu) {
+            $("#serr").html("退租日期不能小于当前日期");
+            return false;
+        }
+        var end = $("#et").text();
+        if(s>=end) {
+            $("#serr").html("退租日期不能大于结束日期");
+            return false;
+        }
+        $("#contract-form").attr('action',"/landlord/updateContractWithAgree2");
+        $('#contract-form').submit();
+    }
+    var show4 = function() {
+        $(".contract-info4").css('display','block');
+    }
+    var reset4 = function() {
+        $(".contract-info4").css('display','none');
+    }
+    var getDate = function(date, n){
+        var year,month,day ;
+        date.setDate(date.getDate()+n);
+        year = date.getFullYear();
+        month = date.getMonth()+1;
+        day = date.getDate() ;
+        s = year + '-' + ( month < 10 ? ( '0' + month ) : month ) + '-' + ( day < 10 ? ( '0' + day ) : day) ;
+        return s ;
+    }
+</script>
 <script th:inline="javascript">
     /*<![CDATA[*/
     var sub = function() {
@@ -308,6 +359,11 @@
         ob.css("display","block");
         curr.attr("class","house_img");
         curr.css("display","none");
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        $("#st").flatpickr();
     });
 </script>
 </html>

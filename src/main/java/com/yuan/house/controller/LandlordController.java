@@ -13,6 +13,7 @@ import com.yuan.house.model.User;
 import com.yuan.house.service.*;
 import com.yuan.house.util.FileUtil;
 import com.yuan.house.util.LoggerUtil;
+import com.yuan.house.util.TimeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -247,11 +248,32 @@ public class LandlordController extends BaseController {
     }
 
     @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/updateContractWithAgree2")
+    public ModelAndView updateContractWithAgree2(Model model, String stime, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        if (StringUtils.isNotBlank(stime)) {
+            contract.setStime(TimeUtils.changeStringToTimestamp(stime));
+        }
+        contractService.updateContractByLandlordWithAgree2(contract);
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
     @RequestMapping("/landlord/updateContractWithRefuse")
     public ModelAndView updateContractWithRefuse(Model model, Long cid) {
         Contract contract = new Contract();
         contract.setContractId(cid);
         contractService.updateContractByLandlordWithRefuse(contract);
+        return new ModelAndView("/landlord/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/landlord/updateContractWithRefuse2")
+    public ModelAndView updateContractWithRefuse2(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByLandlordWithRefuse2(contract);
         return new ModelAndView("/landlord/info", "Model", model);
     }
 

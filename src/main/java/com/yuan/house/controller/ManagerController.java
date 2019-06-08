@@ -157,6 +157,15 @@ public class ManagerController extends BaseController {
     }
 
     @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/contract/updateAgree4")
+    public ModelAndView updateContractAgree4(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByManagerWithAgree4(contract);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
     @RequestMapping("/manager/contract/updateRefuse2")
     public ModelAndView updateContractRefuse2(Model model, Long cid) {
         Contract contract = new Contract();
@@ -164,6 +173,16 @@ public class ManagerController extends BaseController {
         contractService.updateContractByManagerWithRefuse2(contract);
         return new ModelAndView("/manager/index", "Model", model);
     }
+
+    @RequiresPermissions("contract:update")
+    @RequestMapping("/manager/contract/updateRefuse4")
+    public ModelAndView updateContractRefuse4(Model model, Long cid) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        contractService.updateContractByManagerWithRefuse4(contract);
+        return new ModelAndView("/manager/index", "Model", model);
+    }
+
 
     @RequiresPermissions("comment:delete")
     @RequestMapping("/manager/comment/delete")
