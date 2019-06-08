@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -286,8 +287,10 @@ public class ContractServiceImpl implements ContractService {
         String key = "contract_" + cid;
         commonService.deleteRedis(key);
         commonService.deleteByPrex("contracts_");
-        Contract contract = new Contract();
-        contract.setContractId(cid);
+        Contract contract = contractDao.queryContractById(cid);
+        commonService.deleteRedis("house_"+contract.getHouseId());
+        commonService.deleteByPrex("houses_");
+        houseDao.updateHouseStatus(contract.getHouseId(),2);
         contract.setStatus(4);
         contract.setType(0);
         contract.setLandlordOperation(0);
@@ -300,8 +303,10 @@ public class ContractServiceImpl implements ContractService {
         String key = "contract_" + cid;
         commonService.deleteRedis(key);
         commonService.deleteByPrex("contracts_");
-        Contract contract = new Contract();
-        contract.setContractId(cid);
+        Contract contract = contractDao.queryContractById(cid);
+        commonService.deleteRedis("house_"+contract.getHouseId());
+        commonService.deleteByPrex("houses_");
+        houseDao.updateHouseStatus(contract.getHouseId(),1);
         contract.setStatus(8);
         contract.setType(1);
         contract.setLandlordOperation(0);
@@ -350,11 +355,23 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
+    public List<Contract> queryContractsByStatusAndTime(Timestamp time) {
+        return contractDao.queryContractsByStatusAndTime(time);
+    }
+
+    @Override
     public int deleteContractById(Long cid) {
         String key = "contract_" + cid;
         commonService.deleteRedis(key);
         commonService.deleteByPrex("contracts_");
         return contractDao.deleteContract(cid);
+    }
+
+    @Override
+    @Transactional(rollbackFor=Exception.class)
+    public int updateContractStatus(Long cid, Long hid, int type, int status) {
+        houseDao.updateHouseStatus(hid,3);
+        return contractDao.updateContractStatus(cid, type, status);
     }
 
     private int getMoney(Contract contract){

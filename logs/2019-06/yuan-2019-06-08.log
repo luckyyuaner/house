@@ -2345,3 +2345,103 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2019-06-08 19:11:19.234 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_12
 2019-06-08 19:11:19.260 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_12
 2019-06-08 19:11:24.364 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[notice:update, house:update, comment:create, house:read, house:delete, contract:create, notice:create, comment:update, comment:read, contract:update, contract:read, comment:delete, contract:delete, notice:read, notice:delete, house:create]
+2019-06-08 19:19:26.252 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 10648 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 19:19:26.274 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 19:19:42.940 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 19:19:44.121 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 19:19:44.228 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 19:19:50.713 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 19:19:52.887 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 28.093 seconds (JVM running for 36.612)
+2019-06-08 20:35:49.500 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 4888 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 20:35:49.523 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 20:36:09.168 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 20:36:10.147 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 20:36:10.197 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 20:36:14.864 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 20:36:19.701 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 32.957 seconds (JVM running for 38.859)
+2019-06-08 20:36:19.963 INFO  --- [HikariDataSource.java:110][SimpleAsyncTaskExecutor-1] - HikariPool-1 - Starting...
+2019-06-08 20:36:21.304 INFO  --- [HikariDataSource.java:123][SimpleAsyncTaskExecutor-1] - HikariPool-1 - Start completed.
+2019-06-08 20:36:23.758 INFO  --- [Slf4JLogger.java:101][SimpleAsyncTaskExecutor-1] - Starting without optional epoll library
+2019-06-08 20:36:23.765 INFO  --- [Slf4JLogger.java:101][SimpleAsyncTaskExecutor-1] - Starting without optional kqueue library
+2019-06-08 20:36:27.295 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-2] - redis缓存中不存在house_2
+2019-06-08 20:36:27.297 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-4] - redis缓存中不存在house_2
+2019-06-08 20:36:27.295 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-3] - redis缓存中不存在house_2
+2019-06-08 20:36:27.295 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中不存在house_2
+2019-06-08 20:36:27.532 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中添加house_2
+2019-06-08 20:36:27.530 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-4] - redis缓存中添加house_2
+2019-06-08 20:36:27.539 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-3] - redis缓存中添加house_2
+2019-06-08 20:36:28.389 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-2] - redis缓存中添加house_2
+2019-06-08 20:36:28.390 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-4] - redis缓存中不存在user_12
+2019-06-08 20:36:28.390 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-3] - redis缓存中不存在user_12
+2019-06-08 20:36:28.389 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中不存在user_12
+2019-06-08 20:36:28.403 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-2] - redis缓存中不存在user_12
+2019-06-08 20:36:28.443 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中添加user_12
+2019-06-08 20:36:28.443 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-3] - redis缓存中添加user_12
+2019-06-08 20:36:28.475 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-4] - redis缓存中添加user_12
+2019-06-08 20:36:28.661 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-2] - redis缓存中添加user_12
+2019-06-08 20:36:31.919 INFO  --- [LoggerUtil.java:30][SimpleAsyncTaskExecutor-4] - 邮件发送成功
+2019-06-08 20:36:31.956 INFO  --- [LoggerUtil.java:30][SimpleAsyncTaskExecutor-2] - 邮件发送成功
+2019-06-08 20:36:31.981 INFO  --- [LoggerUtil.java:30][SimpleAsyncTaskExecutor-3] - 邮件发送成功
+2019-06-08 20:36:32.024 INFO  --- [LoggerUtil.java:30][SimpleAsyncTaskExecutor-1] - 邮件发送成功
+2019-06-08 20:46:14.783 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 17352 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 20:46:14.829 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 20:46:25.026 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 20:46:25.651 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 20:46:25.684 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 20:46:28.539 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 20:46:29.982 INFO  --- [HikariDataSource.java:110][SimpleAsyncTaskExecutor-1] - HikariPool-1 - Starting...
+2019-06-08 20:46:29.985 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 16.802 seconds (JVM running for 22.416)
+2019-06-08 20:46:30.444 INFO  --- [HikariDataSource.java:123][SimpleAsyncTaskExecutor-1] - HikariPool-1 - Start completed.
+2019-06-08 20:46:31.269 INFO  --- [Slf4JLogger.java:101][SimpleAsyncTaskExecutor-1] - Starting without optional epoll library
+2019-06-08 20:46:31.276 INFO  --- [Slf4JLogger.java:101][SimpleAsyncTaskExecutor-1] - Starting without optional kqueue library
+2019-06-08 20:46:32.297 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中不存在house_2
+2019-06-08 20:46:32.376 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中添加house_2
+2019-06-08 20:46:32.386 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中不存在user_12
+2019-06-08 20:46:32.417 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-1] - redis缓存中添加user_12
+2019-06-08 20:46:34.182 INFO  --- [LoggerUtil.java:30][SimpleAsyncTaskExecutor-1] - 邮件发送成功
+2019-06-08 20:48:20.640 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-12] - redis缓存中不存在house_2
+2019-06-08 20:48:20.685 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-12] - redis缓存中添加house_2
+2019-06-08 20:48:20.694 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-12] - redis缓存中不存在user_12
+2019-06-08 20:48:20.722 INFO  --- [LoggerUtil.java:34][SimpleAsyncTaskExecutor-12] - redis缓存中添加user_12
+2019-06-08 20:49:20.894 ERROR --- [LoggerUtil.java:47][SimpleAsyncTaskExecutor-12] - 提醒邮箱发送失败
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: [EOF];
+  nested exception is:
+	javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Connection closed by remote host
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:438)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:321)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:310)
+	at com.yuan.house.service.impl.MailServiceImpl.sendSimpleMail(MailServiceImpl.java:31)
+	at com.yuan.house.controller.CommonController.sendMailInfo(CommonController.java:150)
+	at com.yuan.house.controller.CommonController.autoEndContract(CommonController.java:431)
+	at com.yuan.house.controller.CommonController$$FastClassBySpringCGLIB$$7eb36f3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$$Lambda$532/50587117.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.mail.AuthenticationFailedException: [EOF]
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:960)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:876)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:780)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:515)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:435)
+	... 13 common frames omitted
+Caused by: javax.mail.MessagingException: Can't send command to SMTP host
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2415)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2402)
+	at com.sun.mail.smtp.SMTPTransport.simpleCommand(SMTPTransport.java:2374)
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:928)
+	... 18 common frames omitted
+Caused by: java.net.SocketException: Connection closed by remote host
+	at sun.security.ssl.SSLSocketImpl.checkWrite(SSLSocketImpl.java:1555)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71)
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:140)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2413)
+	... 21 common frames omitted

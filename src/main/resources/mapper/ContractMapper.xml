@@ -184,4 +184,21 @@
         type = #{object.type},status = #{object.status}
         WHERE contract_id = #{object.contractId}
     </update>
+
+
+    <select id="queryContractsByStatusAndTime" resultType="com.yuan.house.model.Contract">
+        SELECT
+        *
+        FROM contract
+        WHERE (status = 4 AND <![CDATA[etime <= #{time} ]]>)
+        or
+        (status = 8 AND <![CDATA[stime <= #{time} ]]>)
+    </select>
+
+    <update id="updateContractStatus">
+        UPDATE contract
+        SET
+        type = #{type},status = #{status}
+        WHERE contract_id = #{cid}
+    </update>
 </mapper>

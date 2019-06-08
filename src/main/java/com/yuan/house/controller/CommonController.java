@@ -6,6 +6,7 @@ import com.yuan.house.POJO.TenantSearchPOJO;
 import com.yuan.house.VO.MapHouseVO;
 import com.yuan.house.constants.Constants;
 import com.yuan.house.constants.ResultEnum;
+import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import com.yuan.house.model.Role;
 import com.yuan.house.model.User;
@@ -16,6 +17,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +29,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
 
@@ -32,6 +38,8 @@ import java.util.Random;
  * 公共Controller，不限制权限
  */
 @Controller
+@EnableScheduling   // 1.开启定时任务
+@EnableAsync
 public class CommonController extends BaseController {
 
 	@Autowired
@@ -44,6 +52,9 @@ public class CommonController extends BaseController {
 
     @Autowired
     private HouseService houseService;
+
+    @Autowired
+    private ContractService contractService;
 
     @Autowired
     private MailService mailService;
@@ -131,6 +142,15 @@ public class CommonController extends BaseController {
         catch(Exception e) {
             LoggerUtil.error("验证码发送失败",e);
             return "fail";
+        }
+    }
+
+    public void sendMailInfo(String email,String msg) {
+        try {
+            mailService.sendSimpleMail(email, "租房合约到期提醒", msg);
+        }
+        catch(Exception e) {
+            LoggerUtil.error("提醒邮箱发送失败",e);
         }
     }
 
@@ -393,5 +413,25 @@ public class CommonController extends BaseController {
         model.addAttribute("number", number);
         model.addAttribute("housePageInfo", housePageInfo);
         return new ModelAndView("/tenant/show_search", "Model", model);
+    }
+
+    @Async
+    //@Scheduled(fixedDelay = 10000)  //间隔10秒
+    //每天23点50分0秒执行
+    @Scheduled(cron = "00 50 23 * * ?")
+    public void autoEndContract(){
+        //System.out.println("djflskjgdlkfgjdf");
+        List<Contract> contracts = contractService.queryContractsByStatusAndTime(new java.sql.Timestamp(System.currentTimeMillis()));
+        if(contracts!=null && contracts.size()>0) {
+            for(Contract con:contracts) {
+                contractService.updateContractStatus(con.getContractId(),con.getHouseId(),0,5);
+                House house = houseService.queryHouseById(con.getHouseId());
+                User user = userService.queryUserById(con.getUserId());
+                String msg = "租房合同到期通知：租房合同编号为"+con.getContractId()+"的合约于今日到期，已自动更新合同和房源的状态，请及时安排工作人员前往实地帮助租客完成退租。" +
+                        "房源("+house.getHouseId()+")"+house.getName()+":"+house.getAddress()+
+                        "，租客("+user.getUserId()+")"+user.getUsername()+":"+user.getEmail();
+                sendMailInfo(Constants.MAIL_SENDER,msg);
+            }
+        }
     }
 }

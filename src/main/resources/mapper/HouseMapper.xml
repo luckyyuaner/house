@@ -47,7 +47,7 @@
         FROM
         house
         WHERE
-        status = 0
+        status  = 3
         and
         type = #{object.type}
         <if test="object.orientation != null and object.orientation != '0'" >
@@ -111,7 +111,7 @@
         FROM
         house
         WHERE
-        status = 0
+        status = 3
         and address LIKE CONCAT(CONCAT('%', #{city}), '%')
     </select>
 

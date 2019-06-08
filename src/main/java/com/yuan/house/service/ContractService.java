@@ -3,6 +3,7 @@ package com.yuan.house.service;
 
 import com.yuan.house.model.Contract;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface ContractService {
@@ -73,6 +74,10 @@ public interface ContractService {
     List<Contract> queryContractsByLandlord(int number, int sta);
 
     List<Contract> queryAllContract(int number);
+
+    List<Contract> queryContractsByStatusAndTime(Timestamp time);
     
     int deleteContractById(Long cid);
+
+    int updateContractStatus(Long cid, Long hid, int type, int status);
 }

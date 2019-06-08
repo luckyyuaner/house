@@ -4,6 +4,7 @@ import com.yuan.house.model.Contract;
 import com.yuan.house.model.House;
 import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface ContractDao {
@@ -47,8 +48,11 @@ public interface ContractDao {
 
     List<Contract> queryAllContract();
 
+    List<Contract> queryContractsByStatusAndTime(@Param("time") Timestamp time);
+
     int deleteContract(@Param("id") Long id);
 
     Long queryHouseIDByContract(@Param("id") Long id);
 
+    int updateContractStatus(@Param("cid")Long cid,@Param("type") int type,@Param("status") int status);
 }
