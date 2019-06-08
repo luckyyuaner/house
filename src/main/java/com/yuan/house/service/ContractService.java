@@ -23,6 +23,8 @@ public interface ContractService {
 
     int updateContractByTenant2(Contract contract);
 
+    int updateContractByTenant4(Contract contract);
+
     int updateContractByLandlordWithAgree(Contract contract);
 
     int updateContractByLandlordWithRefuse(Contract contract);

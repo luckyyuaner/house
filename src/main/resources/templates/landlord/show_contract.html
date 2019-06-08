@@ -186,8 +186,8 @@
     <div class="clear-box"></div>
     <div class="contract-info3" th:if="${tenantContractPOJO!=null}" style="display: none;">
         <br/><br/>
-        <span class="cc" th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.landlordOperation ==0}">租客分数</span>
-        <input th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.landlordOperation ==0}" type="text" name="grade" class="input3"/><br/><br/>
+        <span class="cc" th:if="${tenantContractPOJO.contract.status == 4 }">租客分数</span>
+        <input th:if="${tenantContractPOJO.contract.status == 4 }" type="text" name="grade" class="input3"/><br/><br/>
         <span class="cc">评论信息</span>
         <textarea name="info" class="textarea3"></textarea><br/><br/>
         <span class="cc">评论图片</span>

@@ -286,6 +286,21 @@ public class TenantController extends BaseController {
     }
 
     @RequiresPermissions("contract:update")
+    @RequestMapping("/tenant/updateContract4")
+    public ModelAndView updateContract4(Model model, MultipartFile[] url4, Long cid, int sta, int number) {
+        Contract contract = new Contract();
+        contract.setContractId(cid);
+        JSONObject json = FileUtil.uploadByNumber(url4,3);
+        if ("fail".equals(json.getString("rs"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/tenant/showContracts?number=" + number+"&sta="+sta);
+        }
+        contract.setTenantInfo(json.getString("msg"));
+        contractService.updateContractByTenant4(contract);
+        return new ModelAndView("/tenant/info", "Model", model);
+    }
+
+    @RequiresPermissions("contract:update")
     @RequestMapping("/tenant/payMoneyContract")
     public ModelAndView payMoneyContract(Model model, Long cid, int sta, int number) {
         int rs = contractService.payMoneyContract(cid);

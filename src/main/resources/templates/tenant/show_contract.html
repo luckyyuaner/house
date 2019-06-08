@@ -128,7 +128,8 @@
             <a th:href="@{/tenant/deleteContract?(cid=${tenantContractPOJO.contract.contractId})}" th:if="${tenantContractPOJO.contract.status == 0 || tenantContractPOJO.contract.status==1}">删除</a>
             <a onclick="show2()" th:if="${tenantContractPOJO.contract.status == 2}">上传签字照</a>
             <a th:href="@{/tenant/payMoneyContract?(cid=${tenantContractPOJO.contract.contractId},sta=${sta},number=${contractPageInfo.pageNum})}" th:if="${tenantContractPOJO.contract.status==3&&tenantContractPOJO.contract.tenantOperation==0}">付款</a>
-            <a onclick="show3()" th:if="${tenantContractPOJO.contract.status == 4}">添加评论</a>
+            <a onclick="show3()" th:if="${tenantContractPOJO.contract.status >= 4}">添加评论</a>
+            <a onclick="show4()" th:if="${tenantContractPOJO.contract.status == 4}">申请退房</a>
             <a href="/tenant/info">返回</a>
         </div>
         <div class="page-box" th:if="${tenantContractPOJO!=null}">
@@ -167,8 +168,8 @@
     <div class="clear-box"></div>
     <div class="contract-info3" th:if="${tenantContractPOJO!=null}" style="display: none;">
         <br/><br/>
-        <span class="cc" th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.tenantOperation ==0}">房源分数</span>
-        <input th:if="${tenantContractPOJO.contract.status == 4 && tenantContractPOJO.contract.tenantOperation ==0}" type="text" name="grade" class="input3"/><br/><br/>
+        <span class="cc" th:if="${tenantContractPOJO.contract.status == 4}">房源分数</span>
+        <input th:if="${tenantContractPOJO.contract.status == 4}" type="text" name="grade" class="input3"/><br/><br/>
         <span class="cc">评论信息</span>
         <textarea name="info" class="textarea3"></textarea><br/><br/>
         <span class="cc">评论图片</span>
@@ -183,6 +184,24 @@
         <div class="new-operate3">
             <a onclick="return sub3();">评论</a>
             <a onclick="reset3()">取消</a>
+        </div>
+    </div>
+    <div class="clear-box"></div>
+    <div class="contract-info4" th:if="${tenantContractPOJO!=null}" style="display: none;">
+        <br/><br/>
+        <p>退房理由,上传图片格式证据，最多三张</p>
+        <div class="filebtn4">
+            <span class="fileinput-button4">
+                <span>点击上传照片</span>
+                <input accept="image/*" name="url4" onchange="showImgs4(this);" type="file" multiple="multiple">
+            </span>
+        </div>
+        <div class="clear-box"></div><br/>
+        <div id="img-box4"></div>
+        <div class="clear-box"></div>
+        <div class="new-operate4">
+            <a onclick="return sub4();">申请</a>
+            <a onclick="reset4()">取消</a>
         </div>
     </div>
     <div class="clear-box"></div>
@@ -203,6 +222,20 @@
 </form>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
+<script type="text/javascript">
+    var sub4 = function() {
+        $("#contract-form").attr('action',"/tenant/updateContract4");
+        $('#contract-form').submit();
+    }
+    var show4 = function() {
+        $("#img-box4").css('display','block');
+        $(".contract-info4").css('display','block');
+    }
+    var reset4 = function() {
+        $("#img-box4").css('display',"none");
+        $(".contract-info4").css('display','none');
+    }
+</script>
 <script type="text/javascript">
     var sub3 = function() {
         if($(".textarea3").val().trim()=="") {

@@ -40,12 +40,6 @@ public class CommentServiceImpl implements CommentService {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
         comment.setUserId(user.getUserId());
-        Contract contract = new Contract();
-        contract.setContractId(comment.getContractId());
-        contract.setType(0);
-        contract.setStatus(4);
-        contract.setTenantOperation(1);
-        contractDao.updateContractByTenant3(contract);
         if(comment.getHouseGrade() != 0) {
             int count1= commentDao.queryHouseCommentCount(comment.getContractId());
             commentDao.updateHouseGrade(comment.getContractId(), comment.getHouseGrade(), (double)count1);
@@ -63,12 +57,6 @@ public class CommentServiceImpl implements CommentService {
         Session session = SecurityUtils.getSubject().getSession();
         User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
         comment.setUserId(user.getUserId());
-        Contract contract = new Contract();
-        contract.setContractId(comment.getContractId());
-        contract.setType(0);
-        contract.setStatus(4);
-        contract.setLandlordOperation(1);
-        contractDao.updateContractByLandlord3(contract);
         if(comment.getUserGrade() != 0) {
             Long uid = contractDao.queryContractById(comment.getContractId()).getUserId();
             int count = commentDao.queryTenantCommentCount(uid);

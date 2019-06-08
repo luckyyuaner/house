@@ -111,6 +111,14 @@
         WHERE contract_id = #{object.contractId}
     </update>
 
+    <update id="updateContractByTenant4" parameterType="com.yuan.house.model.Contract">
+        UPDATE contract
+        SET
+        tenant_operation = #{object.tenantOperation}, type = #{object.type},
+        status = #{object.status}, tenant_info = #{object.tenantInfo}, landlord_operation = #{object.landlordOperation}
+        WHERE contract_id = #{object.contractId}
+    </update>
+
     <update id="updateContractByTenant3" parameterType="com.yuan.house.model.Contract">
         UPDATE contract
         SET
