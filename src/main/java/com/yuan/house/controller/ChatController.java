@@ -20,7 +20,6 @@ public class ChatController {
 
     @MessageMapping("/private")
     public void privatechat(ChatMessage message) throws Exception {
-        System.out.println("执行");
         String ctx = message.getContent();
         String send = message.getName();
         String receiver = message.getReceiver();

@@ -270,3 +270,24 @@ java.lang.IllegalStateException: No decoder for session id 'y2nrp0jt'
 2019-06-08 10:20:08.474 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_租客1
 2019-06-08 10:20:08.498 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_租客1
 2019-06-08 10:20:46.399 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8888-exec-3] - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation]
+2019-06-08 10:53:32.508 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 3284 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 10:53:32.539 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 10:53:47.712 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 10:53:48.696 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 10:53:48.758 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 10:53:53.376 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 10:53:56.204 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 27.368 seconds (JVM running for 48.182)
+2019-06-08 10:56:47.283 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-9] - HikariPool-1 - Starting...
+2019-06-08 10:56:48.616 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-9] - HikariPool-1 - Start completed.
+2019-06-08 11:09:22.809 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-08 11:09:22.856 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-08 11:09:27.185 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_一般管理员
+2019-06-08 11:09:27.575 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_一般管理员
+2019-06-08 11:10:53.691 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_一般管理员
+2019-06-08 11:10:53.707 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_一般管理员
+2019-06-08 11:11:08.692 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_房东
+2019-06-08 11:11:08.720 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_房东
+2019-06-08 11:11:08.728 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_一般管理员
+2019-06-08 11:11:08.757 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_一般管理员
+2019-06-08 11:11:08.795 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_租客1
+2019-06-08 11:11:08.814 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_租客1

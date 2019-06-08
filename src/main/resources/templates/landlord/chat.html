@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-md-2">
             <table id="userlist" class="table">
-                <thead onclick='javascript:hidetuser()'>
+                <thead>
                 <tr>
                     <th>在线用户</th>
                 </tr>
@@ -53,13 +53,13 @@
         </div>
         <div class="col-md-5">
             <table id="privatechat" class="table">
-                <thead onclick='javascript:hidetprivate()'>
+                <thead>
                 <tr>
                     <th id="privateuser">私信聊天</th>
                 </tr>
                 </thead>
                 <tbody id="private" style="height:350px; overflow-y:auto; display:block; ">
-                <tr class="chatroom" style="width:600px;"></tr>
+                <tr th:each="u:${onlines}" th:if="${onlines != null}" th:id="'chat'+${u.username}" class="chatroom" style="width:600px;display: none;" ></tr>
                 </tbody>
             </table>
             <div class="input-group" style="height: 74px">
@@ -83,7 +83,7 @@
     var user2 = null;
     $(".choose").click(function () {
         user2 = $(this).children(".username").text();
-        stompClient.send("/app/private", {}, JSON.stringify({'name': user1, 'content': "咨询", 'receiver': user2}));
+        stompClient.send("/app/private", {}, JSON.stringify({'name': user1, 'content': "你好", 'receiver': user2}));
     });
 
     $("#sendtouser").click(function () {
@@ -102,7 +102,10 @@
             stompClient.subscribe('/user/topic/private', function (greeting) {
                 var parse = JSON.parse(greeting.body);
                 var val = '<td style="display: block;">' + parse.content + "</td>";
-                $(".chatroom").append(val);
+                var id = "#chat"+parse.name;
+                $(".chatroom").css('display','none');
+                $(id).css('display','block');
+                $(id).append(val);
                 if (user2 == null) {
                     user2 = parse.name;
                 }
