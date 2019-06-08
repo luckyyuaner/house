@@ -45,6 +45,7 @@
                         <a href="javascript:void(0)" class="choose">
                             <img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
                             <span class="username" th:text="${u.username}"/>
+                            <span class="count" th:id="'count'+${u.username}" style="color:red;"></span>
                         </a>
                     </td>
                 </tr>
@@ -68,6 +69,7 @@
                 <span class="input-group-btn">
         <button id="sendtouser" class="btn btn-default" type="submit" disabled="disabled"
                 style="height: 100%">发送</button>
+                    <a href="/manager/index" style="margin-left:20px;display: inline-block;width:100px;height:60px;line-height:60px;font-size: 28px;text-align: center;background-color: #fdfdfd;color:black;">返回</a>
         </span>
             </div>
         </div>
@@ -83,7 +85,12 @@
     var user2 = null;
     $(".choose").click(function () {
         user2 = $(this).children(".username").text();
-        stompClient.send("/app/private", {}, JSON.stringify({'name': user1, 'content': "你好", 'receiver': user2}));
+        $(".chatroom").css('display','none');
+        var id = "#chat"+user2;
+        $(id).css('display','block');
+        var id2 = "#count"+user2;
+        $(id2).text("");
+        //stompClient.send("/app/private", {}, JSON.stringify({'name': user1, 'content': "你好", 'receiver': user2}));
     });
 
     $("#sendtouser").click(function () {
@@ -103,8 +110,15 @@
                 var parse = JSON.parse(greeting.body);
                 var val = '<td style="display: block;">' + parse.content + "</td>";
                 var id = "#chat"+parse.name;
-                $(".chatroom").css('display','none');
-                $(id).css('display','block');
+                var id2 = "#count"+parse.name;
+                var con =$(id2).text();
+                if(con == "") {
+                    con = "1";
+                }
+                else{
+                    con = parseInt(con)+1;
+                }
+                $(id2).text(con);
                 $(id).append(val);
                 if (user2 == null) {
                     user2 = parse.name;

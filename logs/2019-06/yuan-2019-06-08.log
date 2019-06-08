@@ -291,3 +291,129 @@ java.lang.IllegalStateException: No decoder for session id 'y2nrp0jt'
 2019-06-08 11:11:08.757 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_一般管理员
 2019-06-08 11:11:08.795 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_租客1
 2019-06-08 11:11:08.814 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_租客1
+2019-06-08 12:19:03.382 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 9692 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 12:19:03.398 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 12:24:08.081 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 6960 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 12:24:08.097 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 12:24:34.651 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 12:24:35.620 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 12:24:35.683 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 12:24:39.448 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 12:24:42.323 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 35.601 seconds (JVM running for 39.884)
+2019-06-08 12:27:13.287 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-4] - HikariPool-1 - Starting...
+2019-06-08 12:27:15.071 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-4] - HikariPool-1 - Start completed.
+2019-06-08 12:28:13.291 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional epoll library
+2019-06-08 12:28:13.291 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
+2019-06-08 12:28:17.666 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_一般管理员
+2019-06-08 12:28:17.728 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_一般管理员
+2019-06-08 12:29:28.644 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-8] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.yuan.house.controller.CommonController.checkCode(CommonController.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-08 12:30:02.239 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_房东
+2019-06-08 12:30:02.270 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_房东
+2019-06-08 12:30:02.285 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_一般管理员
+2019-06-08 12:30:02.317 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_一般管理员
+2019-06-08 12:30:14.128 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_房东
+2019-06-08 12:30:14.164 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_房东
+2019-06-08 12:30:14.178 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_一般管理员
+2019-06-08 12:30:14.203 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_一般管理员
+2019-06-08 12:30:14.214 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_租客1
+2019-06-08 12:30:14.239 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_租客1
+2019-06-08 12:39:56.818 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 11036 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-08 12:39:56.818 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-08 12:40:03.168 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 12:40:03.496 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 12:40:03.527 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-08 12:40:05.511 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-08 12:40:07.168 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 11.647 seconds (JVM running for 15.415)
+2019-06-08 12:42:09.512 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-08 12:42:10.374 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-08 12:43:19.325 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-3] - Starting without optional epoll library
+2019-06-08 12:43:19.340 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-3] - Starting without optional kqueue library
+2019-06-08 12:43:23.059 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_一般管理员
+2019-06-08 12:43:23.106 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_一般管理员
+2019-06-08 12:44:12.544 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_房东
+2019-06-08 12:44:12.591 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_房东
+2019-06-08 12:44:12.607 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_一般管理员
+2019-06-08 12:44:12.638 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_一般管理员
+2019-06-08 12:44:28.532 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_房东
+2019-06-08 12:44:28.573 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_房东
+2019-06-08 12:44:28.585 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_一般管理员
+2019-06-08 12:44:28.637 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_一般管理员
+2019-06-08 12:44:28.645 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_租客1
+2019-06-08 12:44:28.669 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_租客1
+2019-06-08 12:46:11.610 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_房东
+2019-06-08 12:46:11.701 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_房东
+2019-06-08 12:46:11.711 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_租客1
+2019-06-08 12:46:11.744 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_租客1
