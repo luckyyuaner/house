@@ -1,0 +1,99 @@
+2019-06-09 00:00:33.898 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-06-09 00:00:33.934 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-06-09 00:00:38.061 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_map_like_北京
+2019-06-09 00:00:38.112 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-7] - HikariPool-1 - Starting...
+2019-06-09 00:00:39.984 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-7] - HikariPool-1 - Start completed.
+2019-06-09 00:00:43.963 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_map_like_北京
+2019-06-09 00:01:02.836 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在houses_map_like_长沙市
+2019-06-09 00:01:03.358 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加houses_map_like_长沙市
+2019-06-09 00:01:07.408 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-09 00:01:07.467 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-09 08:45:23.792 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 14956 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 08:45:23.821 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 08:46:17.875 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 08:46:21.431 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 08:46:21.562 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 08:46:30.507 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 08:46:45.060 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 94.427 seconds (JVM running for 273.228)
+2019-06-09 08:59:29.640 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-06-09 08:59:30.175 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-06-09 08:59:46.524 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_map_like_北京
+2019-06-09 08:59:48.789 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-09 08:59:59.687 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-09 09:00:13.251 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_map_like_北京
+2019-06-09 09:03:49.715 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在houses_map_like_长沙市
+2019-06-09 09:03:49.811 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加houses_map_like_长沙市
+2019-06-09 09:04:00.833 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_6
+2019-06-09 09:04:01.329 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_6
+2019-06-09 09:04:23.821 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_6
+2019-06-09 09:04:23.893 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_6
+2019-06-09 09:04:23.930 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在comments_hid_6
+2019-06-09 09:04:24.715 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加comments_hid_6
+2019-06-09 09:04:24.728 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_6
+2019-06-09 09:04:24.856 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_6
+2019-06-09 09:04:40.240 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_4
+2019-06-09 09:04:40.271 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_4
+2019-06-09 09:04:56.873 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_4
+2019-06-09 09:04:56.918 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_4
+2019-06-09 09:04:56.932 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在comments_hid_4
+2019-06-09 09:04:56.952 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加comments_hid_4
+2019-06-09 09:04:56.965 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_4
+2019-06-09 09:04:56.992 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_4
+2019-06-09 09:05:03.224 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_5
+2019-06-09 09:05:03.266 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_5
+2019-06-09 09:16:43.919 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 16184 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 09:16:43.947 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 09:17:10.099 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 09:17:11.076 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 09:17:11.139 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 09:17:15.904 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 09:17:19.515 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 38.469 seconds (JVM running for 146.053)
+2019-06-09 09:23:11.685 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-06-09 09:23:11.714 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-06-09 09:23:14.417 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_map_like_北京
+2019-06-09 09:23:14.555 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-09 09:23:15.305 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-09 09:23:15.907 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_map_like_北京
+2019-06-09 09:23:39.857 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_map_like_长沙市
+2019-06-09 09:23:39.955 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_map_like_长沙市
+2019-06-09 09:23:43.901 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-06-09 09:23:44.018 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-06-09 09:23:51.393 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_4
+2019-06-09 09:23:51.427 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_4
+2019-06-09 09:24:01.232 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_5
+2019-06-09 09:24:01.265 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_5
+2019-06-09 09:24:02.190 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中存在house_5
+2019-06-09 10:03:55.788 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2464 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 10:03:55.819 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 10:04:19.997 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 10:04:21.344 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 10:04:21.417 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 10:04:28.592 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 10:04:31.841 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 40.909 seconds (JVM running for 124.426)
+2019-06-09 10:09:23.883 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-06-09 10:09:23.898 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-06-09 10:09:25.720 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在houses_map_like_北京
+2019-06-09 10:09:25.837 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-09 10:09:26.510 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-09 10:09:27.513 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加houses_map_like_北京
+2019-06-09 10:09:49.000 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在houses_map_like_长沙市
+2019-06-09 10:09:49.129 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加houses_map_like_长沙市
+2019-06-09 10:09:56.623 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在house_2
+2019-06-09 10:09:56.696 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加house_2
+2019-06-09 10:10:01.451 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在house_2
+2019-06-09 10:10:01.657 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在comments_hid_2
+2019-06-09 10:10:01.724 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加comments_hid_2
+2019-06-09 10:10:01.734 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-09 10:10:01.777 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-09 10:10:09.031 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-06-09 10:10:09.089 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-06-09 10:10:14.128 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_4
+2019-06-09 10:10:14.152 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_4
+2019-06-09 10:10:32.074 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_map_like_长沙市
+2019-06-09 10:10:32.113 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_map_like_长沙市
+2019-06-09 10:10:35.689 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_5
+2019-06-09 10:10:35.724 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_5
+2019-06-09 10:10:53.160 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_6
+2019-06-09 10:10:53.192 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_6
+2019-06-09 10:10:57.731 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_4
+2019-06-09 10:10:57.789 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_4

@@ -575,13 +575,12 @@ var BMapLib = window.BMapLib = BMapLib || {};
             content += '豪宅';
         }
         content += '&nbsp;&nbsp;' + arr[3] + '元&nbsp;&nbsp;';
-        content += arr[4]+'&sup2;&nbsp;&nbsp;';
+        content += arr[4]+'m&sup2;&nbsp;&nbsp;';
         content += arr[5]+'分';
         content += '</div>';
         console.dir(content);
         label.setContent(content);
         label.addEventListener('click', function(){
-            alert("zhixing");
             var map=document.getElementById("allmap");
             map.style.width="70%";
             var hou=document.getElementById("house-box");
@@ -604,7 +603,65 @@ var BMapLib = window.BMapLib = BMapLib || {};
                     //json字符串转换成为json对象  , data=eval("("+data+")");evel不存在兼容性问题，但是会有安全漏洞。
                     data=JSON.parse(data);
                     console.dir(data);
-
+                    $("#house-box").empty();
+                    var msg = '';
+                    if(data.urls!=null && data.urls!="") {
+                        msg+='<div class="picbox">';
+                        msg+='<img src="/images/icon3.png"  style="visibility: hidden;" class="pre"/>';
+                        msg+='<div class="box">';
+                        var strs= new Array();
+                        strs=data.urls.split(",");
+                        var i=0;
+                        for (i=0;i<strs.length;i++) {
+                            msg+='<div class="pics" name="'+strs.length+'">';
+                            if(i==0){
+                                msg+='<img src="/file/'+strs[i]+'" class="active" alt="'+i+'" style="display:block;"/>';
+                            }
+                            else{
+                                msg+='<img src="/file/'+strs[i]+'" class="house_img" alt="'+i+'" style="display: none;"/>';
+                            }
+                            msg+='</div>';
+                        }
+                        msg+='</div>';
+                        msg+='<img src="/images/icon5.png" class="next" style="visibility: hidden;" />';
+                        msg+='</div>';
+                    }
+                    msg+='<div class="clear-box"></div>';
+                    msg+='<div class="content"><p><b>'+data.name+'</b></p>'+
+                        '<p><span>'+data.money+'</span>元/月<span>&nbsp;&nbsp;'+data.area+'</span>m&sup2;&nbsp;&nbsp;'+
+                        '朝<span>'+data.orientation+'</span></p><p><span>';
+                    if(data.type==0){
+                        msg+='<b>友家托管</b>';
+                    }
+                    if(data.type==1){
+                        msg+='<b>整租托管</b>';
+                    }
+                    if(data.type==2){
+                        msg+='<b>豪宅托管</b>';
+                    }
+                    msg+='&nbsp;&nbsp;</span><span>';
+                    if(data.cycle==1){
+                        msg+='<b>日付</b>';
+                    }
+                    if(data.cycle==30){
+                        msg+='<b>月付</b>';
+                    }
+                    if(data.cycle==90){
+                        msg+='<b>季付</b>';
+                    }
+                    if(data.cycle==180){
+                        msg+='<b>半年付</b>';
+                    }
+                    if(data.cycle==365){
+                        msg+='<b>年付</b>';
+                    }
+                    msg+='</span></p>';
+                    msg+='<p>地址：'+data.address+'</p>'
+                    msg+='</div>';
+                    msg+='<div class="house-operation"><input type="hidden" value="'+data.houseId+'"/>'
+                        +'<a href="/common/showNew?hid='+data.houseId+'">详情</a></div>';
+                    console.dir(msg);
+                    $("#house-box").append(msg);
                 }
             }
         });

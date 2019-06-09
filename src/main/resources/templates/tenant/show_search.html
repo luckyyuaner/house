@@ -118,7 +118,7 @@
 </div>
 <div class="clear-box"></div><br/>
 <div class="house-manager">
-        <div th:each="house:${housePageInfo.getList()}" th:if="${house != null}"  class="house-box">
+    <div th:each="house:${housePageInfo.getList()}" th:if="${house != null}"  class="house-box">
             <div class="picbox" th:if="${house.urls != null}">
                 <img src="/images/icon3.png"  style="visibility: hidden;" class="pre" th:if="${!house.urls.contains(',')}" />
                 <img src="/images/icon3.png"  class="pre" th:if="${house.urls.contains(',')}" />
@@ -145,7 +145,7 @@
                     <span th:switch="${house.type}">
                         <b th:case="0">友家托管</b>
                         <b th:case="1">整租托管</b>
-                        <b th:case="0">豪宅托管</b>
+                        <b th:case="2">豪宅托管</b>
                     </span>
                     <span th:switch="${house.cycle}">
                         <b th:case="1">日付</b>
@@ -165,7 +165,7 @@
                 <a th:href="@{/common/showNew?(hid=${house.houseId})}">详情</a>
             </div>
         </div>
-    </div>
+</div>
 <div th:replace="~{fragments/footer :: footer}">...</div>
 </body>
 <script th:inline="javascript">

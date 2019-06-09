@@ -21,9 +21,75 @@
         }
         #house-box{
             float:left;
-            margin-left:60px;
+            margin-left:50px;
+            width: 320px;
+        }
+
+        #house-box .picbox .pics img {
+            width: 320px;
+            height:400px;
+            object-fit: cover;
+        }
+
+        #house-box .pre {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            float: left;
+            z-index: 10;
+            padding-top: 160px;
+        }
+
+        #house-box  .box {
+            position: absolute;
+            z-index: -1;
+        }
+
+        #house-box .next {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            float: left;
+            z-index: 10;
+            margin-top: -42px;
+            margin-left: 240px;
+        }
+
+        #house-box .content {
+            width: 320px;
+            margin-top:420px;
+            background-color: rgba(89, 151, 136, 0.76);
+        }
+
+        #house-box .content p {
+            text-align: center;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        #house-box .house-operation {
+            width: 320px;
+            background-color: rgba(89, 151, 136, 0.76);
+            height: 60px;
+            line-height: 40px;
+            margin-top: -16px;
+        }
+
+        #house-box .house-operation a {
+            margin-top:6px;
+            height:40px;
+            line-height: 40px;
+            width: 80px;
+            text-align: center;
+            font-size: 28px;
+            text-decoration: none;
+            background-color: rgba(27, 50, 96, 0.47);
+            color: #000000;
+            margin-left: 140px;
+            float: left;
         }
     </style>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg"/>
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/industry_map.css" rel="stylesheet">
