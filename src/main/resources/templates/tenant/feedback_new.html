@@ -2,57 +2,40 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/css/manager/new_permission.css" />
+    <link rel="stylesheet" type="text/css" href="/css/tenant/new_feedback.css" />
     <link rel="stylesheet" href="/css/jquery-labelauty.css">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/jquery-labelauty.js"></script>
+    <script type="text/javascript" src="/js/tenant/new_feedback.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
 <div>
-    <form th:action="@{/permission/addPermission}" th:object="${permission}" method="post">
+    <form th:action="@{/feedback/addFeedback}" th:object="${feedback}" method="post" enctype="multipart/form-data">
         <br/><br/><br/><br/><br/><br/><br/><br/>
-        <span class="v">权限名</span>
-        <input class="z" type="text" th:field="*{name}" /><br/><br/>
-        <span class="v">权限值</span>
-        <input  class="z" type="text" th:field="*{permissionValue}" /><br/><br/>
-        <span class="v">权限路径</span>
-        <input class="z" type="text" th:field="*{url}" /><br/><br/>
-        <span class="v">权限状态</span><br/>
+        <span class="v">反馈类型</span>
         <ul class="dowebok">
-            <li><input type="radio" class="radio-box" th:field="*{status}" value="0" checked data-labelauty="有效"></li>
-            <li><input type="radio" class="radio-box" th:field="*{status}" value="1" data-labelauty="无效"></li>
+            <li><input type="radio" class="radio-box" th:field="*{type}" value="0" checked data-labelauty="咨询"></li>
+            <li><input type="radio" class="radio-box" th:field="*{type}" value="1" data-labelauty="建议"></li>
+            <li><input type="radio" class="radio-box" th:field="*{type}" value="3" data-labelauty="投诉"></li>
+            <li><input type="radio" class="radio-box" th:field="*{type}" value="4" data-labelauty="报修"></li>
         </ul>
+        <div class="clear-box"></div><br/>
+        <span class="v">反馈内容</span>
+        <input  class="z" type="text" th:field="*{info}" /><br/><br/><br/><br/>
+        <span class="v">附加图片</span>
+        <div class="filebtn">
+            <span class="fileinput-button">
+                <span>点击上传照片</span>
+                <input accept="image/*" name="fi" onchange="showImg(this);" type="file">
+            </span>
+        </div>
+        <div class="clear-box"></div><br/><br/>
+        <div id="img-box"></div>
         <div class="clear-box"></div>
-        <div class="list-box" th:if="${permissionPageInfo!=null&&permissionPageInfo.getList()!=null&&permissionPageInfo.getList().size()>0}">
-            <div th:each="per:${permissionPageInfo.getList()}">
-                <input name="pid" type="radio" th:value="${per.permissionId}" />
-                名称：<span th:text="${per.name}" />&nbsp;&nbsp;
-                权限值：<span th:text="${per.permissionValue}" />&nbsp;&nbsp;
-                权限路径：<span th:text="${per.url}" />&nbsp;&nbsp;
-                权限类型：<span th:text="${per.type}" />&nbsp;&nbsp;
-                权限状态：<span th:if="${per.status==0}">有效</span>
-                <span th:if="${per.status==1}">无效</span>
-            </div><br/>
-            <div class="clear-box"></div>
-            <div class="page-box">
-                <div th:if="${permissionPageInfo.hasPreviousPage}" class="page">
-                    <a th:href="@{/permission/showAdd?(number=${permissionPageInfo.pageNum}-1)}" aria-label="Previous">
-                        <span aria-hidden="true">«</span>
-                    </a>
-                </div>
-                <div class="content-box"><span th:text="${permissionPageInfo.pageNum}"></span>/<span th:text="${permissionPageInfo.pages}"></span>页</div>
-                <div th:if="${permissionPageInfo.hasNextPage}" class="page">
-                    <a th:href="@{/permission/showAdd?(number=${permissionPageInfo.pageNum}+1)}" aria-label="Next">
-                        <span aria-hidden="true">»</span>
-                    </a>
-                </div>
-            </div>
-        </div><br/>
-        <div class="clear-box"></div>
-        <input type="submit" value="添加" class="btn1"/>
+        <input type="submit" value="提交" class="btn1"/>
         <input type="reset" value="取消" class="btn"/>
-        <a href="/manager/index" class="btn">返回</a>
+        <a href="/tenant/info" class="btn">返回</a>
     </form>
 </div>
 <div th:replace="~{fragments/footer :: footer}">...</div>

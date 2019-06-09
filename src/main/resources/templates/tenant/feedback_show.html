@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/tenant/show_feedback.css" />
+    <link rel="stylesheet" href="/css/jquery-labelauty.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/jquery-labelauty.js"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">...</div>
+<div>
+    <div class="operate-box">
+        <a th:href="@{/feedback/showAdd}">新建反馈信息</a>
+        <a href="/tenant/info">返回</a>
+    </div><br/><br/>
+    <br/><br/>
+    <div class="feedback-box" th:if="${feedbacks!=null&&feedbacks.size()>0}">
+        <div th:each="feedback:${feedbacks}" style="margin-top:10px;margin-left:400px;">
+            <hr/>
+            <span th:if="${feedback.type == 0}" th:text="咨询" />
+            <span th:if="${feedback.type == 1}" th:text="建议" />
+            <span th:if="${feedback.type == 2}" th:text="举报" />
+            <span th:if="${feedback.type == 3}" th:text="投诉" />
+            <span th:if="${feedback.type == 4}" th:text="报修" />
+            &nbsp;&nbsp;&nbsp;
+            <span th:if="${feedback.status == 0}" th:text="未处理" />
+            <span th:if="${feedback.status == 1}" th:text="处理中" />
+            <span th:if="${feedback.status == 2}" th:text="处理完成" /><br/><br/>
+            <span th:text="${feedback.info}" /><br/><br/><br/>
+            <img class="u" th:if="${feedback.url!=null&&feedback.url.length()>0}" th:src="@{/file/{imgname}(imgname=${feedback.url})}"/>
+            <br/>
+            <a class="op" >删除</a>
+            <a class="op" >确认完成</a>
+        </div>
+    </div>
+</div>
+<div th:replace="~{fragments/footer :: footer}">...</div>
+</body>
+</html>

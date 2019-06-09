@@ -1,0 +1,59 @@
+body {
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/bg.jpg);
+    color: rgba(0, 0, 0, 0.69);
+    font-family: SimHei;
+}
+.clear-box {
+    clear: both;
+}
+.operate-box{
+    margin-top:60px;
+    margin-left:400px;
+}
+
+.operate-box a{
+    display: inline-block;
+    width:160px;
+    height:32px;
+    line-height:32px;
+    text-align: center;
+    font-size:20px;
+    text-decoration: none;
+    color:black;
+    background-color: rgba(72, 144, 119, 0.67);
+}
+
+.feedback-box .h{
+    width:30px;
+    height:30px;
+    object-fit: cover;
+    margin-left:600px;
+}
+.feedback-box .i{
+    width:400px;
+    height:200px;
+    border: 1px solid rgba(46, 93, 77, 0.65);
+    color:black;
+    font-size:20px;
+    overflow-y: scroll;
+    margin-left:300px;
+}
+.feedback-box .op{
+    display: inline-block;
+    width:100px;
+    height:32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+    background-color: rgba(59, 102, 89, 0.88);
+    margin-left:20px;
+    margin-left:20px;
+    text-decoration: none;
+}
+.feedback-box .u{
+    width:300px;
+    height:200px;
+}

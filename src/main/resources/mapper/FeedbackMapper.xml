@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yuan.house.dao.FeedbackDao">
+
+    <insert id="addFeedback" parameterType="com.yuan.house.model.Feedback">
+        INSERT INTO feedback
+        (create_id, role_id, type,status,info, url,ctime)
+        VALUES
+        (
+         #{object.createId},#{object.roleId}, #{object.type},
+         #{object.status},#{object.info},#{object.url},#{object.ctime}
+        )
+    </insert>
+
+    <select id="queryFeedbacksByUserId" resultType="com.yuan.house.model.Feedback">
+        SELECT
+        *
+        FROM
+        feedback
+        WHERE
+        create_id = #{uid}
+        order by utime desc
+    </select>
+</mapper>

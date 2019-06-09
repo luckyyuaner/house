@@ -7,10 +7,7 @@ import com.github.pagehelper.PageInfo;
 import com.yuan.house.POJO.TenantContractPOJO;
 import com.yuan.house.config.websocket.WebSocketConfig;
 import com.yuan.house.constants.Constants;
-import com.yuan.house.model.Comment;
-import com.yuan.house.model.Contract;
-import com.yuan.house.model.House;
-import com.yuan.house.model.User;
+import com.yuan.house.model.*;
 import com.yuan.house.service.*;
 import com.yuan.house.util.FileUtil;
 import com.yuan.house.util.PasswordUtil;
@@ -49,6 +46,9 @@ public class TenantController extends BaseController {
 
     @Autowired
     private CommentService commentService;
+
+    @Autowired
+    private FeedbackService feedbackService;
 
     @Autowired
     private CommonService commonService;
@@ -349,5 +349,34 @@ public class TenantController extends BaseController {
     public ModelAndView deleteComment(Model model, Long cid) {
         commentService.deleteComment(cid);
         return new ModelAndView("/tenant/info", "Model", model);
+    }
+
+    @GetMapping("/feedback/showAdd")
+    public ModelAndView showAddFeedback(Model model) {
+        model.addAttribute("feedback", new Feedback());
+        return new ModelAndView("/tenant/feedback_new", "Model", model);
+    }
+
+    @PostMapping("/feedback/addFeedback")
+    public ModelAndView addFeedback(@ModelAttribute(value = "feedback")Feedback feedback, MultipartFile fi, Model model) {
+        JSONObject json = FileUtil.upload(fi);
+        if ("fail".equals(json.getString("rs"))&&!"未选择文件".equals(json.getString("msg"))) {
+            model.addAttribute("msg", json.getString("msg"));
+            return new ModelAndView("redirect:/feedback/showAdd");
+        }
+        if ("success".equals(json.getString("rs"))) {
+            feedback.setUrl(json.getString("msg"));
+        }
+        feedbackService.addFeedback(feedback);
+        return new ModelAndView("redirect:/feedback/showAdd");
+    }
+
+    @RequestMapping("/tenant/feedback/show")
+    public ModelAndView showFeedback(Model model) {
+        Session session = SecurityUtils.getSubject().getSession();
+        User user = (User) session.getAttribute(Constants.SESSION_CURR_USER);
+        List<Feedback> feedbacks = feedbackService.queryFeedbacksByUserId(user.getUserId());
+        model.addAttribute("feedbacks",feedbacks);
+        return new ModelAndView("/tenant/feedback_show", "Model", model);
     }
 }
