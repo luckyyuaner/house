@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yuan.house.dao.LogDao">
+
+    <insert id="addLog" parameterType="com.yuan.house.model.Log">
+        INSERT INTO log
+        (user_id, content, type,target)
+        VALUES
+        (
+         #{object.userId},#{object.content}, #{object.type},#{object.target}
+        )
+    </insert>
+
+    <select id="queryAllLogs" resultType="com.yuan.house.model.Log">
+        SELECT
+        *
+        FROM
+        log
+        order by time desc
+    </select>
+</mapper>

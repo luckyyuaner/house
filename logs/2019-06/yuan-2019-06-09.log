@@ -495,3 +495,44 @@ Field error in object 'feedback' on field 'url': rejected value [org.springframe
 2019-06-09 15:37:55.524 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-9] - Starting without optional kqueue library
 2019-06-09 15:37:58.325 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在feedbacks_user_12
 2019-06-09 15:37:58.388 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加feedbacks_user_12
+2019-06-09 17:34:15.421 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13240 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 17:34:15.468 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 17:34:56.260 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 17:34:58.556 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 17:34:58.666 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 17:35:08.294 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 17:35:14.497 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 67.044 seconds (JVM running for 116.285)
+2019-06-09 17:36:13.931 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-09 17:36:15.412 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-09 17:44:31.723 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 17700 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 17:44:31.735 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 17:44:53.518 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 17:44:54.541 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 17:44:54.601 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 17:45:00.727 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 17:45:05.595 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 35.26 seconds (JVM running for 43.115)
+2019-06-09 17:46:16.226 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-09 17:46:17.932 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-09 17:46:29.203 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 17:46:30.702 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-06-09 17:46:30.723 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-06-09 17:46:35.529 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_user_5
+2019-06-09 17:46:35.953 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_user_5
+2019-06-09 17:48:32.198 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 17:48:32.318 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_number_1
+2019-06-09 17:48:32.761 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_number_1
+2019-06-09 17:50:02.097 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 17:50:02.356 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在houses_collect_houses_12
+2019-06-09 17:50:02.468 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加houses_collect_houses_12
+2019-06-09 17:51:10.477 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 17:51:10.544 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permissions_number_1
+2019-06-09 17:51:10.603 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permissions_number_1
+2019-06-09 17:51:56.161 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 17:51:56.214 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在roles_number_1
+2019-06-09 17:51:56.269 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加roles_number_1
+2019-06-09 17:52:27.776 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 17:52:27.791 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在users_number_1
+2019-06-09 17:52:27.876 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加users_number_1
+2019-06-09 17:53:12.173 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 17:53:12.187 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_租客1
+2019-06-09 17:53:12.237 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_租客1
