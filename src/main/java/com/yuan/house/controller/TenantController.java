@@ -379,4 +379,16 @@ public class TenantController extends BaseController {
         model.addAttribute("feedbacks",feedbacks);
         return new ModelAndView("/tenant/feedback_show", "Model", model);
     }
+
+    @RequestMapping("/tenant/feedback/delete")
+    public ModelAndView deleteFeedback(Model model,Long fid) {
+        feedbackService.deleteFeedback(fid);
+        return new ModelAndView("/tenant/info", "Model", model);
+    }
+
+    @RequestMapping("/tenant/feedback/updateAgree")
+    public ModelAndView updateAgreeFeedback(Model model,Long fid) {
+        feedbackService.updateAgreeFeedback(fid);
+        return new ModelAndView("/tenant/info", "Model", model);
+    }
 }

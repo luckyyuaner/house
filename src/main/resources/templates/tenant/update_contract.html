@@ -29,7 +29,8 @@
         <div class="content">
             <div class="landlord-info">
                 <p><a>
-                    <img src="/images/head.jpg" style="width:20px;height:20px;object-fit:cover;" />
+                    <img th:if="${landlord.head==null}" src="/images/head.jpg" alt="头像" style="width:20px;height:20px;object-fit: cover;"/>
+                    <img th:if="${landlord.head!=null}" th:src="@{/file/{imgname}(imgname=${landlord.head})}" alt="头像" style="width:20px;height:20px;object-fit: cover;"/>
                     <span th:text="${landlord.username}"/>
                     <span th:if="${landlord.sex == 0}">女</span>
                     <span th:if="${landlord.sex == 1}">男</span>

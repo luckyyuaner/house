@@ -7,5 +7,10 @@ import java.util.List;
 
 public interface FeedbackDao {
     void addFeedback(@Param("object") Feedback object);
+
     List<Feedback> queryFeedbacksByUserId(@Param("uid")Long uid);
+
+    int deleteFeedback(@Param("fid")Long fid);
+
+    int updateAgreeFeedback(@Param("object") Feedback object);
 }

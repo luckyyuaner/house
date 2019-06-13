@@ -686,7 +686,7 @@
     <div class="house-info">
         <span class="span-1">房源名：</span><input class="field-1" type="text" th:field="*{name}"/><br/><span class="err"></span><br/>
         <span class="span-1">地址：&nbsp;&nbsp;</span><input class="field-1" type="text" th:field="*{address}"/><br/><span class="err"></span><br/>
-        <span class="span-2">楼层：</span><input class="field-2" type="text" th:field="*{floor}"/>
+        <span class="span-2">楼层：</span><input class="field-2" type="text" th:field="*{floor}" placeholder="形式为6/7"/>
         <span class="span-2">门牌号：</span><input class="field-2" type="text" th:field="*{doorplate}"/>
         <span class="span-2">房间号：</span><input class="field-2" type="number" th:field="*{orders}"/><br/><br/>
         <span class="span-2">面积：</span><input class="field-2" type="number" th:field="*{area}" min="0.0" step="0.01"/>
@@ -788,7 +788,7 @@
             </div>
         </div><br/><br/>
         <div class="clear-box"></div>
-        <span class="span-1">房源标签：</span><input class="field-1" type="text" th:field="*{words}"/><br/><span class="err"></span><br/>
+        <span class="span-1">房源标签：</span><input class="field-1" type="text" th:field="*{words}" placeholder="多个标签用英文逗号分隔"/><br/><span class="err"></span><br/>
         <span class="span-1">房源图片：</span>
         <span class="fileinput-button">
             <span>添加</span>

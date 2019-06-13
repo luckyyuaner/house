@@ -30,7 +30,7 @@
         <ul class="dowebok">
             <li><input type="radio" class="radio-box" th:field="*{status}" value="0" checked data-labelauty="有效"></li>
             <li><input type="radio" class="radio-box" th:field="*{status}" value="1" data-labelauty="无效"></li>
-        </ul><br/>
+        </ul><br/><br/><br/>
         <div class="list-box" th:if="${roles!=null&&roles.size()>0}">
             <div th:each="ro:${roles}">
                 <input name="rid" type="checkbox" th:value="${ro.roleId}" />

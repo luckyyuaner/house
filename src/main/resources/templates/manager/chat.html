@@ -43,7 +43,8 @@
                 <tr th:each="u:${onlines}" th:if="${onlines != null}">
                     <td>
                         <a href="javascript:void(0)" class="choose">
-                            <img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                            <img th:if="${u.head==null}" src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                            <img th:if="${u.head!=null}" th:src="@{/file/{imgname}(imgname=${u.head})}" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
                             <span class="username" th:text="${u.username}"/>
                             <span class="count" th:id="'count'+${u.username}" style="color:red;"></span>
                         </a>

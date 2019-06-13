@@ -30,8 +30,8 @@
             <span th:text="${feedback.info}" /><br/><br/><br/>
             <img class="u" th:if="${feedback.url!=null&&feedback.url.length()>0}" th:src="@{/file/{imgname}(imgname=${feedback.url})}"/>
             <br/>
-            <a class="op" >删除</a>
-            <a class="op" >确认完成</a>
+            <a th:href="@{/tenant/feedback/delete?(fid=${feedback.feedbackId})}" class="op" >删除</a>
+            <a th:href="@{/tenant/feedback/updateAgree?(fid=${feedback.feedbackId})}" th:if="${feedback.status!=2}"  class="op" >确认完成</a>
         </div>
     </div>
 </div>

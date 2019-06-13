@@ -47,4 +47,23 @@ public class FeedbackServiceImpl implements FeedbackService {
         commonService.insertRedis(key, feedbacks);
         return feedbacks;
     }
+
+    @Override
+    public int deleteFeedback(Long fid) {
+        String key = "feedback_" + fid;
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("feedbacks_");
+        return feedbackDao.deleteFeedback(fid);
+    }
+
+    @Override
+    public int updateAgreeFeedback(Long fid) {
+        String key = "feedback_" + fid;
+        commonService.deleteRedis(key);
+        commonService.deleteByPrex("feedbacks_");
+        Feedback feedback = new Feedback();
+        feedback.setFeedbackId(fid);
+        feedback.setStatus(2);
+        return feedbackDao.updateAgreeFeedback(feedback);
+    }
 }

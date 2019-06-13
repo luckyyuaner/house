@@ -88,7 +88,8 @@
         </div>
         <div class="landlord-box" th:if="${tenantContractPOJO.landlord != null}">
             <p><a>
-                <img class="head" src="/images/head.jpg" />
+                <img class="head" th:if="${tenantContractPOJO.landlord.head==null}" src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                <img class="head" th:if="${tenantContractPOJO.landlord.head!=null}" th:src="@{/file/{imgname}(imgname=${tenantContractPOJO.landlord.head})}" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
                 <span th:text="${tenantContractPOJO.landlord.username}"/>
                 <span th:if="${tenantContractPOJO.landlord.sex == 0}">女</span>
                 <span th:if="${tenantContractPOJO.landlord.sex == 1}">男</span>
@@ -105,7 +106,8 @@
         </div>
         <div class="tenant-box" th:if="${tenantContractPOJO.tenant != null}">
             <p><a>
-                <img class="head" src="/images/head.jpg"  />
+                <img class="head" th:if="${tenantContractPOJO.tenant.head==null}" src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                <img class="head" th:if="${tenantContractPOJO.tenant.head!=null}" th:src="@{/file/{imgname}(imgname=${tenantContractPOJO.tenant.head})}" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
                 <span th:text="${tenantContractPOJO.tenant.username}"/>
                 <span th:if="${tenantContractPOJO.tenant.sex == 0}">女</span>
                 <span th:if="${tenantContractPOJO.tenant.sex == 1}">男</span>

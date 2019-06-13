@@ -536,3 +536,1265 @@ Field error in object 'feedback' on field 'url': rejected value [org.springframe
 2019-06-09 17:53:12.173 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
 2019-06-09 17:53:12.187 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_租客1
 2019-06-09 17:53:12.237 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_租客1
+2019-06-09 21:51:02.765 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 3732 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 21:51:02.795 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 21:51:54.001 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:51:54.693 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:51:54.751 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:52:05.736 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 21:52:12.658 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 74.837 seconds (JVM running for 107.595)
+2019-06-09 21:52:47.136 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-09 21:52:48.593 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-09 21:52:56.720 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional epoll library
+2019-06-09 21:52:56.730 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-7] - Starting without optional kqueue library
+2019-06-09 21:53:00.191 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在feedbacks_user_12
+2019-06-09 21:53:00.337 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加feedbacks_user_12
+2019-06-09 21:53:00.614 ERROR --- [TemplateEngine.java:1136][http-nio-8888-exec-7] - [THYMELEAF][http-nio-8888-exec-7] Exception processing template "/tenant/feedback_show": An error happened during template parsing (template: "class path resource [templates//tenant/feedback_show.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/feedback_show.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "feedback.feedback_id" (template: "/tenant/feedback_show" - line 33, col 16)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 69 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "feedback.feedback_id" (template: "/tenant/feedback_show" - line 33, col 16)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.LinkExpression.resolveParameters(LinkExpression.java:337)
+	at org.thymeleaf.standard.expression.LinkExpression.executeLinkExpression(LinkExpression.java:283)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:85)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 71 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'feedback_id' cannot be found on object of type 'com.yuan.house.model.Feedback' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 101 common frames omitted
+2019-06-09 21:53:00.674 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-7] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//tenant/feedback_show.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'feedback_id' cannot be found on object of type 'com.yuan.house.model.Feedback' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:111)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.LinkExpression.resolveParameters(LinkExpression.java:337)
+	at org.thymeleaf.standard.expression.LinkExpression.executeLinkExpression(LinkExpression.java:283)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:85)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-09 21:54:36.042 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 5668 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 21:54:36.050 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 21:54:44.986 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:54:45.975 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:54:46.105 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:54:51.701 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 21:54:55.520 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 20.598 seconds (JVM running for 26.532)
+2019-06-09 21:56:09.713 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-3] - HikariPool-1 - Starting...
+2019-06-09 21:56:11.146 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-3] - HikariPool-1 - Start completed.
+2019-06-09 21:56:18.785 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional epoll library
+2019-06-09 21:56:18.799 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-4] - Starting without optional kqueue library
+2019-06-09 21:56:23.533 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在feedbacks_user_12
+2019-06-09 21:56:23.623 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加feedbacks_user_12
+2019-06-09 21:56:29.322 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中存在feedbacks_user_12
+2019-06-09 21:56:33.600 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中存在feedbacks_user_12
+2019-06-09 21:57:03.388 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在feedbacks_user_12
+2019-06-09 21:57:03.443 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加feedbacks_user_12
+2019-06-09 21:58:42.455 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 13288 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 21:58:42.465 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 21:58:54.420 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:58:55.265 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:58:55.319 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 21:59:00.247 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 21:59:04.412 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 23.595 seconds (JVM running for 30.215)
+2019-06-09 21:59:44.266 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-5] - HikariPool-1 - Starting...
+2019-06-09 21:59:44.732 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-5] - HikariPool-1 - Start completed.
+2019-06-09 21:59:52.250 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional epoll library
+2019-06-09 21:59:52.260 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-6] - Starting without optional kqueue library
+2019-06-09 21:59:55.657 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在feedbacks_user_12
+2019-06-09 21:59:55.712 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加feedbacks_user_12
+2019-06-09 22:00:15.879 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在feedbacks_user_12
+2019-06-09 22:00:15.936 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加feedbacks_user_12
+2019-06-09 22:05:59.779 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 2596 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 22:05:59.787 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 22:06:09.108 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 22:06:09.511 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 22:06:09.535 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 22:06:12.130 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 22:06:13.387 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 14.971 seconds (JVM running for 19.016)
+2019-06-09 22:06:41.698 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-6] - HikariPool-1 - Starting...
+2019-06-09 22:06:43.342 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-6] - HikariPool-1 - Start completed.
+2019-06-09 22:06:50.372 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional epoll library
+2019-06-09 22:06:50.410 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-5] - Starting without optional kqueue library
+2019-06-09 22:06:54.013 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在feedbacks_user_12
+2019-06-09 22:06:54.123 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加feedbacks_user_12
+2019-06-09 22:35:04.364 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 3776 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 22:35:04.371 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 22:35:20.897 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 22:35:23.248 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 22:35:23.312 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 22:35:33.100 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 22:35:36.720 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 34.002 seconds (JVM running for 39.202)
+2019-06-09 22:53:28.586 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-1] - HikariPool-1 - Starting...
+2019-06-09 22:53:43.384 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-1] - HikariPool-1 - Start completed.
+2019-06-09 22:54:20.264 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:54:24.986 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional epoll library
+2019-06-09 22:54:24.997 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-8] - Starting without optional kqueue library
+2019-06-09 22:54:41.876 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在permissions_number_1
+2019-06-09 22:54:43.086 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加permissions_number_1
+2019-06-09 22:55:01.186 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:01.263 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_number_2
+2019-06-09 22:55:01.359 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_number_2
+2019-06-09 22:55:04.446 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:04.465 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permissions_number_3
+2019-06-09 22:55:04.575 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permissions_number_3
+2019-06-09 22:55:07.495 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:07.509 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在permissions_number_2
+2019-06-09 22:55:20.684 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:20.712 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在permissions_like_管理_number_1
+2019-06-09 22:55:22.977 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加permissions_like_管理_number_1
+2019-06-09 22:55:31.511 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:31.542 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_like_管理_number_2
+2019-06-09 22:55:31.632 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_like_管理_number_2
+2019-06-09 22:55:37.062 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:37.300 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permission_2
+2019-06-09 22:55:37.474 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permission_2
+2019-06-09 22:55:42.369 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:55:42.388 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在permissions_number_1
+2019-06-09 22:55:42.488 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加permissions_number_1
+2019-06-09 22:56:14.201 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:56:20.851 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:56:21.030 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permissions_number_1
+2019-06-09 22:56:21.312 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permissions_number_1
+2019-06-09 22:56:32.899 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:56:32.912 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_number_1
+2019-06-09 22:56:32.955 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_number_1
+2019-06-09 22:56:47.734 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:56:47.768 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在permissions_like_哈哈哈_number_1
+2019-06-09 22:56:47.849 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加permissions_like_哈哈哈_number_1
+2019-06-09 22:56:52.143 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:56:52.161 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permissions_all
+2019-06-09 22:56:52.200 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permissions_all
+2019-06-09 22:56:52.207 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在permission_69
+2019-06-09 22:56:52.225 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加permission_69
+2019-06-09 22:57:08.969 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:57:14.216 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-7] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+### The error may involve com.yuan.house.dao.PermissionDao.updatePermission-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE permission         SET parent_id = ?, name = ?, type = ?, permission_value = ?,         url = ?, icon = ?, status = ?         WHERE permission_id = ?
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+; Data truncation: Data too long for column 'name' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1] with root cause
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:974)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:391)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor116.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy107.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy105.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy56.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy74.updatePermission(Unknown Source)
+	at com.yuan.house.service.impl.PermissionServiceImpl.updatePermission(PermissionServiceImpl.java:107)
+	at com.yuan.house.controller.UserController.updatePermission(UserController.java:178)
+	at com.yuan.house.controller.UserController$$FastClassBySpringCGLIB$$bb2c73d3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.UserController$$EnhancerBySpringCGLIB$$1dc89fcb.updatePermission(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-09 22:58:06.588 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 22:58:06.622 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_all
+2019-06-09 22:58:09.133 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_all
+2019-06-09 22:58:09.150 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permission_69
+2019-06-09 22:58:09.180 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permission_69
+2019-06-09 23:03:30.879 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting HouseApplication on DESKTOP-A42CON3 with PID 21164 (D:\graduate\house\target\classes started by 谢洁芳 in D:\graduate\house)
+2019-06-09 23:03:30.898 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-09 23:04:31.877 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 23:04:37.131 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 23:04:37.308 ERROR --- [DirectJDKLog.java:173][restartedMain] - An incompatible version [1.2.4] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-06-09 23:04:56.775 WARN  --- [TemplateMode.java:150][restartedMain] - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-06-09 23:05:11.794 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started HouseApplication in 129.737 seconds (JVM running for 230.522)
+2019-06-09 23:06:50.477 INFO  --- [HikariDataSource.java:110][http-nio-8888-exec-8] - HikariPool-1 - Starting...
+2019-06-09 23:06:55.017 INFO  --- [HikariDataSource.java:123][http-nio-8888-exec-8] - HikariPool-1 - Start completed.
+2019-06-09 23:07:03.331 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:07:08.373 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-3] - Starting without optional epoll library
+2019-06-09 23:07:08.381 INFO  --- [Slf4JLogger.java:101][http-nio-8888-exec-3] - Starting without optional kqueue library
+2019-06-09 23:07:17.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_number_1
+2019-06-09 23:07:18.698 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_number_1
+2019-06-09 23:07:34.232 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:07:34.960 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-1] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "哈哈哈"] with root cause
+java.lang.NumberFormatException: For input string: "哈哈哈"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.yuan.house.controller.UserController.listPermission(UserController.java:125)
+	at com.yuan.house.controller.UserController$$FastClassBySpringCGLIB$$bb2c73d3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.UserController$$EnhancerBySpringCGLIB$$f6550c4a.listPermission(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-09 23:07:59.544 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:07:59.657 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permissions_number_1
+2019-06-09 23:07:59.811 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permissions_number_1
+2019-06-09 23:08:20.824 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:20.836 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在permissions_like_哈哈哈_number_1
+2019-06-09 23:08:23.067 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加permissions_like_哈哈哈_number_1
+2019-06-09 23:08:25.853 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:25.865 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permissions_all
+2019-06-09 23:08:25.913 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permissions_all
+2019-06-09 23:08:25.920 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在permission_69
+2019-06-09 23:08:26.020 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加permission_69
+2019-06-09 23:08:36.106 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:37.547 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:37.563 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permissions_all
+2019-06-09 23:08:37.629 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permissions_all
+2019-06-09 23:08:37.638 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在permission_69
+2019-06-09 23:08:37.655 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加permission_69
+2019-06-09 23:08:44.222 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:44.232 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在permissions_number_1
+2019-06-09 23:08:44.282 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加permissions_number_1
+2019-06-09 23:08:50.446 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:50.459 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_like_测试_number_1
+2019-06-09 23:08:50.571 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_like_测试_number_1
+2019-06-09 23:08:55.713 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:57.022 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:08:57.030 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在permissions_number_1
+2019-06-09 23:08:57.061 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加permissions_number_1
+2019-06-09 23:09:08.984 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:08.997 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在permissions_like_测试_number_1
+2019-06-09 23:09:09.054 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加permissions_like_测试_number_1
+2019-06-09 23:09:14.065 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:14.146 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在roles_number_1
+2019-06-09 23:09:14.310 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加roles_number_1
+2019-06-09 23:09:22.006 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:22.021 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在role_1
+2019-06-09 23:09:22.107 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加role_1
+2019-06-09 23:09:28.187 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:28.208 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在roles_like_管理员_number_1
+2019-06-09 23:09:28.248 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加roles_like_管理员_number_1
+2019-06-09 23:09:33.605 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:33.613 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在permissions_all
+2019-06-09 23:09:33.667 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加permissions_all
+2019-06-09 23:09:49.297 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:49.858 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:49.867 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在permissions_all
+2019-06-09 23:09:49.911 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加permissions_all
+2019-06-09 23:09:56.043 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:09:56.054 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在roles_number_1
+2019-06-09 23:09:56.079 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加roles_number_1
+2019-06-09 23:10:01.778 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:01.797 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在permissions_all
+2019-06-09 23:10:01.840 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加permissions_all
+2019-06-09 23:10:01.847 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在role_6
+2019-06-09 23:10:01.865 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加role_6
+2019-06-09 23:10:10.787 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:10.801 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中删除role_6
+2019-06-09 23:10:11.418 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:11.426 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中存在permissions_all
+2019-06-09 23:10:11.460 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在role_6
+2019-06-09 23:10:11.471 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加role_6
+2019-06-09 23:10:16.508 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:16.517 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在roles_number_1
+2019-06-09 23:10:16.544 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加roles_number_1
+2019-06-09 23:10:21.383 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:21.396 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中删除role_6
+2019-06-09 23:10:21.514 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:21.519 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在roles_number_1
+2019-06-09 23:10:38.014 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:10:38.096 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在roles_number_1
+2019-06-09 23:10:38.246 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加roles_number_1
+2019-06-09 23:11:02.578 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:02.667 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在users_number_1
+2019-06-09 23:11:02.895 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加users_number_1
+2019-06-09 23:11:19.569 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:19.582 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在users_number_2
+2019-06-09 23:11:19.621 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加users_number_2
+2019-06-09 23:11:21.492 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:21.504 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在users_number_1
+2019-06-09 23:11:21.579 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加users_number_1
+2019-06-09 23:11:23.396 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:23.414 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在roles_all
+2019-06-09 23:11:23.434 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加roles_all
+2019-06-09 23:11:45.609 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:45.660 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在roles_all
+2019-06-09 23:11:45.695 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加roles_all
+2019-06-09 23:11:59.657 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:59.983 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:11:59.991 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在roles_all
+2019-06-09 23:12:00.008 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加roles_all
+2019-06-09 23:12:05.898 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:12:05.916 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在users_number_1
+2019-06-09 23:12:05.964 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加users_number_1
+2019-06-09 23:12:08.949 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:12:08.956 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在users_number_2
+2019-06-09 23:12:08.993 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加users_number_2
+2019-06-09 23:12:14.623 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:12:14.636 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在roles_all
+2019-06-09 23:12:14.663 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加roles_all
+2019-06-09 23:12:14.675 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_16
+2019-06-09 23:12:14.697 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_16
+2019-06-09 23:13:15.076 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:17.172 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:17.178 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在roles_all
+2019-06-09 23:13:17.191 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加roles_all
+2019-06-09 23:13:17.196 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_16
+2019-06-09 23:13:17.608 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_16
+2019-06-09 23:13:25.700 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:25.710 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在users_number_1
+2019-06-09 23:13:25.761 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加users_number_1
+2019-06-09 23:13:28.089 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:28.098 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在users_number_2
+2019-06-09 23:13:28.145 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加users_number_2
+2019-06-09 23:13:31.637 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:32.424 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:32.437 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在users_number_1
+2019-06-09 23:13:35.874 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:35.884 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在users_number_2
+2019-06-09 23:13:39.963 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:39.976 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在users_number_2
+2019-06-09 23:13:40.014 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加users_number_2
+2019-06-09 23:13:42.411 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:42.507 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:42.516 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在users_number_1
+2019-06-09 23:13:42.551 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加users_number_1
+2019-06-09 23:13:46.154 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:46.164 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中存在users_number_1
+2019-06-09 23:13:47.927 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:47.934 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在users_number_2
+2019-06-09 23:13:51.157 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[permission:create, user:delete, user:create, role:update, permission:delete, role:create, role:read, user:read, role:delete, user:update, permission:update, permission:read]
+2019-06-09 23:13:51.167 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在users_number_2
+2019-06-09 23:13:51.223 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加users_number_2
+2019-06-09 23:15:06.774 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:22:33.714 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:22:36.657 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:24:49.012 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:24:54.077 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:24:54.138 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_user_5
+2019-06-09 23:24:54.250 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_user_5
+2019-06-09 23:25:15.873 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:25:15.927 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_8
+2019-06-09 23:25:15.981 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_8
+2019-06-09 23:28:00.413 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:28:06.393 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:28:06.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_user_5
+2019-06-09 23:28:32.455 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:28:53.307 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在houses_user_5
+2019-06-09 23:28:53.307 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_user_5
+2019-06-09 23:28:56.707 ERROR --- [DirectJDKLog.java:175][http-nio-8888-exec-2] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 1
+### The error may exist in file [D:\graduate\house\target\classes\mapper\HouseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT                   house_id, user_id, doorplate, name, orders, type, kind, money, cycle,         area, floor, elevator, orientation, address, description, words,         urls, grade, longitude, latitude, status               FROM         house         WHERE         user_id = ?         order by house_id desc; LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 1] with root cause
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:974)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:391)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy107.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.util.ExecutorUtil.pageQuery(ExecutorUtil.java:177)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:104)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy105.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.GeneratedMethodAccessor140.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy56.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy58.queryHousesByUserId(Unknown Source)
+	at com.yuan.house.service.impl.HouseServiceImpl.getHousesByUser(HouseServiceImpl.java:59)
+	at com.yuan.house.controller.LandlordController.showHouses(LandlordController.java:85)
+	at com.yuan.house.controller.LandlordController$$FastClassBySpringCGLIB$$c5175728.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor$1.proceed(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:82)
+	at org.apache.shiro.authz.aop.AuthorizingMethodInterceptor.invoke(AuthorizingMethodInterceptor.java:39)
+	at org.apache.shiro.spring.security.interceptor.AopAllianceAnnotationsAuthorizingMethodInterceptor.invoke(AopAllianceAnnotationsAuthorizingMethodInterceptor.java:115)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yuan.house.controller.LandlordController$$EnhancerBySpringCGLIB$$31ff369.showHouses(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2019-06-09 23:30:32.585 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:30:32.676 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_user_5
+2019-06-09 23:30:32.955 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_user_5
+2019-06-09 23:30:43.645 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:31:18.181 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:31:41.516 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:32:07.866 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:32:43.689 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:32:46.934 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:32:46.955 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_5
+2019-06-09 23:32:47.234 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_5
+2019-06-09 23:32:53.620 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:32:53.633 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_9
+2019-06-09 23:32:53.654 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_9
+2019-06-09 23:33:14.029 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:33:23.044 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:33:23.055 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_5
+2019-06-09 23:33:23.176 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_5
+2019-06-09 23:33:28.698 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:33:31.617 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:33:31.644 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中存在houses_user_5
+2019-06-09 23:33:36.368 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:33:36.399 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_5
+2019-06-09 23:33:36.435 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_5
+2019-06-09 23:34:47.199 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:34:47.292 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_user_number_1
+2019-06-09 23:34:47.718 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_user_number_1
+2019-06-09 23:35:03.043 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:35:03.286 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在houses_user_number_1
+2019-06-09 23:35:03.325 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加houses_user_number_1
+2019-06-09 23:35:13.828 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:35:13.924 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在houses_user_number_1
+2019-06-09 23:35:13.956 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加houses_user_number_1
+2019-06-09 23:35:35.936 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:35:36.018 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_user_number_1
+2019-06-09 23:35:36.058 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_user_number_1
+2019-06-09 23:35:47.973 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:35:47.981 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_number_2
+2019-06-09 23:35:48.013 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_number_2
+2019-06-09 23:35:52.934 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:35:52.944 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在houses_user_number_3
+2019-06-09 23:35:53.013 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加houses_user_number_3
+2019-06-09 23:36:08.540 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:36:08.553 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_number_2
+2019-06-09 23:36:08.742 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_number_2
+2019-06-09 23:37:54.811 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=湖南,长沙市, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:37:57.508 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=湖南,长沙市, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:38:26.149 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=湖南,长沙市, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:38:26.371 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=湖南,长沙市, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:38:31.517 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=0, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:38:31.794 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=0, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:39:08.288 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:39:08.482 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_tenant_4_number_1_sta_0
+2019-06-09 23:39:08.521 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_tenant_4_number_1_sta_0
+2019-06-09 23:39:17.886 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:39:18.058 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_like_TenantSearchPOJO(type=0, msg=null, kind=00000, orientation=null, show=money, sx=asc, elevator=-1, cycle=0, area1=0, area2=0, money1=0, money2=0)_number_1
+2019-06-09 23:39:18.062 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在houses_collect_hids_4
+2019-06-09 23:39:18.127 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加houses_collect_hids_4
+2019-06-09 23:39:22.274 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:39:22.276 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:39:24.185 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:39:24.187 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:39:29.048 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_2
+2019-06-09 23:39:29.075 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_2
+2019-06-09 23:39:29.337 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在comments_hid_2
+2019-06-09 23:39:29.354 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加comments_hid_2
+2019-06-09 23:39:29.361 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_2
+2019-06-09 23:39:29.406 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_2
+2019-06-09 23:39:29.413 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在houses_collect_hids_4
+2019-06-09 23:39:29.424 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加houses_collect_hids_4
+2019-06-09 23:40:29.320 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:40:29.557 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-06-09 23:40:29.599 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-06-09 23:40:29.613 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在comments_hid_2
+2019-06-09 23:40:29.626 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加comments_hid_2
+2019-06-09 23:40:29.634 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-06-09 23:40:29.650 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-06-09 23:40:29.657 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在houses_collect_hids_4
+2019-06-09 23:40:29.669 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加houses_collect_hids_4
+2019-06-09 23:44:44.562 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:44:51.000 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:44:51.036 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_tenant_4_number_1_sta_0
+2019-06-09 23:44:51.134 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_tenant_4_number_1_sta_0
+2019-06-09 23:44:51.147 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-09 23:44:51.180 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-09 23:44:51.186 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-09 23:44:51.212 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-09 23:44:51.355 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
+2019-06-09 23:44:51.374 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-06-09 23:45:18.574 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:45:18.630 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_user_5_number_1_sta_0
+2019-06-09 23:45:18.742 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_user_5_number_1_sta_0
+2019-06-09 23:45:18.750 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_2
+2019-06-09 23:45:18.774 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_2
+2019-06-09 23:45:18.780 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_2
+2019-06-09 23:45:18.795 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_2
+2019-06-09 23:45:18.801 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_4
+2019-06-09 23:45:18.814 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_4
+2019-06-09 23:45:52.527 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:45:55.896 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:45:55.931 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在contracts_user_5_number_1_sta_0
+2019-06-09 23:45:56.013 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加contracts_user_5_number_1_sta_0
+2019-06-09 23:45:56.027 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在house_2
+2019-06-09 23:45:56.058 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加house_2
+2019-06-09 23:45:56.066 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_house_2
+2019-06-09 23:45:56.364 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_house_2
+2019-06-09 23:45:56.369 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在user_4
+2019-06-09 23:45:56.385 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加user_4
+2019-06-09 23:46:12.236 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:46:12.243 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_all_number_1
+2019-06-09 23:46:12.262 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_all_number_1
+2019-06-09 23:46:12.267 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-06-09 23:46:12.287 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-06-09 23:46:12.291 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_2
+2019-06-09 23:46:12.306 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_2
+2019-06-09 23:46:12.310 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_12
+2019-06-09 23:46:12.320 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_12
+2019-06-09 23:46:21.375 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:46:21.386 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_all_number_2
+2019-06-09 23:46:21.417 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_all_number_2
+2019-06-09 23:46:21.422 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_1
+2019-06-09 23:46:21.440 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_1
+2019-06-09 23:46:21.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_1
+2019-06-09 23:46:21.462 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_1
+2019-06-09 23:46:21.468 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在user_12
+2019-06-09 23:46:26.120 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:46:26.130 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_all_number_3
+2019-06-09 23:46:26.161 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_all_number_3
+2019-06-09 23:46:26.168 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_2
+2019-06-09 23:46:26.190 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_2
+2019-06-09 23:46:26.196 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_2
+2019-06-09 23:46:26.283 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_2
+2019-06-09 23:46:26.289 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_4
+2019-06-09 23:46:26.326 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_4
+2019-06-09 23:47:47.172 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:47:55.388 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:47:55.395 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_all_number_1
+2019-06-09 23:47:55.425 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_all_number_1
+2019-06-09 23:47:55.431 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-09 23:47:55.454 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-09 23:47:55.485 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-09 23:47:55.514 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-09 23:47:55.520 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-09 23:47:55.534 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-09 23:47:58.920 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:47:58.934 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_all_number_2
+2019-06-09 23:47:58.961 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_all_number_2
+2019-06-09 23:47:58.967 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_1
+2019-06-09 23:47:58.979 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_1
+2019-06-09 23:47:58.984 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_1
+2019-06-09 23:47:58.997 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_1
+2019-06-09 23:47:59.002 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_12
+2019-06-09 23:48:03.327 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:48:03.336 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_all_number_3
+2019-06-09 23:48:03.367 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_all_number_3
+2019-06-09 23:48:03.375 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在house_2
+2019-06-09 23:48:03.405 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在user_house_2
+2019-06-09 23:48:03.425 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
+2019-06-09 23:48:03.451 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-06-09 23:48:20.967 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:48:20.976 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:48:21.004 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:48:21.008 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-09 23:48:21.031 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-09 23:48:21.037 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-09 23:48:21.091 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-09 23:48:21.112 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_4
+2019-06-09 23:48:21.140 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_4
+2019-06-09 23:48:23.982 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:50:13.899 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:50:18.175 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:50:18.182 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:50:18.213 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:50:18.218 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_2
+2019-06-09 23:50:18.234 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_2
+2019-06-09 23:50:18.240 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_2
+2019-06-09 23:50:18.252 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_2
+2019-06-09 23:50:18.260 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_4
+2019-06-09 23:50:18.272 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_4
+2019-06-09 23:50:37.664 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:50:37.813 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_5_number_1_sta_0
+2019-06-09 23:50:37.939 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_5_number_1_sta_0
+2019-06-09 23:50:42.209 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-6] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:50:42.231 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中不存在houses_user_5
+2019-06-09 23:50:42.271 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-6] - redis缓存中添加houses_user_5
+2019-06-09 23:50:46.414 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:50:46.443 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_5_number_1_sta_1
+2019-06-09 23:50:46.482 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_5_number_1_sta_1
+2019-06-09 23:50:46.488 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-06-09 23:50:46.512 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-06-09 23:50:46.639 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_2
+2019-06-09 23:50:46.663 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_2
+2019-06-09 23:50:46.671 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_12
+2019-06-09 23:50:46.688 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_12
+2019-06-09 23:50:50.983 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:50:50.998 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:50:51.036 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:50:51.040 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在house_2
+2019-06-09 23:50:51.051 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在user_house_2
+2019-06-09 23:50:51.169 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
+2019-06-09 23:50:51.183 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-06-09 23:51:10.439 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:51:14.977 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:51:15.001 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_5_number_1_sta_1
+2019-06-09 23:51:15.046 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_5_number_1_sta_1
+2019-06-09 23:51:15.051 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-09 23:51:15.071 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-09 23:51:15.077 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-06-09 23:51:15.093 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-06-09 23:51:15.100 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_12
+2019-06-09 23:51:15.113 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_12
+2019-06-09 23:51:21.737 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:51:21.753 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:51:21.795 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:51:21.800 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在house_2
+2019-06-09 23:51:21.814 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_house_2
+2019-06-09 23:51:21.826 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_4
+2019-06-09 23:51:21.842 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_4
+2019-06-09 23:51:31.522 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:51:31.529 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_all_number_3
+2019-06-09 23:51:31.799 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_all_number_3
+2019-06-09 23:51:31.806 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-06-09 23:51:31.828 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-06-09 23:51:31.834 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-06-09 23:51:31.853 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-06-09 23:51:31.857 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-06-09 23:51:31.871 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-06-09 23:51:46.629 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:51:50.370 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:51:50.377 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在contracts_all_number_1
+2019-06-09 23:51:50.404 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加contracts_all_number_1
+2019-06-09 23:51:50.411 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在house_2
+2019-06-09 23:51:50.460 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加house_2
+2019-06-09 23:51:50.465 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_house_2
+2019-06-09 23:51:50.483 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_house_2
+2019-06-09 23:51:50.489 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中不存在user_12
+2019-06-09 23:51:50.504 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-4] - redis缓存中添加user_12
+2019-06-09 23:51:53.382 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:51:53.389 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_all_number_2
+2019-06-09 23:51:53.411 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_all_number_2
+2019-06-09 23:51:53.419 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_1
+2019-06-09 23:51:53.439 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_1
+2019-06-09 23:51:53.445 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_1
+2019-06-09 23:51:53.458 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_1
+2019-06-09 23:51:53.462 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_12
+2019-06-09 23:51:57.272 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:51:57.277 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_all_number_3
+2019-06-09 23:51:57.337 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_all_number_3
+2019-06-09 23:51:57.342 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在house_2
+2019-06-09 23:51:57.354 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中存在user_house_2
+2019-06-09 23:51:57.361 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
+2019-06-09 23:51:57.374 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-06-09 23:52:06.489 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:52:06.498 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:52:06.538 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:52:06.543 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在house_2
+2019-06-09 23:52:06.565 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加house_2
+2019-06-09 23:52:06.570 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_house_2
+2019-06-09 23:52:06.583 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_house_2
+2019-06-09 23:52:06.587 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在user_4
+2019-06-09 23:52:10.084 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:52:10.204 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:52:10.209 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:52:10.242 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在house_2
+2019-06-09 23:52:10.252 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中存在user_house_2
+2019-06-09 23:52:10.260 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_4
+2019-06-09 23:52:10.286 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_4
+2019-06-09 23:52:17.353 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:52:17.440 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:52:17.448 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:52:17.486 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:52:17.491 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-06-09 23:52:17.512 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-06-09 23:52:17.516 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-06-09 23:52:17.530 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-06-09 23:52:17.534 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中存在user_4
+2019-06-09 23:54:57.173 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:54:57.239 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:54:57.306 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:54:57.308 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-09 23:54:57.321 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-09 23:54:57.324 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-09 23:54:57.334 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-09 23:54:57.336 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
+2019-06-09 23:54:57.342 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-06-09 23:55:00.601 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:55:00.621 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:55:00.637 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在house_2
+2019-06-09 23:55:00.651 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在user_house_2
+2019-06-09 23:55:00.661 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中存在user_4
+2019-06-09 23:55:03.757 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:55:03.833 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:55:03.841 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:55:03.851 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在house_2
+2019-06-09 23:55:03.864 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_house_2
+2019-06-09 23:55:03.875 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_4
+2019-06-09 23:55:34.398 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-7] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:55:34.422 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:55:34.472 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:55:34.478 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在house_2
+2019-06-09 23:55:34.499 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加house_2
+2019-06-09 23:55:34.503 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_house_2
+2019-06-09 23:55:34.517 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_house_2
+2019-06-09 23:55:34.522 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中不存在user_4
+2019-06-09 23:55:34.534 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-7] - redis缓存中添加user_4
+2019-06-09 23:55:38.713 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-4] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:55:41.818 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:55:41.825 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:55:41.852 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在house_2
+2019-06-09 23:55:41.864 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_house_2
+2019-06-09 23:55:41.882 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中存在user_4
+2019-06-09 23:56:10.862 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:56:10.872 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:56:10.901 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:56:10.906 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在house_2
+2019-06-09 23:56:10.924 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加house_2
+2019-06-09 23:56:10.928 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_house_2
+2019-06-09 23:56:10.948 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_house_2
+2019-06-09 23:56:10.952 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中不存在user_4
+2019-06-09 23:56:10.962 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-3] - redis缓存中添加user_4
+2019-06-09 23:56:27.028 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:56:27.037 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:56:27.081 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:56:27.085 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-06-09 23:56:27.103 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-06-09 23:56:27.106 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-06-09 23:56:27.119 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-06-09 23:56:27.122 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-06-09 23:56:27.137 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-06-09 23:56:33.046 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:56:37.181 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:56:37.198 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在contracts_user_5_number_1_sta_1
+2019-06-09 23:56:37.233 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加contracts_user_5_number_1_sta_1
+2019-06-09 23:56:37.236 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在house_2
+2019-06-09 23:56:37.257 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加house_2
+2019-06-09 23:56:37.261 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_house_2
+2019-06-09 23:56:37.272 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_house_2
+2019-06-09 23:56:37.276 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中不存在user_12
+2019-06-09 23:56:37.290 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-9] - redis缓存中添加user_12
+2019-06-09 23:56:41.697 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:56:41.713 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:56:41.754 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:56:41.758 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在house_2
+2019-06-09 23:56:41.768 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中存在user_house_2
+2019-06-09 23:56:41.775 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中不存在user_4
+2019-06-09 23:56:41.789 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-8] - redis缓存中添加user_4
+2019-06-09 23:56:53.658 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:56:53.668 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_all_number_3
+2019-06-09 23:56:53.704 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_all_number_3
+2019-06-09 23:56:53.711 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-09 23:56:53.736 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-09 23:56:53.741 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-06-09 23:56:53.753 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-06-09 23:56:53.759 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_4
+2019-06-09 23:56:53.771 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_4
+2019-06-09 23:56:58.826 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:56:58.885 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中删除house_2
+2019-06-09 23:57:03.716 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-3] - permission的值为:[comment:read, house:update, contract:read, contract:update, comment:create, comment:delete, house:read, contract:delete, house:delete, contract:create, comment:update, house:create]
+2019-06-09 23:57:08.345 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:57:08.351 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:57:08.380 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:57:08.385 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-06-09 23:57:08.401 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-06-09 23:57:08.406 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-06-09 23:57:08.419 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-06-09 23:57:08.424 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-06-09 23:57:08.446 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-06-09 23:57:50.544 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-9] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:57:54.902 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-5] - permission的值为:[user:delete, cart:create, comment:create, house:read, user:update, contract:create, comment:update, comment:read, cart:update, user:create, cart:delete, contract:update, contract:read, user:read, comment:delete, cart:read, contract:delete]
+2019-06-09 23:57:54.908 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在contracts_tenant_4_number_1_sta_1
+2019-06-09 23:57:54.951 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加contracts_tenant_4_number_1_sta_1
+2019-06-09 23:57:54.955 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在house_2
+2019-06-09 23:57:54.974 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加house_2
+2019-06-09 23:57:54.979 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_house_2
+2019-06-09 23:57:54.994 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_house_2
+2019-06-09 23:57:54.999 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中不存在user_4
+2019-06-09 23:57:55.009 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-5] - redis缓存中添加user_4
+2019-06-09 23:58:07.951 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-1] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:58:08.001 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:58:08.065 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:58:08.069 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在house_2
+2019-06-09 23:58:08.088 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加house_2
+2019-06-09 23:58:08.095 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_house_2
+2019-06-09 23:58:08.109 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_house_2
+2019-06-09 23:58:08.113 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中不存在user_4
+2019-06-09 23:58:08.126 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-1] - redis缓存中添加user_4
+2019-06-09 23:58:46.807 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:58:51.209 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:58:51.232 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_5_number_1_sta_1
+2019-06-09 23:58:51.267 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_5_number_1_sta_1
+2019-06-09 23:58:51.273 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-09 23:58:51.292 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-09 23:58:51.298 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-06-09 23:58:51.312 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-06-09 23:58:51.318 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_12
+2019-06-09 23:58:51.333 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_12
+2019-06-09 23:58:54.472 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:58:54.494 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:58:54.518 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:58:54.522 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在house_2
+2019-06-09 23:58:54.540 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在user_house_2
+2019-06-09 23:58:54.595 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_4
+2019-06-09 23:58:54.609 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_4
+2019-06-09 23:59:00.866 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-8] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:59:03.759 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-2] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:59:03.770 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在contracts_user_5_number_1_sta_1
+2019-06-09 23:59:03.810 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加contracts_user_5_number_1_sta_1
+2019-06-09 23:59:03.815 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在house_2
+2019-06-09 23:59:03.833 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加house_2
+2019-06-09 23:59:03.842 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_house_2
+2019-06-09 23:59:03.852 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_house_2
+2019-06-09 23:59:03.870 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中不存在user_12
+2019-06-09 23:59:03.881 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-2] - redis缓存中添加user_12
+2019-06-09 23:59:07.169 INFO  --- [LoggerUtil.java:30][http-nio-8888-exec-10] - permission的值为:[house:update, user:delete, comment:create, house:read, user:update, house:delete, contract:create, comment:update, comment:read, user:create, contract:update, contract:read, user:read, comment:delete, contract:delete, house:create]
+2019-06-09 23:59:07.224 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在contracts_user_5_number_2_sta_1
+2019-06-09 23:59:07.274 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加contracts_user_5_number_2_sta_1
+2019-06-09 23:59:07.279 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在house_2
+2019-06-09 23:59:07.289 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中存在user_house_2
+2019-06-09 23:59:07.297 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中不存在user_4
+2019-06-09 23:59:07.311 INFO  --- [LoggerUtil.java:34][http-nio-8888-exec-10] - redis缓存中添加user_4

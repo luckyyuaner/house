@@ -22,4 +22,16 @@
         create_id = #{uid}
         order by utime desc
     </select>
+
+
+    <delete id="deleteFeedback" parameterType="Long">
+        DELETE FROM feedback WHERE feedback_id = #{fid}
+    </delete>
+
+    <update id="updateAgreeFeedback" parameterType="com.yuan.house.model.Feedback">
+        UPDATE feedback
+        SET status = #{object.status}
+        WHERE feedback_id = #{object.feedbackId}
+    </update>
+
 </mapper>

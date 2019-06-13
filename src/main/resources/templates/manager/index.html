@@ -38,7 +38,8 @@
             <div class="clear-box"></div>
             <div class="content">
                 <p>
-                    <img src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                    <img th:if="${house.head==null}" src="/images/head.jpg" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
+                    <img th:if="${house.head!=null}" th:src="@{/file/{imgname}(imgname=${house.head})}" alt="头像" style="width:40px;height:40px;object-fit: cover;"/>
                     <b th:text="${house.username}"></b>
                 </p><br/>
                 <p>

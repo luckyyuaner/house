@@ -9,4 +9,8 @@ public interface FeedbackService {
     void addFeedback(Feedback feedback);
 
     List<Feedback> queryFeedbacksByUserId(Long uid);
+
+    int deleteFeedback(Long fid);
+
+    int updateAgreeFeedback(Long fid);
 }
